@@ -1,0 +1,10 @@
+<GameItemList>
+	<GameItem>
+		<Name>Feather Duster</Name>
+		<Description>Previously owned by harpies.</Description>
+	</GameItem>
+	<GameItem>
+		<Name>Soap</Name>
+		<Description>Do not drop.</Description>
+	</GameItem>
+</GameItemList>
