@@ -42,7 +42,7 @@ public class Controller_GUI : MonoBehaviour
 		{
 			DontDestroyOnLoad(gameObject);
 			ctrl_gui = this;
-			invBtnWidth = 75.0f;
+			invBtnWidth = 80.0f;
 			invBtnHeight = 50.0f;
 
 		}
