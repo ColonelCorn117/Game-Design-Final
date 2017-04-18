@@ -1,0 +1,23 @@
+<SceneDescription>
+	<sceneName>Test Scene</sceneName>
+	<description>Lorem Ipsum loaded</description>
+	<optionList>
+		<option>
+			<optionDescription>Choice 1</optionDescription>
+			<nextScene></nextScene>
+		</option>
+		<option>
+			<optionDescription>Choice 2</optionDescription>
+			<nextScene></nextScene>
+		</option>
+		<option>
+			<optionDescription>Choice 3</optionDescription>
+			<nextScene></nextScene>
+		</option>
+		<option>
+			<optionDescription>Choice 4</optionDescription>
+			<nextScene></nextScene>
+		</option>
+		
+	</optionList>
+</SceneDescription>
