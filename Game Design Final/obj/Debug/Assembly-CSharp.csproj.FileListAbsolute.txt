@@ -1,4 +1,3 @@
-C:\Users\Eric\Documents\GitHub\Game-Design-Final\Game Design Final\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
 C:\Users\Eric\Documents\GitHub\Game-Design-Final\Game Design Final\Temp\bin\Debug\Assembly-CSharp.dll
 C:\Users\Eric\Documents\GitHub\Game-Design-Final\Game Design Final\Temp\bin\Debug\Assembly-CSharp.pdb
 C:\Users\Eric\Documents\GitHub\Game-Design-Final\Game Design Final\Temp\bin\Debug\nunit.framework.dll

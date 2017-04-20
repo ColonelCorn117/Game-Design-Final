@@ -20,7 +20,7 @@ public class Controller_GUI : MonoBehaviour
 	Button option3Btn;
 	Button option4Btn;
 	Button invBtn;
-	Image itemsImage;
+	Image itemsListImage;
 
 	float invBtnWidth;		//Default width of the expandable item list
 	float invBtnHeight;		//Default height "
@@ -63,9 +63,9 @@ public class Controller_GUI : MonoBehaviour
 			case("Background Image"):
 				bgImage = image;
 				break;
-			case("Items Image"):
-				itemsImage = image;
-				itemsImage.gameObject.SetActive(false);
+			case("ItemsList Image"):
+				itemsListImage = image;
+				itemsListImage.gameObject.SetActive(false);
 				break;
 			default:
 				//Debug.Log("Other image found: " + image.name);
@@ -134,7 +134,7 @@ public class Controller_GUI : MonoBehaviour
 
 	public void ToggleItemsList()
 	{
-		itemsImage.gameObject.SetActive(!itemsImage.gameObject.activeSelf);
+		itemsListImage.gameObject.SetActive(!itemsListImage.gameObject.activeSelf);
 	}
 
 	//----------------------------------------------------------------------------------------------------
@@ -143,8 +143,8 @@ public class Controller_GUI : MonoBehaviour
 	public void ScaleItemsList()
 	{
 		int numItems = Controller_Game.ctrl_game.items.Count;
-		itemsImage.rectTransform.sizeDelta = new Vector2(invBtnWidth, invBtnHeight * numItems);					//Increases height for each item. Width stays the same
-		itemsImage.rectTransform.anchoredPosition = new Vector2(0, itemsImage.rectTransform.sizeDelta.y / 2);	//Moves expandable area up/down so that its bottom edge is near its anchor point (the "Items" button)
+		itemsListImage.rectTransform.sizeDelta = new Vector2(invBtnWidth, invBtnHeight * numItems);					//Increases height for each item. Width stays the same
+		itemsListImage.rectTransform.anchoredPosition = new Vector2(0, itemsListImage.rectTransform.sizeDelta.y / 2);	//Moves expandable area up/down so that its bottom edge is near its anchor point (the "Items" button)
 
 		for (int i=0; i<Controller_Game.ctrl_game.items.Count; i++)
 		{
@@ -164,7 +164,7 @@ public class Controller_GUI : MonoBehaviour
 
 	public GameObject AddBtnToItemsList(float width, float height)
 	{
-		return Instantiate(itemBtn, itemsImage.rectTransform);
+		return Instantiate(itemBtn, itemsListImage.rectTransform);
 	}
 
 	//----------------------------------------------------------------------------------------------------
@@ -172,7 +172,7 @@ public class Controller_GUI : MonoBehaviour
 	//It's easier to get rid of every inventory item button an remake them than it is to delete one and move the above ones down
 	public void DestroyBtnsOnItemsList()
 	{
-		List<Button> buttons = new List<Button>(itemsImage.GetComponentsInChildren<Button>());
+		List<Button> buttons = new List<Button>(itemsListImage.GetComponentsInChildren<Button>());
 		foreach(Button button in buttons)
 		{
 			Destroy(button.gameObject);
