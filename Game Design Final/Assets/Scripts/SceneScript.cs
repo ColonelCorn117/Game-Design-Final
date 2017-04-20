@@ -36,24 +36,18 @@ public class SceneScript : MonoBehaviour {
 		descriptionText.GetComponentInChildren<Text> ().text = xml.description;
 
 		//Options
-
-		//xml.optionList.Options [0].description;
 		var optionsText = optionsBox.GetComponentsInChildren<Text>();
-		//Debug.Log (xml.option1.description);
-
-		//Debug.Log (xml.optionList);
-		//Debug.Log (xml.optionList.option1.description);
-
 		int i = 0;
-		Debug.Log ("Options loaded: " + xml.optionList.Options.Count);
-		foreach (Text t in optionsText) {
-			Debug.Log (xml.optionList.Options [i].optionDescription);
-			t.text = xml.optionList.Options[i].optionDescription;
+		//Debug.Log ("Options loaded: " + xml.optionList.Options.Count);
+		if (xml.optionList.Options.Count > 0) {
+			foreach (Text t in optionsText) {
+				t.text = xml.optionList.Options [i].optionDescription;
 
-			++i;
+				++i;
 
-			if (i >= (xml.optionList.Options.Count)) {
-				break;
+				if (i >= (xml.optionList.Options.Count)) {
+					break;
+				}
 			}
 		}
 	}
