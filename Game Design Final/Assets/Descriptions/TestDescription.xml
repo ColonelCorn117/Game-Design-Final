@@ -1,6 +1,7 @@
 <SceneDescription>
-	<sceneName>Test Scene</sceneName>
+	<name>Test Scene</name>
 	<description>Lorem Ipsum loaded</description>
+	<background></background>
 	<optionList>
 	
 		<option>
@@ -30,4 +31,12 @@
 		</option>
 		
 	</optionList>
-</SceneDescription>
+	<npcList>
+		<npc>Sakuya</npc>
+		<npc>npcTemplate</npc>
+	</npcList>
+	<messList>
+		<mess>Shitstorm</mess>
+		<mess>Dust bunny</mess>
+	</messList>
+	</SceneDescription>

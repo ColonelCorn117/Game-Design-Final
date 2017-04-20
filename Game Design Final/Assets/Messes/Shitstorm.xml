@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<mess>
+	<name>Shitstorm</name>
+	<description>You don't want to know what it's made of.</description>
+	<exists>1</exists>
+	<conditionList>
+		<condition>
+			<requirement>
+				<prereq>gainedX</prereq>
+				<prereq>expireX</prereq>
+				<prereq>killed1</prereq>
+				<prereq>nokill1</prereq>
+				<prereq>removeX</prereq>
+				<prereq>existX</prereq>
+			</requirement>
+			<action></action>
+		</condition>
+	</conditionList>
+</mess>
