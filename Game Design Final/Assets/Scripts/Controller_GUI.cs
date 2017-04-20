@@ -143,12 +143,12 @@ public class Controller_GUI : MonoBehaviour
 	public void ScaleItemsList()
 	{
 		int numItems = Controller_Game.ctrl_game.items.Count;
-		itemsListImage.rectTransform.sizeDelta = new Vector2(invBtnWidth, invBtnHeight * numItems);					//Increases height for each item. Width stays the same
-		itemsListImage.rectTransform.anchoredPosition = new Vector2(0, itemsListImage.rectTransform.sizeDelta.y / 2);	//Moves expandable area up/down so that its bottom edge is near its anchor point (the "Items" button)
+		itemsListImage.rectTransform.sizeDelta = new Vector2(invBtnWidth * numItems, invBtnHeight);					//Increases height for each item. Width stays the same
+		itemsListImage.rectTransform.anchoredPosition = new Vector2(itemsListImage.rectTransform.sizeDelta.x / 2, 0);	//Moves expandable area up/down so that its bottom edge is near its anchor point (the "Items" button)
 
 		for (int i=0; i<Controller_Game.ctrl_game.items.Count; i++)
 		{
-			GameObject button = AddBtnToItemsList(invBtnWidth, invBtnHeight);
+			GameObject button = AddBtnToItemsList(invBtnWidth, invBtnWidth);
 			if (button.GetComponentInChildren<Text>())
 			{
 				//Debug.Log("Text Component Found");
@@ -156,7 +156,7 @@ public class Controller_GUI : MonoBehaviour
 			}
 
 			RectTransform buttonRect = (RectTransform)button.transform;
-			buttonRect.anchoredPosition = new Vector3(0, (invBtnHeight / 2) + (i * invBtnHeight));
+			buttonRect.anchoredPosition = new Vector2((invBtnWidth / 2) + (i * invBtnWidth), 0);	//(invBtnHeight / 2) + (i * invBtnHeight)
 		}
 	}
 
