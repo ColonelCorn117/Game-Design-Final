@@ -10,4 +10,10 @@ public class Problem : GenericGameObject {
 	public List<Condition> conditions = new List<Condition>();
 	//public ConditionList conditionList;
 	public int exists; // Works like a bool, technically
+
+	public Problem() {
+		this.exists = 0;
+		this.name = "";
+		this.description = "";
+	}
 }

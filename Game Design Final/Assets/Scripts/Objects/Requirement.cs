@@ -15,7 +15,9 @@ public class Requirement {
 
 			if(req.StartsWith("gained")) {
 				//the player has an item with the name after "gained"
-				//TODO: this
+				if (!Controller_Game.ctrl_game.items.Contains (reqName)) {
+					return false;
+				}
 			}
 			else if (req.StartsWith("expire")) {
 				//the player uses an item with the name after "gained"
@@ -44,6 +46,7 @@ public class Requirement {
 			else if(req.StartsWith("remove")) {
 				//the player has already removed a certain NPC
 				//TODO: this
+
 
 			}
 			else if(req.StartsWith("exists")) {

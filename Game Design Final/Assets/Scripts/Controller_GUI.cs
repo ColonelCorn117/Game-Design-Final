@@ -22,6 +22,7 @@ public class Controller_GUI : MonoBehaviour
 	Button invBtn;
 	Image itemsListImage;
 
+
 	float invBtnWidth;		//Default width of the expandable item list
 	float invBtnHeight;		//Default height "
 
@@ -181,4 +182,13 @@ public class Controller_GUI : MonoBehaviour
 		//Readd buttons for items we still have
 		ScaleItemsList();
 	}
+
+
+	//----------------------------------------------------------------------------------------------------
+
+
+
+
+
+
 }
