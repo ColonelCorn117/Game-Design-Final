@@ -5,22 +5,25 @@
 	<optionList>
 	
 		<option>
-			<optionDescription>Choice 1</optionDescription>
+			<optionDescription>Entrance</optionDescription>
 			<action>
-				<nextScene></nextScene>
+				<name>toEntrance</name>
+				<nextScene>Entrance</nextScene>
 			</action>
 			
 		</option>
 		<option>
-			<optionDescription>Choice 2</optionDescription>
+			<optionDescription>Nothing</optionDescription>
 			<action>
-				<nextScene></nextScene>
+				<name>toNothing</name>
+				<nextScene>Nowhere</nextScene>
 			</action>
 		</option>
 		<option>
-			<optionDescription>Choice 3</optionDescription>
+			<optionDescription>Entrance</optionDescription>
 			<action>
-				<nextScene></nextScene>
+				<name>AlsoEntrance</name>
+				<nextScene>Entrance</nextScene>
 			</action>
 		</option>
 		<option>
