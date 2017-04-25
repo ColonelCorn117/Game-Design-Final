@@ -8,16 +8,22 @@
 		<option>
 			<optionDescription>Entrance</optionDescription>
 			<action>
-				<name>Enter</name>
 				<nextScene>Entrance</nextScene>
 			</action>
 			
 		</option>
 		<option>
-			<optionDescription>Void</optionDescription>
+			<optionDescription>Upstairs</optionDescription>
 			<action>
-				<name>V</name>
-				<nextScene>Default</nextScene>
+				<nextScene>Landing2F</nextScene>
+			</action>
+			
+		</option>
+		<option>
+			<optionDescription>Test (beta)</optionDescription>
+			<action>
+				<name>Remove Later</name>
+				<nextScene>TestDescription</nextScene>
 			</action>
 			
 		</option>

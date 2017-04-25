@@ -18,6 +18,12 @@
 				<nextScene>Intro01-02</nextScene>
 			</action>
 		</option>
+		<option>
+			<optionDescription>Skip</optionDescription>
+			<action>
+				<nextScene>Entrance</nextScene>
+			</action>
+		</option>
 	</optionList>
 	<npcList>
 	</npcList>
