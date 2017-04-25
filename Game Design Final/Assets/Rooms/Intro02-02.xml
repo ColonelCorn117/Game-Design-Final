@@ -1,0 +1,23 @@
+﻿<SceneDescription>
+	<name>Hallway</name>
+	<description>
+	I’m an assassin, not a babysitter...what the hell is that idiot Lord thinking?
+
+	This is such a waste of time...
+	</description>
+	<background>Hallway</background>
+	<optionList>
+	
+		<option>
+			<optionDescription>Continue</optionDescription>
+			<action>
+				<nextScene>Intro02-03</nextScene>
+			</action>
+		</option>
+	</optionList>
+	<npcList>
+	</npcList>
+	<messList>
+	</messList>
+</SceneDescription>
+

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.IO;
 
 public class Controller_GUI : MonoBehaviour
 {
@@ -99,7 +100,10 @@ public class Controller_GUI : MonoBehaviour
 			}
 		}
 		descrText = GetComponentInChildren<Text>();
-		SetBackgroundImage(test);
+
+
+
+		//SetBackgroundImage(sp);
 		ctrl_gui.ScaleItemsList();
 	}
 
@@ -186,7 +190,9 @@ public class Controller_GUI : MonoBehaviour
 
 	//----------------------------------------------------------------------------------------------------
 
-
+	public void SetDetailImage(Sprite s) {
+		GameObject.Find ("Detail Image").GetComponent<Image> ().sprite = s;
+	}
 
 
 

@@ -1,0 +1,45 @@
+<SceneDescription>
+	<name>Test Scene</name>
+	<description>Lorem Ipsum loaded</description>
+	<background>test.jpg</background>
+	<optionList>
+	
+		<option>
+			<optionDescription>Entrance</optionDescription>
+			<action>
+				<name>toEntrance</name>
+				<nextScene>Entrance</nextScene>
+			</action>
+			
+		</option>
+		<option>
+			<optionDescription>Nothing</optionDescription>
+			<action>
+				<name>toNothing</name>
+				<nextScene>Nowhere</nextScene>
+			</action>
+		</option>
+		<option>
+			<optionDescription>Entrance</optionDescription>
+			<action>
+				<name>AlsoEntrance</name>
+				<nextScene>Entrance</nextScene>
+			</action>
+		</option>
+		<option>
+			<optionDescription>Choice 4</optionDescription>
+			<action>
+				<nextScene></nextScene>
+			</action>
+		</option>
+		
+	</optionList>
+	<npcList>
+		<npc>Sakuya</npc>
+		<npc>npcTemplate</npc>
+	</npcList>
+	<messList>
+		<mess>Shitstorm</mess>
+		<mess>Dust bunny</mess>
+	</messList>
+	</SceneDescription>

@@ -1,0 +1,22 @@
+﻿<SceneDescription>
+	<name>Introduction</name>
+	<description>
+	"Make sure those maids get all their work done. No breaks, no gossiping, nothing. 
+	I don’t care if you have to threaten them, they’re replaceable. Just make sure it gets done. 
+	If you fail to do this...you can join them in their fate..."
+	</description>
+	<background>AssassinShadowClosedEyes</background>
+	<optionList>
+	
+		<option>
+			<optionDescription>Continue</optionDescription>
+			<action>
+				<nextScene>Intro01-06</nextScene>
+			</action>
+		</option>
+	</optionList>
+	<npcList>
+	</npcList>
+	<messList>
+	</messList>
+</SceneDescription>

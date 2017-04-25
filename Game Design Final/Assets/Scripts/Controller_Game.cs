@@ -131,7 +131,7 @@ public class Controller_Game : MonoBehaviour
 
 				//addedText = "\n\n" + n.description;
 
-				SceneScript.sceneScript.examineObject (n);
+				SceneScript.sceneScript.examineObject (n, a.objectExamined);
 			} else {
 				//Debug.Log ("No such NPC");
 				//Mess
@@ -139,7 +139,7 @@ public class Controller_Game : MonoBehaviour
 				if (m.exists == 1) {
 					//Debug.Log ("examining " + m.name);
 
-					SceneScript.sceneScript.examineObject (n);
+					SceneScript.sceneScript.examineObject (m, a.objectExamined);
 				} else {
 
 					//Item

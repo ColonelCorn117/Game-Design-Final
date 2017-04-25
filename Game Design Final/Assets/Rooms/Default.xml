@@ -1,0 +1,27 @@
+<SceneDescription>
+	<name>An Endless Void</name>
+	<description>You stand before an abyss of nothingness, and can't help but feel that the abyss is gazing directly into your soul. 
+
+	\n\nIts whisper is almost inaudible, but you know without a doubt that the message conveyed is "Get back to work."
+
+	\n\nYou see a doorway to your left, no doubt leading back to the mansion's entrance.
+	</description>
+	<background>black.png</background>
+	<optionList>
+	
+		<option>
+			<optionDescription>Mysterious Door</optionDescription>
+			<action>
+				<name>Entering</name>
+				<nextScene>Entrance</nextScene>
+			</action>
+			
+		</option>
+	
+		
+	</optionList>
+	<npcList>
+	</npcList>
+	<messList>
+	</messList>
+	</SceneDescription>

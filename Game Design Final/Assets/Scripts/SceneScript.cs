@@ -35,7 +35,7 @@ public class SceneScript : MonoBehaviour {
 		descriptionText = GameObject.Find ("Description Text");
 		optionsBox = GameObject.Find ("Options Box");
 
-		buildDictionaries ();
+		BuildDictionaries ();
 
 
 		var sceneName = "Intro01-01";
@@ -51,20 +51,18 @@ public class SceneScript : MonoBehaviour {
 	}
 
 	public void LoadScene(string sceneName) {
-		string path = "Assets/Descriptions/" + sceneName + ".xml";
+		string path = "Assets/Rooms/" + sceneName + ".xml";
 		if (File.Exists (path)) {
-			
-
 			if (sceneName != currentSceneName) {
-
 				currentSceneName = sceneName;
 				LoadSceneXML (path);
 				titleLocation.GetComponentInChildren<Text> ().text = xml.name;
-
 			}
 
 			BuildDescription ();
-			loadButtons ();
+			LoadButtons ();
+			LoadBackgroundImage (xml.background);
+			LoadDetailSprite ("Default");
 		} else {
 			LoadScene ("Default");
 		}
@@ -73,7 +71,57 @@ public class SceneScript : MonoBehaviour {
 	// loads the scene, but does not rebuild the XML object.
 	public void LoadScene() {
 		BuildDescription ();
-		loadButtons ();
+		LoadButtons ();
+		LoadBackgroundImage ("black.png");
+		LoadDetailSprite ("Default");
+	}
+
+	public void LoadBackgroundImage(string imageName) {
+		string imagePath = "Assets/Rooms/Images/" + imageName;
+
+
+		if (File.Exists (imagePath)) {
+			byte[] data = File.ReadAllBytes (imagePath);
+			Texture2D texture = new Texture2D (64, 64, TextureFormat.ARGB32, false);
+			texture.LoadImage (data);
+			texture.name = Path.GetFileNameWithoutExtension (imageName);
+
+			Controller_GUI.ctrl_gui.SetBackgroundImage (Sprite.Create (texture, new Rect (0, 0, texture.width, texture.height), new Vector2 (0.5f, 0.5f)));
+		} else {
+			Debug.Log("Image " + imageName + " not found");
+
+			if (imageName != "black.png") {		
+				LoadBackgroundImage ("black.png");
+			}
+		}
+	}
+
+	public bool LoadDetailSprite(string name) {
+		string npcPath = "Assets/NPCs/Images/"  + name + ".png";
+		string messPath = "Assets/Messes/Images/" + name + ".png";
+		string path = "";
+		if (File.Exists (npcPath)) {
+			path = npcPath;
+		} else if (File.Exists (messPath)) {
+			path = messPath;
+		} else {
+			Debug.Log("Image " + name + " not found");
+
+			if (name != "Default") {		
+				return LoadDetailSprite ("Default");
+			}
+
+			return false;
+		}
+
+		byte[] data = File.ReadAllBytes (path);
+		Texture2D texture = new Texture2D (64, 64, TextureFormat.ARGB32, false);
+		texture.LoadImage (data);
+		texture.name = name;
+
+		Controller_GUI.ctrl_gui.SetDetailImage (Sprite.Create (texture, new Rect (0, 0, texture.width, texture.height), new Vector2 (0.5f, 0.5f)));
+
+		return true;
 	}
 
 	NPC LoadNPC(string path) {
@@ -92,17 +140,17 @@ public class SceneScript : MonoBehaviour {
 		return output;
 	}
 
-	void buildDictionaries() {
+	void BuildDictionaries() {
 		// Build NPC Dictionary
-		buildNPCDictionary();
+		BuildNPCDictionary();
 
 		// Build Item Dictionary
 
 		// Build Mess Dictionary
-		buildMessDictionary();
+		BuildMessDictionary();
 	}
 
-	void buildNPCDictionary() {
+	void BuildNPCDictionary() {
 		
 		DirectoryInfo levelDirectoryPath = new DirectoryInfo("Assets/NPCs/");
 		FileInfo[] fileInfo = levelDirectoryPath.GetFiles("*.xml", SearchOption.AllDirectories);
@@ -113,7 +161,7 @@ public class SceneScript : MonoBehaviour {
 		}
 	}
 
-	void buildMessDictionary() {
+	void BuildMessDictionary() {
 
 		DirectoryInfo levelDirectoryPath = new DirectoryInfo("Assets/messes/");
 		FileInfo[] fileInfo = levelDirectoryPath.GetFiles("*.xml", SearchOption.AllDirectories);
@@ -125,7 +173,7 @@ public class SceneScript : MonoBehaviour {
 	}
 		
 
-	void loadButtons() {
+	void LoadButtons() {
 		
 		var optionsText = optionsBox.GetComponentsInChildren<Text>();
 		int i = 1;
@@ -270,6 +318,10 @@ public class SceneScript : MonoBehaviour {
 	}
 
 	public void examineObject(GenericGameObject o) {
+		examineObject (o, o.name);
+	}
+
+	public void examineObject(GenericGameObject o, string name) {
 		// rebuild description w/o changing the xml object
 		descriptionText.GetComponentInChildren<Text> ().text = o.description;
 
@@ -285,17 +337,11 @@ public class SceneScript : MonoBehaviour {
 			a.name = "backNow";
 			back.action = a;
 			loadButtons (p.options, back);
+			LoadDetailSprite (name);
 		}
 
-		// reassign actions to buttons
 
-
-
-		// relabel buttons
-		// 
-
-
-		// Back button: reload scene?
+		//TODO: make this work for items
 
 	}
 

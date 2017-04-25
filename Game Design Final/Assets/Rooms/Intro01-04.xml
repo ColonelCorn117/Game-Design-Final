@@ -1,0 +1,25 @@
+﻿<SceneDescription>
+	<name>Introduction</name>
+	<description>
+	Lord turns to Assassin.
+
+	"You..."
+
+	"Everything needs to go flawlessly for my guests’ arrival. I hired you because they say you are the best in your...field. 
+	That said, I need you to do more than just keep away any dangers.
+	</description>
+	<background>AssassinOffice</background>
+	<optionList>
+	
+		<option>
+			<optionDescription>Continue</optionDescription>
+			<action>
+				<nextScene>Intro01-05</nextScene>
+			</action>
+		</option>
+	</optionList>
+	<npcList>
+	</npcList>
+	<messList>
+	</messList>
+</SceneDescription>
