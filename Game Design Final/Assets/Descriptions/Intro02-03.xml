@@ -1,0 +1,23 @@
+﻿<SceneDescription>
+	<name>Hallway</name>
+	<description>
+	Still...
+
+	I’ve been hired to do a job. No matter how stupid this may be, I have to do it.
+	</description>
+	<background>AssassinHallway</background>
+	<optionList>
+	
+		<option>
+			<optionDescription>Continue</optionDescription>
+			<action>
+				<nextScene>Intro02-04</nextScene>
+			</action>
+		</option>
+	</optionList>
+	<npcList>
+	</npcList>
+	<messList>
+	</messList>
+</SceneDescription>
+

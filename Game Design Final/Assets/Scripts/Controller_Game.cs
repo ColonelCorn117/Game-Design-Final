@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Controller_Game : MonoBehaviour
 {
@@ -14,7 +15,11 @@ public class Controller_Game : MonoBehaviour
 	public static Controller_GUI ctrl_gui;
 
 	public List<string> items = new List<string>();
+	public Dictionary<string, NPC> npcs = new Dictionary<string, NPC>();
+	public Dictionary<string,Mess> messes = new Dictionary<string, Mess>();
 
+	Action[] buttonActions = new Action[9]; // buttonActions[0] is empty. the action for btn1 is found in buttonActions[1].
+	//int numButtonActions = 1; // first 'empty slot' that can be filled in buttonActions.
 
 	//====================================================================================================
 	//Start Stuff and Updaters
@@ -59,4 +64,124 @@ public class Controller_Game : MonoBehaviour
 		}
 
 	}
+
+
+	public NPC npcLookup(string s) {
+		NPC n;
+
+		npcs.TryGetValue (s, out n);
+
+		if (n != null) {
+			return n;
+		}
+		return new NPC();
+	}
+
+	public Mess messLookup(string s) {
+		Mess m;
+
+		messes.TryGetValue (s, out m);
+
+		if (m != null) {
+			return m;
+		}
+		return new Mess();
+	}
+
+	public void performAction(Action a) {
+
+		//Debug.Log ("action performed: " + a.name);
+		// if an action consumes an item, delete that item from inventory
+		//TODO: this
+		if (a.itemUsed != null && a.itemUsed != "") {
+
+		}
+
+		// if an action cleans up a mess, clean it up
+		if (a.messResolved != null && a.messResolved != "") {
+			messLookup (a.messResolved).Cleanup (a);
+			// Note: this method returns a bool regarding whether it succeeded
+			// it currently isn't used for anything
+		}
+
+		// if an action removes an NPC, do that
+		if (a.npcSubdued != null && a.npcSubdued != "") {
+			npcLookup (a.npcSubdued).Subdue (a);
+			// Note: this method returns a bool regarding whether it succeeded
+			// it currently isn't used for anything
+		}
+
+
+		// if an action picks up an item, add that item to inventory and mark it as taken from the room
+		//TODO: this
+		if (a.itemGained != null && a.itemGained != "") {
+
+		}
+
+		// if the player is trying to examine an item, mess, or NPC, set up the screen to do that.
+		if (a.objectExamined != null && a.objectExamined != "") {
+			string addedText = "";
+
+
+			//NPC
+			NPC n = npcLookup (a.objectExamined);
+			if (n.exists == 1) {
+				//Debug.Log ("examining " + n.name);
+
+
+				//addedText = "\n\n" + n.description;
+
+				SceneScript.sceneScript.examineObject (n);
+			} else {
+				//Debug.Log ("No such NPC");
+				//Mess
+				Mess m = messLookup (a.objectExamined);
+				if (m.exists == 1) {
+					//Debug.Log ("examining " + m.name);
+
+					SceneScript.sceneScript.examineObject (n);
+				} else {
+
+					//Item
+					//TODO: This
+				}
+			}
+
+			if (addedText != "") {
+				string desc = GameObject.Find ("Description Text").GetComponentInChildren<Text> ().text;
+				desc += addedText;
+				GameObject.Find ("Description Text").GetComponentInChildren<Text> ().text = desc;
+			}
+		}
+
+		if(a.nextScene != null && a.nextScene != "") {
+			SceneScript.sceneScript.LoadScene (a.nextScene);
+
+		}
+
+	}
+
+	public void performAction(int btnNbr) {
+		//Debug.Log ("Action: " + buttonActions [btnNbr].name);
+		performAction (buttonActions [btnNbr]);
+	}
+
+	public bool addButtonAction(Action a, int index) {
+		if (index < buttonActions.Length) {
+
+			if (a.name != null && a.name != "") {
+				
+			}
+			buttonActions [index] = a;
+			return true;
+		}
+
+		return false;
+	}
+
+	public void clearButtonActions() {
+		
+	}
+
+
 }
