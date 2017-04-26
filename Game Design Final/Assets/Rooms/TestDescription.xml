@@ -1,7 +1,7 @@
 <SceneDescription>
 	<name>Test Scene</name>
 	<description>Lorem Ipsum loaded</description>
-	<background></background>
+	<background>test.jpg</background>
 	<optionList>
 	
 		<option>
@@ -26,12 +26,6 @@
 				<nextScene>Entrance</nextScene>
 			</action>
 		</option>
-		<option>
-			<optionDescription>Choice 4</optionDescription>
-			<action>
-				<nextScene></nextScene>
-			</action>
-		</option>
 		
 	</optionList>
 	<npcList>
@@ -42,4 +36,7 @@
 		<mess>Shitstorm</mess>
 		<mess>Dust bunny</mess>
 	</messList>
+	<itemList>
+		<item>Dustpan</item>
+	</itemList>
 	</SceneDescription>

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.IO;
 
 public class Controller_GUI : MonoBehaviour
 {
@@ -15,12 +16,13 @@ public class Controller_GUI : MonoBehaviour
 
 	Image bgImage;
 	Text descrText;
-	Button option1Btn;
+	/*Button option1Btn;
 	Button option2Btn;
 	Button option3Btn;
-	Button option4Btn;
+	Button option4Btn;*/
 	Button invBtn;
 	Image itemsListImage;
+
 
 	float invBtnWidth;		//Default width of the expandable item list
 	float invBtnHeight;		//Default height "
@@ -72,7 +74,7 @@ public class Controller_GUI : MonoBehaviour
 				break;
 			}
 		}
-
+		/*
 		foreach (Button button in GetComponentsInChildren<Button>())
 		{
 			switch (button.name)
@@ -96,9 +98,12 @@ public class Controller_GUI : MonoBehaviour
 				//Debug.Log("Other button found: " + button.name);
 				break;
 			}
-		}
+		}*/
 		descrText = GetComponentInChildren<Text>();
-		SetBackgroundImage(test);
+
+
+
+		//SetBackgroundImage(sp);
 		ctrl_gui.ScaleItemsList();
 	}
 
@@ -142,17 +147,17 @@ public class Controller_GUI : MonoBehaviour
 	//Scales and repositions expandable item list based on number of items in inventory
 	public void ScaleItemsList()
 	{
-		int numItems = Controller_Game.ctrl_game.items.Count;
+		int numItems = Controller_Game.ctrl_game.itemList.Count;
 		itemsListImage.rectTransform.sizeDelta = new Vector2(invBtnWidth * numItems, invBtnHeight);					//Increases height for each item. Width stays the same
 		itemsListImage.rectTransform.anchoredPosition = new Vector2(itemsListImage.rectTransform.sizeDelta.x / 2, 0);	//Moves expandable area up/down so that its bottom edge is near its anchor point (the "Items" button)
 
-		for (int i=0; i<Controller_Game.ctrl_game.items.Count; i++)
+		for (int i=0; i<Controller_Game.ctrl_game.itemList.Count; i++)
 		{
 			GameObject button = AddBtnToItemsList(invBtnWidth, invBtnWidth);
 			if (button.GetComponentInChildren<Text>())
 			{
 				//Debug.Log("Text Component Found");
-				button.GetComponentInChildren<Text>().text = Controller_Game.ctrl_game.items[i];
+				button.GetComponentInChildren<Text>().text = Controller_Game.ctrl_game.itemList[i];
 			}
 
 			RectTransform buttonRect = (RectTransform)button.transform;
@@ -181,4 +186,15 @@ public class Controller_GUI : MonoBehaviour
 		//Readd buttons for items we still have
 		ScaleItemsList();
 	}
+
+
+	//----------------------------------------------------------------------------------------------------
+
+	public void SetDetailImage(Sprite s) {
+		GameObject.Find ("Detail Image").GetComponent<Image> ().sprite = s;
+	}
+
+
+
+
 }

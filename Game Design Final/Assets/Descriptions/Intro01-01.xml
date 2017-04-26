@@ -1,0 +1,32 @@
+﻿<SceneDescription>
+	<name>Introduction</name>
+	<description>
+	Lord clears his throat.
+	"I called you all here because we have some very important guests coming today. They will be arriving this evening. I’ve noticed that you’ve all been slacking off.
+
+	This meeting is too important for fuck-ups. My mansion needs to be spotless and perfect before they arrive. If it isn’t..."
+
+
+
+	</description>
+	<background>LordAngryFace</background>
+	<optionList>
+	
+		<option>
+			<optionDescription>Continue</optionDescription>
+			<action>
+				<nextScene>Intro01-02</nextScene>
+			</action>
+		</option>
+		<option>
+			<optionDescription>Skip</optionDescription>
+			<action>
+				<nextScene>Entrance</nextScene>
+			</action>
+		</option>
+	</optionList>
+	<npcList>
+	</npcList>
+	<messList>
+	</messList>
+</SceneDescription>

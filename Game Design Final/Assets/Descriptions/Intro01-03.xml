@@ -1,0 +1,25 @@
+﻿<SceneDescription>
+	<name>Introduction</name>
+	<description>
+	"Yes, Sir."
+	"Understood."
+	"It will be done."
+
+	The maids leave.
+
+	</description>
+	<background>MaidSalute</background>
+	<optionList>
+	
+		<option>
+			<optionDescription>Continue</optionDescription>
+			<action>
+				<nextScene>Intro01-04</nextScene>
+			</action>
+		</option>
+	</optionList>
+	<npcList>
+	</npcList>
+	<messList>
+	</messList>
+</SceneDescription>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<npc>
+	<name>Sakuya Izayoi</name>
+	<description>Stops time. Uses this power to clean.</description>
+	<exists>1</exists>
+	<conditionList>
+		<condition>
+			<requirement>
+				<prereq>gainedMop</prereq>
+			</requirement>
+			<action></action>
+		</condition>
+	</conditionList>
+	<optionList>
+		<option>
+			<optionDescription>Talk</optionDescription>
+			<action>
+				<name></name>
+				<nextScene>dialogueSakuya1</nextScene>
+			</action>
+		</option>
+
+	</optionList>
+</npc>
