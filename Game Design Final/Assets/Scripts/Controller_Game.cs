@@ -26,14 +26,10 @@ public class Controller_Game : MonoBehaviour
 	Action[] buttonActions = new Action[9]; // buttonActions[0] is empty. the action for btn1 is found in buttonActions[1].
 	//int numButtonActions = 1; // first 'empty slot' that can be filled in buttonActions.
 
-
-	string currentSceneName = "";
 	GameObject titleLocation;
 	GameObject descriptionText;
 	GameObject optionsBox;
 	SceneDescription xml;
-	int cooldown = 0;
-	int maxCooldown = 30;
 
 	//====================================================================================================
 	//Start Stuff and Updaters
@@ -66,36 +62,24 @@ public class Controller_Game : MonoBehaviour
 
 	void Update() {
 
-		if (cooldown < 1) {
-			if (Input.GetKey (KeyCode.Alpha1)) {
-				this.performAction (1);
-				cooldown = maxCooldown;
-			} else if (Input.GetKeyDown (KeyCode.Alpha2)) {
-				this.performAction (2);
-				cooldown = maxCooldown;
-			} else if (Input.GetKeyDown (KeyCode.Alpha3)) {
-				this.performAction (3);
-				cooldown = maxCooldown;
-			} else if (Input.GetKeyDown (KeyCode.Alpha4)) {
-				this.performAction (4);
-				cooldown = maxCooldown;
-			} else if (Input.GetKeyDown (KeyCode.Alpha5)) {
-				this.performAction (5);
-				cooldown = maxCooldown;
-			} else if (Input.GetKeyDown (KeyCode.Alpha6)) {
-				this.performAction (6);
-				cooldown = maxCooldown;
-			} else if (Input.GetKeyDown (KeyCode.Alpha7)) {
-				this.performAction (7);
-				cooldown = maxCooldown;
-			} else if (Input.GetKeyDown (KeyCode.Alpha8)) {
-				this.performAction (8);
-				cooldown = maxCooldown;
-			}
-
-		} else {
-			--cooldown;
+		if (Input.GetKeyDown (KeyCode.Alpha1)) {
+			this.performAction (1);
+		} else if (Input.GetKeyDown (KeyCode.Alpha2)) {
+			this.performAction (2);
+		} else if (Input.GetKeyDown (KeyCode.Alpha3)) {
+			this.performAction (3);
+		} else if (Input.GetKeyDown (KeyCode.Alpha4)) {
+			this.performAction (4);
+		} else if (Input.GetKeyDown (KeyCode.Alpha5)) {
+			this.performAction (5);
+		} else if (Input.GetKeyDown (KeyCode.Alpha6)) {
+			this.performAction (6);
+		} else if (Input.GetKeyDown (KeyCode.Alpha7)) {
+			this.performAction (7);
+		} else if (Input.GetKeyDown (KeyCode.Alpha8)) {
+			this.performAction (8);
 		}
+
 	}
 
 	//====================================================================================================
