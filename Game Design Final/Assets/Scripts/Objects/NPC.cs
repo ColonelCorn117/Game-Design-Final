@@ -4,7 +4,7 @@ using System.Xml.Serialization;
 
 [XmlRoot("npc")]
 public class NPC : Problem {
-
+	int dialogueLocation = 1;
 
 	public bool Subdue(Action a) {
 		if (a.npcSubdued == this.name) {
@@ -14,5 +14,13 @@ public class NPC : Problem {
 		}
 
 		return false;
+	}
+
+	public void setDialogueLocation(int i) {
+		dialogueLocation = i;
+	}
+
+	public int getDialogueLocation() {
+		return dialogueLocation;
 	}
 }

@@ -32,6 +32,8 @@ public class Controller_Game : MonoBehaviour
 	GameObject descriptionText;
 	GameObject optionsBox;
 	SceneDescription xml;
+	int cooldown = 0;
+	int maxCooldown = 30;
 
 	//====================================================================================================
 	//Start Stuff and Updaters
@@ -62,6 +64,39 @@ public class Controller_Game : MonoBehaviour
 
 	}
 
+	void Update() {
+
+		if (cooldown < 1) {
+			if (Input.GetKey (KeyCode.Alpha1)) {
+				this.performAction (1);
+				cooldown = maxCooldown;
+			} else if (Input.GetKeyDown (KeyCode.Alpha2)) {
+				this.performAction (2);
+				cooldown = maxCooldown;
+			} else if (Input.GetKeyDown (KeyCode.Alpha3)) {
+				this.performAction (3);
+				cooldown = maxCooldown;
+			} else if (Input.GetKeyDown (KeyCode.Alpha4)) {
+				this.performAction (4);
+				cooldown = maxCooldown;
+			} else if (Input.GetKeyDown (KeyCode.Alpha5)) {
+				this.performAction (5);
+				cooldown = maxCooldown;
+			} else if (Input.GetKeyDown (KeyCode.Alpha6)) {
+				this.performAction (6);
+				cooldown = maxCooldown;
+			} else if (Input.GetKeyDown (KeyCode.Alpha7)) {
+				this.performAction (7);
+				cooldown = maxCooldown;
+			} else if (Input.GetKeyDown (KeyCode.Alpha8)) {
+				this.performAction (8);
+				cooldown = maxCooldown;
+			}
+
+		} else {
+			--cooldown;
+		}
+	}
 
 	//====================================================================================================
 	//Other Functions
