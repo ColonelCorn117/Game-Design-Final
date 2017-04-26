@@ -74,7 +74,7 @@ public class SceneScript : MonoBehaviour {
 			}
 
 		} else if (o is Item) {
-			Item i = (Item)o;
+			//Item i = (Item)o;
 			Option pickup = new Option ("Take", new Action ("takeBack", currentSceneName, "", name));
 
 			Option back = new Option ("Back", new Action ("backNow", currentSceneName, ""));
@@ -196,7 +196,7 @@ public class SceneScript : MonoBehaviour {
 				LoadButtons ();
 				LoadBackgroundImage (xml.background);
 				LoadDetailSprite ("Default");
-			} else if (sceneName.Substring (0, 8) == "dialogue") {
+			} else if ((sceneName.Length > 8) && (sceneName.Substring (0, 8) == "dialogue")) {
 				LoadDialogue (sceneName.Substring (8));
 			} else {
 				LoadScene ("Default");
@@ -276,6 +276,8 @@ public class SceneScript : MonoBehaviour {
 			path = npcPath;
 		} else if (File.Exists (messPath)) {
 			path = messPath;
+		} else if (File.Exists (itemPath)) {
+			path = itemPath;
 		} else {
 			//Debug.Log("Image " + name + " not found");
 
@@ -366,7 +368,6 @@ public class SceneScript : MonoBehaviour {
 	void LoadButtons(List<Condition> conditions, Option extraOption) {
 		var optionsText = optionsBox.GetComponentsInChildren<Text>();
 		int i = 1;
-		Debug.Log ("conditions");
 		foreach (Condition c in conditions) {
 			if (c.name == "") {
 				continue;

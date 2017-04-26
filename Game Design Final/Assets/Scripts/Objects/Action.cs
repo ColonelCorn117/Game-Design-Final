@@ -1,12 +1,12 @@
 ﻿using System;
 
 public class Action : GenericGameObject {
-	public String nextScene;
-	public String objectExamined;
-	public String itemGained;
-	public String itemUsed;
-	public String npcSubdued;
-	public String messResolved;
+	public string nextScene;
+	public string objectExamined;
+	public string itemGained;
+	public string itemUsed;
+	public string npcSubdued;
+	public string messResolved;
 
 
 	public Action() {
