@@ -181,20 +181,26 @@ public class SceneScript : MonoBehaviour {
 	}
 
 	public void LoadScene(string sceneName) {
-		string path = "Assets/Rooms/" + sceneName + ".xml";
-		if (File.Exists (path)) {
-			//if (sceneName != currentSceneName) {
-			currentSceneName = sceneName;
-			LoadSceneXML (path);
-			titleLocation.GetComponentInChildren<Text> ().text = xml.name;
-			//}
-
-			BuildDescription ();
-			LoadButtons ();
-			LoadBackgroundImage (xml.background);
-			LoadDetailSprite ("Default");
+		if (sceneName == "reload") {
+			LoadScene ();
 		} else {
-			LoadScene ("Default");
+			string path = "Assets/Rooms/" + sceneName + ".xml";
+			if (File.Exists (path)) {
+				//if (sceneName != currentSceneName) {
+				currentSceneName = sceneName;
+				LoadSceneXML (path);
+				titleLocation.GetComponentInChildren<Text> ().text = xml.name;
+				//}
+
+				BuildDescription ();
+				LoadButtons ();
+				LoadBackgroundImage (xml.background);
+				LoadDetailSprite ("Default");
+			} else if (sceneName.Substring (0, 8) == "dialogue") {
+				LoadDialogue (sceneName.Substring (8));
+			} else {
+				LoadScene ("Default");
+			}
 		}
 	}
 
@@ -297,9 +303,8 @@ public class SceneScript : MonoBehaviour {
 		int i = 1;
 
 		foreach (Option o in xml.optionList) {
-			//Debug.Log ("Adding option " + o.action.name + " to button " + i);
 			addButtonAction (o.action,i);
-			optionsText [i - 1].text = o.optionDescription;
+			optionsText [i - 1].text = o.description;
 			++i;
 		}
 		foreach (string npcName in xml.npcList) {
@@ -343,9 +348,8 @@ public class SceneScript : MonoBehaviour {
 		var optionsText = optionsBox.GetComponentsInChildren<Text>();
 		int i = 1;
 		foreach (Option o in options) {
-			//Debug.Log ("Adding option " + o.action.name + " to button " + i);
 			addButtonAction (o.action,i);
-			optionsText [i - 1].text = o.optionDescription;
+			optionsText [i - 1].text = o.description;
 			++i;
 		}
 		while(i < optionsText.Length) {
@@ -359,18 +363,23 @@ public class SceneScript : MonoBehaviour {
 		Controller_Game.ctrl_game.addButtonAction (a, i);
 	}
 
-	void LoadButtons(List<Option> options, Option extraOption) {
+	void LoadButtons(List<Condition> conditions, Option extraOption) {
 		var optionsText = optionsBox.GetComponentsInChildren<Text>();
 		int i = 1;
-		foreach (Option o in options) {
-			//Debug.Log ("Adding option " + o.action.name + " to button " + i);
-			addButtonAction (o.action,i);
-			optionsText [i - 1].text = o.optionDescription;
-			++i;
+		Debug.Log ("conditions");
+		foreach (Condition c in conditions) {
+			if (c.name == "") {
+				continue;
+			}
+			if (c.Satisfied()) {
+				addButtonAction (c.action, i);
+				optionsText [i - 1].text = c.name;
+				++i;
+			}
 		}
 
 		addButtonAction (extraOption.action,i);
-		optionsText [i - 1].text = extraOption.optionDescription;
+		optionsText [i - 1].text = extraOption.description;
 		++i;
 
 		while(i < optionsText.Length) {
@@ -380,9 +389,66 @@ public class SceneScript : MonoBehaviour {
 
 			++i;
 		}
+	}
+
+	void LoadButtons(List<Option> options, Option extraOption) {
+		var optionsText = optionsBox.GetComponentsInChildren<Text>();
+		int i = 1;
+		foreach (Option o in options) {
+			//Debug.Log ("Adding option " + o.action.name + " to button " + i);
+
+			//if (o is Condition && (!((Condition)o).Satisfied())) {
+			//	continue;
+			//}
+			addButtonAction (o.action,i);
+			optionsText [i - 1].text = o.description;
+			++i;
+		}
+
+		addButtonAction (extraOption.action,i);
+		optionsText [i - 1].text = extraOption.description;
+		++i;
+
+		while(i < optionsText.Length) {
+			// The following line isn't strictly needed. Disabling the buttons would also work
+			addButtonAction (new Action(),i);
+			optionsText [i - 1].text = "";
+
+			++i;
+		}
+	}
+
+
+
+	public void LoadDialogue(string dialogueName) {
+		//Note: the dialogue name should be formatted as "[NPCname][integer value between 0 and 9]"
+		string path = "Assets/Dialogue/" + dialogueName + ".xml";
+
+		if (File.Exists (path)) {
+			var serializer = new XmlSerializer (typeof(Dialogue));
+			var stream = new FileStream (path, FileMode.Open);
+			Dialogue d = serializer.Deserialize (stream) as Dialogue;
+			stream.Close ();
+
+			descriptionText.GetComponentInChildren<Text> ().text = d.description;
+			NpcLookup (dialogueName.Substring (0, dialogueName.Length - 1)).setDialogueLocation (
+				int.Parse(dialogueName.Substring (dialogueName.Length - 1))); // sets the dialogue location on the NPC
+
+			this.LoadButtons(d.conditions, new Option ("Back", new Action ("backNow", currentSceneName, "")));
+
+			foreach(Condition c in d.conditions) {
+				if (c.Satisfied ()) {
+					AddToDescription ("\n\n" + c.description);
+				}
+			}
+		}
 
 	}
 
+	public void AddToDescription(string additionalDescription) {
+		string desc = descriptionText.GetComponentInChildren<Text> ().text;
+		descriptionText.GetComponentInChildren<Text> ().text = desc + additionalDescription;
+	}
 
 	// Update is called once per frame
 	void Update () {

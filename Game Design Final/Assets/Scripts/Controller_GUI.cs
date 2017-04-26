@@ -16,10 +16,10 @@ public class Controller_GUI : MonoBehaviour
 
 	Image bgImage;
 	Text descrText;
-	Button option1Btn;
+	/*Button option1Btn;
 	Button option2Btn;
 	Button option3Btn;
-	Button option4Btn;
+	Button option4Btn;*/
 	Button invBtn;
 	Image itemsListImage;
 
@@ -74,7 +74,7 @@ public class Controller_GUI : MonoBehaviour
 				break;
 			}
 		}
-
+		/*
 		foreach (Button button in GetComponentsInChildren<Button>())
 		{
 			switch (button.name)
@@ -98,7 +98,7 @@ public class Controller_GUI : MonoBehaviour
 				//Debug.Log("Other button found: " + button.name);
 				break;
 			}
-		}
+		}*/
 		descrText = GetComponentInChildren<Text>();
 
 

@@ -16,7 +16,7 @@
 			<optionDescription>Talk</optionDescription>
 			<action>
 				<name></name>
-				<nextScene></nextScene>
+				<nextScene>dialogueSakuya1</nextScene>
 			</action>
 		</option>
 
