@@ -1,0 +1,50 @@
+﻿<dialogue>
+	<name>Sakuya1</name>
+	<description>"I'm not sure who you are, but you probably shouldn't be here right now."
+
+
+	</description>
+
+	<conditionList>
+			
+
+		<condition>
+			<name>Take Mop</name>
+			<description>"I can give you a mop if you need it."</description>
+			<requirement>
+				<prereq>nogainMop</prereq>
+			</requirement>
+			<action>
+				<name>Take Mop</name>
+				<itemGained>Mop</itemGained>
+				<nextScene>reload</nextScene>
+			</action>
+		</condition>
+		<condition>
+			<name></name>
+			<description>"I see you already have a mop."</description>
+			<requirement>
+				<prereq>gainedMop</prereq>
+			</requirement>
+			<action>
+				<nextScene>reload</nextScene>
+			</action>
+		</condition>
+		<condition>
+			<name>Give Mop</name>
+			<description>"I can take that mop if you want."</description>
+			<requirement>
+				<prereq>gainedMop</prereq>
+			</requirement>
+			<action>
+				<itemUsed>Mop</itemUsed>
+				<nextScene>reload</nextScene>
+			</action>
+		</condition>
+	</conditionList>
+			
+
+
+
+
+</dialogue>
