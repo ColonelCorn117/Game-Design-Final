@@ -18,5 +18,8 @@ public class SceneDescription : GenericGameObject
 	[XmlArray("messList"),XmlArrayItem("mess")]
 	public List<String> messList = new List<String>();
 
+	[XmlArray("itemList"),XmlArrayItem("item")]
+	public List<String> itemList = new List<String>();
+
 
 }

@@ -147,17 +147,17 @@ public class Controller_GUI : MonoBehaviour
 	//Scales and repositions expandable item list based on number of items in inventory
 	public void ScaleItemsList()
 	{
-		int numItems = Controller_Game.ctrl_game.items.Count;
+		int numItems = Controller_Game.ctrl_game.itemList.Count;
 		itemsListImage.rectTransform.sizeDelta = new Vector2(invBtnWidth * numItems, invBtnHeight);					//Increases height for each item. Width stays the same
 		itemsListImage.rectTransform.anchoredPosition = new Vector2(itemsListImage.rectTransform.sizeDelta.x / 2, 0);	//Moves expandable area up/down so that its bottom edge is near its anchor point (the "Items" button)
 
-		for (int i=0; i<Controller_Game.ctrl_game.items.Count; i++)
+		for (int i=0; i<Controller_Game.ctrl_game.itemList.Count; i++)
 		{
 			GameObject button = AddBtnToItemsList(invBtnWidth, invBtnWidth);
 			if (button.GetComponentInChildren<Text>())
 			{
 				//Debug.Log("Text Component Found");
-				button.GetComponentInChildren<Text>().text = Controller_Game.ctrl_game.items[i];
+				button.GetComponentInChildren<Text>().text = Controller_Game.ctrl_game.itemList[i];
 			}
 
 			RectTransform buttonRect = (RectTransform)button.transform;

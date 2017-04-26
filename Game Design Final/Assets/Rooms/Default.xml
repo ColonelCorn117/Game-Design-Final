@@ -6,7 +6,7 @@
 
 	\n\nYou see a doorway to your left, no doubt leading back to the mansion's entrance.
 	</description>
-	<background>black.png</background>
+	<background>black</background>
 	<optionList>
 	
 		<option>

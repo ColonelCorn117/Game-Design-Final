@@ -1,7 +1,7 @@
 <SceneDescription>
 	<name>Entrance</name>
 	<description>You stand in the entryway to the mansion. It's very big.</description>
-	<background>black.png</background>
+	<background>black</background>
 	<optionList>
 	
 		<option>

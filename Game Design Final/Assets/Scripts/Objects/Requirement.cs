@@ -15,7 +15,7 @@ public class Requirement {
 
 			if(req.StartsWith("gained")) {
 				//the player has an item with the name after "gained"
-				if (!Controller_Game.ctrl_game.items.Contains (reqName)) {
+				if (!Controller_Game.ctrl_game.ItemLookup(reqName).possessed()) {
 					return false;
 				}
 			}
@@ -45,16 +45,19 @@ public class Requirement {
 			}
 			else if(req.StartsWith("remove")) {
 				//the player has already removed a certain NPC
-				//TODO: this
-
-
+				if (Controller_Game.ctrl_game.NpcLookup (reqName).exists == 1) {
+					return false;
+				}
 			}
 			else if(req.StartsWith("exists")) {
 				//the player has not yet removed a certain NPC
-				//TODO: this
+				if (!(Controller_Game.ctrl_game.NpcLookup (reqName).exists == 1)) {
+					return false;
+				}
 
 			}
 			else {
+				//The prerequisite is not one of the predefined options.
 				return false;
 			}
 		}
