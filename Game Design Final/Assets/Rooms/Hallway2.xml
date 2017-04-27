@@ -2,8 +2,7 @@
 	<name>Hallway2</name>
 	<description>Another hallway.</description>
 	<background>black</background>
-	<optionList>
-	
+	<optionList>	
 		<option>
 			<optionDescription>Hallway 1</optionDescription>
 			<action>
@@ -20,8 +19,13 @@
 			<optionDescription>Servant Passage 3</optionDescription>
 			<action>
 				<nextScene>ServantPassage3</nextScene>
-			</action>
-			
+			</action>	
+		</option>
+		<option>
+			<optionDescription>Hallway4</optionDescription>
+			<action>
+				<nextScene>Hallway4</nextScene>
+			</action>	
 		</option>
 	</optionList>
 	<npcList>

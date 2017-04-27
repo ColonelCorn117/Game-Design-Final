@@ -1,0 +1,18 @@
+﻿<SceneDescription>
+	<name>ChildBedroom</name>
+	<description>It looks as if a tornado plowed through this room.
+	</description>
+	<background></background>
+	<optionList>
+		<option>
+			<optionDescription>Hallway 12</optionDescription>
+			<action>
+				<nextScene>Hallway12</nextScene>
+			</action>	
+		</option>
+	</optionList>
+	<npcList>
+	</npcList>
+	<messList>
+	</messList>
+</SceneDescription>

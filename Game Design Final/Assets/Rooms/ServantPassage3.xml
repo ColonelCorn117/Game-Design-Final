@@ -1,9 +1,8 @@
 ﻿<SceneDescription>
-	<name>Hallway2</name>
-	<description>Another hallway.</description>
+	<name>ServantPassage3</name>
+	<description>The evolved form of a hallway.</description>
 	<background>black</background>
-	<optionList>
-	
+	<optionList>	
 		<option>
 			<optionDescription>Hallway 2</optionDescription>
 			<action>
@@ -21,3 +20,4 @@
 	</npcList>
 	<messList>
 	</messList>
+</SceneDescription>

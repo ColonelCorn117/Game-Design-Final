@@ -1,22 +1,26 @@
 ﻿<SceneDescription>
-	<name>Laundry Room</name>
+	<name>LaundryRoom</name>
 	<description>It's a laundry room. You can see laundry.
 
-	The laundry chute drops off clothing into a basket.
+The laundry chute drops off clothing into a basket.
 	</description>
 	<background>black.png</background>
 	<optionList>
-	
 		<option>
 			<optionDescription>Laundry Chute</optionDescription>
 			<action>
 				<nextScene>LaundryChute1F</nextScene>
 			</action>
-			
+		</option>
+		<option>
+			<optionDescription>Servant Passage 1</optionDescription>
+			<action>
+				<nextScene>ServantPassage1</nextScene>
+			</action>
 		</option>
 	</optionList>
 	<npcList>
 	</npcList>
 	<messList>
 	</messList>
-	</SceneDescription>
+</SceneDescription>

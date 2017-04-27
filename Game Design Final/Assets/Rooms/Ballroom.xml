@@ -1,0 +1,25 @@
+﻿<SceneDescription>
+	<name>Ballroom</name>
+	<description>This is a large, open room with expensive chandeliers.
+
+There is an area for a live orchestra at one end.</description>
+	<background>black</background>
+	<optionList>	
+		<option>
+			<optionDescription>Hallway 3</optionDescription>
+			<action>
+				<nextScene>Hallway3</nextScene>
+			</action>
+		</option>
+		<option>
+			<optionDescription>Orchestra Pit</optionDescription>
+			<action>
+				<nextScene>OrchestraPit</nextScene>
+			</action>
+		</option>
+	</optionList>
+	<npcList>
+	</npcList>
+	<messList>
+	</messList>
+</SceneDescription>

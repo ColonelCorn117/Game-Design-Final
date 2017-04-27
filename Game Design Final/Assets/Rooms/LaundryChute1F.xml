@@ -2,7 +2,7 @@
 	<name>Laundry Chute</name>
 	<description>A small laundry chute drops clothing into a large basket.
 
-	You're pretty sure you can't climb up the chute. You're an assassin, not a ninja!
+You're pretty sure you can't climb up the chute. You're an assassin, not a ninja!
 	</description>
 	<background></background>
 	<optionList>
@@ -19,4 +19,4 @@
 	</npcList>
 	<messList>
 	</messList>
-	</SceneDescription>
+</SceneDescription>

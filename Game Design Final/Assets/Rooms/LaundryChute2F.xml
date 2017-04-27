@@ -1,5 +1,5 @@
 ﻿<SceneDescription>
-	<name>Laundry Chute</name>
+	<name>LaundryChute2F</name>
 	<description>A small laundry chute slot is fixed to the wall. You could probably fit inside.
 	</description>
 	<background></background>
@@ -26,4 +26,4 @@
 	</npcList>
 	<messList>
 	</messList>
-	</SceneDescription>
+</SceneDescription>

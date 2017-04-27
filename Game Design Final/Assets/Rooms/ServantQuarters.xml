@@ -1,0 +1,17 @@
+﻿<SceneDescription>
+	<name>ServantQuarters</name>
+	<description>This room is noticeably less posh than the rest of the manor.</description>
+	<background>black</background>
+	<optionList>
+		<option>
+			<optionDescription>Servant Passage 1</optionDescription>
+			<action>
+				<nextScene>ServantPassage1</nextScene>
+			</action>
+		</option>
+	</optionList>
+	<npcList>
+	</npcList>
+	<messList>
+	</messList>
+</SceneDescription>

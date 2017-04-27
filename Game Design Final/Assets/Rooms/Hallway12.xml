@@ -16,12 +16,9 @@
 				<nextScene>ChildBedroom</nextScene>
 			</action>	
 		</option>
-
-	
-		
 	</optionList>
 	<npcList>
 	</npcList>
 	<messList>
 	</messList>
-	</SceneDescription>
+</SceneDescription>

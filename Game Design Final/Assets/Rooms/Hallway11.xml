@@ -14,7 +14,7 @@
 		<option>
 			<optionDescription>Laundry Chute</optionDescription>
 			<action>
-				<nextScene>LaundryChute</nextScene>
+				<nextScene>LaundryChute2F</nextScene>
 			</action>	
 		</option>
 		<option>
@@ -30,4 +30,4 @@
 	</npcList>
 	<messList>
 	</messList>
-	</SceneDescription>
+</SceneDescription>

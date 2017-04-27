@@ -1,0 +1,30 @@
+﻿<SceneDescription>
+	<name>ServantPassage2</name>
+	<description>You can smell the faint aroma of baked goods.</description>
+	<background>black</background>
+	<optionList>
+		<option>
+			<optionDescription>Servant Passage 3</optionDescription>
+			<action>
+				<nextScene>ServantPassage3</nextScene>
+			</action>
+		</option>
+		<option>
+			<optionDescription>Kitchen</optionDescription>
+			<action>
+				<nextScene>Kitchen</nextScene>
+			</action>
+		</option>
+		<option>
+			<optionDescription>Servant Passage 1</optionDescription>
+			<action>
+				<nextScene>ServantPassage1</nextScene>
+			</action>
+			
+		</option>
+	</optionList>
+	<npcList>
+	</npcList>
+	<messList>
+	</messList>
+</SceneDescription>

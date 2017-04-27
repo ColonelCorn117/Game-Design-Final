@@ -1,0 +1,23 @@
+﻿<SceneDescription>
+	<name>Kitchen</name>
+	<description>There are trays of food that appear ready to be served.</description>
+	<background>black</background>
+	<optionList>
+		<option>
+			<optionDescription>Servant Passage 2</optionDescription>
+			<action>
+				<nextScene>ServantPassage2</nextScene>
+			</action>
+		</option>
+		<option>
+			<optionDescription>Dining Room</optionDescription>
+			<action>
+				<nextScene>DiningRoom</nextScene>
+			</action>
+		</option>
+	</optionList>
+	<npcList>
+	</npcList>
+	<messList>
+	</messList>
+</SceneDescription>

@@ -1,0 +1,17 @@
+﻿<SceneDescription>
+	<name>OrchestraPit</name>
+	<description>Without the orchesta, this is just a big, empty space within the bigger, emptier ballroom.</description>
+	<background>black</background>
+	<optionList>	
+		<option>
+			<optionDescription>Ballroom</optionDescription>
+			<action>
+				<nextScene>Ballroom</nextScene>
+			</action>
+		</option>
+	</optionList>
+	<npcList>
+	</npcList>
+	<messList>
+	</messList>
+</SceneDescription>

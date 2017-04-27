@@ -27,6 +27,13 @@
 			
 		</option>
 		<option>
+			<optionDescription>Hallway 6</optionDescription>
+			<action>
+				<nextScene>Hallway6</nextScene>
+			</action>
+			
+		</option>
+		<option>
 			<optionDescription>Test (beta)</optionDescription>
 			<action>
 				<name>Remove Later</name>
@@ -41,4 +48,4 @@
 	</npcList>
 	<messList>
 	</messList>
-	</SceneDescription>
+</SceneDescription>
