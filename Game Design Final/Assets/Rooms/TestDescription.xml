@@ -2,35 +2,29 @@
 	<name>Test Scene</name>
 	<description>Lorem Ipsum loaded</description>
 	<background>test.jpg</background>
-	<optionList>
+	<conditionList>
 	
-		<option>
-			<optionDescription>Entrance</optionDescription>
+		<condition>
+			<description>Entrance</description>
 			<action>
 				<name>toEntrance</name>
 				<nextScene>Entrance</nextScene>
 			</action>
 			
-		</option>
-		<option>
-			<optionDescription>Nothing</optionDescription>
+		</condition>
+		<condition>
+			<description>Intro</description>
+			<requirement>
+				<prereq>gainedMop</prereq>
+			</requirement>
 			<action>
-				<name>toNothing</name>
-				<nextScene>Nowhere</nextScene>
+				<name>Intro</name>
+				<nextScene>Intro01-01</nextScene>
 			</action>
-		</option>
-		<option>
-			<optionDescription>Entrance</optionDescription>
-			<action>
-				<name>AlsoEntrance</name>
-				<nextScene>Entrance</nextScene>
-			</action>
-		</option>
-		
-	</optionList>
+		</condition>
+	</conditionList>
 	<npcList>
 		<npc>Sakuya</npc>
-		<npc>npcTemplate</npc>
 	</npcList>
 	<messList>
 		<mess>Shitstorm</mess>

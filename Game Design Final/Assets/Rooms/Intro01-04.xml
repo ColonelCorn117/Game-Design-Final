@@ -9,15 +9,15 @@
 	That said, I need you to do more than just keep away any dangers.
 	</description>
 	<background>AssassinOffice</background>
-	<optionList>
+	<conditionList>
 	
-		<option>
-			<optionDescription>Continue</optionDescription>
+		<condition>
+			<description>Continue</description>
 			<action>
 				<nextScene>Intro01-05</nextScene>
 			</action>
-		</option>
-	</optionList>
+		</condition>
+	</conditionList>
 	<npcList>
 	</npcList>
 	<messList>

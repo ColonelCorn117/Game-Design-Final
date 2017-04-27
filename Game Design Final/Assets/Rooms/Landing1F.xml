@@ -3,40 +3,40 @@
 	<description>You see a flight of stairs. They are big and fluffy.
 	</description>
 	<background></background>
-	<optionList>
+	<conditionList>
 	
-		<option>
-			<optionDescription>Entrance</optionDescription>
+		<condition>
+			<description>Entrance</description>
 			<action>
 				<nextScene>Entrance</nextScene>
 			</action>
 			
-		</option>
-		<option>
-			<optionDescription>Upstairs</optionDescription>
+		</condition>
+		<condition>
+			<description>Upstairs</description>
 			<action>
 				<nextScene>Landing2F</nextScene>
 			</action>
 			
-		</option>
-		<option>
-			<optionDescription>Hallway 1</optionDescription>
+		</condition>
+		<condition>
+			<description>Hallway 1</description>
 			<action>
 				<nextScene>Hallway1</nextScene>
 			</action>
 			
-		</option>
-		<option>
-			<optionDescription>Test (beta)</optionDescription>
+		</condition>
+		<condition>
+			<description>Test (beta)</description>
 			<action>
 				<name>Remove Later</name>
 				<nextScene>TestDescription</nextScene>
 			</action>
 			
-		</option>
+		</condition>
 	
 		
-	</optionList>
+	</conditionList>
 	<npcList>
 	</npcList>
 	<messList>

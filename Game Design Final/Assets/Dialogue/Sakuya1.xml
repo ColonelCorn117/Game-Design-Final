@@ -9,8 +9,8 @@
 			
 
 		<condition>
-			<name>Take Mop</name>
-			<description>"I can give you a mop if you need it."</description>
+			<description>Take Mop</description>
+			<additionalDescription>"I can give you a mop if you need it."</additionalDescription>
 			<requirement>
 				<prereq>nogainMop</prereq>
 			</requirement>
@@ -21,8 +21,8 @@
 			</action>
 		</condition>
 		<condition>
-			<name></name>
-			<description>"I see you already have a mop."</description>
+			<description></description>
+			<additionalDescription>"I see you already have a mop."</additionalDescription>
 			<requirement>
 				<prereq>gainedMop</prereq>
 			</requirement>
@@ -31,8 +31,8 @@
 			</action>
 		</condition>
 		<condition>
-			<name>Give Mop</name>
-			<description>"I can take that mop if you want."</description>
+			<description>Give Mop</description>
+			<additionalDescription>"I can take that mop if you want."</additionalDescription>
 			<requirement>
 				<prereq>gainedMop</prereq>
 			</requirement>

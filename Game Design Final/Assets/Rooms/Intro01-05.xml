@@ -6,15 +6,15 @@
 	If you fail to do this...you can join them in their fate..."
 	</description>
 	<background>AssassinShadowClosedEyes</background>
-	<optionList>
+	<conditionList>
 	
-		<option>
-			<optionDescription>Continue</optionDescription>
+		<condition>
+			<description>Continue</description>
 			<action>
 				<nextScene>Intro01-06</nextScene>
 			</action>
-		</option>
-	</optionList>
+		</condition>
+	</conditionList>
 	<npcList>
 	</npcList>
 	<messList>

@@ -2,21 +2,21 @@
 	<name>Hallway2</name>
 	<description>Another hallway.</description>
 	<background>black</background>
-	<optionList>
+	<conditionList>
 	
-		<option>
-			<optionDescription>Hallway 2</optionDescription>
+		<condition>
+			<description>Hallway 2</description>
 			<action>
 				<nextScene>Hallway2</nextScene>
 			</action>
-		</option>
-		<option>
-			<optionDescription>Servant Passage 2</optionDescription>
+		</condition>
+		<condition>
+			<description>Servant Passage 2</description>
 			<action>
 				<nextScene>ServantPassage2</nextScene>
 			</action>
-		</option>
-	</optionList>
+		</condition>
+	</conditionList>
 	<npcList>
 	</npcList>
 	<messList>

@@ -2,21 +2,21 @@
 	<name>Hallway1</name>
 	<description>It's a hallway.</description>
 	<background>black</background>
-	<optionList>
+	<conditionList>
 	
-		<option>
-			<optionDescription>Landing 1F</optionDescription>
+		<condition>
+			<description>Landing 1F</description>
 			<action>
 				<nextScene>Landing1F</nextScene>
 			</action>
-		</option>
-		<option>
-			<optionDescription>Hallway 2</optionDescription>
+		</condition>
+		<condition>
+			<description>Hallway 2</description>
 			<action>
 				<nextScene>Hallway2</nextScene>
 			</action>
-		</option>
-	</optionList>
+		</condition>
+	</conditionList>
 	<npcList>
 	</npcList>
 	<messList>

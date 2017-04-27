@@ -3,17 +3,17 @@
 	<description>It's the master bedroom.
 	</description>
 	<background></background>
-	<optionList>
+	<conditionList>
 	
-		<option>
-			<optionDescription>Hallway</optionDescription>
+		<condition>
+			<description>Hallway</description>
 			<action>
 				<nextScene>Hallway11</nextScene>
 			</action>	
-		</option>
+		</condition>
 	
 		
-	</optionList>
+	</conditionList>
 	<npcList>
 	</npcList>
 	<messList>

@@ -7,19 +7,19 @@
 	You see a doorway to your left, no doubt leading back to the mansion's entrance.
 	</description>
 	<background>black</background>
-	<optionList>
+	<conditionList>
 	
-		<option>
-			<optionDescription>Mysterious Door</optionDescription>
+		<condition>
+			<description>Mysterious Door</description>
 			<action>
 				<name>Entering</name>
 				<nextScene>Entrance</nextScene>
 			</action>
 			
-		</option>
+		</condition>
 	
 		
-	</optionList>
+	</conditionList>
 	<npcList>
 	</npcList>
 	<messList>

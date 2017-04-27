@@ -5,16 +5,16 @@
 	You're pretty sure you can't climb up the chute. You're an assassin, not a ninja!
 	</description>
 	<background></background>
-	<optionList>
+	<conditionList>
 	
-		<option>
-			<optionDescription>Back</optionDescription>
+		<condition>
+			<description>Back</description>
 			<action>
 				<nextScene>LaundryRoom</nextScene>
 			</action>
 			
-		</option>
-	</optionList>
+		</condition>
+	</conditionList>
 	<npcList>
 	</npcList>
 	<messList>

@@ -3,23 +3,23 @@
 	<description>It's a hallway.
 	</description>
 	<background></background>
-	<optionList>
-		<option>
-			<optionDescription>Landing</optionDescription>
+	<conditionList>
+		<condition>
+			<description>Landing</description>
 			<action>
 				<nextScene>Landing2F</nextScene>
 			</action>	
-		</option>
-		<option>
-			<optionDescription>Child's Bedroom</optionDescription>
+		</condition>
+		<condition>
+			<description>Child's Bedroom</description>
 			<action>
 				<nextScene>ChildBedroom</nextScene>
 			</action>	
-		</option>
+		</condition>
 
 	
 		
-	</optionList>
+	</conditionList>
 	<npcList>
 	</npcList>
 	<messList>

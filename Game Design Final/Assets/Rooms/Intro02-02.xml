@@ -6,15 +6,15 @@
 	This is such a waste of time...
 	</description>
 	<background>Hallway</background>
-	<optionList>
+	<conditionList>
 	
-		<option>
-			<optionDescription>Continue</optionDescription>
+		<condition>
+			<description>Continue</description>
 			<action>
 				<nextScene>Intro02-03</nextScene>
 			</action>
-		</option>
-	</optionList>
+		</condition>
+	</conditionList>
 	<npcList>
 	</npcList>
 	<messList>

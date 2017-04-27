@@ -5,16 +5,16 @@
 	The laundry chute drops off clothing into a basket.
 	</description>
 	<background>black.png</background>
-	<optionList>
+	<conditionList>
 	
-		<option>
-			<optionDescription>Laundry Chute</optionDescription>
+		<condition>
+			<description>Laundry Chute</description>
 			<action>
 				<nextScene>LaundryChute1F</nextScene>
 			</action>
 			
-		</option>
-	</optionList>
+		</condition>
+	</conditionList>
 	<npcList>
 	</npcList>
 	<messList>
