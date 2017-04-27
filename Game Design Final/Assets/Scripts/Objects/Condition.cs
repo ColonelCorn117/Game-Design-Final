@@ -10,6 +10,8 @@ public class Condition : GenericGameObject {
 	[XmlElement("requirement")]
 	public List<Requirement> requirement = new List<Requirement> ();
 
+	public string additionalDescription;
+
 	[XmlElement("action")]
 	public Action action = new Action();
 
@@ -27,13 +29,14 @@ public class Condition : GenericGameObject {
 
 	public bool Satisfied() {
 		if ((requirement == null) || (requirement.Count < 1)) {
-			Debug.Log ("no requirement object");
+			//Debug.Log ("no requirement object");
 			return true;
 		}
 
 		Action a = new Action ();
 
 		foreach (Requirement r in requirement) {
+			//Debug.Log (r.prereqs);
 			if (r.Satisfied (a)) {
 				return true;
 			}

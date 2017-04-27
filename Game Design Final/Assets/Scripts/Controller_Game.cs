@@ -150,29 +150,41 @@ public class Controller_Game : MonoBehaviour
 
 	public void performAction(int btnNbr) {
 		Action a = buttonActions [btnNbr];
+
+		bool changeMade = false;
+
 		// if an action consumes an item, delete that item from inventory
 		if (a.itemUsed != null && a.itemUsed != "") {
 			this.ItemLookup (a.itemUsed).consume ();
 			//this.itemList.Remove (a.itemUsed);
 			RemoveItemFromInv(a.itemUsed);
+			changeMade = true;
 		}
 		// if an action picks up an item, add that item to inventory and mark it as taken from the room
 		if (a.itemGained != null && a.itemGained != "") {
+
+			if (a.itemGained == "Mop") {
+				Debug.Log ("Claiming mop");
+			}
+
 			this.ItemLookup (a.itemGained).claim ();
 			//this.itemList.Add (a.itemGained);
 			AddItemToInv(a.itemGained);
+			changeMade = true;
 		}
 		// if an action cleans up a mess, clean it up
 		if (a.messResolved != null && a.messResolved != "") {
 			MessLookup (a.messResolved).Cleanup (a);
 			// Note: this method returns a bool regarding whether it succeeded
 			// it currently isn't used for anything
+			changeMade = true;
 		}
 		// if an action removes an NPC, do that
 		if (a.npcSubdued != null && a.npcSubdued != "") {
 			NpcLookup (a.npcSubdued).Subdue (a);
 			// Note: this method returns a bool regarding whether it succeeded
 			// it currently isn't used for anything
+			changeMade = true;
 		}
 		// if the player is trying to examine an item, mess, or NPC, set up the screen to do that.
 		if (a.objectExamined != null && a.objectExamined != "") {
@@ -193,9 +205,9 @@ public class Controller_Game : MonoBehaviour
 				}
 			}
 			if (addedText != "") {
-				string desc = GameObject.Find ("Description Text").GetComponentInChildren<Text> ().text;
-				desc += addedText;
-				GameObject.Find ("Description Text").GetComponentInChildren<Text> ().text = desc;
+				//string desc = GameObject.Find ("Description Text").GetComponentInChildren<Text> ().text;
+				//desc += addedText;
+				//GameObject.Find ("Description Text").GetComponentInChildren<Text> ().text = desc;
 			}
 		}
 

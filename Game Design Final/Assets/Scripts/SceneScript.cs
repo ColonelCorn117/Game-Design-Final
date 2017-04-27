@@ -63,12 +63,19 @@ public class SceneScript : MonoBehaviour {
 	public void examineObject(GenericGameObject o, string name) {
 		// rebuild description w/o changing the xml object
 		descriptionText.text = o.description;
-
+		//string desc = GameObject.Find ("Description Text").GetComponentInChildren<Text> ().text;
 
 		if (o is Problem) {
 			Problem p = (Problem)o;
 			Option back = new Option ("Back", new Action ("backNow", currentSceneName, ""));
-			LoadButtons (p.options, back);
+
+			if (p is Mess) {
+				foreach (Condition c in p.conditions) {
+					//Debug.Log (c.description);
+					//Debug.Log (c.Satisfied ());
+				}
+			}
+			LoadButtons (p.conditions, back);
 			if (p is NPC) {
 				LoadDetailSprite (name, "npc");
 			} else {
@@ -149,11 +156,10 @@ public class SceneScript : MonoBehaviour {
 						desc += ", ";
 					}
 					desc += it.name;
-
 				}
 			}
 		}
-
+		/* // Show Inventory in text pane
 		if (Controller_Game.ctrl_game.itemList.Count > 0) {
 
 			int i = 0;
@@ -172,9 +178,9 @@ public class SceneScript : MonoBehaviour {
 				}
 			}
 		}
+		*/
 
 		descriptionText.text = desc;
-
 	}
 
 	//----------------------------------------------------------------------------------------------------
@@ -190,25 +196,24 @@ public class SceneScript : MonoBehaviour {
 
 	public void LoadScene(string sceneName) {
 		if (sceneName == "reload") {
-			LoadScene ();
-		} else {
-			string path = "Assets/Rooms/" + sceneName + ".xml";
-			if (File.Exists (path)) {
-				//if (sceneName != currentSceneName) {
-				currentSceneName = sceneName;
-				LoadSceneXML (path);
-				locationText.text = xml.name;
-				//}
+			sceneName = currentSceneName;
+		} 
+		string path = "Assets/Rooms/" + sceneName + ".xml";
+		if (File.Exists (path)) {
+			//if (sceneName != currentSceneName) {
+			currentSceneName = sceneName;
+			LoadSceneXML (path);
+			locationText.text = xml.name;
+			//}
 
-				BuildDescription ();
-				LoadButtons ();
-				LoadBackgroundImage (xml.background);
-				LoadDetailSprite ("Default");
-			} else if ((sceneName.Length > 8) && (sceneName.Substring (0, 8) == "dialogue")) {
-				LoadDialogue (sceneName.Substring (8));
-			} else {
-				LoadScene ("Default");
-			}
+			BuildDescription ();
+			LoadButtons ();
+			LoadBackgroundImage (xml.background);
+			LoadDetailSprite ("Default");
+		} else if ((sceneName.Length > 8) && (sceneName.Substring (0, 8) == "dialogue")) {
+			LoadDialogue (sceneName.Substring (8));
+		} else {
+			LoadScene ("Default");
 		}
 	}
 
@@ -226,6 +231,10 @@ public class SceneScript : MonoBehaviour {
 	public void LoadBackgroundImage(string imageName) {
 
 		string imagePath = "Assets/Rooms/Images/" + imageName + ".png";
+
+		if (imageName.Length > 3 && imageName.Substring (imageName.Length - 4, 1) == ".") {
+			imagePath = "Assets/Rooms/Images/" + imageName;
+		}
 
 		if (File.Exists (imagePath)) {
 			byte[] data = File.ReadAllBytes (imagePath);
@@ -320,10 +329,12 @@ public class SceneScript : MonoBehaviour {
 		var optionsText = optionsBox.GetComponentsInChildren<Text>();
 		int i = 1;
 
-		foreach (Option o in xml.optionList) {
-			addButtonAction (o.action,i);
-			optionsText [i - 1].text = o.description;
-			++i;
+		foreach (Condition c in xml.optionList) {
+			if (c.Satisfied ()) {
+				addButtonAction (c.action, i);
+				optionsText [i - 1].text = c.description;
+				++i;
+			}
 		}
 		foreach (string npcName in xml.npcList) {
 			NPC n = NpcLookup (npcName);
@@ -391,12 +402,12 @@ public class SceneScript : MonoBehaviour {
 		var optionsText = optionsBox.GetComponentsInChildren<Text>();
 		int i = 1;
 		foreach (Condition c in conditions) {
-			if (c.name == "") {
+			if (c.description == null || c.description == "") {
 				continue;
 			}
 			if (c.Satisfied()) {
 				addButtonAction (c.action, i);
-				optionsText [i - 1].text = c.name;
+				optionsText [i - 1].text = c.description;
 				++i;
 			}
 		}
@@ -415,7 +426,7 @@ public class SceneScript : MonoBehaviour {
 	}
 
 	//----------------------------------------------------------------------------------------------------
-
+	/*
 	void LoadButtons(List<Option> options, Option extraOption) {
 		var optionsText = optionsBox.GetComponentsInChildren<Text>();
 		int i = 1;
@@ -442,7 +453,7 @@ public class SceneScript : MonoBehaviour {
 			++i;
 		}
 	}
-
+	*/
 	//----------------------------------------------------------------------------------------------------
 
 	public void LoadDialogue(string dialogueName) {
@@ -463,11 +474,10 @@ public class SceneScript : MonoBehaviour {
 
 			foreach(Condition c in d.conditions) {
 				if (c.Satisfied ()) {
-					AddToDescription ("\n\n" + c.description);
+					AddToDescription ("\n\n" + c.additionalDescription);
 				}
 			}
 		}
-
 	}
 
 	//----------------------------------------------------------------------------------------------------

@@ -13,7 +13,17 @@ public class Requirement {
 
 	public bool Satisfied(Action a) {
 		foreach (String req in prereqs) {
+
+
+
 			String reqName = req.Substring(6);
+
+			if (reqName == "Mop") {
+				Item mop = Controller_Game.ctrl_game.ItemLookup (reqName);
+
+				//Debug.Log (req + ": " + mop.possessed () + ", claimed: " + mop.isClaimed () + ",  consumed: " + mop.isConsumed ());
+			}
+
 			//Debug.Log ("req: " + req + ", name: " + reqName);
 			if (req.StartsWith ("noreqs")) {
 				//this prerequisiste is always satisfied
@@ -22,11 +32,13 @@ public class Requirement {
 			if (req.StartsWith ("gained")) {
 				//the player has an item with the name after "gained"
 				if (!Controller_Game.ctrl_game.ItemLookup (reqName).possessed ()) {
+					//Debug.Log ("item possessed: " + reqName);
 					return false;
 				}
 			} else if (req.StartsWith ("nogain")) {
 				//the player does not have an item with the name after "nogain"
 				if (Controller_Game.ctrl_game.ItemLookup (reqName).possessed ()) {
+					//Debug.Log ("item not possessed: " + reqName);
 					return false;
 				}
 			} else if (req.StartsWith ("expire")) {

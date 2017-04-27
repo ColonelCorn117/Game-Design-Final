@@ -27,7 +27,8 @@ public class Item : GenericGameObject {
 	}
 
 	public bool isClaimed() {
-		return unclaimed == 0;
+		return (this.consumed == 1) || Controller_Game.ctrl_game.itemList.Contains (this.name);
+		//return unclaimed == 0;
 	}
 
 	public void claim() {
@@ -43,6 +44,7 @@ public class Item : GenericGameObject {
 	}
 
 	public bool possessed() {
-		return (unclaimed == 0 && consumed == 0);
+		return Controller_Game.ctrl_game.itemList.Contains (this.name);
+		//return (unclaimed == 0 && consumed != 0);
 	}
 }
