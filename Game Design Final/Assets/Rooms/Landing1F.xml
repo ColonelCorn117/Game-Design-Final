@@ -20,6 +20,13 @@
 			
 		</option>
 		<option>
+			<optionDescription>Hallway 1</optionDescription>
+			<action>
+				<nextScene>Hallway1</nextScene>
+			</action>
+			
+		</option>
+		<option>
 			<optionDescription>Test (beta)</optionDescription>
 			<action>
 				<name>Remove Later</name>

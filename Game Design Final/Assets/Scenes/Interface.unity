@@ -3432,7 +3432,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Items
+  m_Text: Inventory
 --- !u!222 &1337436212
 CanvasRenderer:
   m_ObjectHideFlags: 0

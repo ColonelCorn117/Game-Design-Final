@@ -66,20 +66,16 @@ public class Controller_GUI : MonoBehaviour
 			{
 			case("Background Image"):
 				bgImage = image;
-				Debug.Log("Background image");
 				break;
 			case("ItemsList Image"):
 				itemsListImage = image;
 				itemsListImage.gameObject.SetActive(false);
-				Debug.Log("itemslist image");
 				break;
 			case("Detail Image"):
 				detailImage = image;
-				Debug.Log("detail image");
 				break;
 			case("Items Box"):
 				itemsBox = image;
-				Debug.Log("items box");
 				break;
 			default:
 				//Debug.Log("Other image found: " + image.name);
