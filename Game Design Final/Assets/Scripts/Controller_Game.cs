@@ -15,7 +15,13 @@ public class Controller_Game : MonoBehaviour
 	//====================================================================================================
 
 	public static Controller_Game ctrl_game;
-	public static Controller_GUI ctrl_gui;
+
+	//Used to keep references to the xml files so they are included in the build
+	public List<TextAsset> dialogueXML = new List<TextAsset>();
+	public List<TextAsset> itemsXML = new List<TextAsset>();
+	public List<TextAsset> messesXML = new List<TextAsset>();
+	public List<TextAsset> npcsXML = new List<TextAsset>();
+	public List<TextAsset> roomsXML = new List<TextAsset>();
 
 	public List<string> itemList = new List<string>();
 	Dictionary<string, NPC> npcs = new Dictionary<string, NPC>();
@@ -41,7 +47,6 @@ public class Controller_Game : MonoBehaviour
 		{
 			DontDestroyOnLoad(gameObject);
 			ctrl_game = this;
-			ctrl_gui = Controller_GUI.ctrl_gui;
 
 			BuildDictionaries ();
 			//items.Add("Mop");
@@ -52,13 +57,17 @@ public class Controller_Game : MonoBehaviour
 		}
 	}
 
+	//----------------------------------------------------------------------------------------------------
+
 	void Start()
 	{
-
+		Controller_GUI.ctrl_gui.SetItemsText(itemList);
 
 
 
 	}
+
+	//----------------------------------------------------------------------------------------------------
 
 	void Update() {
 
@@ -86,26 +95,25 @@ public class Controller_Game : MonoBehaviour
 	//Other Functions
 	//====================================================================================================
 
-	public void AddItemToInv()//string item)
+	public void AddItemToInv(string item)
 	{
-		itemList.Add("item" + itemList.Count);
-		ctrl_gui.ScaleItemsList();
-		Debug.Log("Item Added: " + itemList[itemList.Count - 1]);
+		itemList.Add(item);
+		Controller_GUI.ctrl_gui.SetItemsText(itemList);
+		//ctrl_gui.ScaleItemsList();
+		Debug.Log("Item Added: " + item);
 	}
 
 	//----------------------------------------------------------------------------------------------------
 
-	public void RemoveItemFromInv()//string item)
+	public void RemoveItemFromInv(string item)
 	{
-		itemList.Remove("item" + (itemList.Count - 1));
-		ctrl_gui.DestroyBtnsOnItemsList();
-		if (itemList.Count > 0)
-		{
-			Debug.Log("Item Removed: " + itemList[itemList.Count - 1]);
-		}
-
+		itemList.Remove(item);
+		Controller_GUI.ctrl_gui.SetItemsText(itemList);
+		//ctrl_gui.DestroyBtnsOnItemsList();
+		Debug.Log("Item Removed: " + item);
 	}
 
+	//----------------------------------------------------------------------------------------------------
 
 	public NPC NpcLookup(string s) {
 		NPC n;
@@ -116,6 +124,8 @@ public class Controller_Game : MonoBehaviour
 		return new NPC();
 	}
 
+	//----------------------------------------------------------------------------------------------------
+
 	public Mess MessLookup(string s) {
 		Mess m;
 		messes.TryGetValue (s, out m);
@@ -124,6 +134,8 @@ public class Controller_Game : MonoBehaviour
 		}
 		return new Mess();
 	}
+
+	//----------------------------------------------------------------------------------------------------
 
 	public Item ItemLookup(string s) {
 		Item i;
@@ -134,17 +146,21 @@ public class Controller_Game : MonoBehaviour
 		return new Item();
 	}
 
+	//----------------------------------------------------------------------------------------------------
+
 	public void performAction(int btnNbr) {
 		Action a = buttonActions [btnNbr];
 		// if an action consumes an item, delete that item from inventory
 		if (a.itemUsed != null && a.itemUsed != "") {
 			this.ItemLookup (a.itemUsed).consume ();
-			this.itemList.Remove (a.itemUsed);
+			//this.itemList.Remove (a.itemUsed);
+			RemoveItemFromInv(a.itemUsed);
 		}
 		// if an action picks up an item, add that item to inventory and mark it as taken from the room
 		if (a.itemGained != null && a.itemGained != "") {
 			this.ItemLookup (a.itemGained).claim ();
-			this.itemList.Add (a.itemGained);
+			//this.itemList.Add (a.itemGained);
+			AddItemToInv(a.itemGained);
 		}
 		// if an action cleans up a mess, clean it up
 		if (a.messResolved != null && a.messResolved != "") {
@@ -188,6 +204,8 @@ public class Controller_Game : MonoBehaviour
 		}
 	}
 
+	//----------------------------------------------------------------------------------------------------
+
 	public bool addButtonAction(Action a, int index) {
 		if (index < buttonActions.Length) {
 
@@ -200,6 +218,8 @@ public class Controller_Game : MonoBehaviour
 
 		return false;
 	}
+
+	//----------------------------------------------------------------------------------------------------
 
 	NPC LoadNPC(string path) {
 		var serializer = new XmlSerializer(typeof(NPC));
@@ -224,6 +244,8 @@ public class Controller_Game : MonoBehaviour
 		stream.Close();
 		return output;
 	}
+
+	//----------------------------------------------------------------------------------------------------
 
 	void BuildDictionaries() {
 		// Build NPC Dictionary
@@ -252,7 +274,7 @@ public class Controller_Game : MonoBehaviour
 		DirectoryInfo levelDirectoryPath = new DirectoryInfo("Assets/messes/");
 		FileInfo[] fileInfo = levelDirectoryPath.GetFiles("*.xml", SearchOption.AllDirectories);
 		foreach (FileInfo file in fileInfo) {
-			messes.Add (file.Name.Substring(0,file.Name.Length-4), LoadMess ("Assets/messes/" + file.Name));
+			messes.Add (file.Name.Substring(0,file.Name.Length-4), LoadMess ("Assets/Messes/" + file.Name));
 			// Note: file.Name includes the file extension.
 		}
 	}

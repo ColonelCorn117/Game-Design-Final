@@ -7,8 +7,8 @@ using System.Xml.Serialization;
 using System.IO;
 
 public class SceneScript : MonoBehaviour {
-	GameObject titleLocation;
-	GameObject descriptionText;
+	Text locationText;
+	Text descriptionText;
 	GameObject optionsBox;
 
 	public static SceneScript sceneScript;
@@ -31,8 +31,8 @@ public class SceneScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		titleLocation = GameObject.Find ("Title-Location");
-		descriptionText = GameObject.Find ("Description Text");
+		locationText = GameObject.Find("Location Text").GetComponent<Text>();
+		descriptionText = GameObject.Find ("Description Text").GetComponent<Text>();
 		optionsBox = GameObject.Find ("Options Box");
 
 		//BuildDictionaries ();
@@ -54,13 +54,15 @@ public class SceneScript : MonoBehaviour {
 		return Controller_Game.ctrl_game.ItemLookup (name);
 	}
 
+	//----------------------------------------------------------------------------------------------------
+
 	public void examineObject(GenericGameObject o) {
 		examineObject (o, o.name);
 	}
 
 	public void examineObject(GenericGameObject o, string name) {
 		// rebuild description w/o changing the xml object
-		descriptionText.GetComponentInChildren<Text> ().text = o.description;
+		descriptionText.text = o.description;
 
 
 		if (o is Problem) {
@@ -88,6 +90,8 @@ public class SceneScript : MonoBehaviour {
 			LoadDetailSprite (name);
 		}
 	}
+
+	//----------------------------------------------------------------------------------------------------
 
 	void BuildDescription () {
 		string desc = xml.description;
@@ -169,9 +173,11 @@ public class SceneScript : MonoBehaviour {
 			}
 		}
 
-		descriptionText.GetComponentInChildren<Text> ().text = desc;
+		descriptionText.text = desc;
 
 	}
+
+	//----------------------------------------------------------------------------------------------------
 
 	void LoadSceneXML (string path) {
 		var serializer = new XmlSerializer(typeof(SceneDescription));
@@ -179,6 +185,8 @@ public class SceneScript : MonoBehaviour {
 		xml = serializer.Deserialize(stream) as SceneDescription;
 		stream.Close();
 	}
+
+	//----------------------------------------------------------------------------------------------------
 
 	public void LoadScene(string sceneName) {
 		if (sceneName == "reload") {
@@ -189,7 +197,7 @@ public class SceneScript : MonoBehaviour {
 				//if (sceneName != currentSceneName) {
 				currentSceneName = sceneName;
 				LoadSceneXML (path);
-				titleLocation.GetComponentInChildren<Text> ().text = xml.name;
+				locationText.text = xml.name;
 				//}
 
 				BuildDescription ();
@@ -204,12 +212,16 @@ public class SceneScript : MonoBehaviour {
 		}
 	}
 
+	//----------------------------------------------------------------------------------------------------
+
 	public void LoadScene() {
 		BuildDescription ();
 		LoadButtons ();
 		LoadBackgroundImage ("black");
 		LoadDetailSprite ("Default");
 	}
+
+	//----------------------------------------------------------------------------------------------------
 
 	public void LoadBackgroundImage(string imageName) {
 
@@ -231,6 +243,8 @@ public class SceneScript : MonoBehaviour {
 			}
 		}
 	}
+
+	//----------------------------------------------------------------------------------------------------
 
 	public bool LoadDetailSprite(string name, string typeName) {
 		string folder = "Rooms";
@@ -267,6 +281,8 @@ public class SceneScript : MonoBehaviour {
 		}
 	}
 
+	//----------------------------------------------------------------------------------------------------
+
 	public bool LoadDetailSprite(string name) {
 		string npcPath = "Assets/NPCs/Images/"  + name + ".png";
 		string messPath = "Assets/Messes/Images/" + name + ".png";
@@ -297,7 +313,7 @@ public class SceneScript : MonoBehaviour {
 		return true;
 	}
 
-
+	//----------------------------------------------------------------------------------------------------
 
 	void LoadButtons() {
 
@@ -346,6 +362,8 @@ public class SceneScript : MonoBehaviour {
 		}
 	}
 
+	//----------------------------------------------------------------------------------------------------
+
 	void LoadButtons (List<Option> options) {
 		var optionsText = optionsBox.GetComponentsInChildren<Text>();
 		int i = 1;
@@ -361,9 +379,13 @@ public class SceneScript : MonoBehaviour {
 		}
 	}
 
+	//----------------------------------------------------------------------------------------------------
+
 	void addButtonAction(Action a, int i) {
 		Controller_Game.ctrl_game.addButtonAction (a, i);
 	}
+
+	//----------------------------------------------------------------------------------------------------
 
 	void LoadButtons(List<Condition> conditions, Option extraOption) {
 		var optionsText = optionsBox.GetComponentsInChildren<Text>();
@@ -392,6 +414,8 @@ public class SceneScript : MonoBehaviour {
 		}
 	}
 
+	//----------------------------------------------------------------------------------------------------
+
 	void LoadButtons(List<Option> options, Option extraOption) {
 		var optionsText = optionsBox.GetComponentsInChildren<Text>();
 		int i = 1;
@@ -419,7 +443,7 @@ public class SceneScript : MonoBehaviour {
 		}
 	}
 
-
+	//----------------------------------------------------------------------------------------------------
 
 	public void LoadDialogue(string dialogueName) {
 		//Note: the dialogue name should be formatted as "[NPCname][integer value between 0 and 9]"
@@ -431,7 +455,7 @@ public class SceneScript : MonoBehaviour {
 			Dialogue d = serializer.Deserialize (stream) as Dialogue;
 			stream.Close ();
 
-			descriptionText.GetComponentInChildren<Text> ().text = d.description;
+			descriptionText.text = d.description;
 			NpcLookup (dialogueName.Substring (0, dialogueName.Length - 1)).setDialogueLocation (
 				int.Parse(dialogueName.Substring (dialogueName.Length - 1))); // sets the dialogue location on the NPC
 
@@ -446,10 +470,14 @@ public class SceneScript : MonoBehaviour {
 
 	}
 
+	//----------------------------------------------------------------------------------------------------
+
 	public void AddToDescription(string additionalDescription) {
-		string desc = descriptionText.GetComponentInChildren<Text> ().text;
-		descriptionText.GetComponentInChildren<Text> ().text = desc + additionalDescription;
+		string desc = descriptionText.text;
+		descriptionText.text = desc + additionalDescription;
 	}
+
+	//----------------------------------------------------------------------------------------------------
 
 	// Update is called once per frame
 	void Update () {

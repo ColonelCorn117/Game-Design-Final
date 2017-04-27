@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.IO;
+using System.Xml;
 
 public class Controller_GUI : MonoBehaviour
 {
@@ -20,15 +21,16 @@ public class Controller_GUI : MonoBehaviour
 	Button option2Btn;
 	Button option3Btn;
 	Button option4Btn;*/
-	Button invBtn;
 	Image itemsListImage;
+	Image detailImage;
+	Image itemsBox;
+	List<Text> itemsText = new List<Text>();	//Text components of the item slots
 
-
-	float invBtnWidth;		//Default width of the expandable item list
-	float invBtnHeight;		//Default height "
-
-	//Item button prefab. Value set in editor
-	public GameObject itemBtn;
+	//Values for old Items button implementation
+//	Button invBtn;
+//	float invBtnWidth;		//Default width of the expandable item list
+//	float invBtnHeight;		//Default height "
+//	public GameObject itemBtn;	//Item button prefab. Value set in editor
 
 	//List of every image used. Values set in editor
 	public Sprite test;
@@ -44,8 +46,8 @@ public class Controller_GUI : MonoBehaviour
 		{
 			DontDestroyOnLoad(gameObject);
 			ctrl_gui = this;
-			invBtnWidth = 80.0f;
-			invBtnHeight = 50.0f;
+//			invBtnWidth = 80.0f;
+//			invBtnHeight = 50.0f;
 
 		}
 		else if (ctrl_gui != this)
@@ -64,16 +66,33 @@ public class Controller_GUI : MonoBehaviour
 			{
 			case("Background Image"):
 				bgImage = image;
+				Debug.Log("Background image");
 				break;
 			case("ItemsList Image"):
 				itemsListImage = image;
 				itemsListImage.gameObject.SetActive(false);
+				Debug.Log("itemslist image");
+				break;
+			case("Detail Image"):
+				detailImage = image;
+				Debug.Log("detail image");
+				break;
+			case("Items Box"):
+				itemsBox = image;
+				Debug.Log("items box");
 				break;
 			default:
 				//Debug.Log("Other image found: " + image.name);
 				break;
 			}
 		}
+
+		foreach (Text textComp in itemsBox.GetComponentsInChildren<Text>())
+		{
+			itemsText.Add(textComp);
+		}
+		itemsText.RemoveAt(0);	//Get rid of the first element since that one contains the "Items" title which we don't want to be changed
+
 		/*
 		foreach (Button button in GetComponentsInChildren<Button>())
 		{
@@ -104,7 +123,7 @@ public class Controller_GUI : MonoBehaviour
 
 
 		//SetBackgroundImage(sp);
-		ctrl_gui.ScaleItemsList();
+		//ScaleItemsList();
 	}
 
 
@@ -132,67 +151,91 @@ public class Controller_GUI : MonoBehaviour
 		button.GetComponent<Text>().text = text;
 	}
 
-
-	//====================================================================================================
-	//Other Functions
-	//====================================================================================================
-
-	public void ToggleItemsList()
-	{
-		itemsListImage.gameObject.SetActive(!itemsListImage.gameObject.activeSelf);
-	}
-
 	//----------------------------------------------------------------------------------------------------
 
-	//Scales and repositions expandable item list based on number of items in inventory
-	public void ScaleItemsList()
+	public void SetItemsText(List<string> itemList)
 	{
-		int numItems = Controller_Game.ctrl_game.itemList.Count;
-		itemsListImage.rectTransform.sizeDelta = new Vector2(invBtnWidth * numItems, invBtnHeight);					//Increases height for each item. Width stays the same
-		itemsListImage.rectTransform.anchoredPosition = new Vector2(itemsListImage.rectTransform.sizeDelta.x / 2, 0);	//Moves expandable area up/down so that its bottom edge is near its anchor point (the "Items" button)
-
-		for (int i=0; i<Controller_Game.ctrl_game.itemList.Count; i++)
+		for (int i=0; i<itemsText.Count; i++)
 		{
-			GameObject button = AddBtnToItemsList(invBtnWidth, invBtnWidth);
-			if (button.GetComponentInChildren<Text>())
+			if (i < itemList.Count)		//We still have items to name, so name the slots after the item
 			{
-				//Debug.Log("Text Component Found");
-				button.GetComponentInChildren<Text>().text = Controller_Game.ctrl_game.itemList[i];
+				itemsText[i].text = itemList[i];
 			}
-
-			RectTransform buttonRect = (RectTransform)button.transform;
-			buttonRect.anchoredPosition = new Vector2((invBtnWidth / 2) + (i * invBtnWidth), 0);	//(invBtnHeight / 2) + (i * invBtnHeight)
+			else 						//We ran out of items but still have slots. Give the slots a blank name
+			{
+				itemsText[i].text = "";	
+			}
 		}
-	}
-
-	//----------------------------------------------------------------------------------------------------
-
-	public GameObject AddBtnToItemsList(float width, float height)
-	{
-		return Instantiate(itemBtn, itemsListImage.rectTransform);
-	}
-
-	//----------------------------------------------------------------------------------------------------
-
-	//It's easier to get rid of every inventory item button an remake them than it is to delete one and move the above ones down
-	public void DestroyBtnsOnItemsList()
-	{
-		List<Button> buttons = new List<Button>(itemsListImage.GetComponentsInChildren<Button>());
-		foreach(Button button in buttons)
-		{
-			Destroy(button.gameObject);
-		}
-
-		//Readd buttons for items we still have
-		ScaleItemsList();
 	}
 
 
 	//----------------------------------------------------------------------------------------------------
 
 	public void SetDetailImage(Sprite s) {
-		GameObject.Find ("Detail Image").GetComponent<Image> ().sprite = s;
+		//GameObject.Find ("Detail Image").GetComponent<Image> ().sprite = s;
+		detailImage.sprite = s;
 	}
+
+	//----------------------------------------------------------------------------------------------------
+
+
+
+
+	#region: Old Items button implementation. Button itself is still offscreen just in case
+//	public void ToggleItemsList()
+//	{
+//		itemsListImage.gameObject.SetActive(!itemsListImage.gameObject.activeSelf);
+//	}
+//
+//	//----------------------------------------------------------------------------------------------------
+//
+//	//Scales and repositions expandable item list based on number of items in inventory
+//	public void ScaleItemsList()
+//	{
+//		int numItems = Controller_Game.ctrl_game.itemList.Count;
+//		itemsListImage.rectTransform.sizeDelta = new Vector2(invBtnWidth * numItems, invBtnHeight);					//Increases height for each item. Width stays the same
+//		itemsListImage.rectTransform.anchoredPosition = new Vector2(itemsListImage.rectTransform.sizeDelta.x / 2, 0);	//Moves expandable area up/down so that its bottom edge is near its anchor point (the "Items" button)
+//
+//		for (int i=0; i<Controller_Game.ctrl_game.itemList.Count; i++)
+//		{
+//			GameObject button = AddBtnToItemsList(invBtnWidth, invBtnWidth);
+//			if (button.GetComponentInChildren<Text>())
+//			{
+//				//Debug.Log("Text Component Found");
+//				button.GetComponentInChildren<Text>().text = Controller_Game.ctrl_game.itemList[i];
+//			}
+//
+//			RectTransform buttonRect = (RectTransform)button.transform;
+//			buttonRect.anchoredPosition = new Vector2((invBtnWidth / 2) + (i * invBtnWidth), 0);	//(invBtnHeight / 2) + (i * invBtnHeight)
+//		}
+//	}
+//
+//	//----------------------------------------------------------------------------------------------------
+//
+//	public GameObject AddBtnToItemsList(float width, float height)
+//	{
+//		return Instantiate(itemBtn, itemsListImage.rectTransform);
+//	}
+//
+//	//----------------------------------------------------------------------------------------------------
+//
+//	//It's easier to get rid of every inventory item button an remake them than it is to delete one and move the above ones down
+//	public void DestroyBtnsOnItemsList()
+//	{
+//		List<Button> buttons = new List<Button>(itemsListImage.GetComponentsInChildren<Button>());
+//		foreach(Button button in buttons)
+//		{
+//			Destroy(button.gameObject);
+//		}
+//
+//		//Readd buttons for items we still have
+//		ScaleItemsList();
+//	}
+	#endregion
+
+	//----------------------------------------------------------------------------------------------------
+
+
 
 
 
