@@ -1,8 +1,10 @@
 ﻿<SceneDescription>
 	<name>Hallway</name>
-	<description>It's a hallway. There's a laundry chute in the wall.
+	<description>It's a hallway. 
+	
+	There's a laundry chute in the wall.
 	</description>
-	<background></background>
+	<background>Hallway</background>
 	<conditionList>
 	
 		<condition>
@@ -14,7 +16,7 @@
 		<condition>
 			<description>Laundry Chute</description>
 			<action>
-				<nextScene>LaundryChute</nextScene>
+				<nextScene>LaundryChute2F</nextScene>
 			</action>	
 		</condition>
 		<condition>

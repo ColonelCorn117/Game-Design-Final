@@ -4,7 +4,7 @@
 
 	The laundry chute drops off clothing into a basket.
 	</description>
-	<background>black.png</background>
+	<background>black</background>
 	<conditionList>
 	
 		<condition>
@@ -14,9 +14,16 @@
 			</action>
 			
 		</condition>
+		<condition>
+			<description>Hallway</description>
+			<action>
+				<nextScene>ServantPassage1</nextScene>
+			</action>
+			
+		</condition>
 	</conditionList>
 	<npcList>
 	</npcList>
 	<messList>
 	</messList>
-	</SceneDescription>
+</SceneDescription>

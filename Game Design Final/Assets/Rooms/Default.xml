@@ -8,17 +8,13 @@
 	</description>
 	<background>black</background>
 	<conditionList>
-	
 		<condition>
 			<description>Mysterious Door</description>
 			<action>
 				<name>Entering</name>
 				<nextScene>Entrance</nextScene>
 			</action>
-			
 		</condition>
-	
-		
 	</conditionList>
 	<npcList>
 	</npcList>

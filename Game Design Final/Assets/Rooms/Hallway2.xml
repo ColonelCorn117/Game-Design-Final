@@ -1,23 +1,29 @@
 ﻿<SceneDescription>
-	<name>Hallway2</name>
+	<name>Hallway</name>
 	<description>Another hallway.</description>
-	<background>black</background>
+	<background>Hallway</background>
 	<conditionList>
 	
 		<condition>
-			<description>Hallway 1</description>
+			<description>North Hallway</description>
 			<action>
 				<nextScene>Hallway1</nextScene>
 			</action>
 		</condition>
 		<condition>
-			<description>Hallway 3</description>
+			<description>East Hallway</description>
 			<action>
 				<nextScene>Hallway3</nextScene>
 			</action>
 		</condition>
 		<condition>
-			<description>Servant Passage 3</description>
+			<description>South Hallway</description>
+			<action>
+				<nextScene>Hallway4</nextScene>
+			</action>
+		</condition>
+		<condition>
+			<description>Servant's Passage</description>
 			<action>
 				<nextScene>ServantPassage3</nextScene>
 			</action>

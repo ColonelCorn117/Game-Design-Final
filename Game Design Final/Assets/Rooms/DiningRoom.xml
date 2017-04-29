@@ -1,0 +1,23 @@
+﻿<SceneDescription>
+	<name>Dining Room</name>
+	<description>A long table stretches through the middle of the room, a set of fancy chandeliers dangling over it to provide light. The tablecloth has been spread out and stacks of dishes placed on it for when the guests arrive.</description>
+	<background>black</background>
+	<conditionList>
+		<condition>
+			<description>Hallway 10</description>
+			<action>
+				<nextScene>Hallway10</nextScene>
+			</action>
+		</condition>
+		<condition>
+			<description>Kitchen</description>
+			<action>
+				<nextScene>Kitchen</nextScene>
+			</action>
+		</condition>
+	</conditionList>
+	<npcList>
+	</npcList>
+	<messList>
+	</messList>
+</SceneDescription>

@@ -1,0 +1,23 @@
+﻿<SceneDescription>
+	<name>Hallway3</name>
+	<description>If you squint really hard, this still just looks like a hallway.</description>
+	<background>black</background>
+	<conditionList>	
+		<condition>
+			<description>Hallway 2</description>
+			<action>
+				<nextScene>Hallway2</nextScene>
+			</action>
+		</condition>
+		<condition>
+			<description>Ballroom</description>
+			<action>
+				<nextScene>Ballroom</nextScene>
+			</action>
+		</condition>
+	</conditionList>
+	<npcList>
+	</npcList>
+	<messList>
+	</messList>
+</SceneDescription>
