@@ -259,6 +259,13 @@ public class Controller_Game : MonoBehaviour
 
 	//----------------------------------------------------------------------------------------------------
 
+	public void examineItem(int i) {
+		Item item = ItemLookup (itemList [i-1]);
+		SceneScript.sceneScript.examineObject (item,item.name);
+	}
+
+	//----------------------------------------------------------------------------------------------------
+
 	NPC LoadNPC(string path) {
 		var serializer = new XmlSerializer(typeof(NPC));
 		var stream = new FileStream(path, FileMode.Open);
@@ -282,6 +289,7 @@ public class Controller_Game : MonoBehaviour
 		stream.Close();
 		return output;
 	}
+
 
 	//----------------------------------------------------------------------------------------------------
 

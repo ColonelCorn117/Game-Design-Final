@@ -15,4 +15,14 @@ public class Mess : Problem {
 
 		return false;
 	}
+
+	public bool Unclean(Action a) {
+		if (a.messResolved == this.name) {
+			this.exists = 1;
+
+			return true;
+		}
+
+		return false;
+	}
 }

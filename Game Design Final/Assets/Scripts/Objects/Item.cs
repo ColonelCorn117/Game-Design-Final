@@ -1,5 +1,7 @@
 ﻿using System.Xml;
 using System.Xml.Serialization;
+using System.Collections;
+using System.Collections.Generic;
 
 [XmlRoot("item")]
 public class Item : GenericGameObject {
@@ -8,6 +10,9 @@ public class Item : GenericGameObject {
 	int unclaimed = 1;
 	int consumed = 0;
 	public int exists;
+
+	[XmlArray("conditionList"),XmlArrayItem("condition")]
+	public List<Condition> conditions = new List<Condition>();
 
 	public Item() {
 		action = new Action ();
