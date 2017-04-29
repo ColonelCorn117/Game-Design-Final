@@ -6,8 +6,16 @@
 </description>
 	<background>Kitchen</background>
 	<conditionList>
-	
 		<condition>
+			<description>Test (beta)</description>
+			<action>
+				<nextScene>TestDescription</nextScene>
+			</action>
+		</condition>
+		<condition>
+			<requirement>
+				<prereq>noreqs</prereq>
+			</requirement>
 			<description>Dining Room</description>
 			<action>
 				<nextScene>DiningRoom</nextScene>

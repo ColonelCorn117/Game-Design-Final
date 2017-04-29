@@ -1,0 +1,13 @@
+﻿<npc>
+	<name>Maid</name>
+	<description>A maid in a uniform.</description>
+	<exists>1</exists>
+	<conditionList>
+		<condition>
+			<requirement>
+				<prereq>killed50</prereq>
+			</requirement>
+			<action></action>
+		</condition>
+	</conditionList>
+</npc>

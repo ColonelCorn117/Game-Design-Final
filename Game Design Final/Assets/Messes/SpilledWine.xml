@@ -1,0 +1,18 @@
+﻿<mess>
+	<name>Spilled Wine</name>
+	<description>A large amount of wine has spread across the floor, courtesy of one obnoxious maid.</description>
+	<exists>0</exists>
+	<conditionList>
+		<condition>
+			<description>Clean</description>
+			<requirement>
+				<prereq>gainedMop</prereq>
+			</requirement>
+			<action>
+				<name>Clean</name>
+				<messResolved>SpilledWine</messResolved>
+				<nextScene>reload</nextScene>
+			</action>
+		</condition>
+	</conditionList>
+</mess>

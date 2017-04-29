@@ -7,13 +7,8 @@ public class NPC : Problem {
 	int dialogueLocation = 1;
 
 	public bool Subdue(Action a) {
-		if (a.npcSubdued == this.name) {
-			this.exists = 0;
-
-			return true;
-		}
-
-		return false;
+		this.exists = 0;
+		return true;
 	}
 
 	public void setDialogueLocation(int i) {

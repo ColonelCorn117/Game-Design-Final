@@ -1,0 +1,20 @@
+﻿<SceneDescription>
+	<name>Dining Room</name>
+	<description>
+		DO NOTHING
+	</description>
+	<background>DiningHall</background>
+	<conditionList>
+		<condition>
+			<description>Continue</description>
+
+			<action>
+				<nextScene>DiningHall</nextScene>
+			</action>
+		</condition>
+	</conditionList>
+	<npcList>
+	</npcList>
+	<messList>
+	</messList>
+</SceneDescription>

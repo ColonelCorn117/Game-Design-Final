@@ -1,15 +1,71 @@
 ﻿<SceneDescription>
 	<name>Dining Room</name>
-	<description>A long table stretches through the middle of the room, a set of fancy chandeliers dangling over it to provide light. The tablecloth has been spread out and stacks of dishes placed on it for when the guests arrive.</description>
-	<background>black</background>
+	<description>A long table stretches through the middle of the room, a set of fancy chandeliers dangling over it to provide light. The tablecloth has been spread out and stacks of dishes placed on it for when the guests arrive.
+	</description>
+	<background>DiningHall</background>
 	<conditionList>
 		<condition>
-			<description>Hallway 10</description>
+			<description>Do Nothing</description>
+			<additionalDescription>
+	A single maid stands at the far end, a glass of wine in hand.
+
+Assassin: [Please don’t tell me she’s planning to do what I think she’s planning to do...]
+			</additionalDescription>
+			<requirement>
+				<prereq>existsMaid1</prereq>
+			</requirement>
+			<action>
+				<messCreated>StainedCloth</messCreated>
+				<npcSubdued>Maid1</npcSubdued>
+				<nextScene>DiningHall1</nextScene>
+			</action>
+		</condition>
+		<condition>
+			<description>Talk to the Maid</description>
+			<requirement>
+				<prereq>existsMaid1</prereq>
+			</requirement>
+			<action>
+				<npcSubdued>Maid1</npcSubdued>
+				<nextScene>DiningHall2</nextScene>
+			</action>
+		</condition>
+		<condition>
+			<description>Subdue Maid</description>
+			<requirement>
+				<prereq>existsMaid1</prereq>
+			</requirement>
+			<action>
+				<npcSubdued>Maid1</npcSubdued>
+				<messCreated>SpilledWine</messCreated>
+				<nextScene>DiningHall3</nextScene>
+			</action>
+		</condition>
+		<condition>
+			<description>Kill Maid</description>
+			<requirement>
+				<prereq>existsMaid1</prereq>
+			</requirement>
+			<action>
+				<npcSubdued>Maid1</npcSubdued>
+				<messCreated>SpilledWine</messCreated>
+				<kill>1</kill>
+				<nextScene>DiningHall4</nextScene>
+			</action>
+		</condition>
+		<condition>
+			<requirement>
+				<prereq>removeMaid1</prereq>
+			</requirement>
+			<description>Hallway</description>
 			<action>
 				<nextScene>Hallway10</nextScene>
 			</action>
 		</condition>
 		<condition>
+			<requirement>
+				<prereq>removeMaid1</prereq>
+			</requirement>
 			<description>Kitchen</description>
 			<action>
 				<nextScene>Kitchen</nextScene>
@@ -19,5 +75,8 @@
 	<npcList>
 	</npcList>
 	<messList>
+		<mess>StainedCloth</mess>
+		<mess>BrokenWineglass</mess>
+		<mess>SpilledWine</mess>
 	</messList>
 </SceneDescription>

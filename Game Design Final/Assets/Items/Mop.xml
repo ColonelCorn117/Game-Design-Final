@@ -2,4 +2,30 @@
 	<name>Mop</name>
 	<description>Cleans up blood.</description>
 	<exists>1</exists>
+	<conditionList>
+		<condition>
+			<description>Take</description>
+			<requirement>
+				<prereq>noreqs</prereq>
+			</requirement>
+			<action>
+				<name>Take Mop</name>
+				<description>Assassin: This could be useful.</description>
+				<itemGained>Mop</itemGained>
+				<nextScene>reload</nextScene>
+			</action>
+		</condition>
+		<condition>
+			<name>Back</name>
+			<description>Back</description>
+			<requirement>
+				<prereq>noreqs</prereq>
+			</requirement>
+			<action>
+				<name>Back</name>
+				<description>Assassin: I'll worry about this later.</description>
+				<nextScene>reload</nextScene>
+			</action>
+		</condition>
+	</conditionList>
 </item>

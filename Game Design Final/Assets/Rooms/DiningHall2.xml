@@ -1,0 +1,36 @@
+﻿<SceneDescription>
+	<name>Dining Room</name>
+	<description>
+Assassin: Stop right now!
+
+Maid: Huh? What do you want?
+
+Assassin: Please don’t dump that wine on the tablecloth.
+
+Maid: What? Why?
+
+Assassin: [Because I don’t want to clean that shit up...]
+
+Assassin: It’s not worth it.
+
+Maid: Yes it is! Lord Borkus is jerk! We’ll show him how important we are!
+
+Assassin: [I have to negotiate this somehow.]
+
+Assassin: That wine is a vintage, limited bottle. Don’t give him the satisfaction of saying you wasted it. Why not drink it instead? Not only does he lose a valuable maid, but he also loses a delicious wine that you get to take instead.
+	</description>
+	<background>DiningHall</background>
+	<conditionList>
+		<condition>
+			<description>Continue</description>
+
+			<action>
+				<nextScene>DiningHall2-1</nextScene>
+			</action>
+		</condition>
+	</conditionList>
+	<npcList>
+	</npcList>
+	<messList>
+	</messList>
+</SceneDescription>
