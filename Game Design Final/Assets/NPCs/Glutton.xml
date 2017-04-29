@@ -1,11 +1,11 @@
 ﻿<npc>
-	<name>Sakuya Izayoi</name>
-	<description>Stops time. Uses this power to clean.</description>
+	<name>'Maid'</name>
+	<description>Assassin: I had no idea that the maid staff included a 400 pound gorilla capable of surviving on nothing but bread.</description>
 	<exists>1</exists>
 	<clearList>
 		<condition>
 			<requirement>
-				<prereq>gainedMop</prereq>
+				<prereq>devour9999</prereq>
 			</requirement>
 			<action></action>
 		</condition>
@@ -15,7 +15,7 @@
 			<description>Talk</description>
 			<action>
 				<name></name>
-				<nextScene>dialogueSakuya1</nextScene>
+				<nextScene>dialogueGlutton1</nextScene>
 			</action>
 		</condition>
 

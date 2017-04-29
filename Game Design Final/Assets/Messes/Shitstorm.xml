@@ -5,15 +5,15 @@
 	<exists>1</exists>
 	<conditionList>
 		<condition>
+			<description>Clean</description>
 			<requirement>
-				<prereq>gainedX</prereq>
-				<prereq>expireX</prereq>
-				<prereq>killed1</prereq>
-				<prereq>nokill1</prereq>
-				<prereq>removeX</prereq>
-				<prereq>existX</prereq>
+				<prereq>gainedDustpan</prereq>
 			</requirement>
-			<action></action>
+			<action>
+				<name>Clean</name>
+				<messResolved>Shitstorm</messResolved>
+				<nextScene>reload</nextScene>
+			</action>
 		</condition>
 	</conditionList>
 </mess>

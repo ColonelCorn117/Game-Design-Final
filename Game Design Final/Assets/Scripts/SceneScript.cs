@@ -13,6 +13,7 @@ public class SceneScript : MonoBehaviour {
 
 	public static SceneScript sceneScript;
 	string currentSceneName = "";
+	public string startingSceneName = "TestDescription";
 
 	SceneDescription xml;
 
@@ -39,7 +40,7 @@ public class SceneScript : MonoBehaviour {
 
 
 		//LoadScene ("Intro01-01");
-		LoadScene("TestDescription");
+		LoadScene(startingSceneName);
 	}
 
 	NPC NpcLookup(string name) {
@@ -84,11 +85,11 @@ public class SceneScript : MonoBehaviour {
 
 		} else if (o is Item) {
 			//Item i = (Item)o;
-			Option pickup = new Option ("Take", new Action ("takeBack", currentSceneName, "", name));
+			Condition pickup = new Condition ("Take", new Action ("takeBack", currentSceneName, "", name));
 
-			Option back = new Option ("Back", new Action ("backNow", currentSceneName, ""));
+			Condition back = new Condition ("Back", new Action ("backNow", currentSceneName, ""));
 
-			List<Option> l = new List<Option> ();
+			List<Condition> l = new List<Condition> ();
 
 			l.Add (pickup);
 			l.Add (back);
@@ -101,6 +102,12 @@ public class SceneScript : MonoBehaviour {
 	//----------------------------------------------------------------------------------------------------
 
 	void BuildDescription () {
+		BuildDescription ("","");
+	}
+
+	//----------------------------------------------------------------------------------------------------
+
+	void BuildDescription (string additionalTextFront, string additionalTextBack) {
 		string desc = xml.description;
 
 		if (xml.npcList.Count > 0) {
@@ -228,6 +235,17 @@ public class SceneScript : MonoBehaviour {
 
 	//----------------------------------------------------------------------------------------------------
 
+	public void LoadSimpleScene(string text, string nextScence) {
+		// rebuild description w/o changing the xml object
+		descriptionText.text = text;
+		Condition continueCondition = new Condition ("Continue", new Action ("continue", nextScence, ""));
+		List<Condition> l = new List<Condition> ();
+		l.Add (continueCondition);
+		LoadButtons (l);
+	}
+
+	//----------------------------------------------------------------------------------------------------
+
 	public void LoadBackgroundImage(string imageName) {
 
 		string imagePath = "Assets/Rooms/Images/" + imageName + ".png";
@@ -325,7 +343,7 @@ public class SceneScript : MonoBehaviour {
 	//----------------------------------------------------------------------------------------------------
 
 	void LoadButtons() {
-
+		//Debug.Log ("LoadButtons()");
 		var optionsText = optionsBox.GetComponentsInChildren<Text>();
 		int i = 1;
 
@@ -375,13 +393,15 @@ public class SceneScript : MonoBehaviour {
 
 	//----------------------------------------------------------------------------------------------------
 
-	void LoadButtons (List<Option> options) {
+	void LoadButtons (List<Condition> conditions) {
 		var optionsText = optionsBox.GetComponentsInChildren<Text>();
 		int i = 1;
-		foreach (Option o in options) {
-			addButtonAction (o.action,i);
-			optionsText [i - 1].text = o.description;
-			++i;
+		foreach (Condition c in conditions) {
+			if (c.Satisfied ()) {
+				addButtonAction (c.action, i);
+				optionsText [i - 1].text = c.description;
+				++i;
+			}
 		}
 		while(i < optionsText.Length) {
 			addButtonAction (new Action(),i);
@@ -392,16 +412,13 @@ public class SceneScript : MonoBehaviour {
 
 	//----------------------------------------------------------------------------------------------------
 
-	void addButtonAction(Action a, int i) {
-		Controller_Game.ctrl_game.addButtonAction (a, i);
-	}
-
-	//----------------------------------------------------------------------------------------------------
-
 	void LoadButtons(List<Condition> conditions, Option extraOption) {
+		Debug.Log ("LoadButtons(conditions, extra)");
 		var optionsText = optionsBox.GetComponentsInChildren<Text>();
 		int i = 1;
 		foreach (Condition c in conditions) {
+			Debug.Log (c.description + ", " + c.Satisfied());
+
 			if (c.description == null || c.description == "") {
 				continue;
 			}
@@ -426,6 +443,13 @@ public class SceneScript : MonoBehaviour {
 	}
 
 	//----------------------------------------------------------------------------------------------------
+
+	void addButtonAction(Action a, int i) {
+		Controller_Game.ctrl_game.addButtonAction (a, i);
+	}
+
+	//----------------------------------------------------------------------------------------------------
+
 	/*
 	void LoadButtons(List<Option> options, Option extraOption) {
 		var optionsText = optionsBox.GetComponentsInChildren<Text>();

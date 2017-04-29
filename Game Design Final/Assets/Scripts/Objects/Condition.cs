@@ -15,6 +15,19 @@ public class Condition : GenericGameObject {
 	[XmlElement("action")]
 	public Action action = new Action();
 
+	public Condition() {
+
+	}
+
+	public Condition(string desc) {
+		this.description = desc;
+	}
+
+	public Condition(string desc, Action a) {
+		this.description = desc;
+		this.action = a;
+	}
+
 	public bool Satisfied(Action a) {
 		if ((requirement == null) || (requirement.Count < 1)) {
 			return true;

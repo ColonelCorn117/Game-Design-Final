@@ -2173,6 +2173,7 @@ MonoBehaviour:
   - {fileID: 4900000, guid: a04aa961a03381a4984f87dcac5d9ec3, type: 3}
   itemList: []
   turnsRemaining: 50
+  breadQuantity: 0
 --- !u!114 &887181254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2184,6 +2185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6815287f3d7c48dca01f26452a6f278, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startingSceneName: Kitchen
 --- !u!1 &896676789
 GameObject:
   m_ObjectHideFlags: 0
