@@ -22,6 +22,12 @@
 				<nextScene>Intro01-01</nextScene>
 			</action>
 		</condition>
+		<condition>
+			<description>Kitchen</description>
+			<action>
+				<nextScene>Kitchen</nextScene>
+			</action>
+		</condition>
 	</conditionList>
 	<npcList>
 		<npc>Sakuya</npc>

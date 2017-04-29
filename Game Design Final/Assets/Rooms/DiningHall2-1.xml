@@ -1,0 +1,33 @@
+﻿<SceneDescription>
+	<name>Dining Room</name>
+	<description>
+	The Maid hesitates, staring at the glass with an expression that shows she is considering the idea offered.
+
+Maid: You won’t tell him?
+
+Assassin: Nope. I think he’s a dick too. Drink away and just don’t get caught on your way out.
+
+	The Maid takes another moment to think, before putting the glass to her lips and drinking the whole thing.
+
+Maid: You’re right. I’m gonna drink this whole bottle and he won’t get to have a single drop!
+
+With a smirk on her face, the Maid struts out of the room. No messes have been made.
+
+Assassin: Phew. Crisis avoided.
+
+	</description>
+	<background>DiningHall</background>
+	<conditionList>
+		<condition>
+			<description>Continue</description>
+
+			<action>
+				<nextScene>DiningRoom</nextScene>
+			</action>
+		</condition>
+	</conditionList>
+	<npcList>
+	</npcList>
+	<messList>
+	</messList>
+</SceneDescription>

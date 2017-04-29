@@ -1,15 +1,18 @@
 ﻿<SceneDescription>
-	<name>Hallway10</name>
+	<name>Hallway</name>
 	<description>Hallways here, hallways there, hallways goddamn everywhere.</description>
 	<background>black</background>
 	<conditionList>
 		<condition>
-			<description>Hallway 9</description>
+			<description>Hallway</description>
 			<action>
 				<nextScene>Hallway9</nextScene>
 			</action>
 		</condition>
 		<condition>
+			<requirement>
+				<prereq>noreqs</prereq>
+			</requirement>
 			<description>Dining Room</description>
 			<action>
 				<nextScene>DiningRoom</nextScene>

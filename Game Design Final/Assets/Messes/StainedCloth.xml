@@ -1,0 +1,19 @@
+﻿<mess>
+	<name>Stained Tablecloth</name>
+	<description>The tablecloth has a massive wine stain, courtesy of one obnoxious maid.</description>
+	<exists>0</exists>
+	<conditionList>
+		<condition>
+			<description>Clean</description>
+			<requirement>
+				<prereq>useTablecloth</prereq>
+			</requirement>
+			<action>
+				<name>Clean</name>
+				<messResolved>StainedTablecloth</messResolved>
+				<itemUsed>Tablecloth</itemUsed>
+				<nextScene>reload</nextScene>
+			</action>
+		</condition>
+	</conditionList>
+</mess>

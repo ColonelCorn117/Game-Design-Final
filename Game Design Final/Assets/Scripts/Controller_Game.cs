@@ -195,6 +195,13 @@ public class Controller_Game : MonoBehaviour
 			// it currently isn't used for anything
 			changeMade = true;
 		}
+		if (a.messCreated != null && a.messCreated != "") {
+			MessLookup (a.messCreated).Unclean (a);
+			// Note: this method returns a bool regarding whether it succeeded
+			// it currently isn't used for anything
+			changeMade = true;
+		}
+
 		// if an action removes an NPC, do that
 		if (a.npcSubdued != null && a.npcSubdued != "") {
 			NpcLookup (a.npcSubdued).Subdue (a);

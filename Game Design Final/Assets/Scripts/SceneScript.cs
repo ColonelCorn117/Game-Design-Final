@@ -103,9 +103,6 @@ public class SceneScript : MonoBehaviour {
 						l.Add (new Condition ("Back", new Action ("Back", currentSceneName, "")));
 					}
 				}
-				Debug.Log ("null: " + (i.conditions == null));
-				Debug.Log ("i.count: " + (i.conditions.Count));
-				Debug.Log (l.Count);
 
 				if (l.Count > 0) {
 					LoadButtons (i.conditions, l);
@@ -129,6 +126,15 @@ public class SceneScript : MonoBehaviour {
 
 	void BuildDescription (string additionalTextFront, string additionalTextBack) {
 		string desc = xml.description;
+		string additionalDesc = "";
+
+		foreach (Condition c in xml.optionList) {
+			if (c.Satisfied ()) {
+				additionalDesc += c.additionalDescription + "\n\n";
+			}
+		}
+
+		desc += additionalDesc;
 
 		if (xml.npcList.Count > 0) {
 
@@ -164,7 +170,6 @@ public class SceneScript : MonoBehaviour {
 						desc += ", ";
 					}
 					desc += m.name;
-
 				}
 			}
 		}
@@ -447,7 +452,7 @@ public class SceneScript : MonoBehaviour {
 		var optionsText = optionsBox.GetComponentsInChildren<Text>();
 		int i = 1;
 		foreach (Condition c in conditions) {
-			Debug.Log (c.description + ", " + c.Satisfied());
+			//Debug.Log (c.description + ", " + c.Satisfied());
 
 			if (c.description == null || c.description == "") {
 				continue;
@@ -460,7 +465,7 @@ public class SceneScript : MonoBehaviour {
 		}
 
 		foreach (Condition c in extraConditions) {
-			Debug.Log (c.description + ", " + c.Satisfied());
+			//Debug.Log (c.description + ", " + c.Satisfied());
 
 			if (c.description == null || c.description == "") {
 				continue;

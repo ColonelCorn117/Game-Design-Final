@@ -59,7 +59,7 @@ public class Requirement {
 				}
 			} else if (req.StartsWith ("remove")) {
 				//the player has already removed a certain NPC
-				if (Controller_Game.ctrl_game.NpcLookup (reqName).exists == 1) {
+				if (!(Controller_Game.ctrl_game.NpcLookup (reqName).exists == 0)) {
 					return false;
 				}
 			} else if (req.StartsWith ("exists")) {

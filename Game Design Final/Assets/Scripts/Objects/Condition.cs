@@ -29,7 +29,6 @@ public class Condition : GenericGameObject {
 	}
 
 	public bool Satisfied(Action a) {
-		Debug.Log ("Requirement length: " + requirement.Count);
 		if ((requirement == null) || (requirement.Count < 1)) {
 			return true;
 		}
@@ -42,7 +41,6 @@ public class Condition : GenericGameObject {
 	}
 
 	public bool Satisfied() {
-		Debug.Log ("Requirement length: " + requirement.Count);
 		if ((requirement == null) || (requirement.Count < 1)) {
 			//Debug.Log ("no requirement object");
 			return true;
