@@ -18,11 +18,6 @@ public class Requirement {
 
 			String reqName = req.Substring(6);
 
-			if (reqName == "Mop") {
-				Item mop = Controller_Game.ctrl_game.ItemLookup (reqName);
-
-				//Debug.Log (req + ": " + mop.possessed () + ", claimed: " + mop.isClaimed () + ",  consumed: " + mop.isConsumed ());
-			}
 
 			//Debug.Log ("req: " + req + ", name: " + reqName);
 			if (req.StartsWith ("noreqs")) {
@@ -31,13 +26,13 @@ public class Requirement {
 			}
 			if (req.StartsWith ("gained")) {
 				//the player has an item with the name after "gained"
-				if (!Controller_Game.ctrl_game.ItemLookup (reqName).possessed ()) {
+				if (!Controller_Game.ctrl_game.itemList.Contains (reqName)) {
 					//Debug.Log ("item possessed: " + reqName);
 					return false;
 				}
 			} else if (req.StartsWith ("nogain")) {
 				//the player does not have an item with the name after "nogain"
-				if (Controller_Game.ctrl_game.ItemLookup (reqName).possessed ()) {
+				if (Controller_Game.ctrl_game.itemList.Contains (reqName)) {
 					//Debug.Log ("item not possessed: " + reqName);
 					return false;
 				}
@@ -50,7 +45,7 @@ public class Requirement {
 				//the player has killed more than a certain number of people
 				int reqKilled = int.Parse (reqName);
 				//TODO: look up number of people killed
-				int numKilled = 0;
+				int numKilled = Controller_Game.ctrl_game.killCount;
 				if (reqKilled > numKilled) {
 					return false;
 				}
@@ -58,7 +53,7 @@ public class Requirement {
 				//the player has killed fewer than a certain number of people
 				int reqKilled = int.Parse (reqName);
 				//TODO: look up number of people killed
-				int numKilled = 0;
+				int numKilled = Controller_Game.ctrl_game.killCount;
 				if (reqKilled < numKilled) {
 					return false;
 				}

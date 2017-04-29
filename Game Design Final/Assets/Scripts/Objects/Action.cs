@@ -6,7 +6,9 @@ public class Action : GenericGameObject {
 	public string itemGained;
 	public string itemUsed;
 	public string npcSubdued;
+	public int kill;
 	public string messResolved;
+	public string messCreated;
 
 
 	public Action() {

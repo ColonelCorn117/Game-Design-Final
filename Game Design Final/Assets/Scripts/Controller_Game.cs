@@ -28,6 +28,9 @@ public class Controller_Game : MonoBehaviour
 	Dictionary<string,Mess> messes = new Dictionary<string, Mess>();
 	Dictionary<string,Item> items = new Dictionary<string, Item>();
 	public int turnsRemaining = 50;
+	public int killCount = 0;
+
+	public int breadQuantity = 0;
 
 	Action[] buttonActions = new Action[9]; // buttonActions[0] is empty. the action for btn1 is found in buttonActions[1].
 	//int numButtonActions = 1; // first 'empty slot' that can be filled in buttonActions.
@@ -155,7 +158,15 @@ public class Controller_Game : MonoBehaviour
 
 		// if an action consumes an item, delete that item from inventory
 		if (a.itemUsed != null && a.itemUsed != "") {
-			this.ItemLookup (a.itemUsed).consume ();
+			if (a.itemGained == "Bread") {
+				if (breadQuantity < 2) {
+					this.ItemLookup (a.itemGained).consume ();
+					breadQuantity = 1;
+				}
+				--breadQuantity;
+			} else {
+				this.ItemLookup (a.itemUsed).consume ();
+			}
 			//this.itemList.Remove (a.itemUsed);
 			RemoveItemFromInv(a.itemUsed);
 			changeMade = true;
@@ -163,13 +174,18 @@ public class Controller_Game : MonoBehaviour
 		// if an action picks up an item, add that item to inventory and mark it as taken from the room
 		if (a.itemGained != null && a.itemGained != "") {
 
-			if (a.itemGained == "Mop") {
-				Debug.Log ("Claiming mop");
+			if (a.itemGained == "Bread") {
+				if (breadQuantity < 1) {
+					this.ItemLookup (a.itemGained).claim ();
+					breadQuantity = 1;
+				}
+				++breadQuantity;
+				this.ItemLookup (a.itemGained).claim ();
+			} else {
+				this.ItemLookup (a.itemGained).claim ();
+				//this.itemList.Add (a.itemGained);
 			}
-
-			this.ItemLookup (a.itemGained).claim ();
-			//this.itemList.Add (a.itemGained);
-			AddItemToInv(a.itemGained);
+			AddItemToInv (a.itemGained);
 			changeMade = true;
 		}
 		// if an action cleans up a mess, clean it up
@@ -185,6 +201,9 @@ public class Controller_Game : MonoBehaviour
 			// Note: this method returns a bool regarding whether it succeeded
 			// it currently isn't used for anything
 			changeMade = true;
+		}
+		if (a.kill > 0) {
+			this.killCount += a.kill;
 		}
 		// if the player is trying to examine an item, mess, or NPC, set up the screen to do that.
 		if (a.objectExamined != null && a.objectExamined != "") {
@@ -210,9 +229,16 @@ public class Controller_Game : MonoBehaviour
 				//GameObject.Find ("Description Text").GetComponentInChildren<Text> ().text = desc;
 			}
 		}
-
+		if (a.messCreated != null && a.messCreated != "") {
+			//TODO: Figure out how to make a new mess.
+		}
 		if(a.nextScene != null && a.nextScene != "") {
-			SceneScript.sceneScript.LoadScene (a.nextScene);
+			if (a.description != null && a.description != "") {
+				SceneScript.sceneScript.LoadSimpleScene (a.description, a.nextScene);
+			} else {
+				SceneScript.sceneScript.LoadScene (a.nextScene);
+			}
+
 		}
 	}
 
