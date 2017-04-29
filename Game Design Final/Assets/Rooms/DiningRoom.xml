@@ -38,6 +38,7 @@ Assassin: [Please don’t tell me she’s planning to do what I think she’s pl
 			<action>
 				<npcSubdued>Maid1</npcSubdued>
 				<messCreated>SpilledWine</messCreated>
+				<itemCreated>Body</itemCreated>
 				<nextScene>DiningHall3</nextScene>
 			</action>
 		</condition>
@@ -49,6 +50,7 @@ Assassin: [Please don’t tell me she’s planning to do what I think she’s pl
 			<action>
 				<npcSubdued>Maid1</npcSubdued>
 				<messCreated>SpilledWine</messCreated>
+				<itemCreated>Corpse</itemCreated>
 				<kill>1</kill>
 				<nextScene>DiningHall4</nextScene>
 			</action>
@@ -79,4 +81,8 @@ Assassin: [Please don’t tell me she’s planning to do what I think she’s pl
 		<mess>BrokenWineglass</mess>
 		<mess>SpilledWine</mess>
 	</messList>
+	<itemList>
+		<item>Corpse</item>
+		<item>Body</item>
+	</itemList>
 </SceneDescription>

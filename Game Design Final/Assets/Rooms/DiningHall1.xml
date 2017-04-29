@@ -9,7 +9,7 @@
 			<description>Continue</description>
 
 			<action>
-				<nextScene>DiningHall</nextScene>
+				<nextScene>DiningRoom</nextScene>
 			</action>
 		</condition>
 	</conditionList>

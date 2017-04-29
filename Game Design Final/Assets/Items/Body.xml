@@ -1,0 +1,32 @@
+﻿<item>
+	<name>Body</name>
+	<description>An unconscious maid who won't be waking up any time soon.</description>
+	<exists>0</exists>
+	<conditionList>
+		<condition>
+			<description>Take</description>
+			<requirement>
+				<prereq>nogainCorpse</prereq>
+				<prereq>nogainBody</prereq>
+			</requirement>
+			<action>
+				<name>Take</name>
+				<description>Assassin: I'd better get this out of the way.</description>
+				<itemGained>Body</itemGained>
+				<nextScene>reload</nextScene>
+			</action>
+		</condition>
+		<condition>
+			<name>Back</name>
+			<description>Back</description>
+			<requirement>
+				<prereq>noreqs</prereq>
+			</requirement>
+			<action>
+				<name>Back</name>
+				<description>Assassin: I'll worry about this later.</description>
+				<nextScene>reload</nextScene>
+			</action>
+		</condition>
+	</conditionList>
+</item>
