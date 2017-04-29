@@ -1,0 +1,24 @@
+﻿<SceneDescription>
+	<name>Hallway4</name>
+	<description>Hallway to hell.</description>
+	<background>black</background>
+	<conditionList>
+	
+		<condition>
+			<description>Hallway 2</description>
+			<action>
+				<nextScene>Hallway2</nextScene>
+			</action>
+		</condition>
+		<condition>
+			<description>Hallway 5</description>
+			<action>
+				<nextScene>Hallway5</nextScene>
+			</action>
+		</condition>
+	</conditionList>
+	<npcList>
+	</npcList>
+	<messList>
+	</messList>
+</SceneDescription>

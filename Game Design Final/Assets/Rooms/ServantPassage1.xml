@@ -1,17 +1,23 @@
 ﻿<SceneDescription>
 	<name>Servant's Passage</name>
-	<description>The evolved form of a hallway.</description>
+	<description>It's really just another hallway.</description>
 	<background>Hallway</background>
 	<conditionList>
 	
 		<condition>
-			<description>East Hallway</description>
+			<description>Laundry Room</description>
 			<action>
-				<nextScene>Hallway2</nextScene>
+				<nextScene>LaundryRoom</nextScene>
 			</action>
 		</condition>
 		<condition>
-			<description>South Servant Passage</description>
+			<description>Servants' Quarters</description>
+			<action>
+				<nextScene>ServantQuarters</nextScene>
+			</action>
+		</condition>
+		<condition>
+			<description>North Servant's Passage</description>
 			<action>
 				<nextScene>ServantPassage2</nextScene>
 			</action>

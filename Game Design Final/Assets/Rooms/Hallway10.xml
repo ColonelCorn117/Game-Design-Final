@@ -1,0 +1,23 @@
+﻿<SceneDescription>
+	<name>Hallway10</name>
+	<description>Hallways here, hallways there, hallways goddamn everywhere.</description>
+	<background>black</background>
+	<conditionList>
+		<condition>
+			<description>Hallway 9</description>
+			<action>
+				<nextScene>Hallway9</nextScene>
+			</action>
+		</condition>
+		<condition>
+			<description>Dining Room</description>
+			<action>
+				<nextScene>DiningRoom</nextScene>
+			</action>
+		</condition>
+	</conditionList>
+	<npcList>
+	</npcList>
+	<messList>
+	</messList>
+</SceneDescription>

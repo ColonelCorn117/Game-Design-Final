@@ -1,0 +1,23 @@
+﻿<SceneDescription>
+	<name>Hallway8</name>
+	<description>More like hallway hate.</description>
+	<background>black</background>
+	<conditionList>
+		<condition>
+			<description>Hallway 6</description>
+			<action>
+				<nextScene>Hallway6</nextScene>
+			</action>
+		</condition>
+		<condition>
+			<description>Hallway 9</description>
+			<action>
+				<nextScene>Hallway9</nextScene>
+			</action>
+		</condition>
+	</conditionList>
+	<npcList>
+	</npcList>
+	<messList>
+	</messList>
+</SceneDescription>

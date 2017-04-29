@@ -1,17 +1,17 @@
 ﻿<SceneDescription>
 	<name>Hallway1</name>
 	<description>It's a hallway.</description>
-	<background>black</background>
+	<background>Hallway</background>
 	<conditionList>
 	
 		<condition>
-			<description>Landing 1F</description>
+			<description>Landing</description>
 			<action>
 				<nextScene>Landing1F</nextScene>
 			</action>
 		</condition>
 		<condition>
-			<description>Hallway 2</description>
+			<description>South Hallway</description>
 			<action>
 				<nextScene>Hallway2</nextScene>
 			</action>

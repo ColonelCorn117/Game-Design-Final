@@ -5,25 +5,11 @@
 	<conditionList>
 	
 		<condition>
-			<description>Landing1F</description>
+			<description>Landing</description>
 			<action>
 				<name>toLanding</name>
 				<nextScene>Landing1F</nextScene>
 			</action>
-		</condition>
-		<condition>
-			<description>The Void</description>
-			<action>
-				<name>Voided</name>
-				<nextScene>Nowhere</nextScene>
-			</action>
-		</condition>
-		<condition>
-			<description>Text</description>
-			<action>
-				<nextScene>TestDecription</nextScene>
-			</action>
-			
 		</condition>
 	</conditionList>
 	<npcList>

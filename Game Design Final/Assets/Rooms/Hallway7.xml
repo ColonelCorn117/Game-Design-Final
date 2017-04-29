@@ -1,0 +1,23 @@
+﻿<SceneDescription>
+	<name>Hallway7</name>
+	<description>No, that was that other hallway.</description>
+	<background>black</background>
+	<conditionList>
+		<condition>
+			<description>Hallway 6</description>
+			<action>
+				<nextScene>Hallway6</nextScene>
+			</action>
+		</condition>
+		<condition>
+			<description>Music Room</description>
+			<action>
+				<nextScene>MusicRoom</nextScene>
+			</action>
+		</condition>
+	</conditionList>
+	<npcList>
+	</npcList>
+	<messList>
+	</messList>
+</SceneDescription>

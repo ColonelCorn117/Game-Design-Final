@@ -20,9 +20,16 @@
 			
 		</condition>
 		<condition>
-			<description>Hallway 1</description>
+			<description>South Hallway</description>
 			<action>
 				<nextScene>Hallway1</nextScene>
+			</action>
+			
+		</condition>
+		<condition>
+			<description>North Hallway</description>
+			<action>
+				<nextScene>Hallway6</nextScene>
 			</action>
 			
 		</condition>
@@ -41,4 +48,4 @@
 	</npcList>
 	<messList>
 	</messList>
-	</SceneDescription>
+</SceneDescription>

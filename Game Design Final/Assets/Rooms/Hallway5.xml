@@ -1,0 +1,17 @@
+﻿<SceneDescription>
+	<name>Hallway5</name>
+	<description>Hall-elujah.</description>
+	<background>black</background>
+	<conditionList>
+		<condition>
+			<description>Hallway 4</description>
+			<action>
+				<nextScene>Hallway4</nextScene>
+			</action>
+		</condition>
+	</conditionList>
+	<npcList>
+	</npcList>
+	<messList>
+	</messList>
+</SceneDescription>
