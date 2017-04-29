@@ -97,7 +97,7 @@ public class SceneScript : MonoBehaviour {
 			} else {
 				if (i.conditions != null) {
 					if (i.conditions.Count == 0 || i.conditions [0].description != "Take") {
-						l.Add (new Condition ("Take", new Action ("takeBack", currentSceneName, "", name)));
+						l.Add (new Condition ("Take", new Action ("Take", currentSceneName, "", name)));
 					}
 					if (i.conditions.Count == 0 || i.conditions [i.conditions.Count - 1].description != "Back") {
 						l.Add (new Condition ("Back", new Action ("Back", currentSceneName, "")));
@@ -368,7 +368,7 @@ public class SceneScript : MonoBehaviour {
 	//----------------------------------------------------------------------------------------------------
 
 	void LoadButtons() {
-		Debug.Log ("LoadButtons()");
+		//Debug.Log ("LoadButtons()");
 		var optionsText = optionsBox.GetComponentsInChildren<Text>();
 		int i = 1;
 
@@ -400,7 +400,7 @@ public class SceneScript : MonoBehaviour {
 		//TODO: Add item options here.
 		foreach (string itemName in xml.itemList) {
 			Item it = ItemLookup (itemName);
-			if (it.exists == 1 && !it.isClaimed()) {
+			if (it.exists == 1 && !Controller_Game.ctrl_game.itemList.Contains(itemName)  && !it.isConsumed()) {
 				Action a = new Action ("examine" + itemName, "", itemName);
 				addButtonAction (a,i);
 				optionsText [i - 1].text = it.name;
@@ -419,12 +419,12 @@ public class SceneScript : MonoBehaviour {
 	//----------------------------------------------------------------------------------------------------
 
 	void LoadButtons (List<Condition> conditions) {
-		Debug.Log ("LoadButtons(conditions)");
+		//Debug.Log ("LoadButtons(conditions)");
 		var optionsText = optionsBox.GetComponentsInChildren<Text>();
 		int i = 1;
-		Debug.Log ("Conditions : " + conditions.Count);
+		//Debug.Log ("Conditions : " + conditions.Count);
 		foreach (Condition c in conditions) {
-			Debug.Log ("Condition: requirement: count; " + c.requirement.Count);
+			//Debug.Log ("Condition: requirement: count; " + c.requirement.Count);
 			if (c.Satisfied ()) {
 				addButtonAction (c.action, i);
 				optionsText [i - 1].text = c.description;
@@ -441,14 +441,14 @@ public class SceneScript : MonoBehaviour {
 	//----------------------------------------------------------------------------------------------------
 
 	void LoadButtons(List<Condition> conditions, Condition extraCondition) {
-		Debug.Log ("LoadButtons(condtions, extra)");
+		//Debug.Log ("LoadButtons(condtions, extra)");
 		List<Condition> l = new List<Condition> ();
 		l.Add (extraCondition);
 		LoadButtons (conditions, l);
 	}
 	//----------------------------------------------------------------------------------------------------
 	void LoadButtons(List<Condition> conditions, List<Condition> extraConditions) {
-		Debug.Log ("LoadButtons(conditions, extraConditions)");
+		//Debug.Log ("LoadButtons(conditions, extraConditions)");
 		var optionsText = optionsBox.GetComponentsInChildren<Text>();
 		int i = 1;
 		foreach (Condition c in conditions) {

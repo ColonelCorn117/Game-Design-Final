@@ -72,7 +72,27 @@ public class Requirement {
 				string npcName = reqName.Substring (0, reqName.Length - 1);
 				int dialogueReached = int.Parse (reqName.Substring (reqName.Length - 1));
 				NPC n = Controller_Game.ctrl_game.NpcLookup (npcName);
-				if (n.getDialogueLocation() < dialogueReached) {
+				if (n.getDialogueLocation () < dialogueReached) {
+					return false;
+				}
+			} else if (req.StartsWith ("loaves")) {
+				// the player has a certain amount of bread in inventory.
+				int reqBread = int.Parse (reqName);
+				if (Controller_Game.ctrl_game.breadQuantity < reqBread) {
+					return false;
+				}
+			} else if (req.StartsWith ("invblk")) {
+				// the player has bread in the first N slots in inventory.
+				int breadCount = int.Parse (reqName);
+				for (int i = 0; i < breadCount; ++i) {
+					if (Controller_Game.ctrl_game.itemList [i] != "Bread") {
+						return false;	
+					}
+				}
+			} else if (req.StartsWith ("devour")) {
+				// the player has bread in the first N slots in inventory.
+				int breadEaten = int.Parse (reqName);
+				if (Controller_Game.ctrl_game.breadConsumed < breadEaten) {
 					return false;
 				}
 			}

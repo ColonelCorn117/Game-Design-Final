@@ -28,6 +28,12 @@
 				<nextScene>Kitchen</nextScene>
 			</action>
 		</condition>
+		<condition>
+			<description>Orchestra</description>
+			<action>
+				<nextScene>OrchestraPit</nextScene>
+			</action>
+		</condition>
 	</conditionList>
 	<npcList>
 		<npc>Sakuya</npc>

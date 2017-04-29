@@ -23,4 +23,7 @@
 	</npcList>
 	<messList>
 	</messList>
+	<itemList>
+		<item>Knife</item>
+	</itemList>
 </SceneDescription>

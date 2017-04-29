@@ -40,6 +40,10 @@ public class Item : GenericGameObject {
 		unclaimed = 0;
 	}
 
+	public void create() {
+		exists = 1;
+	}
+
 	public void consume() {
 		consumed = 1;
 	}
