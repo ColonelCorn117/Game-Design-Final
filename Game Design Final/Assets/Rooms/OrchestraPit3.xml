@@ -1,0 +1,22 @@
+﻿<SceneDescription>
+	<name>Orchestra Pit</name>
+	<description>
+	You manage to retrieve the jam jar, but it has already emptied its precious payload into the piano. Given that Lord Borkus's guests will certainly be anticipating his pianist's performance, a jammed piano will probably not be viewed in a positive light.
+
+	</description>
+	<background>OrchestraPit</background>
+	<conditionList>	
+		<condition>
+			<description>Fish out jam jar</description>
+			<requirement>
+				<prereq>noreqs</prereq>
+			</requirement>
+			<action>
+				<messCreated>JammedPiano</messCreated>
+				<nextScene>OrchestraPit</nextScene>
+			</action>
+		</condition>
+	</conditionList>
+	<npcList>
+	</npcList>
+</SceneDescription>

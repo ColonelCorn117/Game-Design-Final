@@ -35,6 +35,30 @@ Assassin: [She would.]
 			</action>
 		</condition>
 		<condition>
+			<description>Talk to the Maid</description>
+			<requirement>
+				<prereq>existsMaid2</prereq>
+			</requirement>
+			
+			<action>
+				<description>
+				</description>
+				<npcSubdued>Maid2</npcSubdued>
+				<messCreated>JammedPiano</messCreated>
+				<nextScene>OrchestraPit2</nextScene>
+			</action>
+		</condition>
+		<condition>
+			<description>Tackle Maid</description>
+			<requirement>
+				<prereq>existsMaid2</prereq>
+			</requirement>
+			
+			<action>
+				<nextScene>OrchestraPit4</nextScene>
+			</action>
+		</condition>
+		<condition>
 			<description>Throw Knife (Lethal)</description>
 			<requirement>
 				<prereq>existsMaid2</prereq>
@@ -43,14 +67,9 @@ Assassin: [She would.]
 			<action>
 				<description>
 					Muscle memory kicks in as you aim for the maid's exposed throat. In a single smooth motion, you release the knife, and a "thud" marks your success an instant later.
-
-	As you approach the corpse, you notice that the blood splatter is mostly limited to the maid's uniform. A small piece of cloth ripped from your target's skirt and a few moments of scrubbing ensures that no traces of your assassination will remain. Even in death, the maid maintains an iron grip on the jar, despite its contents having spilled onto the front of her shirt.
 				</description>
 				<itemUsed>Knife</itemUsed>
-				<kill>1</kill>
-				<itemCreated>Corpse</itemCreated>
-				<npcSubdued>Maid2</npcSubdued>
-				<nextScene>OrchestraPit</nextScene>
+				<nextScene>OrchestraPit5</nextScene>
 			</action>
 		</condition>
 		<condition>
@@ -61,15 +80,10 @@ Assassin: [She would.]
 			</requirement>
 			<action>
 				<description>
-					Muscle memory kicks in as you aim for the jam jar. In a single smooth motion, you release the knife, and a sharp cry marks your success an instant later.
-
-	You rush the maid, tackling her away from the piano and knocking her out with a swift blow to the head. Unfortunately, you see that the jam jar has emptied its contents on the floor near the piano.					
+					Muscle memory kicks in as you aim for the jam jar. In a single smooth motion, you release the knife, and a sharp cry marks your success an instant later.				
 				</description>
 				<itemUsed>Knife</itemUsed>
-				<itemCreated>Body</itemCreated>
-				<messCreated>SpilledJam</messCreated>
-				<npcSubdued>Maid2</npcSubdued>
-				<nextScene>OrchestraPit</nextScene>
+				<nextScene>OrchestraPit6</nextScene>
 			</action>
 		</condition>
 		<condition>
