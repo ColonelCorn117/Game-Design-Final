@@ -1,0 +1,18 @@
+﻿<mess>
+	<name>Spilled Jam</name>
+	<description>A jar of jam was spilled on the floor.</description>
+	<exists>0</exists>
+	<conditionList>
+		<condition>
+			<description>Clean</description>
+			<requirement>
+				<prereq>gainedMop</prereq>
+			</requirement>
+			<action>
+				<name>Clean</name>
+				<messResolved>SpilledJam</messResolved>
+				<nextScene>reload</nextScene>
+			</action>
+		</condition>
+	</conditionList>
+</mess>
