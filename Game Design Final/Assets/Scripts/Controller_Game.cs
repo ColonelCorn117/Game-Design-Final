@@ -27,11 +27,13 @@ public class Controller_Game : MonoBehaviour
 	Dictionary<string, NPC> npcs = new Dictionary<string, NPC>();
 	Dictionary<string,Mess> messes = new Dictionary<string, Mess>();
 	Dictionary<string,Item> items = new Dictionary<string, Item>();
-	public int turnsRemaining = 50;
+	public float timeRemaining = 50.0f;
 	public int killCount = 0;
 	public int unclaimedBodyCount = 0;
 	public int breadConsumed = 0;
 	public int breadQuantity = 0;
+
+	float unassignedActionTime = 0.2f;	//how much time an action should take if the action has no assigned value
 
 	Action[] buttonActions = new Action[9]; // buttonActions[0] is empty. the action for btn1 is found in buttonActions[1].
 	//int numButtonActions = 1; // first 'empty slot' that can be filled in buttonActions.
@@ -66,9 +68,7 @@ public class Controller_Game : MonoBehaviour
 	void Start()
 	{
 		Controller_GUI.ctrl_gui.SetItemsText(itemList);
-
-
-
+		Controller_GUI.ctrl_gui.SetTimeText(timeRemaining);
 	}
 
 	//----------------------------------------------------------------------------------------------------
@@ -259,6 +259,15 @@ public class Controller_Game : MonoBehaviour
 			}
 
 		}
+
+		if (a.timeUsed < 0.0f)
+		{
+			ChangeRemainingTime(unassignedActionTime);
+		}
+		else
+		{
+			ChangeRemainingTime(a.timeUsed);
+		}
 	}
 
 	//----------------------------------------------------------------------------------------------------
@@ -324,6 +333,8 @@ public class Controller_Game : MonoBehaviour
 		BuildItemDictionary();
 	}
 
+	//----------------------------------------------------------------------------------------------------
+
 	void BuildNPCDictionary() {
 
 		DirectoryInfo levelDirectoryPath = new DirectoryInfo("Assets/NPCs/");
@@ -333,6 +344,8 @@ public class Controller_Game : MonoBehaviour
 			// Note: file.Name includes the file extension.
 		}
 	}
+
+	//----------------------------------------------------------------------------------------------------
 
 	void BuildMessDictionary() {
 
@@ -344,6 +357,8 @@ public class Controller_Game : MonoBehaviour
 		}
 	}
 
+	//----------------------------------------------------------------------------------------------------
+
 	void BuildItemDictionary() {
 		DirectoryInfo levelDirectoryPath = new DirectoryInfo("Assets/Items/");
 		FileInfo[] fileInfo = levelDirectoryPath.GetFiles("*.xml", SearchOption.AllDirectories);
@@ -353,6 +368,13 @@ public class Controller_Game : MonoBehaviour
 		}
 	}
 
+	//----------------------------------------------------------------------------------------------------
+
+	public void ChangeRemainingTime(float amount)
+	{
+		timeRemaining -= amount;
+		Controller_GUI.ctrl_gui.SetTimeText(timeRemaining);
+	}
 
 
 

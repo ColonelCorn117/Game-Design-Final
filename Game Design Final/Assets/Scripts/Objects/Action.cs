@@ -10,6 +10,7 @@ public class Action : GenericGameObject {
 	public int kill;
 	public string messResolved;
 	public string messCreated;
+	public float timeUsed = -1.0f;
 
 
 	public Action() {
@@ -26,10 +27,24 @@ public class Action : GenericGameObject {
 		this.objectExamined = objectToExamine;
 	}
 
-	public Action(string name, string next, string objectToExamine,string gainItem) {
+	public Action(string name, string next, string objectToExamine, string gainItem) {
 		this.name = name;
 		this.nextScene = next;
 		this.objectExamined = objectToExamine;
 		this.itemGained = gainItem;
+	}
+
+	public Action(string name, string next, string objectToExamine, string gainItem, float timeUsed) {
+		this.name = name;
+		this.nextScene = next;
+		this.objectExamined = objectToExamine;
+		this.itemGained = gainItem;
+		this.timeUsed = timeUsed;
+	}
+
+	public Action(string name, float timeUsed)
+	{
+		this.name = name;
+		this.timeUsed = timeUsed;
 	}
 }

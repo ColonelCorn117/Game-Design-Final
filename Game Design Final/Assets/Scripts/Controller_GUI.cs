@@ -16,7 +16,10 @@ public class Controller_GUI : MonoBehaviour
 	public static Controller_GUI ctrl_gui;
 
 	Image bgImage;
-	Text descrText;
+//	Text descrText;		//changed in SceneScript instead
+
+	Text messesText;
+	Text timeText;
 	/*Button option1Btn;
 	Button option2Btn;
 	Button option3Btn;
@@ -77,6 +80,20 @@ public class Controller_GUI : MonoBehaviour
 			case("Items Box"):
 				itemsBox = image;
 				break;
+			case("Titles Box"):
+					List<Transform> children = new List<Transform>(GetComponentsInChildren<Transform>());	//gets child objects
+					foreach (Transform child in children)
+					{
+						if (child.name == "Messes-Text")
+						{
+							messesText = child.GetComponent<Text>();
+						}
+						else if (child.name == "Time-Text")
+						{
+							timeText = child.GetComponent<Text>();
+						}
+					}
+				break;
 			default:
 				//Debug.Log("Other image found: " + image.name);
 				break;
@@ -114,7 +131,8 @@ public class Controller_GUI : MonoBehaviour
 				break;
 			}
 		}*/
-		descrText = GetComponentInChildren<Text>();
+
+		//descrText = GetComponentInChildren<Text>();
 
 
 
@@ -135,10 +153,10 @@ public class Controller_GUI : MonoBehaviour
 
 	//----------------------------------------------------------------------------------------------------
 
-	public void SetDescriptionText(string text)
-	{
-		descrText.text = text;
-	}
+//	public void SetDescriptionText(string text)
+//	{
+//		descrText.text = text;
+//	}
 
 	//----------------------------------------------------------------------------------------------------
 
@@ -174,7 +192,19 @@ public class Controller_GUI : MonoBehaviour
 
 	//----------------------------------------------------------------------------------------------------
 
+	public void SetMessesText(int amount)
+	{
+		messesText.text = amount.ToString();
+	}
 
+	//----------------------------------------------------------------------------------------------------
+
+	public void SetTimeText(float amount)
+	{
+		timeText.text = Mathf.Ceil(amount).ToString();
+	}
+
+	//----------------------------------------------------------------------------------------------------
 
 
 	#region: Old Items button implementation. Button itself is still offscreen just in case

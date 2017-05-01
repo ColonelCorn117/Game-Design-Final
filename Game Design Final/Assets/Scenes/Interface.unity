@@ -672,7 +672,7 @@ GameObject:
   - component: {fileID: 382997431}
   - component: {fileID: 382997430}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Messes-Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2172,8 +2172,10 @@ MonoBehaviour:
   - {fileID: 4900000, guid: 31ccea1ade80032478ca7ddcb5d3e514, type: 3}
   - {fileID: 4900000, guid: a04aa961a03381a4984f87dcac5d9ec3, type: 3}
   itemList: []
-  turnsRemaining: 50
+  timeRemaining: 50
   killCount: 0
+  unclaimedBodyCount: 0
+  breadConsumed: 0
   breadQuantity: 0
 --- !u!114 &887181254
 MonoBehaviour:
@@ -2198,7 +2200,7 @@ GameObject:
   - component: {fileID: 896676792}
   - component: {fileID: 896676791}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Time-Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
