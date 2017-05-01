@@ -3,14 +3,14 @@
 	<description>It looks as if a tornado plowed through this room.
 	</description>
 	<background></background>
-	<optionList>
-		<option>
-			<optionDescription>Hallway 12</optionDescription>
+	<conditionList>
+		<condition>
+			<description>Hallway</description>
 			<action>
 				<nextScene>Hallway12</nextScene>
 			</action>	
-		</option>
-	</optionList>
+		</condition>
+	</conditionList>
 	<npcList>
 	</npcList>
 	<messList>

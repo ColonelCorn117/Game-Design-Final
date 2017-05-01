@@ -1,0 +1,23 @@
+﻿<npc>
+	<name>'Maid'</name>
+	<description>Assassin: I had no idea that the maid staff included a 400 pound gorilla capable of surviving on nothing but bread.</description>
+	<exists>1</exists>
+	<clearList>
+		<condition>
+			<requirement>
+				<prereq>devour9999</prereq>
+			</requirement>
+			<action></action>
+		</condition>
+	</clearList>
+	<conditionList>
+		<condition>
+			<description>Talk</description>
+			<action>
+				<name></name>
+				<nextScene>dialogueGlutton1</nextScene>
+			</action>
+		</condition>
+
+	</conditionList>
+</npc>

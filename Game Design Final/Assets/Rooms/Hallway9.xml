@@ -2,20 +2,20 @@
 	<name>Hallway9</name>
 	<description>Are you the hall monitor?</description>
 	<background>black</background>
-	<optionList>
-		<option>
-			<optionDescription>Hallway 8</optionDescription>
+	<conditionList>
+		<condition>
+			<description>Hallway 8</description>
 			<action>
 				<nextScene>Hallway8</nextScene>
 			</action>
-		</option>
-		<option>
-			<optionDescription>Hallway 10</optionDescription>
+		</condition>
+		<condition>
+			<description>Hallway 10</description>
 			<action>
 				<nextScene>Hallway10</nextScene>
 			</action>
-		</option>
-	</optionList>
+		</condition>
+	</conditionList>
 	<npcList>
 	</npcList>
 	<messList>

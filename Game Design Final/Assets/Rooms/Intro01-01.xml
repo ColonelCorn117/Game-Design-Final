@@ -10,21 +10,21 @@
 
 	</description>
 	<background>LordAngryFace</background>
-	<optionList>
+	<conditionList>
 	
-		<option>
-			<optionDescription>Continue</optionDescription>
+		<condition>
+			<description>Continue</description>
 			<action>
 				<nextScene>Intro01-02</nextScene>
 			</action>
-		</option>
-		<option>
-			<optionDescription>Skip</optionDescription>
+		</condition>
+		<condition>
+			<description>Skip</description>
 			<action>
 				<nextScene>Entrance</nextScene>
 			</action>
-		</option>
-	</optionList>
+		</condition>
+	</conditionList>
 	<npcList>
 	</npcList>
 	<messList>

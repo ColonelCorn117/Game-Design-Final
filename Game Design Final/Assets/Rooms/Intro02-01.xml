@@ -7,15 +7,15 @@
 
 	</description>
 	<background>Hallway</background>
-	<optionList>
+	<conditionList>
 	
-		<option>
-			<optionDescription>Continue</optionDescription>
+		<condition>
+			<description>Continue</description>
 			<action>
 				<nextScene>Intro02-02</nextScene>
 			</action>
-		</option>
-	</optionList>
+		</condition>
+	</conditionList>
 	<npcList>
 	</npcList>
 	<messList>

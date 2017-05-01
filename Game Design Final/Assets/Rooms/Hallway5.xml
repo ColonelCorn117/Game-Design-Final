@@ -2,14 +2,14 @@
 	<name>Hallway5</name>
 	<description>Hall-elujah.</description>
 	<background>black</background>
-	<optionList>
-		<option>
-			<optionDescription>Hallway 4</optionDescription>
+	<conditionList>
+		<condition>
+			<description>Hallway 4</description>
 			<action>
 				<nextScene>Hallway4</nextScene>
 			</action>
-		</option>
-	</optionList>
+		</condition>
+	</conditionList>
 	<npcList>
 	</npcList>
 	<messList>

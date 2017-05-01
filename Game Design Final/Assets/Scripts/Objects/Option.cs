@@ -5,7 +5,7 @@ using System.Xml.Serialization;
 
 public class Option : GenericGameObject
 {
-	[XmlElement("optionDescription")]
+	[XmlElement("description")]
 	public new string description;
 
 	public Action action;

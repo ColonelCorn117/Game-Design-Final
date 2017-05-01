@@ -3,25 +3,25 @@
 	<description>A small laundry chute slot is fixed to the wall. You could probably fit inside.
 	</description>
 	<background></background>
-	<optionList>
+	<conditionList>
 	
-		<option>
-			<optionDescription>Down the chute</optionDescription>
+		<condition>
+			<description>Down the chute</description>
 			<action>
 				<nextScene>LaundryRoom</nextScene>
 			</action>
 			
-		</option>
-		<option>
-			<optionDescription>Back</optionDescription>
+		</condition>
+		<condition>
+			<description>Back</description>
 			<action>
 				<nextScene>Hallway11</nextScene>
 			</action>
 			
-		</option>
+		</condition>
 	
 		
-	</optionList>
+	</conditionList>
 	<npcList>
 	</npcList>
 	<messList>

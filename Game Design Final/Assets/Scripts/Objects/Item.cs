@@ -1,5 +1,7 @@
 ﻿using System.Xml;
 using System.Xml.Serialization;
+using System.Collections;
+using System.Collections.Generic;
 
 [XmlRoot("item")]
 public class Item : GenericGameObject {
@@ -8,6 +10,9 @@ public class Item : GenericGameObject {
 	int unclaimed = 1;
 	int consumed = 0;
 	public int exists;
+
+	[XmlArray("conditionList"),XmlArrayItem("condition")]
+	public List<Condition> conditions = new List<Condition>();
 
 	public Item() {
 		action = new Action ();
@@ -27,11 +32,16 @@ public class Item : GenericGameObject {
 	}
 
 	public bool isClaimed() {
-		return unclaimed == 0;
+		return (this.consumed == 1) || Controller_Game.ctrl_game.itemList.Contains (this.name);
+		//return unclaimed == 0;
 	}
 
 	public void claim() {
 		unclaimed = 0;
+	}
+
+	public void create() {
+		exists = 1;
 	}
 
 	public void consume() {
@@ -43,6 +53,7 @@ public class Item : GenericGameObject {
 	}
 
 	public bool possessed() {
-		return (unclaimed == 0 && consumed == 0);
+		return Controller_Game.ctrl_game.itemList.Contains (this.name);
+		//return (unclaimed == 0 && consumed != 0);
 	}
 }

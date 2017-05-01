@@ -2,20 +2,20 @@
 	<name>Hallway8</name>
 	<description>More like hallway hate.</description>
 	<background>black</background>
-	<optionList>
-		<option>
-			<optionDescription>Hallway 6</optionDescription>
+	<conditionList>
+		<condition>
+			<description>Hallway 6</description>
 			<action>
 				<nextScene>Hallway6</nextScene>
 			</action>
-		</option>
-		<option>
-			<optionDescription>Hallway 9</optionDescription>
+		</condition>
+		<condition>
+			<description>Hallway 9</description>
 			<action>
 				<nextScene>Hallway9</nextScene>
 			</action>
-		</option>
-	</optionList>
+		</condition>
+	</conditionList>
 	<npcList>
 	</npcList>
 	<messList>

@@ -9,8 +9,8 @@ public class SceneDescription : GenericGameObject
 	public String background;
 	//public OptionList optionList;
 
-	[XmlArray("optionList"),XmlArrayItem("option")]
-	public List<Option> optionList = new List<Option>();
+	[XmlArray("conditionList"),XmlArrayItem("condition")]
+	public List<Condition> optionList = new List<Condition>();
 
 	[XmlArray("npcList"),XmlArrayItem("npc")]
 	public List<String> npcList = new List<String>();

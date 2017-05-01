@@ -1,29 +1,32 @@
 ﻿<SceneDescription>
-	<name>ServantPassage2</name>
-	<description>You can smell the faint aroma of baked goods.</description>
+	<name>Servant's Passage</name>
+	<description>The evolved form of a hallway.
+	
+You can smell the faint aroma of baked goods.</description>
 	<background>black</background>
-	<optionList>
-		<option>
-			<optionDescription>Servant Passage 3</optionDescription>
+	<conditionList>
+		<condition>
+			<description>North Servant Passage</description>
 			<action>
 				<nextScene>ServantPassage3</nextScene>
 			</action>
-		</option>
-		<option>
-			<optionDescription>Kitchen</optionDescription>
+		</condition>
+		<condition>
+			<description>Kitchen</description>
 			<action>
 				<nextScene>Kitchen</nextScene>
 			</action>
-		</option>
-		<option>
-			<optionDescription>Servant Passage 1</optionDescription>
+		</condition>
+		<condition>
+			<description>South Servant Passage</description>
 			<action>
 				<nextScene>ServantPassage1</nextScene>
 			</action>
 			
-		</option>
-	</optionList>
+		</condition>
+	</conditionList>
 	<npcList>
+		<npc>Glutton</npc>
 	</npcList>
 	<messList>
 	</messList>

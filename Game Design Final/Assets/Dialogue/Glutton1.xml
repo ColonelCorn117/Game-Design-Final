@@ -1,0 +1,27 @@
+﻿<dialogue>
+	<name>Glutton</name>
+	<description>'Maid': Ook?
+
+
+	</description>
+
+	<conditionList>
+		<condition>
+			<description>Give Bread</description>
+			<requirement>
+				<prereq>gainedBread</prereq>
+			</requirement>
+			<action>
+				<name>Give Bread</name>
+				<description>The 'maid' devours the bread in a flash.</description>
+				<itemUsed>Bread</itemUsed>
+				<nextScene>reload</nextScene>
+			</action>
+		</condition>
+	</conditionList>
+			
+
+
+
+
+</dialogue>

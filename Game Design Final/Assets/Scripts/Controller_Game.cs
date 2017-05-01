@@ -28,6 +28,10 @@ public class Controller_Game : MonoBehaviour
 	Dictionary<string,Mess> messes = new Dictionary<string, Mess>();
 	Dictionary<string,Item> items = new Dictionary<string, Item>();
 	public int turnsRemaining = 50;
+	public int killCount = 0;
+	public int unclaimedBodyCount = 0;
+	public int breadConsumed = 0;
+	public int breadQuantity = 0;
 
 	Action[] buttonActions = new Action[9]; // buttonActions[0] is empty. the action for btn1 is found in buttonActions[1].
 	//int numButtonActions = 1; // first 'empty slot' that can be filled in buttonActions.
@@ -150,29 +154,75 @@ public class Controller_Game : MonoBehaviour
 
 	public void performAction(int btnNbr) {
 		Action a = buttonActions [btnNbr];
+
+		bool changeMade = false;
+
 		// if an action consumes an item, delete that item from inventory
 		if (a.itemUsed != null && a.itemUsed != "") {
-			this.ItemLookup (a.itemUsed).consume ();
+			if (a.itemUsed == "Bread") {
+				if (breadQuantity < 2) {
+					this.ItemLookup (a.itemGained).consume ();
+					breadQuantity = 1;
+				}
+				--breadQuantity;
+				++breadConsumed;
+			} else {
+				this.ItemLookup (a.itemUsed).consume ();
+			}
 			//this.itemList.Remove (a.itemUsed);
 			RemoveItemFromInv(a.itemUsed);
+			changeMade = true;
 		}
 		// if an action picks up an item, add that item to inventory and mark it as taken from the room
 		if (a.itemGained != null && a.itemGained != "") {
-			this.ItemLookup (a.itemGained).claim ();
-			//this.itemList.Add (a.itemGained);
-			AddItemToInv(a.itemGained);
+			if (a.itemGained == "Bread") {
+				if (breadQuantity < 1) {
+					this.ItemLookup (a.itemGained).claim ();
+					breadQuantity = 1;
+				}
+				++breadQuantity;
+				this.ItemLookup (a.itemGained).claim ();
+			} else {
+				if (a.itemCreated == "Corpse" || a.itemCreated == "Body") {
+					--this.unclaimedBodyCount;
+				}
+
+				this.ItemLookup (a.itemGained).claim ();
+				//this.itemList.Add (a.itemGained);
+			}
+			AddItemToInv (a.itemGained);
+			changeMade = true;
+		}
+		if (a.itemCreated != null && a.itemCreated != "") {
+			this.ItemLookup (a.itemCreated).create ();
+			if (a.itemCreated == "Corpse" || a.itemCreated == "Body") {
+				++this.unclaimedBodyCount;
+			}
+			changeMade = true;
 		}
 		// if an action cleans up a mess, clean it up
 		if (a.messResolved != null && a.messResolved != "") {
 			MessLookup (a.messResolved).Cleanup (a);
 			// Note: this method returns a bool regarding whether it succeeded
 			// it currently isn't used for anything
+			changeMade = true;
 		}
+		if (a.messCreated != null && a.messCreated != "") {
+			MessLookup (a.messCreated).Unclean (a);
+			// Note: this method returns a bool regarding whether it succeeded
+			// it currently isn't used for anything
+			changeMade = true;
+		}
+
 		// if an action removes an NPC, do that
 		if (a.npcSubdued != null && a.npcSubdued != "") {
 			NpcLookup (a.npcSubdued).Subdue (a);
 			// Note: this method returns a bool regarding whether it succeeded
 			// it currently isn't used for anything
+			changeMade = true;
+		}
+		if (a.kill > 0) {
+			this.killCount += a.kill;
 		}
 		// if the player is trying to examine an item, mess, or NPC, set up the screen to do that.
 		if (a.objectExamined != null && a.objectExamined != "") {
@@ -193,14 +243,21 @@ public class Controller_Game : MonoBehaviour
 				}
 			}
 			if (addedText != "") {
-				string desc = GameObject.Find ("Description Text").GetComponentInChildren<Text> ().text;
-				desc += addedText;
-				GameObject.Find ("Description Text").GetComponentInChildren<Text> ().text = desc;
+				//string desc = GameObject.Find ("Description Text").GetComponentInChildren<Text> ().text;
+				//desc += addedText;
+				//GameObject.Find ("Description Text").GetComponentInChildren<Text> ().text = desc;
 			}
 		}
-
+		if (a.messCreated != null && a.messCreated != "") {
+			//TODO: Figure out how to make a new mess.
+		}
 		if(a.nextScene != null && a.nextScene != "") {
-			SceneScript.sceneScript.LoadScene (a.nextScene);
+			if (a.description != null && a.description != "") {
+				SceneScript.sceneScript.LoadSimpleScene (a.description, a.nextScene);
+			} else {
+				SceneScript.sceneScript.LoadScene (a.nextScene);
+			}
+
 		}
 	}
 
@@ -217,6 +274,13 @@ public class Controller_Game : MonoBehaviour
 		}
 
 		return false;
+	}
+
+	//----------------------------------------------------------------------------------------------------
+
+	public void examineItem(int i) {
+		Item item = ItemLookup (itemList [i-1]);
+		SceneScript.sceneScript.examineObject (item,item.name);
 	}
 
 	//----------------------------------------------------------------------------------------------------
@@ -244,6 +308,7 @@ public class Controller_Game : MonoBehaviour
 		stream.Close();
 		return output;
 	}
+
 
 	//----------------------------------------------------------------------------------------------------
 

@@ -2,20 +2,20 @@
 	<name>Hallway7</name>
 	<description>No, that was that other hallway.</description>
 	<background>black</background>
-	<optionList>
-		<option>
-			<optionDescription>Hallway 6</optionDescription>
+	<conditionList>
+		<condition>
+			<description>Hallway 6</description>
 			<action>
 				<nextScene>Hallway6</nextScene>
 			</action>
-		</option>
-		<option>
-			<optionDescription>Music Room</optionDescription>
+		</condition>
+		<condition>
+			<description>Music Room</description>
 			<action>
 				<nextScene>MusicRoom</nextScene>
 			</action>
-		</option>
-	</optionList>
+		</condition>
+	</conditionList>
 	<npcList>
 	</npcList>
 	<messList>

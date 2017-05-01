@@ -2,14 +2,14 @@
 	<name>ServantQuarters</name>
 	<description>This room is noticeably less posh than the rest of the manor.</description>
 	<background>black</background>
-	<optionList>
-		<option>
-			<optionDescription>Servant Passage 1</optionDescription>
+	<conditionList>
+		<condition>
+			<description>Servant Passage 1</description>
 			<action>
 				<nextScene>ServantPassage1</nextScene>
 			</action>
-		</option>
-	</optionList>
+		</condition>
+	</conditionList>
 	<npcList>
 	</npcList>
 	<messList>

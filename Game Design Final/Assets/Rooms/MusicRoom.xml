@@ -2,14 +2,14 @@
 	<name>MusicRoom</name>
 	<description>Lord Borkus' private instument collection. Strnagely, he doesn't know how to play any of them.</description>
 	<background>black</background>
-	<optionList>
-		<option>
-			<optionDescription>Hallway 7</optionDescription>
+	<conditionList>
+		<condition>
+			<description>Hallway 7</description>
 			<action>
 				<nextScene>Hallway7</nextScene>
 			</action>
-		</option>
-	</optionList>
+		</condition>
+	</conditionList>
 	<npcList>
 	</npcList>
 	<messList>

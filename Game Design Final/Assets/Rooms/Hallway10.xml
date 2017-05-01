@@ -1,23 +1,29 @@
 ﻿<SceneDescription>
-	<name>Hallway10</name>
+	<name>Hallway</name>
 	<description>Hallways here, hallways there, hallways goddamn everywhere.</description>
 	<background>black</background>
-	<optionList>
-		<option>
-			<optionDescription>Hallway 9</optionDescription>
+	<conditionList>
+		<condition>
+			<description>Hallway</description>
 			<action>
 				<nextScene>Hallway9</nextScene>
 			</action>
-		</option>
-		<option>
-			<optionDescription>Dining Room</optionDescription>
+		</condition>
+		<condition>
+			<requirement>
+				<prereq>noreqs</prereq>
+			</requirement>
+			<description>Dining Room</description>
 			<action>
 				<nextScene>DiningRoom</nextScene>
 			</action>
-		</option>
-	</optionList>
+		</condition>
+	</conditionList>
 	<npcList>
 	</npcList>
 	<messList>
 	</messList>
+	<itemList>
+		<item>Knife</item>
+	</itemList>
 </SceneDescription>

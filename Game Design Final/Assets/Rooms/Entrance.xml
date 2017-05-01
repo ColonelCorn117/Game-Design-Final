@@ -2,16 +2,15 @@
 	<name>Entrance</name>
 	<description>You stand in the entryway to the mansion. It's very big.</description>
 	<background>black</background>
-	<optionList>
-	
-		<option>
-			<optionDescription>Landing1F</optionDescription>
+	<conditionList>
+		<condition>
+			<description>Landing</description>
 			<action>
 				<name>toLanding</name>
 				<nextScene>Landing1F</nextScene>
 			</action>
-		</option>
-	</optionList>
+		</condition>
+	</conditionList>
 	<npcList>
 	</npcList>
 	<messList>

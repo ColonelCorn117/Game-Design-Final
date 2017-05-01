@@ -1,0 +1,34 @@
+﻿<item>
+	<name>UUD-42</name>
+	<description>According to the label, it's an "All-Purpose Cleaner*".
+	
+	*Not actually all-purpose.
+	</description>
+	<exists>1</exists>
+	<conditionList>
+		<condition>
+			<description>Take</description>
+			<requirement>
+				<prereq>noreqs</prereq>
+			</requirement>
+			<action>
+				<name>Take UUD-42</name>
+				<description>Assassin: Knowing these maids, there's probably something they've jammed around here.</description>
+				<itemGained>Mop</itemGained>
+				<nextScene>reload</nextScene>
+			</action>
+		</condition>
+		<condition>
+			<name>Back</name>
+			<description>Back</description>
+			<requirement>
+				<prereq>noreqs</prereq>
+			</requirement>
+			<action>
+				<name>Back</name>
+				<description>Assassin: I'll worry about this later.</description>
+				<nextScene>reload</nextScene>
+			</action>
+		</condition>
+	</conditionList>
+</item>

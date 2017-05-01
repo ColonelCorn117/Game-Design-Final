@@ -6,14 +6,16 @@ using System.Xml.Serialization;
 
 public class Problem : GenericGameObject {
 
+	[XmlArray("clearList"),XmlArrayItem("condition")]
+	public List<Condition> clearingConditions = new List<Condition>();
+
 	[XmlArray("conditionList"),XmlArrayItem("condition")]
 	public List<Condition> conditions = new List<Condition>();
 	//public ConditionList conditionList;
 	public int exists; // Works like a bool, technically
 
 
-	[XmlArray("optionList"),XmlArrayItem("option")]
-	public List<Option> options = new List<Option>();
+
 
 	public Problem() {
 		this.exists = 0;

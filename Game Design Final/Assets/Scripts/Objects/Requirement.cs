@@ -13,7 +13,12 @@ public class Requirement {
 
 	public bool Satisfied(Action a) {
 		foreach (String req in prereqs) {
+
+
+
 			String reqName = req.Substring(6);
+
+
 			//Debug.Log ("req: " + req + ", name: " + reqName);
 			if (req.StartsWith ("noreqs")) {
 				//this prerequisiste is always satisfied
@@ -21,12 +26,14 @@ public class Requirement {
 			}
 			if (req.StartsWith ("gained")) {
 				//the player has an item with the name after "gained"
-				if (!Controller_Game.ctrl_game.ItemLookup (reqName).possessed ()) {
+				if (!Controller_Game.ctrl_game.itemList.Contains (reqName)) {
+					//Debug.Log ("item possessed: " + reqName);
 					return false;
 				}
 			} else if (req.StartsWith ("nogain")) {
 				//the player does not have an item with the name after "nogain"
-				if (Controller_Game.ctrl_game.ItemLookup (reqName).possessed ()) {
+				if (Controller_Game.ctrl_game.itemList.Contains (reqName)) {
+					//Debug.Log ("item not possessed: " + reqName);
 					return false;
 				}
 			} else if (req.StartsWith ("expire")) {
@@ -38,7 +45,7 @@ public class Requirement {
 				//the player has killed more than a certain number of people
 				int reqKilled = int.Parse (reqName);
 				//TODO: look up number of people killed
-				int numKilled = 0;
+				int numKilled = Controller_Game.ctrl_game.killCount;
 				if (reqKilled > numKilled) {
 					return false;
 				}
@@ -46,13 +53,13 @@ public class Requirement {
 				//the player has killed fewer than a certain number of people
 				int reqKilled = int.Parse (reqName);
 				//TODO: look up number of people killed
-				int numKilled = 0;
+				int numKilled = Controller_Game.ctrl_game.killCount;
 				if (reqKilled < numKilled) {
 					return false;
 				}
 			} else if (req.StartsWith ("remove")) {
 				//the player has already removed a certain NPC
-				if (Controller_Game.ctrl_game.NpcLookup (reqName).exists == 1) {
+				if (!(Controller_Game.ctrl_game.NpcLookup (reqName).exists == 0)) {
 					return false;
 				}
 			} else if (req.StartsWith ("exists")) {
@@ -65,7 +72,27 @@ public class Requirement {
 				string npcName = reqName.Substring (0, reqName.Length - 1);
 				int dialogueReached = int.Parse (reqName.Substring (reqName.Length - 1));
 				NPC n = Controller_Game.ctrl_game.NpcLookup (npcName);
-				if (n.getDialogueLocation() < dialogueReached) {
+				if (n.getDialogueLocation () < dialogueReached) {
+					return false;
+				}
+			} else if (req.StartsWith ("loaves")) {
+				// the player has a certain amount of bread in inventory.
+				int reqBread = int.Parse (reqName);
+				if (Controller_Game.ctrl_game.breadQuantity < reqBread) {
+					return false;
+				}
+			} else if (req.StartsWith ("invblk")) {
+				// the player has bread in the first N slots in inventory.
+				int breadCount = int.Parse (reqName);
+				for (int i = 0; i < breadCount; ++i) {
+					if (Controller_Game.ctrl_game.itemList [i] != "Bread") {
+						return false;	
+					}
+				}
+			} else if (req.StartsWith ("devour")) {
+				// the player has bread in the first N slots in inventory.
+				int breadEaten = int.Parse (reqName);
+				if (Controller_Game.ctrl_game.breadConsumed < breadEaten) {
 					return false;
 				}
 			}

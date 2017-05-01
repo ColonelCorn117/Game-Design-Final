@@ -3,47 +3,41 @@
 	<description>You see a flight of stairs. They are big and fluffy.
 	</description>
 	<background></background>
-	<optionList>
-	
-		<option>
-			<optionDescription>Entrance</optionDescription>
+	<conditionList>
+		<condition>
+			<description>Entrance</description>
 			<action>
 				<nextScene>Entrance</nextScene>
 			</action>
 			
-		</option>
-		<option>
-			<optionDescription>Upstairs</optionDescription>
+		</condition>
+		<condition>
+			<description>Upstairs</description>
 			<action>
 				<nextScene>Landing2F</nextScene>
 			</action>
 			
-		</option>
-		<option>
-			<optionDescription>Hallway 1</optionDescription>
+		</condition>
+		<condition>
+			<description>South Hallway</description>
 			<action>
 				<nextScene>Hallway1</nextScene>
 			</action>
-			
-		</option>
-		<option>
-			<optionDescription>Hallway 6</optionDescription>
+		</condition>
+		<condition>
+			<description>North Hallway</description>
 			<action>
 				<nextScene>Hallway6</nextScene>
 			</action>
-			
-		</option>
-		<option>
-			<optionDescription>Test (beta)</optionDescription>
+		</condition>
+		<condition>
+			<description>Test (beta)</description>
 			<action>
 				<name>Remove Later</name>
 				<nextScene>TestDescription</nextScene>
 			</action>
-			
-		</option>
-	
-		
-	</optionList>
+		</condition>
+	</conditionList>
 	<npcList>
 	</npcList>
 	<messList>

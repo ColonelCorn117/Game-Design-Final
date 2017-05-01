@@ -1,23 +1,46 @@
 ﻿<SceneDescription>
 	<name>Kitchen</name>
-	<description>There are trays of food that appear ready to be served.</description>
-	<background>black</background>
-	<optionList>
-		<option>
-			<optionDescription>Servant Passage 2</optionDescription>
+	<description>Though the air is warm and heavy, a delightful aroma wafts through the room from a rack of freshly baked bread. The chef is nowhere to be seen. No maids are present either.
+	
+	Assassin: That smells really good...
+</description>
+	<background>Kitchen</background>
+	<conditionList>
+		<condition>
+			<description>Test (beta)</description>
 			<action>
-				<nextScene>ServantPassage2</nextScene>
+				<nextScene>TestDescription</nextScene>
 			</action>
-		</option>
-		<option>
-			<optionDescription>Dining Room</optionDescription>
+		</condition>
+		<condition>
+			<requirement>
+				<prereq>noreqs</prereq>
+			</requirement>
+			<description>Dining Room</description>
 			<action>
 				<nextScene>DiningRoom</nextScene>
 			</action>
-		</option>
-	</optionList>
+		</condition>
+		<condition>
+			<description>Servant's Passage</description>
+			<action>
+				<nextScene>ServantPassage2</nextScene>
+			</action>
+		</condition>
+		<condition>
+			<description>Take Bread</description>
+			<action>
+				<description>Assassin: I’ll just take this for strategic...bread purposes...</description>
+				<itemGained>Bread</itemGained>
+				<nextScene>reload</nextScene>
+			</action>
+		</condition>
+	</conditionList>
 	<npcList>
 	</npcList>
 	<messList>
 	</messList>
+	<itemList>
+		<item>Soap</item>
+	</itemList>
 </SceneDescription>

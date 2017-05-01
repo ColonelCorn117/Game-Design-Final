@@ -1,0 +1,24 @@
+﻿<SceneDescription>
+	<name>Orchestra Pit</name>
+	<description>
+		As you approach the corpse, you notice that the blood splatter is mostly limited to the maid's uniform. A small piece of cloth ripped from your target's skirt and a few moments of scrubbing ensures that no traces of your assassination will remain. Even in death, the maid maintains an iron grip on the jar, despite its contents having spilled onto the front of her shirt.
+
+	</description>
+	<background>OrchestraPit</background>
+	<conditionList>	
+		<condition>
+			<description>Continue</description>
+			<requirement>
+				<prereq>noreqs</prereq>
+			</requirement>
+			<action>
+				<npcSubdued>Maid2</npcSubdued>
+				<itemCreated>Corpse</itemCreated>
+				<kill>1</kill>
+				<nextScene>OrchestraPit3</nextScene>
+			</action>
+		</condition>
+	</conditionList>
+	<npcList>
+	</npcList>
+</SceneDescription>

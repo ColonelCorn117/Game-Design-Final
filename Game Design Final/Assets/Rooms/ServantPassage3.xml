@@ -1,21 +1,21 @@
 ﻿<SceneDescription>
-	<name>ServantPassage3</name>
+	<name>Servant's Passage</name>
 	<description>The evolved form of a hallway.</description>
-	<background>black</background>
-	<optionList>	
-		<option>
-			<optionDescription>Hallway 2</optionDescription>
+	<background>Hallway</background>
+	<conditionList>
+		<condition>
+			<description>East Hallway</description>
 			<action>
 				<nextScene>Hallway2</nextScene>
 			</action>
-		</option>
-		<option>
-			<optionDescription>Servant Passage 2</optionDescription>
+		</condition>
+		<condition>
+			<description>South Servant Passage</description>
 			<action>
 				<nextScene>ServantPassage2</nextScene>
 			</action>
-		</option>
-	</optionList>
+		</condition>
+	</conditionList>
 	<npcList>
 	</npcList>
 	<messList>

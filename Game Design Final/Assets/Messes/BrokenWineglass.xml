@@ -1,0 +1,19 @@
+﻿<mess>
+	<name>Broken Wineglass</name>
+	<description>Tiny glass shards litter the floor, courtesy of one obnoxious maid.</description>
+	<exists>0</exists>
+	<conditionList>
+		<condition>
+			<description>Clean</description>
+			<requirement>
+				<prereq>gainedDustpan</prereq>
+				<prereq>gainedBroom</prereq>
+			</requirement>
+			<action>
+				<name>Clean</name>
+				<messResolved>BrokenWineglass</messResolved>
+				<nextScene>reload</nextScene>
+			</action>
+		</condition>
+	</conditionList>
+</mess>
