@@ -2,7 +2,6 @@
 	<name>Hallway3</name>
 	<description>If you squint really hard, this still just looks like a hallway.</description>
 	<background>black</background>
-
 	<conditionList>	
 		<condition>
 			<description>Hallway 2</description>
