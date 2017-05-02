@@ -17,11 +17,11 @@ public class Controller_Game : MonoBehaviour
 	public static Controller_Game ctrl_game;
 
 	//Used to keep references to the xml files so they are included in the build
-	public List<TextAsset> dialogueXML = new List<TextAsset>();
-	public List<TextAsset> itemsXML = new List<TextAsset>();
-	public List<TextAsset> messesXML = new List<TextAsset>();
-	public List<TextAsset> npcsXML = new List<TextAsset>();
-	public List<TextAsset> roomsXML = new List<TextAsset>();
+	//public List<TextAsset> dialogueXML = new List<TextAsset>();
+	//public List<TextAsset> itemsXML = new List<TextAsset>();
+	//public List<TextAsset> messesXML = new List<TextAsset>();
+	//public List<TextAsset> npcsXML = new List<TextAsset>();
+	//public List<TextAsset> roomsXML = new List<TextAsset>();
 
 	public List<string> itemList = new List<string>();
 	Dictionary<string, NPC> npcs = new Dictionary<string, NPC>();
@@ -33,9 +33,12 @@ public class Controller_Game : MonoBehaviour
 	public int breadConsumed = 0;
 	public int breadQuantity = 0;
 
+	Dictionary<string,int> bodyInRoom = new Dictionary<string,int>();
+	Dictionary<string,int> corpseInRoom = new Dictionary<string,int>();
+
 	float unassignedActionTime = 0.2f;	//how much time an action should take if the action has no assigned value
 
-	Action[] buttonActions = new Action[9]; // buttonActions[0] is empty. the action for btn1 is found in buttonActions[1].
+	public Action[] buttonActions = new Action[9]; // buttonActions[0] is empty. the action for btn1 is found in buttonActions[1].
 	//int numButtonActions = 1; // first 'empty slot' that can be filled in buttonActions.
 
 	GameObject titleLocation;
@@ -149,30 +152,123 @@ public class Controller_Game : MonoBehaviour
 		}
 		return new Item();
 	}
+		
+	//----------------------------------------------------------------------------------------------------
+
+	//----------------------------------------------------------------------------------------------------
+
+	public int BodiesVisible(string room) {
+		if (!this.bodyInRoom.ContainsKey (room)) {
+			return 0;
+		}
+		return bodyInRoom [room];
+	}
+
+	//----------------------------------------------------------------------------------------------------
+
+	public int CorpsesVisible(string room) {
+		if (!corpseInRoom.ContainsKey (room)) {
+			return 0;
+		}
+		return corpseInRoom [room];
+	}
+
+	//----------------------------------------------------------------------------------------------------
+
+	public void AddBody(string room) {
+		AddBody (room, true);
+	}
+
+	public void AddBody(string room, bool addToCount) {
+		if (room != "") {
+			if (this.bodyInRoom.ContainsKey (room)) {
+				++bodyInRoom [room];
+			} else {
+				bodyInRoom.Add (room, 1);
+			}
+			if (addToCount) {
+				++this.unclaimedBodyCount;
+			}
+		}
+	}
+
+	//----------------------------------------------------------------------------------------------------
+
+	public void AddCorpse(string room) {
+		AddCorpse (room, true);
+	}
+
+	public void AddCorpse(string room, bool addToCount) {
+		if (room != "") {
+			if (corpseInRoom.ContainsKey (room)) {
+				++corpseInRoom [room];
+			} else {
+				this.corpseInRoom.Add (room, 1);
+			}
+			if (addToCount) {
+				++this.unclaimedBodyCount;
+			}
+		}
+	}
+
+	//----------------------------------------------------------------------------------------------------
+
+	public void RemoveBody(string room) {
+		if (this.bodyInRoom.ContainsKey (room)) {
+			if (bodyInRoom [room] > 0) {
+				bodyInRoom [room] -= 1;
+				--this.unclaimedBodyCount;
+			} else {
+				Debug.Log ("Room " + room + " contains too few bodies");
+			}
+		} else {
+			Debug.Log ("Room " + room + " not found");
+		}
+	}
+
+	//----------------------------------------------------------------------------------------------------
+
+	public void RemoveCorpse(string room) {
+		if (this.corpseInRoom.ContainsKey (room)) {
+			if (corpseInRoom [room] > 0) {
+				corpseInRoom [room] -= 1;
+				--this.unclaimedBodyCount;
+			} else {
+				Debug.Log ("Room " + room + " contains too few corpses");
+			}
+		} else {
+			Debug.Log ("Room " + room + " not found");
+		}
+	}
 
 	//----------------------------------------------------------------------------------------------------
 
 	public void performAction(int btnNbr) {
 		Action a = buttonActions [btnNbr];
 
-		bool changeMade = false;
-
 		// if an action consumes an item, delete that item from inventory
 		if (a.itemUsed != null && a.itemUsed != "") {
 			if (a.itemUsed == "Bread") {
 				if (breadQuantity < 2) {
-					this.ItemLookup (a.itemGained).consume ();
+					//this.ItemLookup (a.itemGained).consume ();
 					breadQuantity = 1;
 				}
 				--breadQuantity;
 				++breadConsumed;
-			} else {
-				this.ItemLookup (a.itemUsed).consume ();
+
+			} else if (a.itemUsed == "Body") {
+				Debug.Log ("Attempting to hide a body in : " + SceneScript.sceneScript.GetSceneID());
+				AddBody (SceneScript.sceneScript.GetSceneID(), false);
+			} else if (a.itemUsed == "Corpse") {
+				Debug.Log ("Attempting to hide a corpse in : " + SceneScript.sceneScript.GetSceneID());
+				AddCorpse (SceneScript.sceneScript.GetSceneID(),false);
 			}
 			//this.itemList.Remove (a.itemUsed);
+			this.ItemLookup (a.itemUsed).consume ();
 			RemoveItemFromInv(a.itemUsed);
-			changeMade = true;
 		}
+
+
 		// if an action picks up an item, add that item to inventory and mark it as taken from the room
 		if (a.itemGained != null && a.itemGained != "") {
 			if (a.itemGained == "Bread") {
@@ -181,45 +277,45 @@ public class Controller_Game : MonoBehaviour
 					breadQuantity = 1;
 				}
 				++breadQuantity;
-				this.ItemLookup (a.itemGained).claim ();
-			} else {
-				if (a.itemCreated == "Corpse" || a.itemCreated == "Body") {
-					--this.unclaimedBodyCount;
-				}
-
-				this.ItemLookup (a.itemGained).claim ();
-				//this.itemList.Add (a.itemGained);
+			} else if (a.itemGained == "Body") {
+				Debug.Log ("Attempting to remove a body from : " + SceneScript.sceneScript.GetSceneID());
+				RemoveBody (SceneScript.sceneScript.GetSceneID());
+			} else if (a.itemGained == "Corpse") {
+				Debug.Log ("Attempting to remove a corpse from : " + SceneScript.sceneScript.GetSceneID());
+				RemoveCorpse (SceneScript.sceneScript.GetSceneID());
 			}
+			this.ItemLookup (a.itemGained).claim ();
 			AddItemToInv (a.itemGained);
-			changeMade = true;
 		}
+
 		if (a.itemCreated != null && a.itemCreated != "") {
 			this.ItemLookup (a.itemCreated).create ();
-			if (a.itemCreated == "Corpse" || a.itemCreated == "Body") {
-				++this.unclaimedBodyCount;
+			if (a.itemCreated == "Corpse") {
+				Debug.Log ("Attempting to add a corpse to : " + SceneScript.sceneScript.GetSceneID());
+				AddCorpse (SceneScript.sceneScript.GetSceneID());
+			} else if (a.itemCreated == "Body") {
+				Debug.Log ("Attempting to add a body to : " + SceneScript.sceneScript.GetSceneID());
+				AddBody (SceneScript.sceneScript.GetSceneID());
 			}
-			changeMade = true;
 		}
 		// if an action cleans up a mess, clean it up
 		if (a.messResolved != null && a.messResolved != "") {
 			MessLookup (a.messResolved).Cleanup (a);
 			// Note: this method returns a bool regarding whether it succeeded
 			// it currently isn't used for anything
-			changeMade = true;
 		}
 		if (a.messCreated != null && a.messCreated != "") {
 			MessLookup (a.messCreated).Unclean (a);
 			// Note: this method returns a bool regarding whether it succeeded
 			// it currently isn't used for anything
-			changeMade = true;
 		}
 
 		// if an action removes an NPC, do that
 		if (a.npcSubdued != null && a.npcSubdued != "") {
+			
 			NpcLookup (a.npcSubdued).Subdue (a);
 			// Note: this method returns a bool regarding whether it succeeded
 			// it currently isn't used for anything
-			changeMade = true;
 		}
 		if (a.kill > 0) {
 			this.killCount += a.kill;
@@ -247,9 +343,6 @@ public class Controller_Game : MonoBehaviour
 				//desc += addedText;
 				//GameObject.Find ("Description Text").GetComponentInChildren<Text> ().text = desc;
 			}
-		}
-		if (a.messCreated != null && a.messCreated != "") {
-			//TODO: Figure out how to make a new mess.
 		}
 		if(a.nextScene != null && a.nextScene != "") {
 			if (a.description != null && a.description != "") {

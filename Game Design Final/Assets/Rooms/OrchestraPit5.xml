@@ -12,10 +12,8 @@
 				<prereq>noreqs</prereq>
 			</requirement>
 			<action>
-				<npcSubdued>Maid2</npcSubdued>
-				<itemCreated>Corpse</itemCreated>
-				<kill>1</kill>
-				<nextScene>OrchestraPit3</nextScene>
+				<timeTaken>0</timeTaken>
+				<nextScene>OrchestraPit</nextScene>
 			</action>
 		</condition>
 	</conditionList>

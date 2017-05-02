@@ -25,11 +25,14 @@ public class Requirement {
 				return true;
 			}
 			if (req.StartsWith ("gained")) {
+				//Debug.Log ("Searching for " + reqName + " in inventory");
 				//the player has an item with the name after "gained"
 				if (!Controller_Game.ctrl_game.itemList.Contains (reqName)) {
+					//Debug.Log (reqName + " not found");
 					//Debug.Log ("item possessed: " + reqName);
 					return false;
 				}
+				//Debug.Log (reqName + " found");
 			} else if (req.StartsWith ("nogain")) {
 				//the player does not have an item with the name after "nogain"
 				if (Controller_Game.ctrl_game.itemList.Contains (reqName)) {

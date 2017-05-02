@@ -1,0 +1,52 @@
+﻿<SceneDescription>
+	<name>Closet</name>
+	<description>Unsurprisingly, Lord Borkus's closets are quite spacious.</description>
+	<background>Closet</background>
+	<conditionList>
+		<condition>
+			<description>Test (beta)</description>
+			<action>
+				<nextScene>TestDescription</nextScene>
+			</action>
+		</condition>
+		<condition>
+			<requirement>
+				<prereq>noreqs</prereq>
+			</requirement>
+			<description>Hallway</description>
+			<action>
+				<nextScene>Hallway10</nextScene>
+			</action>
+		</condition>
+		<condition>
+			<description>Drop Body</description>
+			<requirement>
+				<prereq>gainedBody</prereq>
+			</requirement>
+			<action>
+				<description>You drop the unconscious maid inside the closet.</description>
+				<itemUsed>Body</itemUsed>
+				<nextScene>reload</nextScene>
+			</action>
+		</condition>
+		<condition>
+			<description>Drop Corpse</description>
+			<requirement>
+				<prereq>gainedCorpse</prereq>
+			</requirement>
+			<action>
+				<description>You stash the maid's body in the closet.</description>
+				<itemUsed>Corpse</itemUsed>
+				<nextScene>reload</nextScene>
+			</action>
+		</condition>
+	</conditionList>
+	<npcList>
+	</npcList>
+	<messList>
+	</messList>
+	<itemList>
+		<item>UUD-42</item>
+	</itemList>
+</SceneDescription>
+
