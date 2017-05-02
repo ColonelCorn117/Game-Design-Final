@@ -57,6 +57,12 @@ public class SceneScript : MonoBehaviour {
 
 	//----------------------------------------------------------------------------------------------------
 
+	public string GetSceneID() {
+		return xml.id;
+	}
+
+	//----------------------------------------------------------------------------------------------------
+
 	public void examineObject(GenericGameObject o) {
 		examineObject (o, o.name);
 	}
@@ -68,17 +74,8 @@ public class SceneScript : MonoBehaviour {
 
 		if (o is Problem) {
 			Problem p = (Problem)o;
-
-
-
-			if (p is Mess) {
-				foreach (Condition c in p.conditions) {
-					//Debug.Log (c.description);
-					//Debug.Log (c.Satisfied ());
-				}
-			}
 				
-			LoadButtons (p.conditions, new Condition ("Back", new Action ("Back", currentSceneName, "")));
+			LoadButtons (p.conditions, new Condition ("Back", new Action ("Back", currentSceneName, "","",0f)));
 			if (p is NPC) {
 				LoadDetailSprite (name, "npc");
 			} else {
@@ -90,19 +87,29 @@ public class SceneScript : MonoBehaviour {
 
 			List<Condition> l = new List<Condition> ();
 			if (Controller_Game.ctrl_game.itemList.Contains (i.name)) {
-
-				l.Add (new Condition ("Back", new Action ("Back", currentSceneName, "")));
-				LoadButtons (l);
+				if (i.conditions == null || i.conditions.Count == 0) {
+					l.Add (new Condition ("Back", new Action ("Back", currentSceneName, "", "", 0f)));
+					LoadButtons (l);
+				} else {
+					LoadButtons (i.conditions);
+				}
 
 			} else {
 				if (i.conditions != null) {
+					/*
 					if (i.conditions.Count == 0 || i.conditions [0].description != "Take") {
 						l.Add (new Condition ("Take", new Action ("Take", currentSceneName, "", name)));
 					}
 					if (i.conditions.Count == 0 || i.conditions [i.conditions.Count - 1].description != "Back") {
 						l.Add (new Condition ("Back", new Action ("Back", currentSceneName, "")));
 					}
+					*/
+					if (i.conditions.Count == 0) {
+						l.Add (new Condition ("Take", new Action ("Take", currentSceneName, "", name,0f)));
+						l.Add (new Condition ("Back", new Action ("Back", currentSceneName, "","",0f)));
+					}
 				}
+
 
 				if (l.Count > 0) {
 					LoadButtons (i.conditions, l);
@@ -130,19 +137,19 @@ public class SceneScript : MonoBehaviour {
 
 		foreach (Condition c in xml.optionList) {
 			if (c.Satisfied ()) {
-				additionalDesc += c.additionalDescription + "\n\n";
+				additionalDesc += "\n" + c.additionalDescription;
 			}
 		}
 
 		desc += additionalDesc;
-
+		/*
 		if (xml.npcList.Count > 0) {
 
 			int i = 0;
 
 			foreach(string s in xml.npcList) {
 				NPC n = NpcLookup (s);
-
+				/*
 				if (n.exists == 1) {
 					if (i == 0) {
 						desc += "\n\nNPC's: ";
@@ -155,7 +162,8 @@ public class SceneScript : MonoBehaviour {
 				}
 			}
 		}
-
+		*/
+		/*
 		if (xml.messList.Count > 0) {
 
 			int i = 0;
@@ -171,15 +179,18 @@ public class SceneScript : MonoBehaviour {
 					}
 					desc += m.name;
 				}
+
 			}
 		}
+		*/
 
+		/*
 		if (xml.itemList.Count > 0) {
 
 			int i = 0;
 			foreach(string s in xml.itemList) {
 				Item it = ItemLookup (s);
-
+				/*
 				if (it.exists == 1 && (!it.isClaimed())) {
 					if (i == 0) {
 						desc += "\n\nItems: ";
@@ -189,8 +200,10 @@ public class SceneScript : MonoBehaviour {
 					}
 					desc += it.name;
 				}
+
 			}
 		}
+		*/
 		/* // Show Inventory in text pane
 		if (Controller_Game.ctrl_game.itemList.Count > 0) {
 
@@ -211,7 +224,7 @@ public class SceneScript : MonoBehaviour {
 			}
 		}
 		*/
-
+		desc += BodyDescriptions ();
 		descriptionText.text = desc;
 	}
 
@@ -236,6 +249,7 @@ public class SceneScript : MonoBehaviour {
 			currentSceneName = sceneName;
 			LoadSceneXML (path);
 			locationText.text = xml.name;
+			xml.id = sceneName;
 			//}
 
 			BuildDescription ();
@@ -263,7 +277,7 @@ public class SceneScript : MonoBehaviour {
 	public void LoadSimpleScene(string text, string nextScence) {
 		// rebuild description w/o changing the xml object
 		descriptionText.text = text;
-		Condition continueCondition = new Condition ("Continue", new Action ("continue", nextScence, ""));
+		Condition continueCondition = new Condition ("Continue", new Action ("continue", nextScence, "","",0f));
 		List<Condition> l = new List<Condition> ();
 		l.Add (continueCondition);
 		LoadButtons (l);
@@ -367,6 +381,62 @@ public class SceneScript : MonoBehaviour {
 
 	//----------------------------------------------------------------------------------------------------
 
+	string BodyDescriptions() {
+		string textToAdd = "";
+		int bodyCount = Controller_Game.ctrl_game.BodiesVisible (xml.id);
+		int corpseCount = Controller_Game.ctrl_game.CorpsesVisible (xml.id);
+		if (bodyCount + corpseCount == 0) {
+			textToAdd += "Assassin: I could probably squeeze a few bodies in here if I needed to hide them.";
+		} else {
+			switch (bodyCount) {
+			case 0:
+				break;
+			case 1:
+				textToAdd += "A maid lies";
+				break;
+			case 2:
+				textToAdd += "Two maids lie";
+				break;
+			case 3:
+				textToAdd += "Three maids lie";
+				break;
+			default:
+				textToAdd += "Several maids lie";
+				break;
+			}
+			if (bodyCount > 0) {
+				textToAdd +=  " unconscious on the floor.";
+			}
+
+			switch (corpseCount) {
+			case 0:
+				break;
+			case 1:
+				textToAdd += "\nA maid lies";
+				break;
+			case 2:
+				textToAdd += "\nTwo maids lie";
+				break;
+			case 3:
+				textToAdd += "\nThree maids lie";
+				break;
+			default:
+				textToAdd += "\nSeveral maids lie";
+				break;
+			}
+			if (corpseCount > 0) {
+				textToAdd +=  " dead on the floor.";
+			}
+
+			if ((bodyCount + corpseCount) > 4) {
+				textToAdd += "\nAssassin: How did I manage to get all of these idiots into here?";
+			}
+		}
+		return textToAdd;
+	}
+
+	//----------------------------------------------------------------------------------------------------
+
 	void LoadButtons() {
 		//Debug.Log ("LoadButtons()");
 		var optionsText = optionsBox.GetComponentsInChildren<Text>();
@@ -382,7 +452,7 @@ public class SceneScript : MonoBehaviour {
 		foreach (string npcName in xml.npcList) {
 			NPC n = NpcLookup (npcName);
 			if (n.exists == 1) {
-				Action a = new Action ("examine" + npcName, "", npcName);
+				Action a = new Action ("examine" + npcName, "", npcName, "",0f);
 				addButtonAction (a,i);
 				optionsText [i - 1].text = n.name;
 				++i;
@@ -391,7 +461,7 @@ public class SceneScript : MonoBehaviour {
 		foreach (string messName in xml.messList) {
 			Mess m = MessLookup (messName);
 			if (m.exists == 1) {
-				Action a = new Action ("examine" + messName, "", messName);
+				Action a = new Action ("examine" + messName, "", messName,"",0f);
 				addButtonAction (a,i);
 				optionsText [i - 1].text = m.name;
 				++i;
@@ -400,8 +470,8 @@ public class SceneScript : MonoBehaviour {
 		//TODO: Add item options here.
 		foreach (string itemName in xml.itemList) {
 			Item it = ItemLookup (itemName);
-			if (it.exists == 1 && !Controller_Game.ctrl_game.itemList.Contains(itemName)  && !it.isConsumed()) {
-				Action a = new Action ("examine" + itemName, "", itemName);
+			if (it.isViewableInRoom(xml.id)) {
+				Action a = new Action ("examine" + itemName, "", itemName,"",0f);
 				addButtonAction (a,i);
 				optionsText [i - 1].text = it.name;
 				++i;
@@ -422,9 +492,7 @@ public class SceneScript : MonoBehaviour {
 		//Debug.Log ("LoadButtons(conditions)");
 		var optionsText = optionsBox.GetComponentsInChildren<Text>();
 		int i = 1;
-		//Debug.Log ("Conditions : " + conditions.Count);
 		foreach (Condition c in conditions) {
-			//Debug.Log ("Condition: requirement: count; " + c.requirement.Count);
 			if (c.Satisfied ()) {
 				addButtonAction (c.action, i);
 				optionsText [i - 1].text = c.description;
@@ -452,7 +520,6 @@ public class SceneScript : MonoBehaviour {
 		var optionsText = optionsBox.GetComponentsInChildren<Text>();
 		int i = 1;
 		foreach (Condition c in conditions) {
-			//Debug.Log (c.description + ", " + c.Satisfied());
 
 			if (c.description == null || c.description == "") {
 				continue;
@@ -489,11 +556,10 @@ public class SceneScript : MonoBehaviour {
 
 	/*
 	void LoadButtons(List<Condition> conditions, Option extraOption) {
-		Debug.Log ("LoadButtons(conditions, extra)");
+		
 		var optionsText = optionsBox.GetComponentsInChildren<Text>();
 		int i = 1;
 		foreach (Condition c in conditions) {
-			Debug.Log (c.description + ", " + c.Satisfied());
 
 			if (c.description == null || c.description == "") {
 				continue;
@@ -531,7 +597,6 @@ public class SceneScript : MonoBehaviour {
 		var optionsText = optionsBox.GetComponentsInChildren<Text>();
 		int i = 1;
 		foreach (Option o in options) {
-			//Debug.Log ("Adding option " + o.action.name + " to button " + i);
 
 			//if (o is Condition && (!((Condition)o).Satisfied())) {
 			//	continue;
@@ -570,11 +635,11 @@ public class SceneScript : MonoBehaviour {
 			NpcLookup (dialogueName.Substring (0, dialogueName.Length - 1)).setDialogueLocation (
 				int.Parse(dialogueName.Substring (dialogueName.Length - 1))); // sets the dialogue location on the NPC
 
-			this.LoadButtons(d.conditions, new Condition ("Back", new Action ("Back", currentSceneName, "")));
+			this.LoadButtons(d.conditions, new Condition ("Back", new Action ("Back", currentSceneName, "","",0f)));
 
 			foreach(Condition c in d.conditions) {
 				if (c.Satisfied ()) {
-					AddToDescription ("\n\n" + c.additionalDescription);
+					AddToDescription ("\n" + c.additionalDescription);
 				}
 			}
 		}

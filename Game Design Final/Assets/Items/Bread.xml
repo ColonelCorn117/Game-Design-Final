@@ -1,8 +1,9 @@
 ﻿<item>
-	<name>Mop</name>
-	<description>Cleans up blood.</description>
+	<name>Bread</name>
+	<description>It smells warm and delicious.
+	</description>
 	<exists>1</exists>
-	<duplicable>0</duplicable>
+	<duplicable>1</duplicable>
 	<conditionList>
 		<condition>
 			<description>Take</description>
@@ -10,9 +11,9 @@
 				<prereq>noreqs</prereq>
 			</requirement>
 			<action>
-				<name>Take Mop</name>
-				<description>Assassin: This could be useful.</description>
-				<itemGained>Mop</itemGained>
+				<name>Take Bread</name>
+				<description>Assassin: I’ll just take this for strategic...bread purposes...</description>
+				<itemGained>Bread</itemGained>
 				<nextScene>reload</nextScene>
 			</action>
 		</condition>

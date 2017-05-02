@@ -7,12 +7,13 @@
 	<background>OrchestraPit</background>
 	<conditionList>	
 		<condition>
-			<description>Fish out jam jar</description>
+			<description>Continue</description>
 			<requirement>
 				<prereq>noreqs</prereq>
 			</requirement>
 			<action>
 				<messCreated>JammedPiano</messCreated>
+				<timeTaken>0</timeTaken>
 				<nextScene>OrchestraPit</nextScene>
 			</action>
 		</condition>

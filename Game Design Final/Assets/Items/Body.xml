@@ -1,6 +1,7 @@
 ﻿<item>
 	<name>Body</name>
 	<description>An unconscious maid who won't be waking up any time soon.</description>
+	<duplicable>1</duplicable>
 	<exists>0</exists>
 	<conditionList>
 		<condition>
@@ -17,6 +18,28 @@
 			</action>
 		</condition>
 		<condition>
+			<description>Take</description>
+			<requirement>
+				<prereq>gainedCorpse</prereq>
+			</requirement>
+			<action>
+				<name>Grab</name>
+				<description>Assassin: I can't carry this while I'm hauling a corpse.</description>
+				<nextScene>reload</nextScene>
+			</action>
+		</condition>
+		<condition>
+			<description>Take</description>
+			<requirement>
+				<prereq>gainedBody</prereq>
+			</requirement>
+			<action>
+				<name>Take</name>
+				<description>Assassin: I can't carry this while I'm hauling a body.</description>
+				<nextScene>reload</nextScene>
+			</action>
+		</condition>
+		<condition>
 			<name>Back</name>
 			<description>Back</description>
 			<requirement>
@@ -24,7 +47,7 @@
 			</requirement>
 			<action>
 				<name>Back</name>
-				<description>Assassin: I'll worry about this later.</description>
+				<description>Assassin: I might think about worrying about this later on.</description>
 				<nextScene>reload</nextScene>
 			</action>
 		</condition>
