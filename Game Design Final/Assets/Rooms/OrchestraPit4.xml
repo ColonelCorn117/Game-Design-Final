@@ -12,8 +12,6 @@
 				<prereq>noreqs</prereq>
 			</requirement>
 			<action>
-				<npcSubdued>Maid2</npcSubdued>
-				<itemCreated>Body</itemCreated>
 				<nextScene>OrchestraPit3</nextScene>
 			</action>
 		</condition>

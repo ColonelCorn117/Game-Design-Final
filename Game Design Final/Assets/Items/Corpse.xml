@@ -1,6 +1,7 @@
 ﻿<item>
 	<name>Corpse</name>
 	<description>It's a bloody corpse. Pun possibly intended.</description>
+	<duplicable>1</duplicable>
 	<exists>0</exists>
 	<conditionList>
 		<condition>
@@ -13,6 +14,28 @@
 				<name>Take</name>
 				<description>Assassin: I'd better get this out of the way.</description>
 				<itemGained>Corpse</itemGained>
+				<nextScene>reload</nextScene>
+			</action>
+		</condition>
+		<condition>
+			<description>Grab</description>
+			<requirement>
+				<prereq>gainedCorpse</prereq>
+			</requirement>
+			<action>
+				<name>Take</name>
+				<description>Assassin: I can't carry this while I'm hauling a corpse.</description>
+				<nextScene>reload</nextScene>
+			</action>
+		</condition>
+		<condition>
+			<description>Grab</description>
+			<requirement>
+				<prereq>gainedBody</prereq>
+			</requirement>
+			<action>
+				<name>Take</name>
+				<description>Assassin: I can't carry this while I'm hauling a body.</description>
 				<nextScene>reload</nextScene>
 			</action>
 		</condition>

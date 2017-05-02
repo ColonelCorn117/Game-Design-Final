@@ -55,7 +55,22 @@ Assassin: [She would.]
 			</requirement>
 			
 			<action>
+				<npcSubdued>Maid2</npcSubdued>
+				<itemCreated>Body</itemCreated>
 				<nextScene>OrchestraPit4</nextScene>
+			</action>
+		</condition>
+		<condition>
+			<description>Murder Maid</description>
+			<requirement>
+				<prereq>existsMaid2</prereq>
+			</requirement>
+			
+			<action>
+				<npcSubdued>Maid2</npcSubdued>
+				<itemCreated>Corpse</itemCreated>
+				<kill>1</kill>
+				<nextScene>OrchestraPit7</nextScene>
 			</action>
 		</condition>
 		<condition>
@@ -69,6 +84,9 @@ Assassin: [She would.]
 					Muscle memory kicks in as you aim for the maid's exposed throat. In a single smooth motion, you release the knife, and a "thud" marks your success an instant later.
 				</description>
 				<itemUsed>Knife</itemUsed>
+				<npcSubdued>Maid2</npcSubdued>
+				<itemCreated>Corpse</itemCreated>
+				<kill>1</kill>
 				<nextScene>OrchestraPit5</nextScene>
 			</action>
 		</condition>
@@ -83,6 +101,8 @@ Assassin: [She would.]
 					Muscle memory kicks in as you aim for the jam jar. In a single smooth motion, you release the knife, and a sharp cry marks your success an instant later.				
 				</description>
 				<itemUsed>Knife</itemUsed>
+				<npcSubdued>Maid2</npcSubdued>
+				<itemCreated>Body</itemCreated>
 				<nextScene>OrchestraPit6</nextScene>
 			</action>
 		</condition>
@@ -101,6 +121,7 @@ Assassin: [She would.]
 	</npcList>
 	<messList>
 		<mess>SpilledJam</mess>
+		<mess>JammedPiano</mess>
 	</messList>
 	<itemList>
 		<item>Corpse</item>

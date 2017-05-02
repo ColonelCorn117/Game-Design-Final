@@ -9,6 +9,7 @@
 			<description>Continue</description>
 
 			<action>
+				<timeUsed>0</timeUsed>
 				<nextScene>DiningRoom</nextScene>
 			</action>
 		</condition>

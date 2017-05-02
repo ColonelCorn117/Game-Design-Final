@@ -5,6 +5,7 @@
 	*Not actually all-purpose.
 	</description>
 	<exists>1</exists>
+	<duplicable>0</duplicable>
 	<conditionList>
 		<condition>
 			<description>Take</description>
@@ -14,7 +15,7 @@
 			<action>
 				<name>Take UUD-42</name>
 				<description>Assassin: Knowing these maids, there's probably something they've jammed around here.</description>
-				<itemGained>Mop</itemGained>
+				<itemGained>UUD-42</itemGained>
 				<nextScene>reload</nextScene>
 			</action>
 		</condition>

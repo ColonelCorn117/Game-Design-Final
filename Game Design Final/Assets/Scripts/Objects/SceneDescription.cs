@@ -6,8 +6,9 @@ using System.Collections.Generic;
 [XmlRoot("SceneDescription")]
 public class SceneDescription : GenericGameObject
 {
-	public String background;
+	public string background;
 	//public OptionList optionList;
+	public string id;
 
 	[XmlArray("conditionList"),XmlArrayItem("condition")]
 	public List<Condition> optionList = new List<Condition>();

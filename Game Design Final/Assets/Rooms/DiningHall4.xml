@@ -9,7 +9,7 @@
 			<description>Continue</description>
 
 			<action>
-				<messCreated>BrokenGlass</messCreated>
+				<messCreated>BrokenWineglass</messCreated>
 				<nextScene>DiningRoom</nextScene>
 			</action>
 		</condition>
