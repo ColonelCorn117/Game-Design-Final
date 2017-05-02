@@ -1,17 +1,16 @@
 ﻿<SceneDescription>
 	<name>Hallway</name>
-	<description>
-	Still...
+	<description>Assassin: [Still...]
 
-	I’ve been hired to do a job. No matter how stupid this may be, I have to do it.
+Assassin: [I’ve been hired to do a job. No matter how stupid this may be, I have to do it.]
 	</description>
 	<background>AssassinHallway</background>
 	<conditionList>
-	
 		<condition>
 			<description>Continue</description>
 			<action>
 				<nextScene>Intro02-04</nextScene>
+				<timeUsed>0.0f</timeUsed>
 			</action>
 		</condition>
 	</conditionList>

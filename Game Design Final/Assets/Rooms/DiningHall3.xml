@@ -7,10 +7,9 @@
 	<conditionList>
 		<condition>
 			<description>Continue</description>
-
 			<action>
-				<timeUsed>0</timeUsed>
 				<nextScene>DiningRoom</nextScene>
+				<timeUsed>0.0f</timeUsed>
 			</action>
 		</condition>
 	</conditionList>

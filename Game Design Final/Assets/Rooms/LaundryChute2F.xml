@@ -16,11 +16,9 @@
 			<description>Back</description>
 			<action>
 				<nextScene>Hallway11</nextScene>
+				<timeUsed>0.0f</timeUsed>
 			</action>
-			
 		</condition>
-	
-		
 	</conditionList>
 	<npcList>
 	</npcList>

@@ -1,20 +1,18 @@
 ﻿<SceneDescription>
 	<name>Introduction</name>
-	<description>
-	"Yes, Sir."
-	"Understood."
-	"It will be done."
+	<description>Maids: "Yes, Sir."
+Maids: "Understood."
+Maids: "It will be done."
 
-	The maids leave.
-
+The maids leave.
 	</description>
 	<background>MaidSalute.jpg</background>
 	<conditionList>
-	
 		<condition>
 			<description>Continue</description>
 			<action>
 				<nextScene>Intro01-04</nextScene>
+				<timeUsed>0.0f</timeUsed>
 			</action>
 		</condition>
 	</conditionList>

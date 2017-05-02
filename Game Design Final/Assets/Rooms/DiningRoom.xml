@@ -18,6 +18,7 @@ Assassin: [Please don’t tell me she’s planning to do what I think she’s pl
 				<messCreated>StainedCloth</messCreated>
 				<npcSubdued>Maid1</npcSubdued>
 				<nextScene>DiningHall1</nextScene>
+				<timeUsed>0.0f</timeUsed>
 			</action>
 		</condition>
 		<condition>
@@ -28,6 +29,7 @@ Assassin: [Please don’t tell me she’s planning to do what I think she’s pl
 			<action>
 				<npcSubdued>Maid1</npcSubdued>
 				<nextScene>DiningHall2</nextScene>
+				<timeUsed>0.0f</timeUsed>
 			</action>
 		</condition>
 		<condition>
@@ -40,6 +42,7 @@ Assassin: [Please don’t tell me she’s planning to do what I think she’s pl
 				<messCreated>SpilledWine</messCreated>
 				<itemCreated>Body</itemCreated>
 				<nextScene>DiningHall3</nextScene>
+				<timeUsed>0.0f</timeUsed>
 			</action>
 		</condition>
 		<condition>

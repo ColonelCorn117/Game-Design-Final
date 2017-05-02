@@ -27,6 +27,7 @@
 				<description>You drop the unconscious maid inside the closet.</description>
 				<itemUsed>Body</itemUsed>
 				<nextScene>reload</nextScene>
+				<timeUsed>0.0f</timeUsed>
 			</action>
 		</condition>
 		<condition>
@@ -38,6 +39,7 @@
 				<description>You stash the maid's body in the closet.</description>
 				<itemUsed>Corpse</itemUsed>
 				<nextScene>reload</nextScene>
+				<timeUsed>0.0f</timeUsed>
 			</action>
 		</condition>
 	</conditionList>

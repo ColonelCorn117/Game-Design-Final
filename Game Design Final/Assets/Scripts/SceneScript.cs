@@ -234,7 +234,8 @@ public class SceneScript : MonoBehaviour {
 	void LoadSceneXML (string path) {
 		var serializer = new XmlSerializer(typeof(SceneDescription));
 		var stream = new FileStream(path, FileMode.Open);
-		xml = serializer.Deserialize(stream) as SceneDescription;
+		Debug.Log("checking");
+		xml = serializer.Deserialize(stream) as SceneDescription;	//<--
 		stream.Close();
 	}
 

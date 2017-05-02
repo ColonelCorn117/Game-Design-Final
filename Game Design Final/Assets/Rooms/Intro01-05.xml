@@ -1,9 +1,8 @@
 ﻿<SceneDescription>
 	<name>Introduction</name>
-	<description>
-	"Make sure those maids get all their work done. No breaks, no gossiping, nothing. 
-	I don’t care if you have to threaten them, they’re replaceable. Just make sure it gets done. 
-	If you fail to do this...you can join them in their fate..."
+	<description>Lord Borkus: "Make sure those maids get all their work done. No breaks, no gossiping, nothing. 
+I don’t care if you have to threaten them, they’re replaceable. Just make sure it gets done. 
+If you fail to do this...you can join them in their fate..."
 	</description>
 	<background>AssassinShadowClosedEyes</background>
 	<conditionList>
@@ -12,6 +11,7 @@
 			<description>Continue</description>
 			<action>
 				<nextScene>Intro01-06</nextScene>
+				<timeUsed>0.0f</timeUsed>
 			</action>
 		</condition>
 	</conditionList>

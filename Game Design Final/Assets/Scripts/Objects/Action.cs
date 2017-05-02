@@ -11,11 +11,11 @@ public class Action : GenericGameObject {
 	public int kill;
 	public string messResolved;
 	public string messCreated;
-	public float timeUsed = -1.0f;
+	public float timeUsed = -1.0f;		//Negative because I doubt we'll ever add time to the clock and we want some actions (such as dialogue) to not take up time, so we can't use 0.0f to denote "unassigned time".
 
 
 	public Action() {
-		timeUsed = 0f;
+		timeUsed = -1.0f;
 	}
 
 	public Action(string name) {

@@ -1,8 +1,6 @@
 ﻿<SceneDescription>
 	<name>Orchestra Pit</name>
-	<description>
-You rush the maid, tackling her away from the piano and snapping her neck, killing her instantly. Unfortunately, you see that the jam jar has emptied its contents on the floor near the piano.	
-
+	<description>You rush the maid, tackling her away from the piano and snapping her neck, killing her instantly. Unfortunately, you see that the jam jar has emptied its contents on the floor near the piano.
 	</description>
 	<background>OrchestraPit</background>
 	<conditionList>	
@@ -13,8 +11,8 @@ You rush the maid, tackling her away from the piano and snapping her neck, killi
 			</requirement>
 			<action>
 				<messCreated>SpilledJam</messCreated>
-				<timeTaken>0</timeTaken>
 				<nextScene>OrchestraPit</nextScene>
+				<timeUsed>0.0f</timeUsed>
 			</action>
 		</condition>
 	</conditionList>
