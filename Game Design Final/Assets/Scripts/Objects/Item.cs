@@ -37,8 +37,8 @@ public class Item : GenericGameObject {
 	}
 
 	public bool isClaimed() {
-		return (this.consumed == 1) || Controller_Game.ctrl_game.itemList.Contains (this.name);
-		//return unclaimed == 0;
+		//return (this.consumed == 1) || Controller_Game.ctrl_game.itemList.Contains (this.name);
+		return unclaimed == 0;
 	}
 
 	// like claim(), but doesn't check corpse or body status
@@ -80,8 +80,9 @@ public class Item : GenericGameObject {
 	}
 
 	public bool possessed() {
-		return Controller_Game.ctrl_game.itemList.Contains (this.name);
-		//return (unclaimed == 0 && consumed != 0);
+		//return Controller_Game.ctrl_game.itemList.Contains (this.name);
+		//Debug.Log("id: " + id + ", unclaimed: " + unclaimed + ", consumed: " + consumed);
+		return (unclaimed == 0 && consumed == 0);
 	}
 
 	public bool isViewableInRoom() {
@@ -90,11 +91,16 @@ public class Item : GenericGameObject {
 
 	// Given that this item is listed as being in a given room, should it appear as viewable
 	public bool isViewableInRoom(string roomName) {
+		//Debug.Log("viewable item name: " + this.name);
 		if (name == "Body") {
 			return Controller_Game.ctrl_game.BodiesVisible (roomName) > 0;
 		} else if(name == "Corpse") {
 			return Controller_Game.ctrl_game.CorpsesVisible (roomName) > 0;
 		} else {
+			// case 0: the item doesn't exist
+			if (exists == 0) {
+				return false;
+			}
 			// case 1: it's in the room
 			if (!(isClaimed ())) {
 				return true;
@@ -104,6 +110,7 @@ public class Item : GenericGameObject {
 			else if (isClaimed ()) {
 				// case 2a: the object is a singleton (and therefore it can't be in the room because it's in inventory or it was consumed): return false
 				// case 2b: the object is not a singleton (and therefore could exist in the room as well as inventory): return true
+				//Debug.Log("claimed item name: " + this.name);
 				return (duplicable == 1); 
 			}
 				

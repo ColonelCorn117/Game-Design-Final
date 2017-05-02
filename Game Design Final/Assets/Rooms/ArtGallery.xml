@@ -1,0 +1,73 @@
+﻿<SceneDescription>
+	<name>Art Gallery</name>
+	<description>The art gallery is very large and has lots of paintings.
+	</description>
+	<background>ArtGallery</background>
+	<conditionList>
+		<condition>
+			<additionalDescription>A maid appears to be attempting to set a particularly large portrait of Lord Borkus on fire with a lighter.</additionalDescription>
+			<requirement>
+				<prereq>existsMaid3</prereq>
+			</requirement>
+			<description>Do Nothing</description>
+			<action>
+				<npcSubdued>Maid3</npcSubdued>
+				<nextScene>ArtGallery1</nextScene>
+			</action>
+		</condition>
+		<condition>
+			<description>Talk to the Maid</description>
+			<requirement>
+				<prereq>existsMaid3</prereq>
+			</requirement>
+			<action>
+				<npcSubdued>Maid3</npcSubdued>
+				<nextScene>ArtGallery2</nextScene>
+			</action>
+		</condition>
+		<condition>
+			<description>Subdue Maid</description>
+			<requirement>
+				<prereq>existsMaid3</prereq>
+			</requirement>
+			<action>
+				<description></description>
+				<npcSubdued>Maid3</npcSubdued>
+				<itemCreated>Body</itemCreated>
+				<timeUsed>1</timeUsed>
+				<nextScene>ArtGallery3</nextScene>
+			</action>
+		</condition>
+		<condition>
+			<description>Kill Maid</description>
+			<requirement>
+				<prereq>existsMaid3</prereq>
+			</requirement>
+			<action>
+				<npcSubdued>Maid3</npcSubdued>
+				<itemCreated>Corpse</itemCreated>
+				<kill>1</kill>
+				<timeUsed>3</timeUsed>
+				<nextScene>ArtGallery4</nextScene>
+			</action>
+		</condition>
+		<condition>
+			<description>South Hallway</description>
+			<requirement>
+				<prereq>removeMaid3</prereq>
+			</requirement>
+			<action>
+				<nextScene>Hallway11</nextScene>
+			</action>
+		</condition>
+	</conditionList>
+	<npcList>
+	</npcList>
+	<messList>
+	</messList>
+	<itemList>
+		<item>Corpse</item>
+		<item>Body</item>
+		<item>Painting</item>
+	</itemList>
+</SceneDescription>

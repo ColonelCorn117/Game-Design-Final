@@ -7,6 +7,7 @@ public class Action : GenericGameObject {
 	public string itemUsed;
 	public string itemCreated;
 	public string npcSubdued;
+	public string npcCreated;
 	public int kill;
 	public string messResolved;
 	public string messCreated;

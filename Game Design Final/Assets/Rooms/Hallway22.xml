@@ -1,23 +1,20 @@
 ﻿<SceneDescription>
-	<name>Master Bedroom</name>
-	<description>It's the master bedroom.</description>
+	<name>Hallway</name>
+	<description>It's a hallway.</description>
 	<background></background>
 	<conditionList>
-	
 		<condition>
-			<description>Hallway</description>
+			<description>Landing</description>
 			<action>
-				<nextScene>Hallway21</nextScene>
+				<nextScene>Landing3F</nextScene>
 			</action>	
 		</condition>
 		<condition>
-			<description>Master Bathroom</description>
+			<description>Child's Bedroom</description>
 			<action>
-				<nextScene>MasterBathroom</nextScene>
+				<nextScene>ChildBedroom</nextScene>
 			</action>	
 		</condition>
-	
-		
 	</conditionList>
 	<npcList>
 	</npcList>
