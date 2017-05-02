@@ -1,0 +1,35 @@
+﻿<SceneDescription>
+	<name>Hallway</name>
+	<description>It's a hallway. 
+	
+	There's a laundry chute in the wall.
+	</description>
+	<background>Hallway</background>
+	<conditionList>
+	
+		<condition>
+			<description>Master Bedroom</description>
+			<action>
+				<nextScene>MasterBedroom</nextScene>
+			</action>	
+		</condition>
+		<condition>
+			<description>Laundry Chute</description>
+			<action>
+				<nextScene>LaundryChute3F</nextScene>
+			</action>	
+		</condition>
+		<condition>
+			<description>Landing</description>
+			<action>
+				<nextScene>Landing3F</nextScene>
+			</action>	
+		</condition>
+	
+		
+	</conditionList>
+	<npcList>
+	</npcList>
+	<messList>
+	</messList>
+</SceneDescription>

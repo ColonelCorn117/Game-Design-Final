@@ -1,0 +1,26 @@
+﻿<SceneDescription>
+	<name>Bathroom</name>
+	<description>It's a bathroom.</description>
+	<background>Bathroom</background>
+	<conditionList>
+		<condition>
+			<description>Lord's Lounge</description>
+			<action>
+				<nextScene>LordLounge</nextScene>
+			</action>	
+		</condition>
+		<condition>
+			<description>Hallway</description>
+			<action>
+				<nextScene>Hallway5</nextScene>
+			</action>	
+		</condition>
+	</conditionList>
+	<npcList>
+	</npcList>
+	<messList>
+	</messList>
+	<itemList>
+		<item>Broom</item>
+	</itemList>
+</SceneDescription>

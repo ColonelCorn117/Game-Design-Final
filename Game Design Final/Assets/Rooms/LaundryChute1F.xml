@@ -2,11 +2,9 @@
 	<name>Laundry Chute</name>
 	<description>A small laundry chute drops clothing into a large basket.
 
-You're pretty sure you can't climb up the chute. You're an assassin, not a ninja!
-	</description>
+You're pretty sure you can't climb up the chute. You're an assassin, not a ninja!</description>
 	<background></background>
 	<conditionList>
-	
 		<condition>
 			<description>Back</description>
 			<action>
