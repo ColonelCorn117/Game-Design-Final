@@ -4,13 +4,14 @@
 	<background>black</background>
 	<conditionList>
 		<condition>
-			<description>Servant Passage 1</description>
+			<description>Servant Passage</description>
 			<action>
 				<nextScene>ServantPassage1</nextScene>
 			</action>
 		</condition>
 	</conditionList>
 	<npcList>
+		<npc>Maid3a</npc>
 	</npcList>
 	<messList>
 	</messList>
