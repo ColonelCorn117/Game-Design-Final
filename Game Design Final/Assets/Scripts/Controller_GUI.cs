@@ -192,9 +192,17 @@ public class Controller_GUI : MonoBehaviour
 
 	//----------------------------------------------------------------------------------------------------
 
-	public void SetMessesText(int amount)
+	public void SetMessesText(Dictionary<string, Mess> messes)
 	{
-		messesText.text = amount.ToString();
+		int count = 0;
+		foreach (KeyValuePair<string, Mess> mess in messes)
+		{
+			if (mess.Value.exists == 1)
+			{
+				count++;
+			}
+		}
+		messesText.text = (count + Controller_Game.ctrl_game.unclaimedBodyCount).ToString();
 	}
 
 	//----------------------------------------------------------------------------------------------------

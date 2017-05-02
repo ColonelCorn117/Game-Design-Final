@@ -72,6 +72,7 @@ public class Controller_Game : MonoBehaviour
 	{
 		Controller_GUI.ctrl_gui.SetItemsText(itemList);
 		Controller_GUI.ctrl_gui.SetTimeText(timeRemaining);
+		Controller_GUI.ctrl_gui.SetMessesText (messes);
 	}
 
 	//----------------------------------------------------------------------------------------------------
@@ -277,12 +278,13 @@ public class Controller_Game : MonoBehaviour
 					breadQuantity = 1;
 				}
 				++breadQuantity;
+
 			} else if (a.itemGained == "Body") {
 				Debug.Log ("Attempting to remove a body from : " + SceneScript.sceneScript.GetSceneID());
 				RemoveBody (SceneScript.sceneScript.GetSceneID());
 			} else if (a.itemGained == "Corpse") {
 				Debug.Log ("Attempting to remove a corpse from : " + SceneScript.sceneScript.GetSceneID());
-				RemoveCorpse (SceneScript.sceneScript.GetSceneID());
+				RemoveCorpse (SceneScript.sceneScript.GetSceneID())
 			}
 			this.ItemLookup (a.itemGained).claim ();
 			AddItemToInv (a.itemGained);
@@ -353,6 +355,7 @@ public class Controller_Game : MonoBehaviour
 
 		}
 
+		Controller_GUI.ctrl_gui.SetMessesText(messes);
 		if (a.timeUsed < 0.0f)
 		{
 			ChangeRemainingTime(unassignedActionTime);
