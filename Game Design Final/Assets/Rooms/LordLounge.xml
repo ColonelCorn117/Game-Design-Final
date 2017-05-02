@@ -1,26 +1,25 @@
 ﻿<SceneDescription>
-	<name>Master Bedroom</name>
-	<description>It's the master bedroom.</description>
-	<background></background>
+	<name>Lord's Lounge</name>
+	<description>It's the lord's lounge.</description>
+	<background>LordLounge</background>
 	<conditionList>
-	
 		<condition>
 			<description>Hallway</description>
 			<action>
-				<nextScene>Hallway21</nextScene>
+				<nextScene>Hallway5</nextScene>
 			</action>	
 		</condition>
 		<condition>
-			<description>Master Bathroom</description>
+			<description>Bathroom</description>
 			<action>
-				<nextScene>MasterBathroom</nextScene>
+				<nextScene>Bathroom1</nextScene>
 			</action>	
 		</condition>
-	
-		
 	</conditionList>
 	<npcList>
 	</npcList>
 	<messList>
 	</messList>
+	<itemList>
+	</itemList>
 </SceneDescription>

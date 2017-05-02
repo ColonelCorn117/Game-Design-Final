@@ -1,13 +1,17 @@
 ﻿<SceneDescription>
 	<name>ChildBedroom</name>
 	<description>It looks as if a tornado plowed through this room.
-	</description>
+	Assassin: ...oh no. 
+	Assassin: No no no no no.
+	Assassin: NO NO NO NO NO!
+	Assassin: NONONONONONONO!
+	Assassin: He's not here.</description>
 	<background></background>
 	<conditionList>
 		<condition>
 			<description>Hallway</description>
 			<action>
-				<nextScene>Hallway12</nextScene>
+				<nextScene>Hallway22</nextScene>
 			</action>	
 		</condition>
 	</conditionList>

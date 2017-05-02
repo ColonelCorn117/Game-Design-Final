@@ -1,7 +1,6 @@
 ﻿<SceneDescription>
 	<name>Hallway</name>
-	<description>It's a hallway.
-	</description>
+	<description>It's a hallway.</description>
 	<background></background>
 	<conditionList>
 		<condition>
@@ -11,9 +10,9 @@
 			</action>	
 		</condition>
 		<condition>
-			<description>Child's Bedroom</description>
+			<description>Trophy Room</description>
 			<action>
-				<nextScene>ChildBedroom</nextScene>
+				<nextScene>TrophyRoom</nextScene>
 			</action>	
 		</condition>
 	</conditionList>

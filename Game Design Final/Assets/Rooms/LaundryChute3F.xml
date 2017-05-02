@@ -1,0 +1,50 @@
+﻿<SceneDescription>
+	<name>LaundryChute</name>
+	<description>A small laundry chute slot is fixed to the wall. You could probably fit inside.</description>
+	<background></background>
+	<conditionList>
+	
+		<condition>
+			<description>Down the Chute</description>
+			<action>
+				<nextScene>LaundryRoom</nextScene>
+			</action>
+			
+		</condition>
+		<condition>
+			<description>Drop Body into Chute</description>
+			<requirement>
+				<prereq>gainedBody</prereq>
+			</requirement>
+			<action>
+				<description>You shove the unconscious maid into the laundry chute.</description>
+				<itemUsed>Body</itemUsed>
+				<nextScene>reload</nextScene>
+			</action>
+		</condition>
+		<condition>
+			<description>Drop Corpse into Chute</description>
+			<requirement>
+				<prereq>gainedCorpse</prereq>
+			</requirement>
+			<action>
+				<description>You shove the maid's body into the laundry chute.</description>
+				<itemUsed>Corpse</itemUsed>
+				<nextScene>reload</nextScene>
+			</action>
+		</condition>
+		<condition>
+			<description>Back</description>
+			<action>
+				<nextScene>Hallway21</nextScene>
+			</action>
+			
+		</condition>
+	
+		
+	</conditionList>
+	<npcList>
+	</npcList>
+	<messList>
+	</messList>
+</SceneDescription>

@@ -2,7 +2,7 @@
 	<name>Landing</name>
 	<description>You see a flight of stairs. They are big and fluffy.
 	</description>
-	<background></background>
+	<background>Landing</background>
 	<conditionList>
 		<condition>
 			<description>Entrance</description>
@@ -14,6 +14,7 @@
 		<condition>
 			<description>Upstairs</description>
 			<action>
+				<timeUsed>0.3</timeUsed>
 				<nextScene>Landing2F</nextScene>
 			</action>
 			

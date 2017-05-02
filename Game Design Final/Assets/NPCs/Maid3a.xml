@@ -1,0 +1,15 @@
+﻿<npc>
+	<name>Maid</name>
+	<description>A maid in a uniform. She seems to be searching for something without much success.
+Assassin: Wait a minute. She's that pyromaniac I found in the art gallery. 
+Assassin:...I think I'll leave her alone for now.</description>
+	<exists>0</exists>
+	<clearList>
+		<condition>
+			<requirement>
+				<prereq>expirePainting</prereq>
+			</requirement>
+			<action></action>
+		</condition>
+	</clearList>
+</npc>
