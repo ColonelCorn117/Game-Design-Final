@@ -9,4 +9,5 @@ using System.Xml.Serialization;
 public class GenericGameObject {
 	public String name;
 	public String description;
+	public string id;
 }

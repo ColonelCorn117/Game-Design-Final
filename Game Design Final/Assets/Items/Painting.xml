@@ -1,0 +1,19 @@
+﻿<item>
+	<name>Painting</name>
+	<description>The gold plated label below the painting has the name of the artist and says the medium is oil paint-
+Assassin: That's not oil paint. It's acrylic. C'mon people,  learn the difference; I'm a goddamn  assassin, and even I know the difference.
+Assassin:...
+Assassin: Well, at least there's no way to set this thing on fire.</description>
+	<exists>0</exists>
+	<conditionList>
+		<condition>
+			<requirement>
+				<prereq>noreqs</prereq>
+			</requirement>
+			<description>Back</description>
+			<action>
+				<nextScene>reload</nextScene>
+			</action>
+		</condition>
+	</conditionList>
+</item>

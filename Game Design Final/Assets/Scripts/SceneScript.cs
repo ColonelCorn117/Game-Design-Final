@@ -86,7 +86,7 @@ public class SceneScript : MonoBehaviour {
 			Item i = (Item)o;
 
 			List<Condition> l = new List<Condition> ();
-			if (Controller_Game.ctrl_game.itemList.Contains (i.name)) {
+			if (i.isClaimed()) {
 				if (i.conditions == null || i.conditions.Count == 0) {
 					l.Add (new Condition ("Back", new Action ("Back", currentSceneName, "", "", 0f)));
 					LoadButtons (l);
@@ -105,7 +105,8 @@ public class SceneScript : MonoBehaviour {
 					}
 					*/
 					if (i.conditions.Count == 0) {
-						l.Add (new Condition ("Take", new Action ("Take", currentSceneName, "", name,0f)));
+						Debug.Log (i.id + " taken");
+						l.Add (new Condition ("Take", new Action ("Take", currentSceneName, "", i.id,0f)));
 						l.Add (new Condition ("Back", new Action ("Back", currentSceneName, "","",0f)));
 					}
 				}
@@ -383,53 +384,56 @@ public class SceneScript : MonoBehaviour {
 
 	string BodyDescriptions() {
 		string textToAdd = "";
-		int bodyCount = Controller_Game.ctrl_game.BodiesVisible (xml.id);
-		int corpseCount = Controller_Game.ctrl_game.CorpsesVisible (xml.id);
-		if (bodyCount + corpseCount == 0) {
-			textToAdd += "Assassin: I could probably squeeze a few bodies in here if I needed to hide them.";
-		} else {
-			switch (bodyCount) {
-			case 0:
-				break;
-			case 1:
-				textToAdd += "A maid lies";
-				break;
-			case 2:
-				textToAdd += "Two maids lie";
-				break;
-			case 3:
-				textToAdd += "Three maids lie";
-				break;
-			default:
-				textToAdd += "Several maids lie";
-				break;
-			}
-			if (bodyCount > 0) {
-				textToAdd +=  " unconscious on the floor.";
-			}
+		
+		if (xml.id.Contains ("Closet") || (xml.id == "LaundryRoom")) {
+			int bodyCount = Controller_Game.ctrl_game.BodiesVisible (xml.id);
+			int corpseCount = Controller_Game.ctrl_game.CorpsesVisible (xml.id);
+			if (bodyCount + corpseCount == 0) {
+				textToAdd += "Assassin: I could probably squeeze a few bodies in here if I needed to hide them.";
+			} else {
+				switch (bodyCount) {
+				case 0:
+					break;
+				case 1:
+					textToAdd += "A maid lies";
+					break;
+				case 2:
+					textToAdd += "Two maids lie";
+					break;
+				case 3:
+					textToAdd += "Three maids lie";
+					break;
+				default:
+					textToAdd += "Several maids lie";
+					break;
+				}
+				if (bodyCount > 0) {
+					textToAdd += " unconscious on the floor.";
+				}
 
-			switch (corpseCount) {
-			case 0:
-				break;
-			case 1:
-				textToAdd += "\nA maid lies";
-				break;
-			case 2:
-				textToAdd += "\nTwo maids lie";
-				break;
-			case 3:
-				textToAdd += "\nThree maids lie";
-				break;
-			default:
-				textToAdd += "\nSeveral maids lie";
-				break;
-			}
-			if (corpseCount > 0) {
-				textToAdd +=  " dead on the floor.";
-			}
+				switch (corpseCount) {
+				case 0:
+					break;
+				case 1:
+					textToAdd += "\nA maid lies";
+					break;
+				case 2:
+					textToAdd += "\nTwo maids lie";
+					break;
+				case 3:
+					textToAdd += "\nThree maids lie";
+					break;
+				default:
+					textToAdd += "\nSeveral maids lie";
+					break;
+				}
+				if (corpseCount > 0) {
+					textToAdd += " dead on the floor.";
+				}
 
-			if ((bodyCount + corpseCount) > 4) {
-				textToAdd += "\nAssassin: How did I manage to get all of these idiots into here?";
+				if ((bodyCount + corpseCount) > 4) {
+					textToAdd += "\nAssassin: How did I manage to get all of these idiots into here?";
+				}
 			}
 		}
 		return textToAdd;

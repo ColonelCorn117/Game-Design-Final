@@ -8,7 +8,6 @@ public class SceneDescription : GenericGameObject
 {
 	public string background;
 	//public OptionList optionList;
-	public string id;
 
 	[XmlArray("conditionList"),XmlArrayItem("condition")]
 	public List<Condition> optionList = new List<Condition>();
