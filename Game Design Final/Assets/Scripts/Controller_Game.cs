@@ -328,6 +328,11 @@ public class Controller_Game : MonoBehaviour
 		if (a.kill > 0) {
 			this.killCount += a.kill;
 		}
+
+		if (a.npcCreated != null && a.npcCreated != "") {
+			NpcLookup (a.npcCreated).Create ();
+		}
+
 		// if the player is trying to examine an item, mess, or NPC, set up the screen to do that.
 		if (a.objectExamined != null && a.objectExamined != "") {
 			string addedText = "";

@@ -11,6 +11,10 @@ public class NPC : Problem {
 		return true;
 	}
 
+	public void Create() {
+		this.exists = 1;
+	}
+
 	public void setDialogueLocation(int i) {
 		dialogueLocation = i;
 	}
