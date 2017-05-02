@@ -108,7 +108,7 @@ public class Controller_Game : MonoBehaviour
 		itemList.Add(item);
 		Controller_GUI.ctrl_gui.SetItemsText(itemList);
 		//ctrl_gui.ScaleItemsList();
-		Debug.Log("Item Added: " + item);
+		//Debug.Log("Item Added: " + item);
 	}
 
 	//----------------------------------------------------------------------------------------------------
@@ -118,7 +118,7 @@ public class Controller_Game : MonoBehaviour
 		itemList.Remove(item);
 		Controller_GUI.ctrl_gui.SetItemsText(itemList);
 		//ctrl_gui.DestroyBtnsOnItemsList();
-		Debug.Log("Item Removed: " + item);
+		//Debug.Log("Item Removed: " + item);
 	}
 
 	//----------------------------------------------------------------------------------------------------
@@ -284,7 +284,7 @@ public class Controller_Game : MonoBehaviour
 				RemoveBody (SceneScript.sceneScript.GetSceneID());
 			} else if (a.itemGained == "Corpse") {
 				Debug.Log ("Attempting to remove a corpse from : " + SceneScript.sceneScript.GetSceneID());
-				RemoveCorpse (SceneScript.sceneScript.GetSceneID())
+				RemoveCorpse (SceneScript.sceneScript.GetSceneID());
 			}
 			this.ItemLookup (a.itemGained).claim ();
 			AddItemToInv (a.itemGained);

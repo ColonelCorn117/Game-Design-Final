@@ -3,7 +3,6 @@
 	<description>It's really just another hallway.</description>
 	<background>Hallway</background>
 	<conditionList>
-	
 		<condition>
 			<description>Laundry Room</description>
 			<action>

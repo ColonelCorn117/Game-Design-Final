@@ -70,15 +70,12 @@ public class Controller_GUI : MonoBehaviour
 			case("Background Image"):
 				bgImage = image;
 				break;
-			case("ItemsList Image"):
-				itemsListImage = image;
-				itemsListImage.gameObject.SetActive(false);
-				break;
 			case("Detail Image"):
 				detailImage = image;
 				break;
 			case("Items Box"):
 				itemsBox = image;
+				ToggleInventory();
 				break;
 			case("Titles Box"):
 					List<Transform> children = new List<Transform>(GetComponentsInChildren<Transform>());	//gets child objects
@@ -94,6 +91,10 @@ public class Controller_GUI : MonoBehaviour
 						}
 					}
 				break;
+//			case("ItemsList Image"):				//Old Items button
+//				itemsListImage = image;
+//				itemsListImage.gameObject.SetActive(false);
+//				break;
 			default:
 				//Debug.Log("Other image found: " + image.name);
 				break;
@@ -105,6 +106,7 @@ public class Controller_GUI : MonoBehaviour
 			itemsText.Add(textComp);
 		}
 		itemsText.RemoveAt(0);	//Get rid of the first element since that one contains the "Items" title which we don't want to be changed
+		itemsText.RemoveAt(itemsText.Count - 1);	//Same for the last element, since that's the "Hide Inventory" button
 
 		/*
 		foreach (Button button in GetComponentsInChildren<Button>())
@@ -214,6 +216,12 @@ public class Controller_GUI : MonoBehaviour
 
 	//----------------------------------------------------------------------------------------------------
 
+	public void ToggleInventory()
+	{
+		itemsBox.gameObject.SetActive(!itemsBox.gameObject.activeSelf);
+	}
+
+	//----------------------------------------------------------------------------------------------------
 
 	#region: Old Items button implementation. Button itself is still offscreen just in case
 //	public void ToggleItemsList()
