@@ -69,6 +69,7 @@ public class Controller_Game : MonoBehaviour
 	{
 		Controller_GUI.ctrl_gui.SetItemsText(itemList);
 		Controller_GUI.ctrl_gui.SetTimeText(timeRemaining);
+		Controller_GUI.ctrl_gui.SetMessesText (messes);
 	}
 
 	//----------------------------------------------------------------------------------------------------
@@ -183,7 +184,7 @@ public class Controller_Game : MonoBehaviour
 				++breadQuantity;
 				this.ItemLookup (a.itemGained).claim ();
 			} else {
-				if (a.itemCreated == "Corpse" || a.itemCreated == "Body") {
+				if (a.itemGained == "Corpse" || a.itemGained == "Body") {
 					--this.unclaimedBodyCount;
 				}
 
@@ -206,6 +207,8 @@ public class Controller_Game : MonoBehaviour
 			// Note: this method returns a bool regarding whether it succeeded
 			// it currently isn't used for anything
 			changeMade = true;
+			Debug.Log ("mess count: " + messes.Count);
+
 		}
 		if (a.messCreated != null && a.messCreated != "") {
 			MessLookup (a.messCreated).Unclean (a);
@@ -260,6 +263,7 @@ public class Controller_Game : MonoBehaviour
 
 		}
 
+		Controller_GUI.ctrl_gui.SetMessesText(messes);
 		if (a.timeUsed < 0.0f)
 		{
 			ChangeRemainingTime(unassignedActionTime);
