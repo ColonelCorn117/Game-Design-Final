@@ -1,6 +1,6 @@
 ﻿<SceneDescription>
 	<name>Landing</name>
-	<description>You see a flight of stairs going up and another going down. You have the urge to slide down the railing.
+	<description>You see a flight of stairs going down. You have the urge to slide down the railing.
 	</description>
 	<background>Landing</background>
 	<conditionList>
@@ -9,34 +9,24 @@
 			<description>Downstairs</description>
 			<action>
 				<timeUsed>0.1</timeUsed>
-				<nextScene>Landing1F</nextScene>
-			</action>
-			
-		</condition>
-		<condition>
-			<description>Upstairs</description>
-			<action>
-				<timeUsed>0.3</timeUsed>
-				<nextScene>Landing3F</nextScene>
+				<nextScene>Landing2F</nextScene>
 			</action>
 			
 		</condition>
 		<condition>
 			<description>North Hallway</description>
 			<action>
-				<nextScene>Hallway11</nextScene>
+				<nextScene>Hallway21</nextScene>
 			</action>
 			
 		</condition>
 		<condition>
 			<description>South Hallway</description>
 			<action>
-				<nextScene>Hallway12</nextScene>
+				<nextScene>Hallway22</nextScene>
 			</action>
 			
 		</condition>
-	
-		
 	</conditionList>
 	<npcList>
 	</npcList>

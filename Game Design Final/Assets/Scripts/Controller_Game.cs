@@ -72,7 +72,6 @@ public class Controller_Game : MonoBehaviour
 	{
 		Controller_GUI.ctrl_gui.SetItemsText(itemList);
 		Controller_GUI.ctrl_gui.SetTimeText(timeRemaining);
-		Controller_GUI.ctrl_gui.SetMessesText (messes);
 	}
 
 	//----------------------------------------------------------------------------------------------------
@@ -182,13 +181,17 @@ public class Controller_Game : MonoBehaviour
 
 	public void AddBody(string room, bool addToCount) {
 		if (room != "") {
-			if (this.bodyInRoom.ContainsKey (room)) {
-				++bodyInRoom [room];
+			if (room == "LaundryChute3F") {
+				AddBody ("LaundryChute1F", addToCount);
 			} else {
-				bodyInRoom.Add (room, 1);
-			}
-			if (addToCount) {
-				++this.unclaimedBodyCount;
+				if (this.bodyInRoom.ContainsKey (room)) {
+					++bodyInRoom [room];
+				} else {
+					bodyInRoom.Add (room, 1);
+				}
+				if (addToCount) {
+					++this.unclaimedBodyCount;
+				}
 			}
 		}
 	}
@@ -201,13 +204,17 @@ public class Controller_Game : MonoBehaviour
 
 	public void AddCorpse(string room, bool addToCount) {
 		if (room != "") {
-			if (corpseInRoom.ContainsKey (room)) {
-				++corpseInRoom [room];
+			if (room == "LaundryChute3F") {
+				AddCorpse ("LaundryChute1F", addToCount);
 			} else {
-				this.corpseInRoom.Add (room, 1);
-			}
-			if (addToCount) {
-				++this.unclaimedBodyCount;
+				if (corpseInRoom.ContainsKey (room)) {
+					++corpseInRoom [room];
+				} else {
+					this.corpseInRoom.Add (room, 1);
+				}
+				if (addToCount) {
+					++this.unclaimedBodyCount;
+				}
 			}
 		}
 	}
@@ -278,13 +285,12 @@ public class Controller_Game : MonoBehaviour
 					breadQuantity = 1;
 				}
 				++breadQuantity;
-
 			} else if (a.itemGained == "Body") {
 				Debug.Log ("Attempting to remove a body from : " + SceneScript.sceneScript.GetSceneID());
 				RemoveBody (SceneScript.sceneScript.GetSceneID());
 			} else if (a.itemGained == "Corpse") {
 				Debug.Log ("Attempting to remove a corpse from : " + SceneScript.sceneScript.GetSceneID());
-				RemoveCorpse (SceneScript.sceneScript.GetSceneID())
+				RemoveCorpse (SceneScript.sceneScript.GetSceneID());
 			}
 			this.ItemLookup (a.itemGained).claim ();
 			AddItemToInv (a.itemGained);
@@ -322,6 +328,11 @@ public class Controller_Game : MonoBehaviour
 		if (a.kill > 0) {
 			this.killCount += a.kill;
 		}
+
+		if (a.npcCreated != null && a.npcCreated != "") {
+			NpcLookup (a.npcCreated).Create ();
+		}
+
 		// if the player is trying to examine an item, mess, or NPC, set up the screen to do that.
 		if (a.objectExamined != null && a.objectExamined != "") {
 			string addedText = "";
@@ -355,7 +366,6 @@ public class Controller_Game : MonoBehaviour
 
 		}
 
-		Controller_GUI.ctrl_gui.SetMessesText(messes);
 		if (a.timeUsed < 0.0f)
 		{
 			ChangeRemainingTime(unassignedActionTime);
@@ -410,6 +420,7 @@ public class Controller_Game : MonoBehaviour
 		var serializer = new XmlSerializer(typeof(Item));
 		var stream = new FileStream(path, FileMode.Open);
 		var output = serializer.Deserialize(stream) as Item;
+		output.id = path.Substring(13,path.Length - (13 + 4));// Items should be in Assets/Items/
 		stream.Close();
 		return output;
 	}

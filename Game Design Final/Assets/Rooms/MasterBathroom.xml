@@ -1,0 +1,20 @@
+﻿<SceneDescription>
+	<name>Master Bathroom</name>
+	<description>It's the master bathroom.</description>
+	<background>MasterBathroom</background>
+	<conditionList>
+		<condition>
+			<description>Master Bedroom</description>
+			<action>
+				<nextScene>MasterBedroom</nextScene>
+			</action>	
+		</condition>
+	</conditionList>
+	<npcList>
+	</npcList>
+	<messList>
+	</messList>
+	<itemList>
+		
+	</itemList>
+</SceneDescription>
