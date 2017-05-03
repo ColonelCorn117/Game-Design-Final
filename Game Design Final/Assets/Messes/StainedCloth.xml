@@ -4,13 +4,14 @@
 	<exists>0</exists>
 	<conditionList>
 		<condition>
-			<description>Clean</description>
+			<description>Replace Tablecloth</description>
 			<requirement>
-				<prereq>useTablecloth</prereq>
+				<prereq>gainedTablecloth</prereq>
 			</requirement>
 			<action>
 				<name>Clean</name>
-				<messResolved>StainedTablecloth</messResolved>
+				<description> You swap the stained tablecloth for a clean one.</description>
+				<messResolved>StainedCloth</messResolved>
 				<itemUsed>Tablecloth</itemUsed>
 				<nextScene>reload</nextScene>
 			</action>
