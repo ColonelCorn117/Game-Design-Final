@@ -3,13 +3,11 @@
 	<description>A small laundry chute slot is fixed to the wall. You could probably fit inside.</description>
 	<background></background>
 	<conditionList>
-	
 		<condition>
 			<description>Down the Chute</description>
 			<action>
 				<nextScene>LaundryRoom</nextScene>
-			</action>
-			
+			</action>	
 		</condition>
 		<condition>
 			<description>Drop Body into Chute</description>
@@ -20,6 +18,7 @@
 				<description>You shove the unconscious maid into the laundry chute.</description>
 				<itemUsed>Body</itemUsed>
 				<nextScene>reload</nextScene>
+				<timeUsed>0.0</timeUsed>
 			</action>
 		</condition>
 		<condition>
@@ -31,17 +30,16 @@
 				<description>You shove the maid's body into the laundry chute.</description>
 				<itemUsed>Corpse</itemUsed>
 				<nextScene>reload</nextScene>
+				<timeUsed>0.0</timeUsed>
 			</action>
 		</condition>
 		<condition>
 			<description>Back</description>
 			<action>
 				<nextScene>Hallway21</nextScene>
-			</action>
-			
+				<timeUsed>0.0</timeUsed>
+			</action>	
 		</condition>
-	
-		
 	</conditionList>
 	<npcList>
 	</npcList>

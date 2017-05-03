@@ -34,6 +34,7 @@ Assassin: That smells really good...
 				<itemGained>Bread</itemGained>
 				<timeUsed>0</timeUsed>
 				<nextScene>reload</nextScene>
+				<timeUsed>0.0</timeUsed>
 			</action>
 		</condition>
 	</conditionList>

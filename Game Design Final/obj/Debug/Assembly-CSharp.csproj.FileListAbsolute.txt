@@ -28,4 +28,3 @@ C:\Users\Eric\Documents\GitHub\Game-Design-Final\Game Design Final\Temp\bin\Debu
 C:\Users\Eric\Documents\GitHub\Game-Design-Final\Game Design Final\Temp\bin\Debug\UnityEngine.VR.xml
 C:\Users\Eric\Documents\GitHub\Game-Design-Final\Game Design Final\obj\Debug\Assembly-CSharp.dll
 C:\Users\Eric\Documents\GitHub\Game-Design-Final\Game Design Final\obj\Debug\Assembly-CSharp.pdb
-C:\Users\Eric\Documents\GitHub\Game-Design-Final\Game Design Final\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache

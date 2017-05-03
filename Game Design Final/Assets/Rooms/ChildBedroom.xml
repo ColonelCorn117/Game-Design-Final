@@ -1,11 +1,11 @@
 ﻿<SceneDescription>
 	<name>ChildBedroom</name>
 	<description>It looks as if a tornado plowed through this room.
-	Assassin: ...oh no. 
-	Assassin: No no no no no.
-	Assassin: NO NO NO NO NO!
-	Assassin: NONONONONONONO!
-	Assassin: He's not here.</description>
+Assassin: [...oh no.] 
+Assassin: [No no no no no.]
+Assassin: "NO NO NO NO NO!"
+Assassin: "NONONONONONONO!"
+Assassin: [He's not here.]</description>
 	<background></background>
 	<conditionList>
 		<condition>

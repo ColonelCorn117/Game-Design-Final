@@ -4412,7 +4412,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Messes Remaining:'
+  m_Text: 'Known Messes:'
 --- !u!222 &1554821396
 CanvasRenderer:
   m_ObjectHideFlags: 0

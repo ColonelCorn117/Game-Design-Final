@@ -15,7 +15,7 @@
 			<description>Upstairs</description>
 			<action>
 				<timeUsed>0.3</timeUsed>
-				<nextScene>Landing2F</nextScene>
+				<nextScene>Landing2</nextScene>
 			</action>
 			
 		</condition>

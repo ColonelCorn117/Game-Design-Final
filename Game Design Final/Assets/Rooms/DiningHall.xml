@@ -12,12 +12,14 @@ Assassin: Please don’t tell me she’s planning to do what I think she’s pla
 			<description>Do Nothing</description>
 			<action>
 				<nextScene>DiningHall1</nextScene>
+				<timeUsed>0.0</timeUsed>
 			</action>
 		</condition>
 		<condition>
 			<description>Talk to the Maid</description>
 			<action>
 				<nextScene>DiningHall2</nextScene>
+				<timeUsed>1.3</timeUsed>
 			</action>
 		</condition>
 		<condition>
@@ -25,6 +27,7 @@ Assassin: Please don’t tell me she’s planning to do what I think she’s pla
 			<action>
 				<npcSubdued>Maid1</npcSubdued>
 				<nextScene>DiningHall3</nextScene>
+				<timeUsed>1.5</timeUsed>
 			</action>
 		</condition>
 		<condition>
@@ -33,6 +36,7 @@ Assassin: Please don’t tell me she’s planning to do what I think she’s pla
 				<npcSubdued>Maid1</npcSubdued>
 				<kill>1</kill>
 				<nextScene>DiningHall4</nextScene>
+				<timeUsed>1.0</timeUsed>
 			</action>
 		</condition>
 	</conditionList>

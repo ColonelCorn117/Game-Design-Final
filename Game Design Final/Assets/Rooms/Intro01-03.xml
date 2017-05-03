@@ -1,19 +1,20 @@
 ﻿<SceneDescription>
 	<name>Introduction</name>
-	<description>Maid 1: Yes, Sir.
-Maid 2: Understood.
-Maid 3: It will be done.
-'Maid': Ook.
+
+	<description>Maid 1: "Yes, Sir."
+Maid 2: "Understood."
+Maid 3: "It will be done."
+'Maid': "Ook."
 	
 The maids leave.</description>
 	<background>MaidSalute.jpg</background>
 	<conditionList>
-	
 		<condition>
 			<description>Continue</description>
 			<action>
 				<timeUsed>0</timeUsed>
 				<nextScene>Intro01-04</nextScene>
+				<timeUsed>0.0</timeUsed>
 			</action>
 		</condition>
 	</conditionList>

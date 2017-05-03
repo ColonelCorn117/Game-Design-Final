@@ -11,9 +11,9 @@
 			<action>
 				<description>Assassin: I'd better keep this. I'd rather not deal with ANOTHER pyromaniac.</description>
 				<itemGained>Lighter</itemGained>
-				<timeUsed>0</timeUsed>
 				<itemCreated>Painting</itemCreated>
 				<nextScene>ArtGallery</nextScene>
+				<timeUsed>0.0</timeUsed>
 			</action>
 		</condition>
 	</conditionList>

@@ -13,6 +13,7 @@
 			<action>
 				<npcSubdued>Maid3</npcSubdued>
 				<nextScene>ArtGallery1</nextScene>
+				<timeUsed>0.5</timeUsed>
 			</action>
 		</condition>
 		<condition>
@@ -23,6 +24,7 @@
 			<action>
 				<npcSubdued>Maid3</npcSubdued>
 				<nextScene>ArtGallery2</nextScene>
+				<timeUsed>1.0</timeUsed>
 			</action>
 		</condition>
 		<condition>
@@ -34,8 +36,8 @@
 				<description></description>
 				<npcSubdued>Maid3</npcSubdued>
 				<itemCreated>Body</itemCreated>
-				<timeUsed>1</timeUsed>
 				<nextScene>ArtGallery3</nextScene>
+				<timeUsed>2.0</timeUsed>
 			</action>
 		</condition>
 		<condition>
@@ -47,8 +49,8 @@
 				<npcSubdued>Maid3</npcSubdued>
 				<itemCreated>Corpse</itemCreated>
 				<kill>1</kill>
-				<timeUsed>3</timeUsed>
 				<nextScene>ArtGallery4</nextScene>
+				<timeUsed>3.0</timeUsed>
 			</action>
 		</condition>
 		<condition>

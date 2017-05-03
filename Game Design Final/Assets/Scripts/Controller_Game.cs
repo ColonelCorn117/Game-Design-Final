@@ -71,7 +71,9 @@ public class Controller_Game : MonoBehaviour
 	void Start()
 	{
 		Controller_GUI.ctrl_gui.SetItemsText(itemList);
+		Controller_GUI.ctrl_gui.SetMessesText(messes);
 		Controller_GUI.ctrl_gui.SetTimeText(timeRemaining);
+
 	}
 
 	//----------------------------------------------------------------------------------------------------
@@ -368,6 +370,8 @@ public class Controller_Game : MonoBehaviour
 
 		}
 
+		Controller_GUI.ctrl_gui.SetMessesText(messes);
+//		Debug.Log("pA timeUsed: " + a.timeUsed);
 		if (a.timeUsed < 0.0f)
 		{
 			ChangeRemainingTime(unassignedActionTime);
@@ -435,11 +439,10 @@ public class Controller_Game : MonoBehaviour
 		BuildNPCDictionary();
 
 		// Build Item Dictionary
+		BuildItemDictionary();
 
 		// Build Mess Dictionary
 		BuildMessDictionary();
-
-		BuildItemDictionary();
 	}
 
 	//----------------------------------------------------------------------------------------------------
@@ -482,6 +485,7 @@ public class Controller_Game : MonoBehaviour
 	public void ChangeRemainingTime(float amount)
 	{
 		timeRemaining -= amount;
+//		Debug.Log("CTR: " + timeRemaining);
 		Controller_GUI.ctrl_gui.SetTimeText(timeRemaining);
 	}
 

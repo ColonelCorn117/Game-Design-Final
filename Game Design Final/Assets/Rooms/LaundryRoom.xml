@@ -6,12 +6,12 @@ The laundry chute drops off clothing into a basket.
 	</description>
 	<background>black</background>
 	<conditionList>
-	
 		<condition>
 			<description>Examine Laundry Chute</description>
 			<action>
 				<timeUsed>0</timeUsed>
 				<nextScene>LaundryChute1F</nextScene>
+				<timeUsed>0.0</timeUsed>
 			</action>
 		</condition>
 		<condition>
@@ -23,6 +23,7 @@ The laundry chute drops off clothing into a basket.
 				<description>You drop the unconscious maid into a pile of dirty laundry.</description>
 				<itemUsed>Body</itemUsed>
 				<nextScene>reload</nextScene>
+				<timeUsed>0.0</timeUsed>
 			</action>
 		</condition>
 		<condition>
@@ -34,6 +35,7 @@ The laundry chute drops off clothing into a basket.
 				<description>You stash the maid's body in a pile of dirty laundry.</description>
 				<itemUsed>Corpse</itemUsed>
 				<nextScene>reload</nextScene>
+				<timeUsed>0.0</timeUsed>
 			</action>
 		</condition>
 		<condition>

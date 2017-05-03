@@ -1,10 +1,10 @@
 ﻿<SceneDescription>
 	<name>Introduction</name>
-	<description>Lord Borkus: Make sure those maids get all their work done. No breaks, no gossiping, nothing. 
+	<description>Lord Borkus: "Make sure those maids get all their work done. No breaks, no gossiping, nothing. "
 
-Lord Borkus: I don’t care if you have to threaten them, they’re replaceable. Just make sure it gets done. 
+Lord Borkus: "I don’t care if you have to threaten them, they’re replaceable. Just make sure it gets done." 
 
-Lord Borkus: If you fail to do this...you can join them in their fate...</description>
+Lord Borkus: "If you fail to do this...you can join them in their fate..."</description>
 	<background>AssassinShadowClosedEyes</background>
 	<conditionList>
 	
@@ -13,6 +13,7 @@ Lord Borkus: If you fail to do this...you can join them in their fate...</descri
 			<action>
 				<timeUsed>0</timeUsed>
 				<nextScene>Intro01-06</nextScene>
+				<timeUsed>0.0</timeUsed>
 			</action>
 		</condition>
 	</conditionList>

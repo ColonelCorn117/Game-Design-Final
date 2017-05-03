@@ -1,8 +1,6 @@
 ﻿<SceneDescription>
 	<name>Orchestra Pit</name>
-	<description>
-You rush the maid, tackling her away from the piano and knocking her out with a swift blow to the head. Unfortunately, you see that the jam jar has emptied its contents on the floor near the piano.	
-
+	<description>You rush the maid, tackling her away from the piano and knocking her out with a swift blow to the head. Unfortunately, you see that the jam jar has emptied its contents on the floor near the piano.	
 	</description>
 	<background>OrchestraPit</background>
 	<conditionList>	
@@ -15,8 +13,8 @@ You rush the maid, tackling her away from the piano and knocking her out with a 
 				<npcSubdued>Maid2</npcSubdued>
 				<itemCreated>Body</itemCreated>
 				<messCreated>SpilledJam</messCreated>
-				<timeTaken>0</timeTaken>
 				<nextScene>OrchestraPit</nextScene>
+				<timeUsed>0.0</timeUsed>
 			</action>
 		</condition>
 	</conditionList>
