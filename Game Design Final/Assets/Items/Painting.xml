@@ -12,6 +12,7 @@ Assassin: Well, at least there's no way to set this thing on fire.</description>
 			</requirement>
 			<description>Back</description>
 			<action>
+				<timeUsed>0</timeUsed>
 				<nextScene>reload</nextScene>
 			</action>
 		</condition>

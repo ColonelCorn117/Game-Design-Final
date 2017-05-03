@@ -29,9 +29,16 @@
 			</action>
 		</condition>
 		<condition>
-			<description>Orchestra</description>
+			<description>Hallway</description>
 			<action>
-				<nextScene>OrchestraPit</nextScene>
+				<nextScene>Hallway12</nextScene>
+			</action>	
+		</condition>
+		
+		<condition>
+			<description>Bathroom2</description>
+			<action>
+				<nextScene>Bathroom2</nextScene>
 			</action>
 		</condition>
 	</conditionList>
@@ -39,8 +46,6 @@
 		<npc>Sakuya</npc>
 	</npcList>
 	<messList>
-		<mess>Shitstorm</mess>
-		<mess>Dust bunny</mess>
 	</messList>
 	<itemList>
 		<item>Dustpan</item>

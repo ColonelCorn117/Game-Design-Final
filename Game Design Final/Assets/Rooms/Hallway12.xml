@@ -10,9 +10,21 @@
 			</action>	
 		</condition>
 		<condition>
+			<description>Bathroom</description>
+			<action>
+				<nextScene>Bathroom3</nextScene>
+			</action>	
+		</condition>
+		<condition>
 			<description>Trophy Room</description>
 			<action>
 				<nextScene>TrophyRoom</nextScene>
+			</action>	
+		</condition>
+		<condition>
+			<description>Test (beta)</description>
+			<action>
+				<nextScene>TestDescription</nextScene>
 			</action>	
 		</condition>
 	</conditionList>

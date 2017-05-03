@@ -4,6 +4,12 @@
 	<background>black</background>
 	<conditionList>
 		<condition>
+			<description>Bathroom</description>
+			<action>
+				<nextScene>Bathroom2</nextScene>
+			</action>
+		</condition>
+		<condition>
 			<description>Hallway 8</description>
 			<action>
 				<nextScene>Hallway8</nextScene>

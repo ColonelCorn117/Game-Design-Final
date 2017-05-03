@@ -40,7 +40,8 @@ public class Requirement {
 
 				} else if (req.StartsWith ("nogain")) {
 					//the player does not have an item with the name after "nogain"
-					if (Controller_Game.ctrl_game.itemList.Contains (reqName)) {
+					Item i = Controller_Game.ctrl_game.ItemLookup (reqName);
+					if (i != null && i.possessed ()) {
 						//Debug.Log ("item not possessed: " + reqName);
 						return false;
 					}
@@ -90,7 +91,7 @@ public class Requirement {
 					}
 
 				} else if (req.StartsWith ("nomess")) {
-					//the player has not yet removed a certain NPC
+					//the player has removed a certain mess
 					if ((Controller_Game.ctrl_game.MessLookup (reqName).exists == 1)) {
 						return false;
 					}

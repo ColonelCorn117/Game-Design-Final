@@ -8,7 +8,7 @@ The laundry chute drops off clothing into a basket.
 	<conditionList>
 	
 		<condition>
-			<description>Examine Laundry Chute</description>
+			<description>Laundry Chute</description>
 			<action>
 				<timeUsed>0</timeUsed>
 				<nextScene>LaundryChute1F</nextScene>
@@ -33,6 +33,19 @@ The laundry chute drops off clothing into a basket.
 			<action>
 				<description>You stash the maid's body in a pile of dirty laundry.</description>
 				<itemUsed>Corpse</itemUsed>
+				<nextScene>reload</nextScene>
+			</action>
+		</condition>
+		<condition>
+			<description>Dry Book</description>
+			<requirement>
+				<prereq>gainedWetBook</prereq>
+			</requirement>
+			<action>
+				<description>You wrap the book in some clean linens and place it in the dryer. Within a few minutes, the book is dried enough to open without ruining the pages (though they remain quite crinkly).</description>
+				<itemUsed>WetBook</itemUsed>
+				<itemGained>DryBook</itemGained>
+				<timeUsed>2</timeUsed>
 				<nextScene>reload</nextScene>
 			</action>
 		</condition>

@@ -1,0 +1,20 @@
+﻿<mess>
+	<name>Clogged Toilet</name>
+	<description>There's a very soggy book resting in the toilet bowl. The toilet is otherwise clean.</description>
+	<exists>1</exists>
+	<conditionList>
+		<condition>
+			<description>Remove Book</description>
+			<requirement>
+				<prereq>noreqs</prereq>
+			</requirement>
+			<action>
+				<name>Clean</name>
+				<messResolved>BookInToilet</messResolved>
+				<itemCreated>WetBook</itemCreated>
+				<timeUsed>1</timeUsed>
+				<nextScene>Bathroom3-1</nextScene>
+			</action>
+		</condition>
+	</conditionList>
+</mess>

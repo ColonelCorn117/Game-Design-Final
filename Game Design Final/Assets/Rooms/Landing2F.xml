@@ -1,6 +1,6 @@
 ﻿<SceneDescription>
 	<name>Landing</name>
-	<description>You see a flight of stairs going up and another going down. You have the urge to slide down the railing.
+	<description>You see a flight of wooden stairs going up and flight of carpeted stairs going down. You have the urge to slide down the railing.
 	</description>
 	<background>Landing</background>
 	<conditionList>
@@ -8,16 +8,30 @@
 		<condition>
 			<description>Downstairs</description>
 			<action>
-				<timeUsed>0.1</timeUsed>
 				<nextScene>Landing1F</nextScene>
 			</action>
 			
 		</condition>
 		<condition>
+			<requirement>
+				<prereq>nomessOilSlick</prereq>
+			</requirement>
 			<description>Upstairs</description>
 			<action>
-				<timeUsed>0.3</timeUsed>
 				<nextScene>Landing3F</nextScene>
+			</action>
+			
+		</condition>
+		<condition>
+			<requirement>
+				<prereq>messedOilSlick</prereq>
+			</requirement>
+			<description>Upstairs</description>
+			<additionalDescription>The stairs going to the third floor are slick with grease.</additionalDescription>
+			<action>
+				<description>Assassin: there's no way I can climb the stairs when they're that slippery</description>
+				<timeUsed>0</timeUsed>
+				<nextScene>reload</nextScene>
 			</action>
 			
 		</condition>
@@ -34,12 +48,11 @@
 				<nextScene>Hallway12</nextScene>
 			</action>
 			
-		</condition>
-	
-		
+		</condition>	
 	</conditionList>
 	<npcList>
 	</npcList>
 	<messList>
+		<mess>OilSlick</mess>
 	</messList>
 </SceneDescription>

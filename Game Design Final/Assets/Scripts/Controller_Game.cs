@@ -36,7 +36,7 @@ public class Controller_Game : MonoBehaviour
 	Dictionary<string,int> bodyInRoom = new Dictionary<string,int>();
 	Dictionary<string,int> corpseInRoom = new Dictionary<string,int>();
 
-	float unassignedActionTime = 0.2f;	//how much time an action should take if the action has no assigned value
+	float unassignedActionTime = 1f;	//how much time an action should take if the action has no assigned value
 
 	public Action[] buttonActions = new Action[9]; // buttonActions[0] is empty. the action for btn1 is found in buttonActions[1].
 	//int numButtonActions = 1; // first 'empty slot' that can be filled in buttonActions.
@@ -77,23 +77,27 @@ public class Controller_Game : MonoBehaviour
 	//----------------------------------------------------------------------------------------------------
 
 	void Update() {
-
-		if (Input.GetKeyDown (KeyCode.Alpha1)) {
-			this.performAction (1);
-		} else if (Input.GetKeyDown (KeyCode.Alpha2)) {
-			this.performAction (2);
-		} else if (Input.GetKeyDown (KeyCode.Alpha3)) {
-			this.performAction (3);
-		} else if (Input.GetKeyDown (KeyCode.Alpha4)) {
-			this.performAction (4);
-		} else if (Input.GetKeyDown (KeyCode.Alpha5)) {
-			this.performAction (5);
-		} else if (Input.GetKeyDown (KeyCode.Alpha6)) {
-			this.performAction (6);
-		} else if (Input.GetKeyDown (KeyCode.Alpha7)) {
-			this.performAction (7);
-		} else if (Input.GetKeyDown (KeyCode.Alpha8)) {
-			this.performAction (8);
+		
+		if (!Controller_GUI.ctrl_gui.itemsBox.gameObject.activeSelf)
+			if (Input.GetKeyDown (KeyCode.Space)) {
+				this.performAction (1);
+			} else if (Input.GetKeyDown (KeyCode.Alpha1)) {
+				this.performAction (1);
+			} else if (Input.GetKeyDown (KeyCode.Alpha2)) {
+				this.performAction (2);
+			} else if (Input.GetKeyDown (KeyCode.Alpha3)) {
+				this.performAction (3);
+			} else if (Input.GetKeyDown (KeyCode.Alpha4)) {
+				this.performAction (4);
+			} else if (Input.GetKeyDown (KeyCode.Alpha5)) {
+				this.performAction (5);
+			} else if (Input.GetKeyDown (KeyCode.Alpha6)) {
+				this.performAction (6);
+			} else if (Input.GetKeyDown (KeyCode.Alpha7)) {
+				this.performAction (7);
+			} else if (Input.GetKeyDown (KeyCode.Alpha8)) {
+				this.performAction (8);
+			}
 		}
 
 	}
@@ -105,7 +109,7 @@ public class Controller_Game : MonoBehaviour
 	public void AddItemToInv(string item)
 	{
 		itemList.Add(item);
-		Controller_GUI.ctrl_gui.SetItemsText(itemList);
+		//Controller_GUI.ctrl_gui.SetItemsText(itemList);
 		//ctrl_gui.ScaleItemsList();
 		//Debug.Log("Item Added: " + item);
 	}
@@ -115,7 +119,7 @@ public class Controller_Game : MonoBehaviour
 	public void RemoveItemFromInv(string item)
 	{
 		itemList.Remove(item);
-		Controller_GUI.ctrl_gui.SetItemsText(itemList);
+		//Controller_GUI.ctrl_gui.SetItemsText(itemList);
 		//ctrl_gui.DestroyBtnsOnItemsList();
 		//Debug.Log("Item Removed: " + item);
 	}
@@ -341,15 +345,15 @@ public class Controller_Game : MonoBehaviour
 
 			NPC n = NpcLookup (a.objectExamined);
 			if (n.exists == 1) {
-				SceneScript.sceneScript.examineObject (n, a.objectExamined);
+				SceneScript.sceneScript.examineObject (n);
 			} else {
 				Mess m = MessLookup (a.objectExamined);
 				if (m.exists == 1) {
-					SceneScript.sceneScript.examineObject (m, a.objectExamined);
+					SceneScript.sceneScript.examineObject (m);
 				} else {
 					Item i = ItemLookup(a.objectExamined);
 					if (i.exists == 1) {
-						SceneScript.sceneScript.examineObject (i, a.objectExamined);
+						SceneScript.sceneScript.examineObject (i);
 					}
 				}
 			}
@@ -397,7 +401,7 @@ public class Controller_Game : MonoBehaviour
 
 	public void examineItem(int i) {
 		Item item = ItemLookup (itemList [i-1]);
-		SceneScript.sceneScript.examineObject (item,item.name);
+		SceneScript.sceneScript.examineObjectInInventory (item);
 	}
 
 	//----------------------------------------------------------------------------------------------------
@@ -483,6 +487,10 @@ public class Controller_Game : MonoBehaviour
 	{
 		timeRemaining -= amount;
 		Controller_GUI.ctrl_gui.SetTimeText(timeRemaining);
+
+		if (timeRemaining <= 0) {
+
+		}
 	}
 
 	//----------------------------------------------------------------------------------------------------

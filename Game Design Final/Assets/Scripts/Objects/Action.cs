@@ -11,7 +11,7 @@ public class Action : GenericGameObject {
 	public int kill;
 	public string messResolved;
 	public string messCreated;
-	public float timeUsed = -1.0f;
+	public float timeUsed = 3.0f;
 
 
 	public Action() {
