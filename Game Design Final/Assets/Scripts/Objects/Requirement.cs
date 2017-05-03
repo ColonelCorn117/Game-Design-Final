@@ -83,7 +83,19 @@ public class Requirement {
 					if (n.getDialogueLocation () < dialogueReached) {
 						return false;
 					}
-				} else if (req.StartsWith ("loaves")) {
+				} else if (req.StartsWith ("messed")) {
+					//the player has not yet removed a certain mess
+					if (!(Controller_Game.ctrl_game.MessLookup (reqName).exists == 1)) {
+						return false;
+					}
+
+				} else if (req.StartsWith ("nomess")) {
+					//the player has not yet removed a certain NPC
+					if ((Controller_Game.ctrl_game.MessLookup (reqName).exists == 1)) {
+						return false;
+					}
+
+				}else if (req.StartsWith ("loaves")) {
 					// the player has a certain amount of bread in inventory.
 					int reqBread = int.Parse (reqName);
 					if (Controller_Game.ctrl_game.breadQuantity < reqBread) {
@@ -92,14 +104,20 @@ public class Requirement {
 				} else if (req.StartsWith ("invblk")) {
 					// the player has bread in the first N slots in inventory.
 					int breadCount = int.Parse (reqName);
-					for (int i = 0; i < breadCount; ++i) {
-						if (Controller_Game.ctrl_game.itemList [i] != "Bread") {
-							return false;	
+					if (Controller_Game.ctrl_game.itemList.Count > 0) {
+						for (int i = 0; i < breadCount; ++i) {
+							if (Controller_Game.ctrl_game.itemList [i] != "Bread") {
+								Debug.Log ("Bread Count: " + i);
+								return false;	
+							}
 						}
+					} else {
+						return false;
 					}
 				} else if (req.StartsWith ("devour")) {
 					// the player has bread in the first N slots in inventory.
 					int breadEaten = int.Parse (reqName);
+					//Debug.Log ("Bread Needed: " + breadEaten + ", Bread Eaten: " + Controller_Game.ctrl_game.breadConsumed);
 					if (Controller_Game.ctrl_game.breadConsumed < breadEaten) {
 						return false;
 					}

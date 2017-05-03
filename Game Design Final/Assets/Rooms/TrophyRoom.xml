@@ -14,5 +14,7 @@ Assassin: [This would be more impressive if I hadn’t been the one to kill all 
 	<npcList>
 	</npcList>
 	<messList>
+		<mess>TPMess</mess>
+		<mess>TPDust</mess>
 	</messList>
 </SceneDescription>

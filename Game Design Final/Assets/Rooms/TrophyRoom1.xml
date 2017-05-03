@@ -1,0 +1,25 @@
+﻿<SceneDescription>
+	<name>Trophy Room</name>
+	<description>You wave about two loaves of bread in an intricate pattern.
+	
+A gorilla wearing a maid uniform appears before you in a puff of smoke.
+
+Maid: Ook?
+
+The animal spins around in a circle, then walks towards you, stepping daintily over the toilet paper.</description>
+	<background>TrophyRoom</background>
+	<conditionList>
+		<condition>
+			<description>Continue</description>
+			<action>
+				<timeUsed>0</timeUsed>
+				<itemUsed>Bread</itemUsed>
+				<nextScene>TrophyRoom2</nextScene>
+			</action>	
+		</condition>
+	</conditionList>
+	<npcList>
+	</npcList>
+	<messList>
+	</messList>
+</SceneDescription>

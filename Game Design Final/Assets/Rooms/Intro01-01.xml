@@ -1,15 +1,17 @@
 ﻿<SceneDescription>
 	<name>Introduction</name>
-	<description>Lord clears his throat.
-Lord Borkus: "I called you all here because we have some very important guests coming today. They will be arriving this evening. I’ve noticed that you’ve all been slacking off.
+	<description>Lord Borkus clears his throat.
+	
+Lord Borkus: "I called you all here because we have some very important guests coming today. They will be arriving this evening. I’ve noticed that you’ve all been slacking off."
 
-This meeting is too important for fuck-ups. My mansion needs to be spotless and perfect before they arrive. If it isn’t..."
-	</description>
+Lord Borkus: "This meeting is too important for fuck-ups. My mansion needs to be spotless and perfect before they arrive. If it isn’t..."
+</description>
 	<background>LordAngryFace</background>
 	<conditionList>
 		<condition>
 			<description>Continue</description>
 			<action>
+				<timeUsed>0</timeUsed>
 				<nextScene>Intro01-02</nextScene>
 				<timeUsed>0.0</timeUsed>
 			</action>
@@ -17,6 +19,7 @@ This meeting is too important for fuck-ups. My mansion needs to be spotless and 
 		<condition>
 			<description>Skip</description>
 			<action>
+				<timeUsed>0</timeUsed>
 				<nextScene>Entrance</nextScene>
 				<timeUsed>0.0</timeUsed>
 			</action>

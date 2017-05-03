@@ -1,14 +1,14 @@
 ﻿<SceneDescription>
 	<name>Introduction</name>
-	<description>Lord Borkus: "Not only will I fire every one of you, but I will destroy your reputations and ensure that you will never have a life again. You’ll be scrounging the streets for scraps and begging for mercy. 
+	<description>Lord Borkus: "Not only will I fire every one of you, but I will destroy your reputations and ensure that you will never have a life again. You’ll be scrounging the streets for scraps and begging for mercy."
 
-Do I make myself clear?"
-	</description>
+Lord Borkus: "Do I make myself clear?"</description>
 	<background>LordAngryFace</background>
 	<conditionList>
 		<condition>
 			<description>Continue</description>
 			<action>
+				<timeUsed>0</timeUsed>
 				<nextScene>Intro01-03</nextScene>
 				<timeUsed>0.0</timeUsed>
 			</action>

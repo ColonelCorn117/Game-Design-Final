@@ -8,6 +8,7 @@ You're pretty sure you can't climb up the chute. You're an assassin, not a ninja
 		<condition>
 			<description>Back</description>
 			<action>
+				<timeUsed>0</timeUsed>
 				<nextScene>LaundryRoom</nextScene>
 				<timeUsed>0.0</timeUsed>
 			</action>

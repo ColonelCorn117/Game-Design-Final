@@ -15,15 +15,13 @@ Assassin: It’s not worth it.
 
 Maid: Yes it is! Lord Borkus is jerk! We’ll show him how important we are!
 
-Assassin: [I have to negotiate this somehow.]
-
-Assassin: That wine is a vintage, limited bottle. Don’t give him the satisfaction of saying you wasted it. Why not drink it instead? Not only does he lose a valuable maid, but he also loses a delicious wine that you get to take instead.
-	</description>
+Assassin: [I have to negotiate this somehow.]</description>
 	<background>DiningHall</background>
 	<conditionList>
 		<condition>
 			<description>Continue</description>
 			<action>
+				<timeUsed>0</timeUsed>
 				<nextScene>DiningHall2-1</nextScene>
 				<timeUsed>0.0</timeUsed>
 			</action>
