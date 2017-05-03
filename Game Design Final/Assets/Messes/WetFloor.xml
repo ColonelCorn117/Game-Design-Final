@@ -1,0 +1,33 @@
+﻿<mess>
+	<name>Wet Floor</name>
+	<description>Someone emptied a mop bucket onto the floor.</description>
+	<exists>1</exists>
+	<conditionList>
+		<condition>
+			<description>Clean</description>
+			<requirement>
+				<prereq>gainedMop</prereq>
+				<prereq>gainedBucket</prereq>
+			</requirement>
+			<action>
+				<name>Clean</name>
+				<messResolved>WetFloor</messResolved>
+				<timeUsed>1</timeUsed>
+				<nextScene>reload</nextScene>
+			</action>
+		</condition>
+		<condition>
+			<description>Clean</description>
+			<requirement>
+				<prereq>gainedMop</prereq>
+				<prereq>gainedWaterBucket</prereq>
+			</requirement>
+			<action>
+				<name>Clean</name>
+				<messResolved>WetFloor</messResolved>
+				<timeUsed>1</timeUsed>
+				<nextScene>reload</nextScene>
+			</action>
+		</condition>
+	</conditionList>
+</mess>

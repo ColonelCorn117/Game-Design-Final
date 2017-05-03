@@ -1,7 +1,6 @@
 ﻿<SceneDescription>
 	<name>Hallway</name>
-	<description>
-	Because an assassin is never allowed to fail...
+	<description>Because an assassin is never allowed to fail...
 	</description>
 	<background>Black</background>
 	<conditionList>
@@ -9,6 +8,7 @@
 		<condition>
 			<description>Continue</description>
 			<action>
+				<timeUsed>0</timeUsed>
 				<nextScene>Intro03-01</nextScene>
 			</action>
 		</condition>

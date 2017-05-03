@@ -1,12 +1,12 @@
 ﻿<SceneDescription>
 	<name>Introduction</name>
-	<description>
-	Lord turns to Assassin.
+	<description>Lord Borkus turns to you.
 
-	"You..."
+Lord Borkus: You...
 
-	"Everything needs to go flawlessly for my guests’ arrival. I hired you because they say you are the best in your...field. 
-	That said, I need you to do more than just keep away any dangers.
+Lord Borkus: Everything needs to go flawlessly for my guests’ arrival. I hired you because they say you are the best in your...field. 
+
+Lord Borkus: That said, I need you to do more than just keep away any dangers.
 	</description>
 	<background>AssassinOffice</background>
 	<conditionList>
@@ -14,6 +14,7 @@
 		<condition>
 			<description>Continue</description>
 			<action>
+				<timeUsed>0</timeUsed>
 				<nextScene>Intro01-05</nextScene>
 			</action>
 		</condition>

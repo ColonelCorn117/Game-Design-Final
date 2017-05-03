@@ -194,9 +194,14 @@ public class Controller_GUI : MonoBehaviour
 
 	//----------------------------------------------------------------------------------------------------
 
+	public void SetMessesText(int messCount) {
+		messesText.text = (messCount).ToString ();
+	}
+
 	public void SetMessesText(Dictionary<string, Mess> messes)
 	{
 		int count = 0;
+
 		foreach (KeyValuePair<string, Mess> mess in messes)
 		{
 			if (mess.Value.exists == 1)

@@ -15,7 +15,7 @@ public class Action : GenericGameObject {
 
 
 	public Action() {
-		timeUsed = 0f;
+		timeUsed = -1.0f;
 	}
 
 	public Action(string name) {
