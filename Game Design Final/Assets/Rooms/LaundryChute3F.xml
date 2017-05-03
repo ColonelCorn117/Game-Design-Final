@@ -18,7 +18,7 @@
 				<description>You shove the unconscious maid into the laundry chute.</description>
 				<itemUsed>Body</itemUsed>
 				<nextScene>reload</nextScene>
-				<timeUsed>0.0f</timeUsed>
+				<timeUsed>0.0</timeUsed>
 			</action>
 		</condition>
 		<condition>
@@ -30,14 +30,14 @@
 				<description>You shove the maid's body into the laundry chute.</description>
 				<itemUsed>Corpse</itemUsed>
 				<nextScene>reload</nextScene>
-				<timeUsed>0.0f</timeUsed>
+				<timeUsed>0.0</timeUsed>
 			</action>
 		</condition>
 		<condition>
 			<description>Back</description>
 			<action>
 				<nextScene>Hallway21</nextScene>
-				<timeUsed>0.0f</timeUsed>
+				<timeUsed>0.0</timeUsed>
 			</action>	
 		</condition>
 	</conditionList>

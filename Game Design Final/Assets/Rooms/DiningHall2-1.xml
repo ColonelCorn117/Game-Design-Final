@@ -21,7 +21,7 @@ Assassin: Phew. Crisis avoided.
 			<description>Continue</description>
 			<action>
 				<nextScene>DiningRoom</nextScene>
-				<timeUsed>0.0f</timeUsed>
+				<timeUsed>0.0</timeUsed>
 			</action>
 		</condition>
 	</conditionList>

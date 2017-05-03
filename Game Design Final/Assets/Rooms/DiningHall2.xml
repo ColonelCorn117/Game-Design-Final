@@ -25,7 +25,7 @@ Assassin: That wine is a vintage, limited bottle. Don’t give him the satisfact
 			<description>Continue</description>
 			<action>
 				<nextScene>DiningHall2-1</nextScene>
-				<timeUsed>0.0f</timeUsed>
+				<timeUsed>0.0</timeUsed>
 			</action>
 		</condition>
 	</conditionList>

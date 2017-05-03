@@ -9,7 +9,7 @@
 			<action>
 				<messCreated>BrokenWineglass</messCreated>
 				<nextScene>DiningRoom</nextScene>
-				<timeUsed>0.0f</timeUsed>
+				<timeUsed>0.0</timeUsed>
 			</action>
 		</condition>
 	</conditionList>

@@ -11,7 +11,7 @@ If you fail to do this...you can join them in their fate..."
 			<description>Continue</description>
 			<action>
 				<nextScene>Intro01-06</nextScene>
-				<timeUsed>0.0f</timeUsed>
+				<timeUsed>0.0</timeUsed>
 			</action>
 		</condition>
 	</conditionList>

@@ -10,7 +10,7 @@ Assassin: [This is such a waste of time...]
 			<description>Continue</description>
 			<action>
 				<nextScene>Intro02-03</nextScene>
-				<timeUsed>0.0f</timeUsed>
+				<timeUsed>0.0</timeUsed>
 			</action>
 		</condition>
 	</conditionList>

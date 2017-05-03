@@ -32,7 +32,7 @@ Assassin: [She would.]
 				<npcSubdued>Maid2</npcSubdued>
 				<messCreated>JammedPiano</messCreated>
 				<nextScene>OrchestraPit</nextScene>
-				<timeUsed>1.5f</timeUsed>
+				<timeUsed>1.5</timeUsed>
 			</action>
 		</condition>
 		<condition>
@@ -46,7 +46,7 @@ Assassin: [She would.]
 				<npcSubdued>Maid2</npcSubdued>
 				<messCreated>JammedPiano</messCreated>
 				<nextScene>OrchestraPit2</nextScene>
-				<timeUsed>0.9f</timeUsed>
+				<timeUsed>0.9</timeUsed>
 			</action>
 		</condition>
 		<condition>
@@ -58,7 +58,7 @@ Assassin: [She would.]
 				<npcSubdued>Maid2</npcSubdued>
 				<itemCreated>Body</itemCreated>
 				<nextScene>OrchestraPit4</nextScene>
-				<timeUsed>1.3f</timeUsed>
+				<timeUsed>1.3</timeUsed>
 			</action>
 		</condition>
 		<condition>
@@ -71,7 +71,7 @@ Assassin: [She would.]
 				<itemCreated>Corpse</itemCreated>
 				<kill>1</kill>
 				<nextScene>OrchestraPit7</nextScene>
-				<timeUsed>1.0f</timeUsed>
+				<timeUsed>1.0</timeUsed>
 			</action>
 		</condition>
 		<condition>
@@ -89,7 +89,7 @@ Assassin: [She would.]
 				<itemCreated>Corpse</itemCreated>
 				<kill>1</kill>
 				<nextScene>OrchestraPit5</nextScene>
-				<timeUsed>0.5f</timeUsed>
+				<timeUsed>0.5</timeUsed>
 			</action>
 		</condition>
 		<condition>
@@ -106,7 +106,7 @@ Assassin: [She would.]
 				<npcSubdued>Maid2</npcSubdued>
 				<itemCreated>Body</itemCreated>
 				<nextScene>OrchestraPit6</nextScene>
-				<timeUsed>0.2f</timeUsed>
+				<timeUsed>0.2</timeUsed>
 			</action>
 		</condition>
 		<condition>
@@ -117,7 +117,7 @@ Assassin: [She would.]
 			<action>
 				<itemUsed>bread</itemUsed>
 				<nextScene>OrchestraPit1</nextScene>
-				<timeUsed>0.75f</timeUsed>
+				<timeUsed>0.75</timeUsed>
 			</action>
 		</condition>
 	</conditionList>

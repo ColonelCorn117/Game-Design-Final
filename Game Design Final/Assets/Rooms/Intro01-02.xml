@@ -10,7 +10,7 @@ Do I make myself clear?"
 			<description>Continue</description>
 			<action>
 				<nextScene>Intro01-03</nextScene>
-				<timeUsed>0.0f</timeUsed>
+				<timeUsed>0.0</timeUsed>
 			</action>
 		</condition>
 	</conditionList>

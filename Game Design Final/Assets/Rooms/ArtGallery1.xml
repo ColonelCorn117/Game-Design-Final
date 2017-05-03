@@ -15,7 +15,7 @@
 				<timeUsed>3</timeUsed>
 				<itemCreated>Painting</itemCreated>
 				<nextScene>ArtGallery</nextScene>
-				<timeUsed>0.0f</timeUsed>
+				<timeUsed>0.0</timeUsed>
 			</action>
 		</condition>
 	</conditionList>

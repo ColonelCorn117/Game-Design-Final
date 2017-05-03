@@ -17,7 +17,7 @@ You see your life flash before your eyes, and decide that your head is worth mor
 			<action>
 				<description>Assassin: "...what?""</description>
 				<nextScene>OrchestraPit</nextScene>
-				<timeUsed>0.0f</timeUsed>
+				<timeUsed>0.0</timeUsed>
 			</action>
 		</condition>
 	</conditionList>

@@ -11,14 +11,14 @@ This meeting is too important for fuck-ups. My mansion needs to be spotless and 
 			<description>Continue</description>
 			<action>
 				<nextScene>Intro01-02</nextScene>
-				<timeUsed>0.0f</timeUsed>
+				<timeUsed>0.0</timeUsed>
 			</action>
 		</condition>
 		<condition>
 			<description>Skip</description>
 			<action>
 				<nextScene>Entrance</nextScene>
-				<timeUsed>0.0f</timeUsed>
+				<timeUsed>0.0</timeUsed>
 			</action>
 		</condition>
 	</conditionList>
