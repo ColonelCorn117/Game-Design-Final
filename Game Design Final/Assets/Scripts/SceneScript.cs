@@ -70,11 +70,14 @@ public class SceneScript : MonoBehaviour {
 
 	//----------------------------------------------------------------------------------------------------
 
-	public void examineObject(GenericGameObject o) {
-		examineObject (o, o.name);
+	public void examineObjectInInventory(Item i) {
+		List<Condition> l = new List<Condition> ();
+		l.Add (new Condition ("Back", new Action ("Back", "reload", "", "", 0f)));
+
+		LoadSimpleScene (i.description, l);
 	}
 
-	public void examineObject(GenericGameObject o, string name) {
+	public void examineObject(GenericGameObject o) {
 		// rebuild description w/o changing the xml object
 		descriptionText.text = o.description;
 		//string desc = GameObject.Find ("Description Text").GetComponentInChildren<Text> ().text;
@@ -84,9 +87,9 @@ public class SceneScript : MonoBehaviour {
 				
 			LoadButtons (p.conditions, new Condition ("Back", new Action ("Back", currentSceneName, "","",0f)));
 			if (p is NPC) {
-				LoadDetailSprite (name, "npc");
+				LoadDetailSprite (o.id, "npc");
 			} else {
-				LoadDetailSprite (name, "mess");
+				LoadDetailSprite (o.id, "mess");
 			}
 
 		} else if (o is Item) {
@@ -127,7 +130,7 @@ public class SceneScript : MonoBehaviour {
 			}
 
 
-			LoadDetailSprite (name);
+			LoadDetailSprite (o.id);
 		}
 	}
 
@@ -291,6 +294,14 @@ public class SceneScript : MonoBehaviour {
 		List<Condition> l = new List<Condition> ();
 		l.Add (continueCondition);
 		LoadButtons (l);
+	}
+
+	public void LoadSimpleScene(string text, List<Condition> conditions) {
+				descriptionText.text = text;
+				//Condition continueCondition = new Condition ("Continue", new Action ("continue", nextScence, "","",0f));
+				//List<Condition> l = new List<Condition> ();
+
+				LoadButtons (conditions);
 	}
 
 	//----------------------------------------------------------------------------------------------------

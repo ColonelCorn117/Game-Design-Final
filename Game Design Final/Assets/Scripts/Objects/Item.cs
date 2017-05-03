@@ -57,6 +57,7 @@ public class Item : GenericGameObject {
 		} else {
 			unclaimed = 0;
 		}
+		exists = 1;
 
 	}
 

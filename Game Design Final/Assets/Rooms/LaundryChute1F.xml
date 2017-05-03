@@ -1,13 +1,41 @@
 ﻿<SceneDescription>
 	<name>Laundry Chute</name>
-	<description>A small laundry chute drops clothing into a large basket.
-
-You're pretty sure you can't climb up the chute. You're an assassin, not a ninja!</description>
+	<description>A small laundry chute drops clothing into a large basket.</description>
 	<background></background>
 	<conditionList>
 		<condition>
-			<description>Back</description>
+			<description>Climb</description>
+			<additionalDescription>Assassin: I think I could make it up the chute with this climbing gear.</additionalDescription>
+			<requirement>
+				<prereq>gainedClimbingEquipment</prereq>
+			</requirement>
 			<action>
+				<description>It takes a fair amount of work, but you manage to to make it up the laundry chute</description>
+				<timeUsed>5</timeUsed>
+				<nextScene>LaundryChute3F</nextScene>
+			</action>
+			
+		</condition>
+		
+		<condition>
+			<description>Back</description>
+			<requirement>
+				<prereq>nogainClimbingEquipment</prereq>
+			</requirement>
+			<additionalDescription>Assassin: I'm pretty sure I can't climb up the chute. I'm an assassin, not a ninja!</additionalDescription>
+			<action>
+				<timeUsed>0</timeUsed>
+				<nextScene>LaundryRoom</nextScene>
+			</action>
+			
+		</condition>
+		<condition>
+			<description>Back</description>
+			<requirement>
+				<prereq>gainedClimbingEquipment</prereq>
+			</requirement>
+			<action>
+				<description>Assassin: Yeah, I'm not doing that.</description>
 				<timeUsed>0</timeUsed>
 				<nextScene>LaundryRoom</nextScene>
 				<timeUsed>0.0</timeUsed>

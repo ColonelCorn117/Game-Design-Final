@@ -1,0 +1,63 @@
+﻿<mess>
+	<name>Tripping Hazard</name>
+	<description>It looks like one of the maids found a very nice set of climbing gear in Lord Borkus's sporting equipment. Unfortunately, they apparently decided that the best way to use that equipment involved spreading it all over the stairs. A long rope has been threaded between the banisters on the stairway. Several pitons have been strewn about on the stairs themselves, and a harness is half-hidden under the carpet.
+	
+Assassin: I can still get up the stairs through all this, but it's not going to be easy.</description>
+	<exists>1</exists>
+	<conditionList>
+		<condition>
+			<description>Untie Ropes and Clean</description>
+			<requirement>
+				<prereq>noreqs</prereq>
+			</requirement>
+			<action>
+				<name>Clean</name>
+				<description>After fumbling around for far too long, you manage to find a knot you can actually untie. After several more minutes of struggling, you manage to untie all the ropes and collect the rest of the climbing equipment.</description>
+				<messResolved>Tripwires</messResolved>
+				<itemCreated>ClimbingEquipment</itemCreated>
+				<timeUsed>15</timeUsed>
+				<nextScene>reload</nextScene>
+			</action>
+		</condition>
+		<condition>
+			<description>Cut Ropes and Clean</description>
+			<requirement>
+				<prereq>gainedKnife</prereq>
+			</requirement>
+			<action>
+				<name>Clean</name>
+				<description>You hack away at the ropes with a butter knife, and eventually manage to clear away the potential tripwires. It only takes a few more minutes to collect the remaining pieces of climbing equipment, but without the rope, it's pretty much useless.</description>
+				<messResolved>Tripwires</messResolved>
+				<timeUsed>10</timeUsed>
+				<nextScene>reload</nextScene>
+			</action>
+		</condition>
+		<condition>
+			<description>Shear Ropes and Clean</description>
+			<description>You use the pruning shears to cut the ropes and quickly  clear away the potential tripwires. It only takes a few more minutes to collect the remaining pieces of climbing equipment, but without the rope, it's pretty much useless.</description>
+			<requirement>
+				<prereq>gainedShears</prereq>
+			</requirement>
+			<action>
+				<name>Clean</name>
+				<messResolved>Tripwires</messResolved>
+				<timeUsed>2</timeUsed>
+				<nextScene>reload</nextScene>
+			</action>
+		</condition>
+		<condition>
+			<description>Use Book and Clean</description>
+			<requirement>
+				<prereq>gainedDryBook</prereq>
+			</requirement>
+			<action>
+				<name>Clean</name>
+				<description>You start to read "Fear Knot: A Sailor's Guide to Rope Tricks" and discover that the maid used literally the first rope trick in the book to vandalize the stairwell. With this information in mind, you quickly locate each knot, untangle the rope, and collect the rest of the climbing equipment.</description>
+				<messResolved>Tripwires</messResolved>
+				<itemCreated>ClimbingEquipment</itemCreated>
+				<timeUsed>2</timeUsed>
+				<nextScene>reload</nextScene>
+			</action>
+		</condition>
+	</conditionList>
+</mess>

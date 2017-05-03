@@ -13,9 +13,23 @@
 		</condition>
 		<condition>
 			<description>Upstairs</description>
+			<requirement>
+				<prereq>nomessTripwires</prereq>
+			</requirement>
 			<action>
-				<timeUsed>0.3</timeUsed>
-				<nextScene>Landing2</nextScene>
+				<nextScene>Landing2F</nextScene>
+			</action>
+			
+		</condition>
+		<condition>
+			<description>Upstairs</description>
+			<additionalDescription>Climbing equipment 'decorates' the stairs, making them more difficult to climb.</additionalDescription>
+			<requirement>
+				<prereq>messedTripwires</prereq>
+			</requirement>
+			<action>
+				<timeUsed>1</timeUsed>
+				<nextScene>Landing2F</nextScene>
 			</action>
 			
 		</condition>
@@ -42,5 +56,9 @@
 	<npcList>
 	</npcList>
 	<messList>
+		<mess>Tripwires</mess>
 	</messList>
+	<itemList>
+		<item>ClimbingEquipment</item>
+	</itemList>
 </SceneDescription>

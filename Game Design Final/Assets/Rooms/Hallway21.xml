@@ -16,6 +16,7 @@
 		<condition>
 			<description>Laundry Chute</description>
 			<action>
+				<timeUsed>0</timeUsed>
 				<nextScene>LaundryChute3F</nextScene>
 			</action>	
 		</condition>

@@ -4,6 +4,18 @@
 	<background>MasterBathroom</background>
 	<conditionList>
 		<condition>
+			<requirement>
+				<prereq>gainedBucket</prereq>
+			</requirement>
+			<description>Fill Bucket with Water</description>
+			<action>
+				<description>You fill the bucket with water.</description>
+				<itemUsed>Bucket</itemUsed>
+				<itemGained>WaterBucket</itemGained>
+				<nextScene>reload</nextScene>
+			</action>	
+		</condition>
+		<condition>
 			<description>Master Bedroom</description>
 			<action>
 				<nextScene>MasterBedroom</nextScene>

@@ -4,6 +4,12 @@
 	<background>Bathroom</background>
 	<conditionList>
 		<condition>
+			<description>Hallway</description>
+			<action>
+				<nextScene>Hallway12</nextScene>
+			</action>	
+		</condition>
+		<condition>
 			<requirement>
 				<prereq>gainedBucket</prereq>
 			</requirement>
@@ -15,25 +21,13 @@
 				<nextScene>reload</nextScene>
 			</action>	
 		</condition>
-		<condition>
-			<description>Lord's Lounge</description>
-			<action>
-				<nextScene>LordLounge</nextScene>
-			</action>	
-		</condition>
-		<condition>
-			<description>Hallway</description>
-			<action>
-				<nextScene>Hallway5</nextScene>
-			</action>	
-		</condition>
 	</conditionList>
 	<npcList>
 	</npcList>
 	<messList>
-		<mess>WetFloor</mess>
+		<mess>BookInToilet</mess>
 	</messList>
 	<itemList>
-		<item>Broom</item>
+		<item>WetBook</item>
 	</itemList>
 </SceneDescription>

@@ -175,7 +175,7 @@ public class Controller_GUI : MonoBehaviour
 		{
 			if (i < itemList.Count)		//We still have items to name, so name the slots after the item
 			{
-				itemsText[i].text = itemList[i];
+				itemsText[i].text = Controller_Game.ctrl_game.ItemLookup(itemList[i]).name;
 			}
 			else 						//We ran out of items but still have slots. Give the slots a blank name
 			{
@@ -223,6 +223,7 @@ public class Controller_GUI : MonoBehaviour
 
 	public void ToggleInventory()
 	{
+		this.SetItemsText (Controller_Game.ctrl_game.itemList);
 		itemsBox.gameObject.SetActive(!itemsBox.gameObject.activeSelf);
 	}
 

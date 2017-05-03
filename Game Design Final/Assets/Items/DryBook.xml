@@ -1,21 +1,20 @@
 ﻿<item>
-	<name>UUD-42</name>
-	<description>According to the label, it's an "All-Purpose Cleaner*".
+	<name>Dry Book</name>
+	<description>"Fear Knot: A Sailor's Guide to Rope Tricks". 
 	
-	*Not actually all-purpose.
-	</description>
-	<exists>1</exists>
+The book is dry enough to open, though the water damage will probably never fully disappear.</description>
+	<exists>0</exists>
 	<duplicable>0</duplicable>
 	<conditionList>
 		<condition>
 			<description>Take</description>
 			<requirement>
-				<prereq>nogainUUD-42</prereq>
+				<prereq>nogainDryBook</prereq>
 			</requirement>
 			<action>
-				<name>Take UUD-42</name>
-				<description>Assassin: Knowing these maids, there's probably something they've jammed around here.</description>
-				<itemGained>UUD-42</itemGained>
+				<name>Take Book</name>
+				<description>Assassin: This could be useful.</description>
+				<itemGained>DryBook</itemGained>
 				<timeUsed>0</timeUsed>
 				<nextScene>reload</nextScene>
 			</action>

@@ -36,6 +36,7 @@
 		<condition>
 			<description>Back</description>
 			<action>
+				<timeUsed>0</timeUsed>
 				<nextScene>Hallway21</nextScene>
 				<timeUsed>0.0</timeUsed>
 			</action>	

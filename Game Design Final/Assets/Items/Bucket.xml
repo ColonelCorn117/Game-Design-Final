@@ -1,31 +1,29 @@
 ﻿<item>
-	<name>Mop</name>
-	<description>Cleans up blood.</description>
+	<name>Bucket</name>
+	<description>An empty bucket.</description>
 	<exists>1</exists>
-	<duplicable>0</duplicable>
 	<conditionList>
 		<condition>
 			<description>Take</description>
 			<requirement>
-				<prereq>nogainMop</prereq>
+				<prereq>nogainBucket</prereq>
 			</requirement>
 			<action>
-				<name>Take Mop</name>
-				<description>Assassin: This could be useful.</description>
-				<itemGained>Mop</itemGained>
+				<name>Take</name>
+				<description>Assassin: That might come in handy. I should take it with me.</description>
+				<itemGained>Bucket</itemGained>
 				<timeUsed>0</timeUsed>
 				<nextScene>reload</nextScene>
 			</action>
 		</condition>
 		<condition>
-			<name>Back</name>
 			<description>Back</description>
 			<requirement>
-				<prereq>noreqs</prereq>
+				<prereq>nogainBucket</prereq>
 			</requirement>
 			<action>
 				<name>Back</name>
-				<description>Assassin: I'll worry about this later.</description>
+				<description>Assassin: That’s fine, I didn’t want a bucket anyway.</description>
 				<timeUsed>0</timeUsed>
 				<nextScene>reload</nextScene>
 			</action>

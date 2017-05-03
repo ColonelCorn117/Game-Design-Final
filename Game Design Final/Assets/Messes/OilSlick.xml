@@ -1,0 +1,26 @@
+﻿<mess>
+	<name>Oily Carpet</name>
+	<description>A layer of food grease covers the wooden stairs. There's no way you can make it up without cleaning this up.
+	
+Assassin: I'm not sure which surprises me more: that Lord Borkus and that demon eat enough food to produce all this grease, or that one of the maids managed to carry all this grease up the stairs before dumping it.</description>
+	<exists>1</exists>
+	<conditionList>
+		<condition>
+			<description>Clean</description>
+			<requirement>
+				<prereq>gainedMop</prereq>
+				<prereq>gainedWaterBucket</prereq>
+				<prereq>gainedSoap</prereq>
+			</requirement>
+			<action>
+				<name>Clean</name>
+				<description>You manage to mop up the grease, though you have to empty your bucket out a window afterwards.</description>
+				<messResolved>OilSlick</messResolved>
+				<itemUsed>WaterBucket</itemUsed>
+				<itemGained>Bucket</itemGained>
+				<timeUsed>1</timeUsed>
+				<nextScene>reload</nextScene>
+			</action>
+		</condition>
+	</conditionList>
+</mess>
