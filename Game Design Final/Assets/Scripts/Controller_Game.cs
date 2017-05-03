@@ -30,8 +30,9 @@ public class Controller_Game : MonoBehaviour
 	public float timeRemaining = 50.0f;
 	public int killCount = 0;
 	public int unclaimedBodyCount = 0;
-	public int breadConsumed = 0;
-	public int breadQuantity = 0;
+	public int breadConsumed = 0;		//How much bread the gorilla maid has consumed
+	public int breadQuantity{ get; set; }
+	public int breadSlot{ get; set;}	//Which slot in the inventory contains bread
 
 	Dictionary<string,int> bodyInRoom = new Dictionary<string,int>();
 	Dictionary<string,int> corpseInRoom = new Dictionary<string,int>();
@@ -56,6 +57,8 @@ public class Controller_Game : MonoBehaviour
 		{
 			DontDestroyOnLoad(gameObject);
 			ctrl_game = this;
+			breadQuantity = 0;
+			breadSlot = -1;
 
 			BuildDictionaries ();
 			//items.Add("Mop");
@@ -289,7 +292,7 @@ public class Controller_Game : MonoBehaviour
 			if (a.itemGained == "Bread") {
 				if (breadQuantity < 1) {
 					this.ItemLookup (a.itemGained).claim ();
-					breadQuantity = 1;
+					breadQuantity = 0;
 				}
 				++breadQuantity;
 			} else if (a.itemGained == "Body") {
