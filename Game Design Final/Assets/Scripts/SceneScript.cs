@@ -254,6 +254,7 @@ public class SceneScript : MonoBehaviour {
 			//}
 
 			BuildDescription ();
+			Controller_Game.ctrl_game.UpdateMessCount ();
 			LoadButtons ();
 			LoadBackgroundImage (xml.background);
 			LoadDetailSprite ("Default");

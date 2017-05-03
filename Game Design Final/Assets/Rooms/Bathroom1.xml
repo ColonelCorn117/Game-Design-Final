@@ -19,6 +19,7 @@
 	<npcList>
 	</npcList>
 	<messList>
+		<mess>WetFloor</mess>
 	</messList>
 	<itemList>
 		<item>Broom</item>

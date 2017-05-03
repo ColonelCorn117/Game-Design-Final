@@ -1,0 +1,22 @@
+﻿<mess>
+	<name>Dust</name>
+	<description>A fine layer of dust covers every surface of the room.</description>
+	<exists>0</exists>
+	<conditionList>
+		<condition>
+			<description>Clean</description>
+			<requirement>
+				<prereq>gainedDuster</prereq>
+				<prereq>gainedBroom</prereq>
+				<prereq>gainedDustpan</prereq>
+			</requirement>
+			<action>
+				<name>Clean</name>
+				<description>You brush away the dust on the animals and display cases with the duster, then sweep everything off the floor with a broom and dustpan.</description>
+				<messResolved>TPDust</messResolved>
+				<timeUsed>2</timeUsed>
+				<nextScene>reload</nextScene>
+			</action>
+		</condition>
+	</conditionList>
+</mess>

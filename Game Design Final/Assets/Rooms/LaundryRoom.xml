@@ -10,6 +10,7 @@ The laundry chute drops off clothing into a basket.
 		<condition>
 			<description>Examine Laundry Chute</description>
 			<action>
+				<timeUsed>0</timeUsed>
 				<nextScene>LaundryChute1F</nextScene>
 			</action>
 		</condition>

@@ -68,8 +68,12 @@ public class Item : GenericGameObject {
 		
 
 		if (duplicable == 1) {
+			//Debug.Log ("Duplicable item consumed: " + id);
 			consumed = 0;
-			unclaimed = 1;
+			if (!Controller_Game.ctrl_game.itemList.Contains (id)) {
+				unclaimed = 1;
+			}
+
 		} else {
 			consumed = 1;
 		}

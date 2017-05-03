@@ -1,17 +1,13 @@
 ﻿<SceneDescription>
 	<name>Hallway</name>
-	<description>
-	Assassin sighs.
-
-
-
-	</description>
+	<description>Assassin: *sigh*</description>
 	<background>Hallway</background>
 	<conditionList>
 	
 		<condition>
 			<description>Continue</description>
 			<action>
+				<timeUsed>0</timeUsed>
 				<nextScene>Intro02-02</nextScene>
 			</action>
 		</condition>

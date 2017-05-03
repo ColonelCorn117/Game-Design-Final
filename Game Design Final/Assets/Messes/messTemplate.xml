@@ -1,8 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" ?>
 <mess>
 	<name>name</name>
 	<description></description>
-	<exists>1</exists>
+	<exists>0</exists>
 	<conditionList>
 		<condition>
 			<requirement>

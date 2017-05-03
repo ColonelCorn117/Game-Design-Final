@@ -15,4 +15,7 @@
 	</npcList>
 	<messList>
 	</messList>
+	<itemList>
+		<item>Duster</item>
+	</itemList>
 </SceneDescription>

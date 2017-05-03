@@ -32,6 +32,7 @@ Assassin: That smells really good...
 			<action>
 				<description>Assassin: I’ll just take this for strategic...bread purposes...</description>
 				<itemGained>Bread</itemGained>
+				<timeUsed>0</timeUsed>
 				<nextScene>reload</nextScene>
 			</action>
 		</condition>

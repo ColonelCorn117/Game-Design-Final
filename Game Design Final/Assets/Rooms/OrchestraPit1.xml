@@ -5,10 +5,7 @@ In a flash, the maid appears at your side, her eyes gaining an unsettling glimme
 
 Maid: Give me the bread!
 
-You see your life flash before your eyes, and decide that your head is worth more than a single loaf of bread. As you hand over a loaf of bread, the maid's demeanor shifts abruptly. She pulls out a butter knife, spreading the jam over her newly acquired loaf, and skips away, munching away at her prize.
-
-
-	</description>
+You see your life flash before your eyes, and decide that your head is worth more than a single loaf of bread. As you hand over a loaf of bread, the maid's demeanor shifts abruptly. She pulls out a butter knife, spreading the jam over her newly acquired loaf, and skips away, munching away at her prize.</description>
 	<background>OrchestraPit</background>
 	<conditionList>	
 		<condition>
@@ -19,6 +16,7 @@ You see your life flash before your eyes, and decide that your head is worth mor
 			<action>
 				<description>Assassin: ...what.</description>
 				<timeTaken>0</timeTaken>
+				<npcSubdued>Maid2</npcSubdued>
 				<nextScene>OrchestraPit</nextScene>
 			</action>
 		</condition>
