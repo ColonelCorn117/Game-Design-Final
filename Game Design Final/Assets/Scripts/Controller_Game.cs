@@ -513,5 +513,10 @@ public class Controller_Game : MonoBehaviour
 		Controller_GUI.ctrl_gui.SetMessesText (count + this.unclaimedBodyCount);
 	}
 
+	//----------------------------------------------------------------------------------------------------
 
+	public void QuitGame()
+	{
+		Application.Quit();
+	}
 }
