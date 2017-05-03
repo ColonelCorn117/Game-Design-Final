@@ -71,17 +71,20 @@ public class Controller_Game : MonoBehaviour
 	void Start()
 	{
 		Controller_GUI.ctrl_gui.SetItemsText(itemList);
+		Controller_GUI.ctrl_gui.SetMessesText(messes);
 		Controller_GUI.ctrl_gui.SetTimeText(timeRemaining);
+
 	}
 
 	//----------------------------------------------------------------------------------------------------
 
 	void Update() {
-		
+
 		if (!Controller_GUI.ctrl_gui.itemsBox.gameObject.activeSelf)
-			if (Input.GetKeyDown (KeyCode.Space)) {
+		{
+      if (Input.GetKeyDown (KeyCode.Space)) {
 				this.performAction (1);
-			} else if (Input.GetKeyDown (KeyCode.Alpha1)) {
+			else if (Input.GetKeyDown (KeyCode.Alpha1)) {
 				this.performAction (1);
 			} else if (Input.GetKeyDown (KeyCode.Alpha2)) {
 				this.performAction (2);
@@ -99,7 +102,6 @@ public class Controller_Game : MonoBehaviour
 				this.performAction (8);
 			}
 		}
-
 	}
 
 	//====================================================================================================
@@ -372,6 +374,8 @@ public class Controller_Game : MonoBehaviour
 
 		}
 
+		Controller_GUI.ctrl_gui.SetMessesText(messes);
+//		Debug.Log("pA timeUsed: " + a.timeUsed);
 		if (a.timeUsed < 0.0f)
 		{
 			ChangeRemainingTime(unassignedActionTime);
@@ -439,11 +443,10 @@ public class Controller_Game : MonoBehaviour
 		BuildNPCDictionary();
 
 		// Build Item Dictionary
+		BuildItemDictionary();
 
 		// Build Mess Dictionary
 		BuildMessDictionary();
-
-		BuildItemDictionary();
 	}
 
 	//----------------------------------------------------------------------------------------------------
@@ -486,6 +489,7 @@ public class Controller_Game : MonoBehaviour
 	public void ChangeRemainingTime(float amount)
 	{
 		timeRemaining -= amount;
+//		Debug.Log("CTR: " + timeRemaining);
 		Controller_GUI.ctrl_gui.SetTimeText(timeRemaining);
 
 		if (timeRemaining <= 0) {

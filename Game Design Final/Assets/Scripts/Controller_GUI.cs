@@ -75,7 +75,7 @@ public class Controller_GUI : MonoBehaviour
 				break;
 			case("Items Box"):
 				itemsBox = image;
-				ToggleInventory();
+				ToggleInventory();	//Hide inventory at start
 				break;
 			case("Titles Box"):
 					List<Transform> children = new List<Transform>(GetComponentsInChildren<Transform>());	//gets child objects

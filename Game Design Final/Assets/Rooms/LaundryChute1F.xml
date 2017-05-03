@@ -38,8 +38,8 @@
 				<description>Assassin: Yeah, I'm not doing that.</description>
 				<timeUsed>0</timeUsed>
 				<nextScene>LaundryRoom</nextScene>
+				<timeUsed>0.0</timeUsed>
 			</action>
-			
 		</condition>
 	</conditionList>
 	<npcList>

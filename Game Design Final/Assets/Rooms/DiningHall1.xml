@@ -1,15 +1,14 @@
 ﻿<SceneDescription>
 	<name>Dining Room</name>
-	<description>
-		DO NOTHING
+	<description>The maid swirls the glass and then launches the contents across the tablecloth. She then storms out of the room.
 	</description>
 	<background>DiningHall</background>
 	<conditionList>
 		<condition>
 			<description>Continue</description>
-
 			<action>
 				<nextScene>DiningRoom</nextScene>
+				<timeUsed>0.0</timeUsed>
 			</action>
 		</condition>
 	</conditionList>

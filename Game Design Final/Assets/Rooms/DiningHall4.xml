@@ -1,16 +1,15 @@
 ﻿<SceneDescription>
 	<name>Dining Room</name>
-	<description>
-	Maid is slain, but some wine spills on the floor during the struggle. The glass also falls onto the floor and shatters.
+	<description>Maid is slain, but some wine spills on the floor during the struggle. The glass also falls onto the floor and shatters.
 	</description>
 	<background>DiningHall</background>
 	<conditionList>
 		<condition>
 			<description>Continue</description>
-
 			<action>
 				<messCreated>BrokenWineglass</messCreated>
 				<nextScene>DiningRoom</nextScene>
+				<timeUsed>0.0</timeUsed>
 			</action>
 		</condition>
 	</conditionList>

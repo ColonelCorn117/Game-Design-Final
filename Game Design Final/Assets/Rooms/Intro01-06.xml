@@ -1,14 +1,14 @@
 ﻿<SceneDescription>
 	<name>Introduction</name>
-	<description>Assassin: It will be done...</description>
+	<description>Assassin: "It will be done..."</description>
 	<background>AssassinShadowOpenEyes</background>
 	<conditionList>
-	
 		<condition>
 			<description>Continue</description>
 			<action>
 				<timeUsed>0</timeUsed>
 				<nextScene>Intro02-01</nextScene>
+				<timeUsed>0.0</timeUsed>
 			</action>
 		</condition>
 	</conditionList>

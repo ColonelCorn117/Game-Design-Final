@@ -1,17 +1,17 @@
 ﻿<SceneDescription>
 	<name>Hallway</name>
-	<description>Assassin: I’m an assassin, not a babysitter...what the hell is that idiot Lord thinking?
+	<description>Assassin: [I’m an assassin, not a babysitter...what the hell is that idiot Lord thinking?]
 
 
-Assassin: This is such a waste of time...</description>
+Assassin: [This is such a waste of time...]</description>
 	<background>Hallway</background>
 	<conditionList>
-	
 		<condition>
 			<description>Continue</description>
 			<action>
 				<timeUsed>0</timeUsed>
 				<nextScene>Intro02-03</nextScene>
+				<timeUsed>0.0</timeUsed>
 			</action>
 		</condition>
 	</conditionList>

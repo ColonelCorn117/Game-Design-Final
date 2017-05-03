@@ -20,10 +20,10 @@ Assassin: [I have to negotiate this somehow.]</description>
 	<conditionList>
 		<condition>
 			<description>Continue</description>
-
 			<action>
 				<timeUsed>0</timeUsed>
 				<nextScene>DiningHall2-1</nextScene>
+				<timeUsed>0.0</timeUsed>
 			</action>
 		</condition>
 	</conditionList>
