@@ -13,9 +13,12 @@ public class SceneScript : MonoBehaviour {
 
 	public static SceneScript sceneScript;
 	string currentSceneName = "";
+	string pastSceneName = "";
 	public string startingSceneName = "TestDescription";
 
 	SceneDescription xml;
+
+	//----------------------------------------------------------------------------------------------------
 
 	void Awake()
 	{
@@ -30,6 +33,8 @@ public class SceneScript : MonoBehaviour {
 		}
 	}
 
+	//----------------------------------------------------------------------------------------------------
+
 	// Use this for initialization
 	void Start () {
 		locationText = GameObject.Find("Location Text").GetComponent<Text>();
@@ -42,6 +47,8 @@ public class SceneScript : MonoBehaviour {
 		//LoadScene ("Intro01-01");
 		LoadScene(startingSceneName);
 	}
+
+	//----------------------------------------------------------------------------------------------------
 
 	NPC NpcLookup(string name) {
 		return Controller_Game.ctrl_game.NpcLookup (name);
@@ -247,6 +254,7 @@ public class SceneScript : MonoBehaviour {
 		string path = "Assets/Rooms/" + sceneName + ".xml";
 		if (File.Exists (path)) {
 			//if (sceneName != currentSceneName) {
+			pastSceneName = currentSceneName;
 			currentSceneName = sceneName;
 			LoadSceneXML (path);
 			locationText.text = xml.name;
@@ -451,6 +459,10 @@ public class SceneScript : MonoBehaviour {
 			if (c.Satisfied ()) {
 				addButtonAction (c.action, i);
 				optionsText [i - 1].text = c.description;
+				if (c.action.nextScene == pastSceneName)
+				{
+					optionsText [i - 1].text += "*";
+				}
 				++i;
 			}
 		}

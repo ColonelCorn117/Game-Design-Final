@@ -26,7 +26,7 @@ public class Controller_GUI : MonoBehaviour
 	Button option4Btn;*/
 	Image itemsListImage;
 	Image detailImage;
-	Image itemsBox;
+	public Image itemsBox;
 	List<Text> itemsText = new List<Text>();	//Text components of the item slots
 
 	//Values for old Items button implementation

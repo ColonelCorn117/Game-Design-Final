@@ -80,24 +80,26 @@ public class Controller_Game : MonoBehaviour
 
 	void Update() {
 
-		if (Input.GetKeyDown (KeyCode.Alpha1)) {
-			this.performAction (1);
-		} else if (Input.GetKeyDown (KeyCode.Alpha2)) {
-			this.performAction (2);
-		} else if (Input.GetKeyDown (KeyCode.Alpha3)) {
-			this.performAction (3);
-		} else if (Input.GetKeyDown (KeyCode.Alpha4)) {
-			this.performAction (4);
-		} else if (Input.GetKeyDown (KeyCode.Alpha5)) {
-			this.performAction (5);
-		} else if (Input.GetKeyDown (KeyCode.Alpha6)) {
-			this.performAction (6);
-		} else if (Input.GetKeyDown (KeyCode.Alpha7)) {
-			this.performAction (7);
-		} else if (Input.GetKeyDown (KeyCode.Alpha8)) {
-			this.performAction (8);
+		if (!Controller_GUI.ctrl_gui.itemsBox.gameObject.activeSelf)
+		{
+			if (Input.GetKeyDown (KeyCode.Alpha1)) {
+				this.performAction (1);
+			} else if (Input.GetKeyDown (KeyCode.Alpha2)) {
+				this.performAction (2);
+			} else if (Input.GetKeyDown (KeyCode.Alpha3)) {
+				this.performAction (3);
+			} else if (Input.GetKeyDown (KeyCode.Alpha4)) {
+				this.performAction (4);
+			} else if (Input.GetKeyDown (KeyCode.Alpha5)) {
+				this.performAction (5);
+			} else if (Input.GetKeyDown (KeyCode.Alpha6)) {
+				this.performAction (6);
+			} else if (Input.GetKeyDown (KeyCode.Alpha7)) {
+				this.performAction (7);
+			} else if (Input.GetKeyDown (KeyCode.Alpha8)) {
+				this.performAction (8);
+			}
 		}
-
 	}
 
 	//====================================================================================================
