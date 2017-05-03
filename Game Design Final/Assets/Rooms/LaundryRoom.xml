@@ -63,4 +63,7 @@ The laundry chute drops off clothing into a basket.
 	</npcList>
 	<messList>
 	</messList>
+	<itemList>
+		<item>Tablecloth</item>
+	</itemList>
 </SceneDescription>

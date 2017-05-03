@@ -256,9 +256,10 @@ public class SceneScript : MonoBehaviour {
 		} 
 		string path = "Assets/Rooms/" + sceneName + ".xml";
 		if (File.Exists (path)) {
-			//if (sceneName != currentSceneName) {
-			pastSceneName = currentSceneName;
-			currentSceneName = sceneName;
+			if (sceneName != currentSceneName) {
+				pastSceneName = currentSceneName;
+				currentSceneName = sceneName;
+			}
 			LoadSceneXML (path);
 			locationText.text = xml.name;
 			xml.id = sceneName;

@@ -7,10 +7,14 @@
 			<description>Clean</description>
 			<requirement>
 				<prereq>gainedMop</prereq>
+				<prereq>gainedWaterBucket</prereq>
 			</requirement>
 			<action>
 				<name>Clean</name>
+				<description>You mop up the floor and empty your water bucket out a nearby window.</description>
 				<messResolved>SpilledWine</messResolved>
+				<itemUsed>WaterBucket</itemUsed>
+				<itemGained>Bucket</itemGained>
 				<nextScene>reload</nextScene>
 			</action>
 		</condition>

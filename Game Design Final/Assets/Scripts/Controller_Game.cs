@@ -79,12 +79,11 @@ public class Controller_Game : MonoBehaviour
 	//----------------------------------------------------------------------------------------------------
 
 	void Update() {
-
 		if (!Controller_GUI.ctrl_gui.itemsBox.gameObject.activeSelf)
 		{
-      if (Input.GetKeyDown (KeyCode.Space)) {
+			if (Input.GetKeyDown (KeyCode.Space)) {
 				this.performAction (1);
-			else if (Input.GetKeyDown (KeyCode.Alpha1)) {
+			} else if (Input.GetKeyDown (KeyCode.Alpha1)) {
 				this.performAction (1);
 			} else if (Input.GetKeyDown (KeyCode.Alpha2)) {
 				this.performAction (2);

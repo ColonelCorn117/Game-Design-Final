@@ -14,7 +14,7 @@
 		<condition>
 			<description>Talk</description>
 			<action>
-				<name></name>
+				<timeUsed>0</timeUsed>
 				<nextScene>dialogueGlutton1</nextScene>
 			</action>
 		</condition>
