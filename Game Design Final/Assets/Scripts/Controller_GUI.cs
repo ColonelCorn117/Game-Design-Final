@@ -29,6 +29,8 @@ public class Controller_GUI : MonoBehaviour
 	public Image itemsBox;
 	List<Text> itemsText = new List<Text>();	//Text components of the item slots
 
+
+
 	//Values for old Items button implementation
 //	Button invBtn;
 //	float invBtnWidth;		//Default width of the expandable item list
@@ -171,13 +173,31 @@ public class Controller_GUI : MonoBehaviour
 
 	public void SetItemsText(List<string> itemList)
 	{
-		for (int i=0; i<itemsText.Count; i++)
+		int breadSlot = Controller_Game.ctrl_game.breadSlot;
+		int assignedSlots = 0;		//How many individual slots have been assigned
+//		Debug.Log("breadSlot: " + breadSlot);
+		for (int i=0; i<itemList.Count; i++)		//Iterate through our obtained items
 		{
-			if (i < itemList.Count)		//We still have items to name, so name the slots after the item
+			if (Controller_Game.ctrl_game.ItemLookup(itemList[i]).name == "Bread")
 			{
-				itemsText[i].text = Controller_Game.ctrl_game.ItemLookup(itemList[i]).name;
+				if (breadSlot == -1)		//breadSlot gets reset to -1 every time the inventory is hidden (i.e. disabled) in this version of unity, so there isn't a need to reset breadSlot if breadQuantity == 0.
+				{
+					breadSlot = i;
+					assignedSlots++;
+				}
+				itemsText[breadSlot].text = "Bread x" + Controller_Game.ctrl_game.breadQuantity;
+
 			}
-			else 						//We ran out of items but still have slots. Give the slots a blank name
+			else
+			{
+				itemsText[assignedSlots].text = Controller_Game.ctrl_game.ItemLookup(itemList[i]).name;
+				assignedSlots++;
+			}
+		}
+
+		if (assignedSlots < itemsText.Count)	//We still have open inventory slots after going through our items. Gives slots blank name
+		{
+			for (int i=assignedSlots; i<itemsText.Count; i++)
 			{
 				itemsText[i].text = "";	
 			}
@@ -223,8 +243,11 @@ public class Controller_GUI : MonoBehaviour
 
 	public void ToggleInventory()
 	{
-		this.SetItemsText (Controller_Game.ctrl_game.itemList);
 		itemsBox.gameObject.SetActive(!itemsBox.gameObject.activeSelf);
+		if (itemsBox.gameObject.activeSelf)
+		{
+			this.SetItemsText (Controller_Game.ctrl_game.itemList);
+		}
 	}
 
 	//----------------------------------------------------------------------------------------------------

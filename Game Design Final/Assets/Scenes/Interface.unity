@@ -2416,7 +2416,6 @@ MonoBehaviour:
   killCount: 0
   unclaimedBodyCount: 0
   breadConsumed: 0
-  breadQuantity: 0
 --- !u!114 &887181254
 MonoBehaviour:
   m_ObjectHideFlags: 0

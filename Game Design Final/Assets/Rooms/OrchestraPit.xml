@@ -112,6 +112,7 @@ Assassin: [She would.]
 		<condition>
 			<description>Stand and Watch</description>
 			<requirement>
+				<prereq>existsMaid2</prereq>
 				<prereq>loaves7</prereq>
 			</requirement>
 			<action>
