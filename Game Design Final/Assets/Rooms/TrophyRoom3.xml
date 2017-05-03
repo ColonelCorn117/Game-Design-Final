@@ -1,0 +1,23 @@
+﻿<SceneDescription>
+	<name>Trophy Room</name>
+	<description>Every single piece of toilet paper in the room disintegrates into dust.
+	
+	The gorilla turns back towards you, bows, and disappears in another puff of smoke.
+	
+Assassin: There are no words that can adequately describe how weirded out I am right now.</description>
+	<background>TrophyRoom</background>
+	<conditionList>
+		<condition>
+			<description>Continue</description>
+			<action>
+				<timeUsed>0</timeUsed>
+				<messCreated>TPDust</messCreated>
+				<nextScene>TrophyRoom</nextScene>
+			</action>	
+		</condition>
+	</conditionList>
+	<npcList>
+	</npcList>
+	<messList>
+	</messList>
+</SceneDescription>

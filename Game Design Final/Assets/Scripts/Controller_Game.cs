@@ -262,6 +262,7 @@ public class Controller_Game : MonoBehaviour
 					breadQuantity = 1;
 				}
 				--breadQuantity;
+
 				++breadConsumed;
 
 			} else if (a.itemUsed == "Body") {
@@ -272,8 +273,9 @@ public class Controller_Game : MonoBehaviour
 				AddCorpse (SceneScript.sceneScript.GetSceneID(),false);
 			}
 			//this.itemList.Remove (a.itemUsed);
+			RemoveItemFromInv(a.itemUsed); // needs to happen before consuming the item, due to duplicable item stuff
 			this.ItemLookup (a.itemUsed).consume ();
-			RemoveItemFromInv(a.itemUsed);
+
 		}
 
 
@@ -483,7 +485,21 @@ public class Controller_Game : MonoBehaviour
 		Controller_GUI.ctrl_gui.SetTimeText(timeRemaining);
 	}
 
+	//----------------------------------------------------------------------------------------------------
 
+	public void UpdateMessCount() {
+		int count = 0;
+
+		foreach (KeyValuePair<string, Mess> mess in messes)
+		{
+			if (mess.Value.exists == 1)
+			{
+				//Debug.Log (mess.Value.name);
+				count++;
+			}
+		}
+		Controller_GUI.ctrl_gui.SetMessesText (count + this.unclaimedBodyCount);
+	}
 
 
 }
