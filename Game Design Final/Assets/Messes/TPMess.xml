@@ -21,7 +21,7 @@ Assassin: This is going to be a pain to clean.</description>
 			<description>Summon Gorilla</description>
 			<requirement>
 				<prereq>invblk2</prereq>
-				<prereq>devour10</prereq>
+				<prereq>devour8</prereq>
 			</requirement>
 			<action>
 				<name>Clean</name>

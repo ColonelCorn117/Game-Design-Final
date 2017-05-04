@@ -1,6 +1,6 @@
 ﻿<SceneDescription>
 	<name>Bathroom</name>
-	<description>It's a bathroom.</description>
+	<description>It’s a bathroom. There’s a toilet and a sink. What more do you want?</description>
 	<background>Bathroom</background>
 	<conditionList>
 		<condition>
@@ -27,6 +27,19 @@
 				<nextScene>Hallway5</nextScene>
 			</action>	
 		</condition>
+		<condition>
+			<additionalDescription>There’s a can of air freshener spray on the sink counter. The label says it is “Flower-Scented”.
+			
+Assassin: I could probably use that. This whole mansion smells like bullshit.</additionalDescription>
+			<requirement>
+				<prereq>nogainAirFreshener</prereq>
+			</requirement>
+			<description></description>
+			<action>
+				<timeUsed>0</timeUsed>
+				<nextScene>reload</nextScene>
+			</action>	
+		</condition>
 	</conditionList>
 	<npcList>
 	</npcList>
@@ -34,6 +47,6 @@
 		<mess>WetFloor</mess>
 	</messList>
 	<itemList>
-		<item>Broom</item>
+		<item>AirFreshener</item>
 	</itemList>
 </SceneDescription>

@@ -29,6 +29,9 @@ Assassin: That smells really good...
 		</condition>
 		<condition>
 			<description>Take Bread</description>
+			<requirement>
+				<prereq>breadn9</prereq>
+			</requirement>
 			<action>
 				<description>Assassin: I’ll just take this for strategic...bread purposes...</description>
 				<itemGained>Bread</itemGained>
