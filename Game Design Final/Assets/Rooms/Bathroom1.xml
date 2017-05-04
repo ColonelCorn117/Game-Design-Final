@@ -1,6 +1,6 @@
 ﻿<SceneDescription>
 	<name>Bathroom</name>
-	<description>It's a bathroom.</description>
+	<description>It's a bathroom. There’s a toilet and a sink. What more do you want?</description>
 	<background>Bathroom</background>
 	<conditionList>
 		<condition>
