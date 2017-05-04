@@ -1,8 +1,15 @@
 ﻿<SceneDescription>
 	<name>Library</name>
-	<description>Library Description goes here.</description>
+	<description>Bookshelves span the walls, all with labels by section for easy searching. A rolling ladder for reaching all areas has wisely been installed. </description>
 	<background>Library</background>
 	<conditionList>
+		<condition>
+			<description>Hallway</description>
+			<additionalDescription>The rolling ladder is currently occupied by a timid-looking maid who is frantically flinging books off of the shelves and onto the floor. </additionalDescription>
+			<action>
+				<nextScene>Hallway4</nextScene>
+			</action>	
+		</condition>
 		<condition>
 			<description>Hallway</description>
 			<action>

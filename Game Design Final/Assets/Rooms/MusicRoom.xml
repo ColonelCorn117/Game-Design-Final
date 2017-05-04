@@ -1,6 +1,10 @@
 ﻿<SceneDescription>
 	<name>MusicRoom</name>
-	<description>Lord Borkus' private instument collection. Strnagely, he doesn't know how to play any of them.</description>
+	<description>The Music Room is equally as unused as half of the other rooms in the mansion. White walls decorated with gold trimming and cliche fleur-de-lis patterns match the white plush carpet. A harp sits in one corner of the room, overshadowed by the 3 grand pianos: 1 Black, 1 White, and 1 Almond Brown.
+
+Assassin: ...
+Assassin: He doesn’t even know how to play ONE piano; why does he need THREE?
+Assassin: *sigh* Whatever. At least there aren’t any messes to deal with here.</description>
 	<background>black</background>
 	<conditionList>
 		<condition>

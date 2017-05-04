@@ -483,7 +483,7 @@ public class SceneScript : MonoBehaviour {
 			if (n.exists == 1) {
 				Action a = new Action ("examine" + npcName, "", npcName, "",0f);
 				addButtonAction (a,i);
-				optionsText [i - 1].text = n.name;
+				optionsText [i - 1].text = "Approach " + n.name;
 				++i;
 			}
 		}
@@ -492,7 +492,7 @@ public class SceneScript : MonoBehaviour {
 			if (m.exists == 1) {
 				Action a = new Action ("examine" + messName, "", messName,"",0f);
 				addButtonAction (a,i);
-				optionsText [i - 1].text = m.name;
+				optionsText [i - 1].text = "Examine " + m.name;
 				++i;
 			}
 		}
@@ -502,7 +502,7 @@ public class SceneScript : MonoBehaviour {
 			if (it.isViewableInRoom(xml.id)) {
 				Action a = new Action ("examine" + itemName, "", itemName,"",0f);
 				addButtonAction (a,i);
-				optionsText [i - 1].text = it.name;
+				optionsText [i - 1].text = "Examine " + it.name;
 				++i;
 			}
 		}
