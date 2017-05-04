@@ -1,18 +1,12 @@
 ﻿<SceneDescription>
 	<name>Library</name>
-	<description>Assassin: "Just clean up the books and go hide somewhere. I won't tell Borkus what you did."
-
-Maid: "O-okay."
-
-The maid begins to place the scattered books neatly back on the shelves.</description>
+	<description>You quickly ascend the ladder and permanently neutralize the maid.</description>
 	<background>Library</background>
 	<conditionList>
 		<condition>
 			<description>Continue</description>
 			<action>
-				<messResolved>BooksStrewn</messResolved>
 				<nextScene>Library</nextScene>
-				<timeUsed>0.0</timeUsed>
 			</action>	
 		</condition>
 	</conditionList>

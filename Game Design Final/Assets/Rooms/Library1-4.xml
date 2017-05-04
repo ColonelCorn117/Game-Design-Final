@@ -10,7 +10,6 @@ The maid quietly exits the room.</description>
 		<condition>
 			<description>Continue</description>
 			<action>
-				<npcSubdued>Maid4</npcSubdued>
 				<nextScene>Library</nextScene>
 				<timeUsed>0.0</timeUsed>
 			</action>	
