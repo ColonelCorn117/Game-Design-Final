@@ -1,0 +1,26 @@
+﻿<SceneDescription>
+	<name>Library</name>
+	<description>Assassin: "Just clean up the books and go hide somewhere. I won't tell Borkus what you did."
+
+Maid: "O-okay."
+
+The maid begins to place the scattered books neatly back on the shelves.</description>
+	<background>Library</background>
+	<conditionList>
+		<condition>
+			<description>Continue</description>
+			<action>
+				<npcSubdued>Maid4</npcSubdued>
+				<messResolved>BooksStrewn</messResolved>
+				<nextScene>Library</nextScene>
+				<timeUsed>0.0</timeUsed>
+			</action>	
+		</condition>
+	</conditionList>
+	<npcList>
+	</npcList>
+	<messList>
+	</messList>
+	<itemList>
+	</itemList>
+</SceneDescription>

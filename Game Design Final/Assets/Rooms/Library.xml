@@ -1,25 +1,68 @@
 ﻿<SceneDescription>
 	<name>Library</name>
-	<description>Bookshelves span the walls, all with labels by section for easy searching. A rolling ladder for reaching all areas has wisely been installed. </description>
+	<description>Bookshelves span the walls, all with labels by section for easy searching. A rolling ladder for reaching all areas has wisely been installed.</description>
 	<background>Library</background>
 	<conditionList>
 		<condition>
 			<description>Hallway</description>
-			<additionalDescription>The rolling ladder is currently occupied by a timid-looking maid who is frantically flinging books off of the shelves and onto the floor. </additionalDescription>
+			<requirement>
+				<prereq>removeMaid4</prereq>
+			</requirement>
 			<action>
 				<nextScene>Hallway4</nextScene>
 			</action>	
 		</condition>
 		<condition>
-			<description>Hallway</description>
+			<description>Leave</description>
+			<additionalDescription>The rolling ladder is currently occupied by a timid-looking maid who is frantically flinging books off of the shelves and onto the floor.</additionalDescription>
+			<requirement>
+				<prereq>existsMaid4</prereq>
+			</requirement>
 			<action>
+				<messCreated>BooksStrewn</messCreated>
 				<nextScene>Hallway4</nextScene>
+			</action>	
+		</condition>
+		<condition>
+			<description>Talk to Maid</description>
+			<requirement>
+				<prereq>existsMaid4</prereq>
+			</requirement>
+			<action>
+				<messCreated>BooksStrewn</messCreated>
+				<nextScene>Library1</nextScene>
+				<timeUsed>1.0</timeUsed>
+			</action>	
+		</condition>
+		<condition>
+			<description>Subdue Maid</description>
+			<requirement>
+				<prereq>existsMaid4</prereq>
+			</requirement>
+			<action>
+				<itemCreated>Body</itemCreated>
+				<messCreated>BooksStrewn</messCreated>
+				<nextScene>Library2</nextScene>
+				<timeUsed>1.5</timeUsed>
+			</action>	
+		</condition>
+		<condition>
+			<description>Kill Maid</description>
+			<requirement>
+				<prereq>existsMaid4</prereq>
+			</requirement>
+			<action>
+				<itemCreated>Corpse</itemCreated>
+				<messCreated>BooksStrewn</messCreated>
+				<nextScene>Library3</nextScene>
+				<timeUsed>2.5</timeUsed>
 			</action>	
 		</condition>
 	</conditionList>
 	<npcList>
 	</npcList>
 	<messList>
+		<mess>BooksStrewn</mess>
 	</messList>
 	<itemList>
 		<item>Mop</item>

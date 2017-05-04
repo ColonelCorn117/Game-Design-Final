@@ -1,0 +1,28 @@
+﻿<SceneDescription>
+	<name>Library</name>
+	<description>Assassin: "Listen, can you just please stop throwing those? My job is already hard enough as it is."
+
+Maid: "I'm sorry! Ah- I mean...go away! I'm sorry!"
+
+Maid: "...please don't kill me."
+
+Assassin: "Calm down, I'm not going to kill you. I just want you to stop making a mess."
+
+Maid: "B-but...how are we supposed to make Mr. Borkus be nicer to us?"</description>
+	<background>Library</background>
+	<conditionList>
+		<condition>
+			<description>Continue Talking</description>
+			<action>
+				<nextScene>Library1-2</nextScene>
+				<timeUsed>0.0</timeUsed>
+			</action>	
+		</condition>
+	</conditionList>
+	<npcList>
+	</npcList>
+	<messList>
+	</messList>
+	<itemList>
+	</itemList>
+</SceneDescription>
