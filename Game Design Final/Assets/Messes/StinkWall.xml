@@ -1,0 +1,26 @@
+﻿<mess>
+	<name>Stink Wall</name>
+	<description>Noxious fumes bar the door to...HIS...bedroom far more effectively than a steel wall.</description>
+	<exists>1</exists>
+	<conditionList>
+		<condition>
+			<description>Air Freshener + Lighter</description>
+			<requirement>
+				<prereq>gainedAirFreshener</prereq>
+				<prereq>gainedLighter</prereq>
+			</requirement>
+			<action>
+				<description>You aim the air freshener at the wall, holding the lighter near the nozzle. 
+				
+Assassin: I'd never try this at home under normal circumstances, but at this point, I don't even care if this burns me.	
+
+You open fire with the air freshener and light the spray up with the lighter, and watch as the fireball ignites the wretched barrier, leaving no trace of its existence.</description>
+				<messResolved>StinkWall</messResolved>
+				<timeUsed>1</timeUsed>
+				<itemUsed>AirFreshener</itemUsed>
+				<nextScene>reload</nextScene>
+			</action>
+		</condition>
+		
+	</conditionList>
+</mess>

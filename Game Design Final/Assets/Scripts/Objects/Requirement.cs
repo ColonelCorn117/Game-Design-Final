@@ -122,7 +122,21 @@ public class Requirement {
 					if (Controller_Game.ctrl_game.breadConsumed < breadEaten) {
 						return false;
 					}
-				} else {
+				} else if (req.StartsWith ("nofeed")) {
+					// the player has bread in the first N slots in inventory.
+					int breadEaten = int.Parse (reqName);
+					//Debug.Log ("Bread Needed: " + breadEaten + ", Bread Eaten: " + Controller_Game.ctrl_game.breadConsumed);
+					if (Controller_Game.ctrl_game.breadConsumed > breadEaten) {
+						return false;
+					}
+				} else if (req.StartsWith ("breadn")) {
+					// the player has acquired/used at most N loaves of bread
+					int breadLimit = int.Parse (reqName);
+					//Debug.Log ("Bread Needed: " + breadEaten + ", Bread Eaten: " + Controller_Game.ctrl_game.breadConsumed);
+					if ((Controller_Game.ctrl_game.breadConsumed + Controller_Game.ctrl_game.breadQuantity) > breadLimit) {
+						return false;
+					}
+				}else {
 					//The prerequisite is not one of the predefined options.
 					return false;
 				}

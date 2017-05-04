@@ -15,6 +15,7 @@
 			<description>Talk</description>
 			<action>
 				<name></name>
+				<timeUsed>0</timeUsed>
 				<nextScene>dialogueSakuya1</nextScene>
 			</action>
 		</condition>

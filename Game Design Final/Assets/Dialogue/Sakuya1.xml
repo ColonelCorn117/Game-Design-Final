@@ -17,6 +17,7 @@
 			<action>
 				<name>Take Mop</name>
 				<itemGained>Mop</itemGained>
+				<timeUsed>0</timeUsed>
 				<nextScene>reload</nextScene>
 			</action>
 		</condition>
@@ -38,6 +39,7 @@
 			</requirement>
 			<action>
 				<itemUsed>Mop</itemUsed>
+				<timeUsed>0</timeUsed>
 				<nextScene>reload</nextScene>
 			</action>
 		</condition>

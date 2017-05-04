@@ -15,7 +15,7 @@
 				<name>Give Bread</name>
 				<description>The 'maid' devours the bread in a flash.</description>
 				<itemUsed>Bread</itemUsed>
-				<nextScene>reload</nextScene>
+				<nextScene>dialogueGlutton1</nextScene>
 				<timeUsed>0</timeUsed>
 			</action>
 		</condition>
