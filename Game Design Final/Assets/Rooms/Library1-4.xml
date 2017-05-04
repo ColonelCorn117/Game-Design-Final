@@ -1,0 +1,25 @@
+﻿<SceneDescription>
+	<name>Library</name>
+	<description>Assassin: "Just get out of here. I'll deal with this."
+
+Maid: "O-okay."
+
+The maid quietly exits the room.</description>
+	<background>Library</background>
+	<conditionList>
+		<condition>
+			<description>Continue</description>
+			<action>
+				<npcSubdued>Maid4</npcSubdued>
+				<nextScene>Library</nextScene>
+				<timeUsed>0.0</timeUsed>
+			</action>	
+		</condition>
+	</conditionList>
+	<npcList>
+	</npcList>
+	<messList>
+	</messList>
+	<itemList>
+	</itemList>
+</SceneDescription>

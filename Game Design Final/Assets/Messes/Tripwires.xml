@@ -33,7 +33,7 @@ Assassin: I can still get up the stairs through all this, but it's not going to 
 		</condition>
 		<condition>
 			<description>Shear Ropes and Clean</description>
-			<description>You use the pruning shears to cut the ropes and quickly  clear away the potential tripwires. It only takes a few more minutes to collect the remaining pieces of climbing equipment, but without the rope, it's pretty much useless.</description>
+			<description>You use the pruning shears to cut the ropes and quickly clear away the potential tripwires. It only takes a few more minutes to collect the remaining pieces of climbing equipment, but without the rope, it's pretty much useless.</description>
 			<requirement>
 				<prereq>gainedShears</prereq>
 			</requirement>

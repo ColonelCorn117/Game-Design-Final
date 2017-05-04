@@ -1,0 +1,28 @@
+﻿<SceneDescription>
+	<name>Library</name>
+	<description>Assassin: "Can you not?"
+
+The maid is so startled that she nearly falls off of the ladder with a squeak of surprise.
+
+Maid: "Wh-who are you?! Where did you come from?"
+
+Assassin: "Um...the door..."
+
+Maid: "W-well go away!"</description>
+	<background>Library</background>
+	<conditionList>
+		<condition>
+			<description>Continue Talking</description>
+			<action>
+				<nextScene>Library1-1</nextScene>
+				<timeUsed>0.0</timeUsed>
+			</action>	
+		</condition>
+	</conditionList>
+	<npcList>
+	</npcList>
+	<messList>
+	</messList>
+	<itemList>
+	</itemList>
+</SceneDescription>
