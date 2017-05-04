@@ -1,0 +1,29 @@
+﻿<SceneDescription>
+	<name>Servant's Passage</name>
+	<description>The evolved form of a hallway.</description>
+	<background>Hallway</background>
+	<conditionList>
+		<condition>
+			<description>Kitchen</description>
+			<action>
+				<nextScene>Kitchen</nextScene>
+			</action>
+		</condition>
+		<condition>
+			<description>South Hallway</description>
+			<action>
+				<nextScene>Hallway2</nextScene>
+			</action>
+		</condition>
+		<condition>
+			<description>South Servant Passage</description>
+			<action>
+				<nextScene>ServantPassage1</nextScene>
+			</action>
+		</condition>
+	</conditionList>
+	<npcList>
+	</npcList>
+	<messList>
+	</messList>
+</SceneDescription>
