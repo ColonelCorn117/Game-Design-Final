@@ -1,0 +1,33 @@
+﻿<SceneDescription>
+	<name>Bratticus's Bedroom</name>
+	<description>Assassin: ...
+	
+The giggling continues.</description>
+	<background>ChildBedroom</background>
+	<conditionList>
+		<condition>
+			<description>Turn Around</description>
+			<requirement>
+				<prereq>existsBratticus</prereq>
+			</requirement>
+			<action>
+				<timeUsed>0</timeUsed>
+				<nextScene>Bratticus1</nextScene>
+			</action>	
+		</condition>
+		<condition>
+			<description>Break the Unbreakable</description>
+			<requirement>
+				<prereq>existsBratticus</prereq>
+			</requirement>
+			<action>
+				<timeUsed>1</timeUsed>
+				<nextScene>Bratticus0-8</nextScene>
+			</action>	
+		</condition>
+	</conditionList>
+	<npcList>
+	</npcList>
+	<messList>
+	</messList>
+</SceneDescription>

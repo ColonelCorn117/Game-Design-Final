@@ -1,22 +1,64 @@
 ﻿<SceneDescription>
-	<name>MusicRoom</name>
-	<description>The Music Room is equally as unused as half of the other rooms in the mansion. White walls decorated with gold trimming and cliche fleur-de-lis patterns match the white plush carpet. A harp sits in one corner of the room, overshadowed by the 3 grand pianos: 1 Black, 1 White, and 1 Almond Brown.
+	<name>Music Room</name>
+	<description>The music room is equally as unused as half of the other rooms in the mansion. White walls decorated with gold trimming and cliche fleur-de-lis patterns match the white plush carpet. A harp sits in one corner of the room, overshadowed by the three grand pianos: one black, one white, and one almond brown.
 
-Assassin: ...
-Assassin: He doesn’t even know how to play ONE piano; why does he need THREE?
-Assassin: *sigh* Whatever. At least there aren’t any messes to deal with here.</description>
-	<background>black</background>
+</description>
+	<background>MusicRoom</background>
 	<conditionList>
 		<condition>
-			<description>Hallway 7</description>
+			<description>Hallway</description>
+			<additionalDescription>Assassin: ...
+Assassin: He doesn’t even know how to play ONE piano; why does he need THREE?
+Assassin: *sigh* Whatever. At least there aren’t any messes to deal with here.</additionalDescription>
+			<requirement>
+				<prereq>removeBratticus</prereq>
+			</requirement>
 			<action>
 				<nextScene>Hallway7</nextScene>
+			</action>
+		</condition>
+		<condition>
+			<description>Take Him Down</description>
+			<additionalDescription>You arrive just in time to see Bratticus open fire on one of the window curtains.</additionalDescription>
+			<requirement>
+				<prereq>existsFinalEncounterFlag</prereq>
+				<prereq>timelo1</prereq>
+				<prereq>timehi7</prereq>
+			</requirement>
+			<action>
+				<npcSubdued>FinalEncounterFlag</npcSubdued>
+				<messCreated>FlamingCurtains</messCreated>
+				<timeUsed>0</timeUsed>
+				<stopTimer>1</stopTimer>
+				<nextScene>Bratticus3</nextScene>
+			</action>
+		</condition>
+		<condition>
+			<description>Continue</description>
+			<additionalDescription>You arrive moments too late.</additionalDescription>
+			<requirement>
+				<prereq>existsFinalEncounterFlag</prereq>
+				<prereq>timelo8</prereq>
+			</requirement>
+			<action>
+				<npcSubdued>FinalEncounterFlag</npcSubdued>
+				<messCreated>FlamingCurtains</messCreated>
+				<timeUsed>0</timeUsed>
+				<stopTimer>1</stopTimer>
+				<nextScene>Bratticus2</nextScene>
 			</action>
 		</condition>
 	</conditionList>
 	<npcList>
 	</npcList>
 	<messList>
+		<mess>ScorchedCurtains</mess>
+		<mess>BrokenHarp</mess>
+		<mess>ScorchedPiano</mess>
+		<mess>FlamingCurtains</mess>
+		<mess>BratticusBody1</mess>
 	</messList>
+	<itemList>
+	</itemList>
 </SceneDescription>
 

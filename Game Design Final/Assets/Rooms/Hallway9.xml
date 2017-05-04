@@ -10,9 +10,9 @@
 			</action>
 		</condition>
 		<condition>
-			<description>Hallway 8</description>
+			<description>Hallway</description>
 			<action>
-				<nextScene>Hallway8</nextScene>
+				<nextScene>Hallway6</nextScene>
 			</action>
 		</condition>
 		<condition>

@@ -1,0 +1,27 @@
+﻿<SceneDescription>
+	<name>One Punch</name>
+	<description>As the curtains catch fire, you launch yourself across the room. Chambering your fist as you fly through the air, you render your nemesis unconscious with one punch as you land.</description>
+	<background>MusicRoom</background>
+	<conditionList>
+		
+		<condition>
+			<description>Spare His Life</description>
+			<action>
+				<timeUsed>0</timeUsed>
+				<npcSubdued>Bratticus</npcSubdued>
+				<messCreated>BratticusBody1</messCreated>
+				<nextScene>Bratticus3-1</nextScene>
+			</action>
+		</condition>
+		
+		<condition>
+			<description>End Him</description>
+			<action>
+				<timeUsed>0</timeUsed>
+				<npcSubdued>Bratticus</npcSubdued>
+				<messCreated>BratticusBody1</messCreated>
+				<nextScene>Bratticus3-2</nextScene>
+			</action>
+		</condition>
+	</conditionList>
+</SceneDescription>

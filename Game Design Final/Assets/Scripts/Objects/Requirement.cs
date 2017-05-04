@@ -77,7 +77,22 @@ public class Requirement {
 						return false;
 					}
 
-				} else if (req.StartsWith ("talked")) {
+				} else if (req.StartsWith ("timelo")) {
+					//the encounter timer has reached at least the specified threshold.
+					int reqTime = int.Parse (reqName);
+					if (Controller_Game.ctrl_game.encounterTimer < reqTime) {
+						return false;
+					}
+
+				} else if (req.StartsWith ("timehi")) {
+					//the encounter timer has not exceeded the specified threshold.
+					int reqTime = int.Parse (reqName);
+					if (Controller_Game.ctrl_game.encounterTimer > reqTime) {
+						return false;
+					}
+
+				} 
+				else if (req.StartsWith ("talked")) {
 					string npcName = reqName.Substring (0, reqName.Length - 1);
 					int dialogueReached = int.Parse (reqName.Substring (reqName.Length - 1));
 					NPC n = Controller_Game.ctrl_game.NpcLookup (npcName);
@@ -85,6 +100,7 @@ public class Requirement {
 						return false;
 					}
 				} else if (req.StartsWith ("messed")) {
+					//Debug.Log("Messed: " + reqName + " exists? " + Controller_Game.ctrl_game.MessLookup (reqName).exists);
 					//the player has not yet removed a certain mess
 					if (!(Controller_Game.ctrl_game.MessLookup (reqName).exists == 1)) {
 						return false;
@@ -92,6 +108,7 @@ public class Requirement {
 
 				} else if (req.StartsWith ("nomess")) {
 					//the player has removed a certain mess
+					//Debug.Log("NoMess: " + reqName + " exists? " + Controller_Game.ctrl_game.MessLookup (reqName).exists);
 					if ((Controller_Game.ctrl_game.MessLookup (reqName).exists == 1)) {
 						return false;
 					}
@@ -116,7 +133,13 @@ public class Requirement {
 					} else {
 						return false;
 					}
-				} else if (req.StartsWith ("devour")) {
+				} else if (req.StartsWith ("curloc")) {
+					// the player has fed at least N loaves of bread to the gorilla
+					//Debug.Log ("Bread Needed: " + breadEaten + ", Bread Eaten: " + Controller_Game.ctrl_game.breadConsumed);
+					if (SceneScript.sceneScript.currentSceneName != "reqName") {
+						return false;
+					}
+				}else if (req.StartsWith ("devour")) {
 					// the player has fed at least N loaves of bread to the gorilla
 					int breadEaten = int.Parse (reqName);
 					//Debug.Log ("Bread Needed: " + breadEaten + ", Bread Eaten: " + Controller_Game.ctrl_game.breadConsumed);

@@ -1,0 +1,27 @@
+﻿<mess>
+	<name>Piano</name>
+	<description>Bratticus left a rather intricate design 'inscribed' into the brown piano's lid, and a long streak on the side facing the wall. Luckily the scorch marks could probably be covered up with some sort of decorative cloth.
+	
+Assassin: This almost looks like writing, but I can't comprehend the language at all. Theoretically, my brain could be refusing to interpret the whatever the hell the brat wrote, due to the endless hatred for that creature's very existence. That's unlikely, though.</description>
+	<exists>0</exists>
+	<conditionList>
+		<condition>
+			<description>Cover Burns</description>
+			<requirement>
+				<prereq>gainedDoily</prereq>
+			</requirement>
+			<action>
+				<name>Clean</name>
+				<description>Closing the lid and laying the doily on top is enough to completely obscure the burn mark.
+				
+Assassin: That should keep anyone from realizing that the hellspawn defaced the piano until someone uses this room again.
+
+Assassin: ...which will never actually happen.</description>
+				<messResolved>ScorchedPiano</messResolved>
+				<itemUsed>Doily</itemUsed>
+				<timeUsed>1</timeUsed>
+				<nextScene>reload</nextScene>
+			</action>
+		</condition>
+	</conditionList>
+</mess>

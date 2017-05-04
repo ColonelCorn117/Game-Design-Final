@@ -1,0 +1,41 @@
+﻿<SceneDescription>
+	<name>Vase</name>
+	<description>The vase is clearly a priceless antique. It's incredibly bland and has no remarkable features whatsoever.</description>
+	<background>Hallway</background>
+	<conditionList>
+		<condition>
+			<description>Take</description>
+			<additionalDescription>A set of harp strings hangs from the vase.
+	
+Assassin: Hiding these here is a surprisingly clever idea. Nobody pays attention to the decorations in the hallways around here, and Lord Borkus's harpist has trouble seeing anything more than a foot away from him. If I hadn't spotted these strings, they probably would have gone unnoticed for weeks.</additionalDescription>
+			<requirement>
+				<prereq>nogainHarpstrings</prereq>
+			</requirement>
+			<action>
+				<name>Take</name>
+				<description>Assassin: I should probably keep these for now.</description>
+				<itemGained>Harpstrings</itemGained>
+				<timeUsed>0</timeUsed>
+				<nextScene>Hallway2</nextScene>
+			</action>
+		</condition>
+		<condition>
+			<description>Back</description>
+			<requirement>
+				<prereq>noreqs</prereq>
+			</requirement>
+			<action>
+				<name>Back</name>
+				<description>Assassin: Cat gut is probably too weak to be an effective garrote..</description>
+				<timeUsed>0</timeUsed>
+				<nextScene>Hallway2</nextScene>
+			</action>
+		</condition>
+	</conditionList>
+	<npcList>
+	</npcList>
+	<messList>
+	</messList>
+	<itemList>
+	</itemList>
+</SceneDescription>

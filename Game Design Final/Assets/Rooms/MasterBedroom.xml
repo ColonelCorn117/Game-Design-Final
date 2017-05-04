@@ -1,7 +1,7 @@
 ﻿<SceneDescription>
 	<name>Master Bedroom</name>
 	<description>It's the master bedroom.</description>
-	<background></background>
+	<background>MasterBedroom</background>
 	<conditionList>
 	
 		<condition>
@@ -23,4 +23,7 @@
 	</npcList>
 	<messList>
 	</messList>
+	<itemList>
+		<item>Doily</item>
+	</itemList>
 </SceneDescription>

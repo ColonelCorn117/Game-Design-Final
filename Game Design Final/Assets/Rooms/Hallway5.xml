@@ -10,6 +10,12 @@
 			</action>
 		</condition>
 		<condition>
+			<description>Assassin's Room</description>
+			<action>
+				<nextScene>AssassinBedroom</nextScene>
+			</action>
+		</condition>
+		<condition>
 			<description>Lord's Lounge</description>
 			<action>
 				<nextScene>LordLounge</nextScene>
@@ -26,4 +32,7 @@
 	</npcList>
 	<messList>
 	</messList>
+	<itemList>
+		<item>Dustpan</item>
+	</itemList>
 </SceneDescription>

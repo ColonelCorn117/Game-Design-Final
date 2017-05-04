@@ -1,0 +1,15 @@
+﻿<SceneDescription>
+	<name>One Punch</name>
+	<description>Assassin: As much as I would love to offer this abomination as a sacrifice to eldritch horrors from before the time of man, there's no way I'll be able to get away with it. I'm an assassin, not a cultist.</description>
+	<background>MusicRoom</background>
+	<conditionList>
+		
+		<condition>
+			<description>Continue</description>
+			<action>				
+				<timeUsed>0</timeUsed>
+				<nextScene>MusicRoom</nextScene>
+			</action>
+		</condition>
+	</conditionList>
+</SceneDescription>

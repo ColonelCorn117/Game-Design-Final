@@ -37,6 +37,9 @@ public class Controller_Game : MonoBehaviour
 	Dictionary<string,int> bodyInRoom = new Dictionary<string,int>();
 	Dictionary<string,int> corpseInRoom = new Dictionary<string,int>();
 
+	public bool encounterTimerRunning = false;
+	public float encounterTimer = 0f;
+
 	float unassignedActionTime = 1f;	//how much time an action should take if the action has no assigned value
 
 	public Action[] buttonActions = new Action[9]; // buttonActions[0] is empty. the action for btn1 is found in buttonActions[1].
@@ -285,7 +288,12 @@ public class Controller_Game : MonoBehaviour
 			this.ItemLookup (a.itemUsed).consume ();
 
 		}
-
+		if (a.startTimer != null && a.startTimer != 0) {
+			this.encounterTimerRunning = true;
+		}
+		if (a.stopTimer != null && a.stopTimer != 0) {
+			this.encounterTimerRunning = false;
+		}
 
 		// if an action picks up an item, add that item to inventory and mark it as taken from the room
 		if (a.itemGained != null && a.itemGained != "") {
@@ -413,6 +421,7 @@ public class Controller_Game : MonoBehaviour
 	//----------------------------------------------------------------------------------------------------
 
 	NPC LoadNPC(string path) {
+		//Debug.Log (path);
 		var serializer = new XmlSerializer(typeof(NPC));
 		var stream = new FileStream(path, FileMode.Open);
 		var output = serializer.Deserialize(stream) as NPC;
@@ -421,6 +430,7 @@ public class Controller_Game : MonoBehaviour
 	}
 
 	Mess LoadMess(string path) {
+		//Debug.Log (path);
 		var serializer = new XmlSerializer(typeof(Mess));
 		var stream = new FileStream(path, FileMode.Open);
 		var output = serializer.Deserialize(stream) as Mess;
@@ -429,6 +439,7 @@ public class Controller_Game : MonoBehaviour
 	}
 
 	Item LoadItem(string path) {
+		//Debug.Log (path);
 		var serializer = new XmlSerializer(typeof(Item));
 		var stream = new FileStream(path, FileMode.Open);
 		var output = serializer.Deserialize(stream) as Item;
@@ -493,7 +504,9 @@ public class Controller_Game : MonoBehaviour
 		timeRemaining -= amount;
 //		Debug.Log("CTR: " + timeRemaining);
 		Controller_GUI.ctrl_gui.SetTimeText(timeRemaining);
-
+		if (encounterTimerRunning) {
+			encounterTimer += amount;
+		}
 		if (timeRemaining <= 0) {
 
 		}

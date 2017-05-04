@@ -10,6 +10,12 @@
 			</action>
 		</condition>
 		<condition>
+			<description>Hallway</description>
+			<action>
+				<nextScene>Hallway7</nextScene>
+			</action>
+		</condition>
+		<condition>
 			<requirement>
 				<prereq>noreqs</prereq>
 			</requirement>
@@ -18,15 +24,7 @@
 				<nextScene>DiningRoom</nextScene>
 			</action>
 		</condition>
-		<condition>
-			<requirement>
-				<prereq>noreqs</prereq>
-			</requirement>
-			<description>Closet</description>
-			<action>
-				<nextScene>Closet1</nextScene>
-			</action>
-		</condition>
+		
 	</conditionList>
 	<npcList>
 	</npcList>

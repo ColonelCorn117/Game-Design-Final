@@ -36,9 +36,9 @@
 		</condition>
 		
 		<condition>
-			<description>Bathroom2</description>
+			<description>Child Bedroom</description>
 			<action>
-				<nextScene>Bathroom2</nextScene>
+				<nextScene>ChildBedroom</nextScene>
 			</action>
 		</condition>
 	</conditionList>
@@ -48,6 +48,7 @@
 	<messList>
 	</messList>
 	<itemList>
-		<item>Dustpan</item>
+		<item>WaterBucket</item>
+		<item>Curtains</item>
 	</itemList>
 </SceneDescription>

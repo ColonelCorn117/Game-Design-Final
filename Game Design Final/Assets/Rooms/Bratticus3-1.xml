@@ -1,0 +1,15 @@
+﻿<SceneDescription>
+	<name>One Punch</name>
+	<description>I don't have much time left. I need to clean this up fast.</description>
+	<background>MusicRoom</background>
+	<conditionList>
+		
+		<condition>
+			<description>Continue</description>
+			<action>				
+				<timeUsed>0</timeUsed>
+				<nextScene>MusicRoom</nextScene>
+			</action>
+		</condition>
+	</conditionList>
+</SceneDescription>

@@ -1,12 +1,12 @@
 ﻿<SceneDescription>
 	<name>Hallway</name>
-	<description>Another hallway.</description>
+	<description>Another hallway. This one at least has a vase.</description>
 	<background>Hallway</background>
 	<conditionList>
 		<condition>
-			<description>North Hallway</description>
+			<description>Landing</description>
 			<action>
-				<nextScene>Hallway1</nextScene>
+				<nextScene>Landing1F</nextScene>
 			</action>
 		</condition>
 		<condition>
@@ -22,9 +22,16 @@
 			</action>
 		</condition>
 		<condition>
-			<description>Servant's Passage</description>
+			<description>South Servant Passage</description>
 			<action>
 				<nextScene>ServantPassage3</nextScene>
+			</action>
+		</condition>
+		<condition>
+			<description>Examine Vase</description>
+			<action>
+				<timeUsed>0</timeUsed>
+				<nextScene>Vase</nextScene>
 			</action>
 		</condition>
 	</conditionList>
@@ -32,4 +39,6 @@
 	</npcList>
 	<messList>
 	</messList>
+	<itemList>
+	</itemList>
 </SceneDescription>

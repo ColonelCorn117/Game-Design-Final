@@ -4,17 +4,24 @@
 	<background>black</background>
 	<conditionList>
 		<condition>
+			<description>Music Room</description>
+			<action>
+				<nextScene>MusicRoom</nextScene>
+			</action>
+		</condition>
+		<condition>
 			<description>Hallway 6</description>
 			<action>
 				<nextScene>Hallway6</nextScene>
 			</action>
 		</condition>
 		<condition>
-			<description>Music Room</description>
+			<description>North Servant Passage</description>
 			<action>
-				<nextScene>MusicRoom</nextScene>
+				<nextScene>ServantPassage1</nextScene>
 			</action>
 		</condition>
+		
 	</conditionList>
 	<npcList>
 	</npcList>

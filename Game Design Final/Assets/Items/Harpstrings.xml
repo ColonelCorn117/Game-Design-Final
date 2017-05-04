@@ -1,0 +1,33 @@
+﻿<item>
+	<name>Harp Strings</name>
+	<description>A set of very expensive harp strings for a very expensive harp.</description>
+	<exists>1</exists>
+	<conditionList>
+		<condition>
+			<description>Take</description>
+			<additionalDescription>Assassin: Hiding these</additionalDescription>
+			<requirement>
+				<prereq>nogainHarpstrings</prereq>
+			</requirement>
+			<action>
+				<name>Take</name>
+				<description>Assassin: This will probably come in handy.</description>
+				<itemGained>Curtains</itemGained>
+				<timeUsed>0</timeUsed>
+				<nextScene>reload</nextScene>
+			</action>
+		</condition>
+		<condition>
+			<description>Back</description>
+			<requirement>
+				<prereq>noreqs</prereq>
+			</requirement>
+			<action>
+				<name>Back</name>
+				<description>Assassin: Cat gut is probably too weak to be an effective garrote.</description>
+				<timeUsed>0</timeUsed>
+				<nextScene>reload</nextScene>
+			</action>
+		</condition>
+	</conditionList>
+</item>
