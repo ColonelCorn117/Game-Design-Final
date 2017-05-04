@@ -1,9 +1,6 @@
 ﻿<SceneDescription>
 	<name>Kitchen</name>
-	<description>Though the air is warm and heavy, a delightful aroma wafts through the room from a rack of freshly baked bread. The chef is nowhere to be seen. No maids are present either.
-	
-Assassin: That smells really good...
-</description>
+	<description>The kitchen is fairly clean, though the chef is nowhere to be seen. No maids are present either.</description>
 	<background>Kitchen</background>
 	<conditionList>
 		<condition>
@@ -29,17 +26,48 @@ Assassin: That smells really good...
 		</condition>
 		<condition>
 			<description>Take Bread</description>
+			<additionalDescription>Though the air is warm and heavy, a delightful aroma wafts through the room from a rack of freshly baked bread.
+			
+Assassin: That smells really good...</additionalDescription>
 			<requirement>
-				<prereq>breadn9</prereq>
+				<prereq>breadn8</prereq>
 			</requirement>
 			<action>
 				<description>Assassin: I’ll just take this for strategic...bread purposes...</description>
 				<itemGained>Bread</itemGained>
 				<timeUsed>0</timeUsed>
 				<nextScene>reload</nextScene>
-				<timeUsed>0.0</timeUsed>
 			</action>
 		</condition>
+		<condition>
+			<description>Take Bread</description>
+			<additionalDescription>Though the air is warm and heavy, a delightful aroma wafts through the room from a rack of freshly baked bread.
+			
+Assassin: That smells really good...</additionalDescription>
+			<requirement>
+				<prereq>breadn9</prereq>
+				<prereq>breadm9</prereq>
+			</requirement>
+			<action>
+				<description>Assassin: I’ll just take this for strategic...bread purposes...</description>
+				<itemGained>Bread</itemGained>
+				<timeUsed>0</timeUsed>
+				<nextScene>KitchenBread</nextScene>
+			</action>
+		</condition>
+		<condition>
+			<description>Examine Bread Rack</description>
+			<additionalDescription>The delightful aroma of fresh bread lingers in the air despite the disappearance of its source.</additionalDescription>
+			<requirement>
+				<prereq>breadm10</prereq>
+			</requirement>
+			<action>
+				<description>The rack is empty. Just like your soul.</description>
+				<timeUsed>0</timeUsed>
+				<nextScene>reload</nextScene>
+			</action>
+		</condition>
+		
 	</conditionList>
 	<npcList>
 	</npcList>
