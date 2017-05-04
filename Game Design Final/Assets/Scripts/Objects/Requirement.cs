@@ -102,6 +102,7 @@ public class Requirement {
 					if (Controller_Game.ctrl_game.breadQuantity < reqBread) {
 						return false;
 					}
+
 				} else if (req.StartsWith ("invblk")) {
 					// the player has bread in the first N slots in inventory.
 					int breadCount = int.Parse (reqName);
@@ -116,14 +117,14 @@ public class Requirement {
 						return false;
 					}
 				} else if (req.StartsWith ("devour")) {
-					// the player has bread in the first N slots in inventory.
+					// the player has fed at least N loaves of bread to the gorilla
 					int breadEaten = int.Parse (reqName);
 					//Debug.Log ("Bread Needed: " + breadEaten + ", Bread Eaten: " + Controller_Game.ctrl_game.breadConsumed);
 					if (Controller_Game.ctrl_game.breadConsumed < breadEaten) {
 						return false;
 					}
 				} else if (req.StartsWith ("nofeed")) {
-					// the player has bread in the first N slots in inventory.
+					// the player has fed at most N loaves of bread to the gorilla
 					int breadEaten = int.Parse (reqName);
 					//Debug.Log ("Bread Needed: " + breadEaten + ", Bread Eaten: " + Controller_Game.ctrl_game.breadConsumed);
 					if (Controller_Game.ctrl_game.breadConsumed > breadEaten) {
@@ -136,7 +137,14 @@ public class Requirement {
 					if ((Controller_Game.ctrl_game.breadConsumed + Controller_Game.ctrl_game.breadQuantity) > breadLimit) {
 						return false;
 					}
-				}else {
+				} else if (req.StartsWith ("breadm")) {
+					// the player has acquired/used at least M loaves of bread
+					int breadLimit = int.Parse (reqName);
+					//Debug.Log ("Bread Needed: " + breadEaten + ", Bread Eaten: " + Controller_Game.ctrl_game.breadConsumed);
+					if ((Controller_Game.ctrl_game.breadConsumed + Controller_Game.ctrl_game.breadQuantity) < breadLimit) {
+						return false;
+					}
+				} else {
 					//The prerequisite is not one of the predefined options.
 					return false;
 				}

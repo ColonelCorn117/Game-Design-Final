@@ -116,7 +116,7 @@ Assassin: [She would.]
 				<prereq>loaves7</prereq>
 			</requirement>
 			<action>
-				<itemUsed>bread</itemUsed>
+				<itemUsed>Bread</itemUsed>
 				<nextScene>OrchestraPit1</nextScene>
 				<timeUsed>0.75</timeUsed>
 			</action>
