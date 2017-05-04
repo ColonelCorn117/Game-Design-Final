@@ -21,12 +21,25 @@
 				<nextScene>reload</nextScene>
 			</action>	
 		</condition>
+		
 		<condition>
 			<description>Test (beta)</description>
 			<action>
 				<nextScene>TestDescription</nextScene>
 			</action>	
 		</condition>
+		<condition>
+			<additionalDescription>There’s a cabinet underneath the sink with a bucket in it.</additionalDescription>
+			<requirement>
+				<prereq>nogainBucket</prereq>
+			</requirement>
+			<description></description>
+			<action>
+				<timeUsed>0</timeUsed>
+				<nextScene>reload</nextScene>
+			</action>	
+		</condition>
+		
 	</conditionList>
 	<npcList>
 	</npcList>

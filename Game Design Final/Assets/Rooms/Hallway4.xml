@@ -16,6 +16,12 @@
 			</action>
 		</condition>
 		<condition>
+			<description>Closet</description>
+			<action>
+				<nextScene>Closet2</nextScene>
+			</action>
+		</condition>
+		<condition>
 			<description>Library</description>
 			<action>
 				<nextScene>Library</nextScene>

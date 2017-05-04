@@ -11,6 +11,22 @@
 		</condition>
 		<condition>
 			<description>Child's Bedroom</description>
+			<additionalDescription>The wretched smell from the bedroom has a very physical presence.</additionalDescription>
+			<requirement>
+				<prereq>messedStinkWall</prereq>
+			</requirement>
+			<action>
+				<description>Assassin: I'm not going through that with anything less than a HazMat suit.</description>
+				<timeUsed>0</timeUsed>
+				<nextScene>reload</nextScene>
+			</action>	
+		</condition>
+		<condition>
+			<description>Child's Bedroom</description>
+			
+			<requirement>
+				<prereq>nomessStinkWall</prereq>
+			</requirement>
 			<action>
 				<nextScene>ChildBedroom</nextScene>
 			</action>	
@@ -19,5 +35,6 @@
 	<npcList>
 	</npcList>
 	<messList>
+		<mess>StinkWall</mess>
 	</messList>
 </SceneDescription>
