@@ -10,15 +10,15 @@
 			</action>
 		</condition>
 		<condition>
-			<description>Hallway 7</description>
+			<description>Hallway</description>
 			<action>
-				<nextScene>Hallway7</nextScene>
+				<nextScene>Hallway9</nextScene>
 			</action>
 		</condition>
 		<condition>
-			<description>Hallway 8</description>
+			<description>Closet</description>
 			<action>
-				<nextScene>Hallway8</nextScene>
+				<nextScene>Closet1</nextScene>
 			</action>
 		</condition>
 	</conditionList>

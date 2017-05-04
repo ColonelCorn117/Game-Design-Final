@@ -1,6 +1,6 @@
 ﻿<mess>
 	<name>Tripping Hazard</name>
-	<description>It looks like one of the maids found a very nice set of climbing gear in Lord Borkus's sporting equipment. Unfortunately, they apparently decided that the best way to use that equipment involved spreading it all over the stairs. A long rope has been threaded between the banisters on the stairway. Several pitons have been strewn about on the stairs themselves, and a harness is half-hidden under the carpet.
+	<description>It looks like one of the maids found a very nice set of climbing gear in Lord Borkus's sporting equipment. Unfortunately, they apparently decided that the best way to use that equipment involved spreading it all over the stairs. A long rope has been threaded between the banisters on the stairway. Several pitons have been strewn about on the stairs themselves, and a harness is half-hidden under the carpet. Strips of duct tape can be seen holding various knots together.
 	
 Assassin: I can still get up the stairs through all this, but it's not going to be easy. Trying to untie all of this will take a lot of time, though.</description>
 	<exists>1</exists>
@@ -14,7 +14,7 @@ Assassin: I can still get up the stairs through all this, but it's not going to 
 				<name>Clean</name>
 				<description>After fumbling around for far too long, you eventually resort to stabbing the ropes repeatedly with a piton. After several more minutes of struggling, you manage to hack through all the ropes and collect the rest of the climbing equipment. Unfortunately, without the rope, the rest of the climbing gear is pretty much useless.</description>
 				<messResolved>Tripwires</messResolved>
-				<timeUsed>15</timeUsed>
+				<timeUsed>20</timeUsed>
 				<nextScene>reload</nextScene>
 			</action>
 		</condition>

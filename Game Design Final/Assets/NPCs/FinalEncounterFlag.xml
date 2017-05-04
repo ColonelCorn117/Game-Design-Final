@@ -1,0 +1,8 @@
+﻿<npc>
+	<name>FinalEncounterFlag</name>
+	<description>This NPC is a flag to indicate that the encounter with Bratticus is occurring.</description>
+	<exists>0</exists>
+	<conditionList>
+		
+	</conditionList>
+</npc>

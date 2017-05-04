@@ -16,9 +16,15 @@
 			</action>
 		</condition>
 		<condition>
-			<description>North Servant's Passage</description>
+			<description>South Servant Passage</description>
 			<action>
-				<nextScene>ServantPassage2</nextScene>
+				<nextScene>ServantPassage3</nextScene>
+			</action>
+		</condition>
+		<condition>
+			<description>Hallway</description>
+			<action>
+				<nextScene>Hallway7</nextScene>
 			</action>
 		</condition>
 	</conditionList>
@@ -26,4 +32,7 @@
 	</npcList>
 	<messList>
 	</messList>
+	<itemList>
+		<item>Curtains</item>
+	</itemList>
 </SceneDescription>

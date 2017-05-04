@@ -1,0 +1,24 @@
+﻿<npc>
+	<name>Bratticus</name>
+	<description>The demon without a name.</description>
+	<exists>1</exists>
+	<clearList>
+		<condition>
+			<requirement>
+				<prereq>devour9999</prereq>
+			</requirement>
+			<action></action>
+		</condition>
+	</clearList>
+	<conditionList>
+		<condition>
+			<description>Flee In Terror</description>
+			<action>
+				<name></name>
+				<timeUsed>0</timeUsed>
+				<nextScene>reload</nextScene>
+			</action>
+		</condition>
+
+	</conditionList>
+</npc>

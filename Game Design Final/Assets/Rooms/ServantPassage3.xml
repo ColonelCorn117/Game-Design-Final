@@ -4,15 +4,21 @@
 	<background>Hallway</background>
 	<conditionList>
 		<condition>
-			<description>East Hallway</description>
+			<description>Kitchen</description>
+			<action>
+				<nextScene>Kitchen</nextScene>
+			</action>
+		</condition>
+		<condition>
+			<description>South Hallway</description>
 			<action>
 				<nextScene>Hallway2</nextScene>
 			</action>
 		</condition>
 		<condition>
-			<description>South Servant Passage</description>
+			<description>North Servant Passage</description>
 			<action>
-				<nextScene>ServantPassage2</nextScene>
+				<nextScene>ServantPassage1</nextScene>
 			</action>
 		</condition>
 	</conditionList>

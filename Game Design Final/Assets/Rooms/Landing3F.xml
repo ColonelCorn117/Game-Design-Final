@@ -26,6 +26,12 @@
 			</action>
 			
 		</condition>
+		<condition>
+			<description>Test (beta)</description>
+			<action>
+				<nextScene>TestDescription</nextScene>
+			</action>	
+		</condition>
 	</conditionList>
 	<npcList>
 	</npcList>

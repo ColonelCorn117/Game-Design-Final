@@ -1,0 +1,21 @@
+﻿<SceneDescription>
+	<name>Music Room</name>
+	<description>You quickly determine that Bratticus must be hiding behind the brown piano, and you hear the blowtorch firing steadily.
+
+Assassin: [[This ends now.]]
+	
+Assassin: [Apparently burning some demonic sigil into the lid wasn't enough.]</description>
+	<background>MusicRoom</background>
+	<conditionList>
+		
+		<condition>
+			<description>Take Him Down</description>
+			<action>
+				<messCreated>ScorchedPiano</messCreated>
+				<npcSubdued>Bratticus</npcSubdued>
+				<timeUsed>0</timeUsed>
+				<nextScene>Bratticus2-2</nextScene>
+			</action>
+		</condition>
+	</conditionList>
+</SceneDescription>

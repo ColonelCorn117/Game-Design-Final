@@ -14,13 +14,6 @@
 			</action>	
 		</condition>
 		<condition>
-			<description>Laundry Chute</description>
-			<action>
-				<timeUsed>0</timeUsed>
-				<nextScene>LaundryChute3F</nextScene>
-			</action>	
-		</condition>
-		<condition>
 			<description>Landing</description>
 			<action>
 				<nextScene>Landing3F</nextScene>

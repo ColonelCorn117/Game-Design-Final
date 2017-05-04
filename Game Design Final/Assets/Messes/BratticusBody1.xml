@@ -1,0 +1,37 @@
+﻿<mess>
+	<name>Bratticus's Body</name>
+	<description>Bratticus's unconscious body. It's more than a little grimy.</description>
+	<exists>0</exists>
+	<conditionList>
+		<condition>
+			<description>Return to Bedroom</description>
+			<requirement>
+				<prereq>gainedDuctTape</prereq>
+				<prereq>nomessOilSlick</prereq>
+			</requirement>
+			<action>
+				<name>Clean</name>
+				<description>A few strips of duct tape and two flights of stairs later, Bratticus has been hidden safely in his room.</description>
+				<messResolved>BratticusBody</messResolved>
+				<itemUsed>DuctTape</itemUsed>
+				<timeUsed>9</timeUsed>
+				<nextScene>ChildBedroom</nextScene>
+			</action>
+		</condition>
+		<condition>
+			<description>Return to Bedroom</description>
+			<requirement>
+				<prereq>nogainDuctTape</prereq>
+			</requirement>
+			<requirement>
+				<prereq>messedOilSlick</prereq>
+			</requirement>
+			<action>
+				<name>Clean</name>
+				<description>Assassin: I'm not touching him until I'm ready to move him. I'll need some way to keep him from moving if he wakes up and I need to make sure the path to his room is clear. I can't just shove Lord Borkus's child in some closet and I can't just magic him up the laundry chute. I'm an assassin, not a magician.</description>
+				<timeUsed>0</timeUsed>
+				<nextScene>reload</nextScene>
+			</action>
+		</condition>
+	</conditionList>
+</mess>

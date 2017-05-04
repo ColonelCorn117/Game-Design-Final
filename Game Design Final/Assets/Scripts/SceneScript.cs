@@ -12,7 +12,7 @@ public class SceneScript : MonoBehaviour {
 	GameObject optionsBox;
 
 	public static SceneScript sceneScript;
-	string currentSceneName = "";
+	public string currentSceneName = "";
 	string pastSceneName = "";
 	public string startingSceneName = "TestDescription";
 

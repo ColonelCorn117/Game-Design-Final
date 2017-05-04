@@ -1,0 +1,20 @@
+﻿<mess>
+	<name>Curtains</name>
+	<description>The curtains were set on fire with a blowtorch, though you've managed to put out the flames.</description>
+	<exists>0</exists>
+	<conditionList>
+		<condition>
+			<description>Replace Curtains</description>
+			<requirement>
+				<prereq>gainedCurtains</prereq>
+			</requirement>
+			<action>
+				<name>Clean</name>
+				<messResolved>ScorchedCurtains</messResolved>
+				<itemUsed>Curtains</itemUsed>
+				<timeUsed>2</timeUsed>
+				<nextScene>reload</nextScene>
+			</action>
+		</condition>
+	</conditionList>
+</mess>

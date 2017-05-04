@@ -1,0 +1,50 @@
+﻿<SceneDescription>
+	<name>Bratticus's Bedroom</name>
+	<description>Lord Borkus's hellspawn stands in the doorway with a manic grin on his face and his hands behind his back.
+	
+Assassin: [I'm pretty sure my hatred for this demon has overwritten any memory I might have of his real name. Not that it matters. "Bratticus" is far too appropriate for him.]
+
+Assassin: ...What do you want, kid?
+
+Bratticus: That fire was awesome! I wanna try that now!
+
+The little monster scampers away, revealing what he was holding behind his back.
+
+Assassin: [That's a blowtorch.]
+
+Assassin: ...
+
+Assassin: SHIT!</description>
+	<background></background>
+	<conditionList>
+		<condition>
+			<description>Chase Him Down</description>
+			<requirement>
+				<prereq>nomessOilSlick</prereq>
+			</requirement>
+			<action>
+				<description>As you dash out the door, your quarry lets out a fierce battle cry.
+	
+Bratticus: TO THE MUSIC ROOM!</description>
+				<startTimer>1</startTimer>
+				<nextScene>Hallway22</nextScene>
+			</action>	
+		</condition>
+		<condition>
+			<description>Chase Him Down</description>
+			<requirement>
+				<prereq>messedOilSlick</prereq>
+			</requirement>
+			<action>
+				<description>As you dash out the door, your quarry lets out a fierce battle cry.
+	
+Bratticus: TO THE MUSIC ROOM!</description>
+				<nextScene>Bratticus1-1</nextScene>
+			</action>	
+		</condition>
+	</conditionList>
+	<npcList>
+	</npcList>
+	<messList>
+	</messList>
+</SceneDescription>

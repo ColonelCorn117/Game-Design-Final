@@ -1,0 +1,22 @@
+﻿<mess>
+	<name>Burning Curtains</name>
+	<description>The curtains have been set on fire with a blowtorch, and continue to slowly burn.</description>
+	<exists>0</exists>
+	<conditionList>
+		<condition>
+			<description>Put Out Fire</description>
+			<requirement>
+				<prereq>gainedWaterBucket</prereq>
+			</requirement>
+			<action>
+				<description>You empty the water bucket on the curtains, extinguishing the flames.</description>
+				<messResolved>FlamingCurtains</messResolved>
+				<messCreated>ScorchedCurtains</messCreated>
+				<itemUsed>WaterBucket</itemUsed>
+				<itemGained>Bucket</itemGained>
+				<timeUsed>1</timeUsed>
+				<nextScene>reload</nextScene>
+			</action>
+		</condition>
+	</conditionList>
+</mess>

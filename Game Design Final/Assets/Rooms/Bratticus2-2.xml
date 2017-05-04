@@ -1,0 +1,28 @@
+﻿<SceneDescription>
+	<name>Music Room</name>
+	<description>Leaping over the piano, you descend upon your mortal nemesis, raining blows with absolute precision. Bratticus falls in a heap, the blowtorch shutting off and landing at his side.
+</description>
+	<background>MusicRoom</background>
+	<conditionList>
+		
+		<condition>
+			<description>Spare His Life</description>
+			<action>
+				<description>Assassin: I'm already short on time. I'm not risking bloodstains on the carpet.</description>
+				<messCreated>BratticusBody1</messCreated>
+				<timeUsed>0</timeUsed>
+				<nextScene>MusicRoom</nextScene>
+			</action>
+		</condition>
+		
+		<condition>
+			<description>End Him</description>
+			<action>
+				<description>Assassin: As much as I would love to use this foul beast's small intestines as a jump rope, there's no way I'll be able to get away with it. I'm an assassin, not a miracle worker.</description>
+				<messCreated>BratticusBody1</messCreated>
+				<timeUsed>0</timeUsed>
+				<nextScene>MusicRoom</nextScene>
+			</action>
+		</condition>
+	</conditionList>
+</SceneDescription>

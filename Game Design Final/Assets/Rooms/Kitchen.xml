@@ -19,10 +19,22 @@
 			</action>
 		</condition>
 		<condition>
-			<description>Servant's Passage</description>
+			<description>South Servant Passage</description>
 			<action>
-				<nextScene>ServantPassage2</nextScene>
+				<nextScene>ServantPassage3</nextScene>
 			</action>
+		</condition>
+		<condition>
+			<requirement>
+				<prereq>gainedBucket</prereq>
+			</requirement>
+			<description>Fill Bucket with Water</description>
+			<action>
+				<description>You fill the bucket with water.</description>
+				<itemUsed>Bucket</itemUsed>
+				<itemGained>WaterBucket</itemGained>
+				<nextScene>reload</nextScene>
+			</action>	
 		</condition>
 		<condition>
 			<description>Take Bread</description>

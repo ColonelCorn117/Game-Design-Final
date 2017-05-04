@@ -1,0 +1,32 @@
+﻿<item>
+	<name>Doily</name>
+	<description>It's a frilly piece of cloth.</description>
+	<exists>1</exists>
+	<conditionList>
+		<condition>
+			<description>Take</description>
+			<requirement>
+				<prereq>nogainDoily</prereq>
+			</requirement>
+			<action>
+				<name>Take</name>
+				<description>Assassin: This seems bizarre enough to be useful somewhere.</description>
+				<itemGained>Doily</itemGained>
+				<timeUsed>0</timeUsed>
+				<nextScene>reload</nextScene>
+			</action>
+		</condition>
+		<condition>
+			<description>Back</description>
+			<requirement>
+				<prereq>noreqs</prereq>
+			</requirement>
+			<action>
+				<name>Back</name>
+				<description>Assassin: I didn't want to decorate anyway.</description>
+				<timeUsed>0</timeUsed>
+				<nextScene>reload</nextScene>
+			</action>
+		</condition>
+	</conditionList>
+</item>

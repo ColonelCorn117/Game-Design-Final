@@ -31,6 +31,13 @@
 				<nextScene>ChildBedroom</nextScene>
 			</action>	
 		</condition>
+		<condition>
+			<description>Examine Laundry Chute</description>
+			<action>
+				<timeUsed>0</timeUsed>
+				<nextScene>LaundryChute3F</nextScene>
+			</action>	
+		</condition>
 	</conditionList>
 	<npcList>
 	</npcList>
