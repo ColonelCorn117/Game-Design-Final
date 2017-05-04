@@ -1,0 +1,91 @@
+﻿<SceneDescription>
+	<name>Kitchen</name>
+	<description>The kitchen is fairly clean, though the chef is nowhere to be seen. No maids are present either.</description>
+	<background>Kitchen</background>
+	<conditionList>
+		<condition>
+			<description>Test (beta)</description>
+			<action>
+				<nextScene>TestDescription</nextScene>
+			</action>
+		</condition>
+		<condition>
+			<requirement>
+				<prereq>noreqs</prereq>
+			</requirement>
+			<description>Dining Room</description>
+			<action>
+				<nextScene>DiningRoom</nextScene>
+			</action>
+		</condition>
+		<condition>
+			<description>North Servant's Passage</description>
+			<action>
+				<nextScene>ServantPassage3</nextScene>
+			</action>
+		</condition>
+		<condition>
+			<requirement>
+				<prereq>gainedBucket</prereq>
+			</requirement>
+			<description>Fill Bucket with Water</description>
+			<action>
+				<description>You fill the bucket with water.</description>
+				<itemUsed>Bucket</itemUsed>
+				<itemGained>WaterBucket</itemGained>
+				<nextScene>reload</nextScene>
+			</action>	
+		</condition>
+		<condition>
+			<description>Take Bread</description>
+			<additionalDescription>Though the air is warm and heavy, a delightful aroma wafts through the room from a rack of freshly baked bread.
+			
+Assassin: That smells really good...</additionalDescription>
+			<requirement>
+				<prereq>breadn8</prereq>
+			</requirement>
+			<action>
+				<description>Assassin: I’ll just take this for strategic...bread purposes...</description>
+				<itemGained>Bread</itemGained>
+				<timeUsed>0</timeUsed>
+				<nextScene>reload</nextScene>
+			</action>
+		</condition>
+		<condition>
+			<description>Take Bread</description>
+			<additionalDescription>Though the air is warm and heavy, a delightful aroma wafts through the room from a rack of freshly baked bread.
+			
+Assassin: That smells really good...</additionalDescription>
+			<requirement>
+				<prereq>breadn9</prereq>
+				<prereq>breadm9</prereq>
+			</requirement>
+			<action>
+				<description>Assassin: I’ll just take this for strategic...bread purposes...</description>
+				<itemGained>Bread</itemGained>
+				<timeUsed>0</timeUsed>
+				<nextScene>KitchenBread</nextScene>
+			</action>
+		</condition>
+		<condition>
+			<description>Examine Bread Rack</description>
+			<additionalDescription>The delightful aroma of fresh bread lingers in the air despite the disappearance of its source.</additionalDescription>
+			<requirement>
+				<prereq>breadm10</prereq>
+			</requirement>
+			<action>
+				<description>The rack is empty. Just like your soul.</description>
+				<timeUsed>0</timeUsed>
+				<nextScene>reload</nextScene>
+			</action>
+		</condition>
+		
+	</conditionList>
+	<npcList>
+	</npcList>
+	<messList>
+	</messList>
+	<itemList>
+		<item>Soap</item>
+	</itemList>
+</SceneDescription>

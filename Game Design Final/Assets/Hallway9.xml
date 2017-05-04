@@ -1,0 +1,29 @@
+﻿<SceneDescription>
+	<name>Hallway9</name>
+	<description>Are you the hall monitor?</description>
+	<background>black</background>
+	<conditionList>
+		<condition>
+			<description>Bathroom</description>
+			<action>
+				<nextScene>Bathroom2</nextScene>
+			</action>
+		</condition>
+		<condition>
+			<description>Hallway</description>
+			<action>
+				<nextScene>Hallway6</nextScene>
+			</action>
+		</condition>
+		<condition>
+			<description>Hallway 10</description>
+			<action>
+				<nextScene>Hallway10</nextScene>
+			</action>
+		</condition>
+	</conditionList>
+	<npcList>
+	</npcList>
+	<messList>
+	</messList>
+</SceneDescription>

@@ -1,0 +1,21 @@
+﻿<SceneDescription>
+	<name>Assassin's Bedroom</name>
+	<description>A spartan room with a cot and not much else.
+	
+Assassin: Home sweet home. 
+
+Assassin: ...or rather, home sweet (miserable) home.</description>
+	<background></background>
+	<conditionList>
+		<condition>
+			<description>Hallway</description>
+			<action>
+				<nextScene>Hallway22</nextScene>
+			</action>	
+		</condition>
+	</conditionList>
+	<npcList>
+	</npcList>
+	<messList>
+	</messList>
+</SceneDescription>

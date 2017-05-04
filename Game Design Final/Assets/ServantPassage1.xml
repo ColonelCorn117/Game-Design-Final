@@ -1,0 +1,29 @@
+﻿<SceneDescription>
+	<name>Servant's Passage</name>
+	<description>It's really just another hallway.</description>
+	<background>Hallway</background>
+	<conditionList>
+		<condition>
+			<description>Laundry Room</description>
+			<action>
+				<nextScene>LaundryRoom</nextScene>
+			</action>
+		</condition>
+		<condition>
+			<description>Servants' Quarters</description>
+			<action>
+				<nextScene>ServantQuarters</nextScene>
+			</action>
+		</condition>
+		<condition>
+			<description>North Servant's Passage</description>
+			<action>
+				<nextScene>ServantPassage3</nextScene>
+			</action>
+		</condition>
+	</conditionList>
+	<npcList>
+	</npcList>
+	<messList>
+	</messList>
+</SceneDescription>

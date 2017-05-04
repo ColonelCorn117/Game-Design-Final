@@ -1,0 +1,29 @@
+﻿<SceneDescription>
+	<name>Hallway6</name>
+	<description>This hallway looks different from the rest. No, wait, no it doesn't.</description>
+	<background>black</background>
+	<conditionList>
+		<condition>
+			<description>Landing 1F</description>
+			<action>
+				<nextScene>Landing1F</nextScene>
+			</action>
+		</condition>
+		<condition>
+			<description>Hallway 7</description>
+			<action>
+				<nextScene>Hallway7</nextScene>
+			</action>
+		</condition>
+		<condition>
+			<description>Hallway</description>
+			<action>
+				<nextScene>Hallway9</nextScene>
+			</action>
+		</condition>
+	</conditionList>
+	<npcList>
+	</npcList>
+	<messList>
+	</messList>
+</SceneDescription>
