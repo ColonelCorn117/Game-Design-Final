@@ -1,7 +1,7 @@
 ﻿<SceneDescription>
 	<name>Hallway4</name>
 	<description>Hallway to hell.</description>
-	<background>Hallway</background>
+	<background>HallwayPlain</background>
 	<conditionList>
 		<condition>
 			<description>Hallway 2</description>

@@ -1,7 +1,7 @@
 ﻿<SceneDescription>
-	<name>Hallway8</name>
-	<description>More like hallway hate.</description>
-	<background>black</background>
+	<name>Hallway</name>
+	<description>More like 'allways.</description>
+	<background>HallwayPlain</background>						<!--Scene not currently used-->
 	<conditionList>
 		<condition>
 			<description>Hallway 6</description>

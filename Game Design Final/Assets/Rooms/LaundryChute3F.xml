@@ -1,7 +1,7 @@
 ﻿<SceneDescription>
 	<name>LaundryChute</name>
 	<description>A small laundry chute slot is fixed to the wall. You could probably fit inside.</description>
-	<background></background>
+	<background>HallwayPaintings</background>
 	<conditionList>
 		<condition>
 			<description>Down the Chute</description>
@@ -36,7 +36,6 @@
 		<condition>
 			<description>Back</description>
 			<action>
-				<timeUsed>0</timeUsed>
 				<nextScene>Hallway22</nextScene>
 				<timeUsed>0</timeUsed>
 			</action>	

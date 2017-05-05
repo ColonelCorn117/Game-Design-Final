@@ -4,7 +4,7 @@
 
 The laundry chute drops off clothing into a basket.
 	</description>
-	<background>black</background>
+	<background>LaundryRoom</background>
 	<conditionList>
 		<condition>
 			<description>Laundry Chute</description>

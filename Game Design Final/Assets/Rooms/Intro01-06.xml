@@ -1,7 +1,7 @@
 ﻿<SceneDescription>
 	<name>Introduction</name>
 	<description>Assassin: "It will be done..."</description>
-	<background>AssassinShadowOpenEyes</background>
+	<background>IntroAssassinOpenEyes</background>
 	<conditionList>
 		<condition>
 			<description>Continue</description>

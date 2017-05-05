@@ -1,22 +1,21 @@
 ﻿<SceneDescription>
 	<name>Dining Room</name>
-	<description>
-Assassin: Stop right now!
+	<description>Assassin: "Stop right now!"
 
-Maid: Huh? What do you want?
+Maid: "Huh? What do you want?"
 
-Assassin: Please don’t dump that wine on the tablecloth.
+Assassin: "Please don’t dump that wine on the tablecloth."
 
-Maid: What? Why?
+Maid: "What? Why?"
 
 Assassin: [Because I don’t want to clean that shit up...]
 
 Assassin: It’s not worth it.
 
-Maid: Yes it is! Lord Borkus is jerk! We’ll show him how important we are!
+Maid: "Yes it is! Lord Borkus is jerk! We’ll show him how important we are!"
 
 Assassin: [I have to negotiate this somehow.]</description>
-	<background>DiningHall</background>
+	<background>DiningRoom</background>
 	<conditionList>
 		<condition>
 			<description>Continue</description>

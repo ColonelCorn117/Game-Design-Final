@@ -1,9 +1,8 @@
 ﻿<SceneDescription>
-	<name>Hallway1</name>
+	<name>Hallway</name>
 	<description>It's a hallway.</description>
-	<background>Hallway</background>
+	<background>HallwayPlain</background>							<!--Scene not currently used-->
 	<conditionList>
-	
 		<condition>
 			<description>Landing</description>
 			<action>

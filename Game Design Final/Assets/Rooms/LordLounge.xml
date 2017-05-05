@@ -1,7 +1,7 @@
 ﻿<SceneDescription>
 	<name>Lord's Lounge</name>
 	<description>It's the lord's lounge.</description>
-	<background>LordLounge</background>
+	<background>LordsLounge</background>
 	<conditionList>
 		<condition>
 			<description>Hallway</description>

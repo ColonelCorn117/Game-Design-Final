@@ -9,7 +9,7 @@
 			</requirement>
 			<description>Pocket Lighter</description>
 			<action>
-				<description>Assassin: I'd better keep this. I'd rather not deal with ANOTHER pyromaniac.</description>
+				<description>Assassin: [I'd better keep this. I'd rather not deal with ANOTHER pyromaniac.]</description>
 				<itemGained>Lighter</itemGained>
 				<itemCreated>Painting</itemCreated>
 				<nextScene>ArtGallery</nextScene>

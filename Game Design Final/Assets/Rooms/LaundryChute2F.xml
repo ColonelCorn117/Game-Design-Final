@@ -2,15 +2,13 @@
 	<name>LaundryChute2F</name>
 	<description>A small laundry chute slot is fixed to the wall. You could probably fit inside.
 	</description>
-	<background></background>
+	<background>HallwayWindows</background>
 	<conditionList>
-	
 		<condition>
-			<description>Down the chute</description>
+			<description>Down the Chute</description>
 			<action>
 				<nextScene>LaundryRoom</nextScene>
 			</action>
-			
 		</condition>
 		<condition>
 			<description>Back</description>

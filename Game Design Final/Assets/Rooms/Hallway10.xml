@@ -1,7 +1,7 @@
 ﻿<SceneDescription>
 	<name>Hallway</name>
 	<description>Hallways here, hallways there, hallways goddamn everywhere.</description>
-	<background>black</background>
+	<background>HallwayWindows</background>
 	<conditionList>
 		<condition>
 			<description>Hallway</description>

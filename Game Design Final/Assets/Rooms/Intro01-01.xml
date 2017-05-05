@@ -6,7 +6,7 @@ Lord Borkus: "I called you all here because we have some very important guests c
 
 Lord Borkus: "This meeting is too important for fuck-ups. My mansion needs to be spotless and perfect before they arrive. If it isn’t..."
 </description>
-	<background>LordAngryFace</background>
+	<background>IntroLordAngryFace</background>
 	<conditionList>
 		<condition>
 			<description>Continue</description>

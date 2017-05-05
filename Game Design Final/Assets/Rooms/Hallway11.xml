@@ -1,9 +1,8 @@
 ﻿<SceneDescription>
 	<name>Hallway</name>
 	<description>It's a hallway.</description>
-	<background>Hallway</background>
+	<background>HallwayWindows</background>
 	<conditionList>
-	
 		<condition>
 			<description>Art Gallery</description>
 			<action>
@@ -16,8 +15,6 @@
 				<nextScene>Landing2F</nextScene>
 			</action>	
 		</condition>
-	
-		
 	</conditionList>
 	<npcList>
 	</npcList>

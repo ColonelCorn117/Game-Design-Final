@@ -1,7 +1,7 @@
 ﻿<SceneDescription>
 	<name>Hallway</name>
 	<description>Assassin: *sigh*</description>
-	<background>Hallway</background>
+	<background>HallwayPaintings</background>
 	<conditionList>
 		<condition>
 			<description>Continue</description>

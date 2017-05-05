@@ -1,10 +1,8 @@
 ﻿<SceneDescription>
 	<name>Hallway</name>
 	<description>It's a hallway. 
-	
-	There's a laundry chute in the wall.
 	</description>
-	<background>Hallway</background>
+	<background>HallwayPaintings</background>
 	<conditionList>
 	
 		<condition>
@@ -19,8 +17,6 @@
 				<nextScene>Landing3F</nextScene>
 			</action>	
 		</condition>
-	
-		
 	</conditionList>
 	<npcList>
 	</npcList>

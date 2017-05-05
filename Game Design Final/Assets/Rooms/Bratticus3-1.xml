@@ -3,7 +3,6 @@
 	<description>I don't have much time left. I need to clean this up fast.</description>
 	<background>MusicRoom</background>
 	<conditionList>
-		
 		<condition>
 			<description>Continue</description>
 			<action>				

@@ -2,7 +2,7 @@
 	<name>Dining Room</name>
 	<description>A long table stretches through the middle of the room, a set of fancy chandeliers dangling over it to provide light. The tablecloth has been spread out and stacks of dishes placed on it for when the guests arrive.
 	</description>
-	<background>DiningHall</background>
+	<background>DiningRoom</background>
 	<conditionList>
 		<condition>
 			<description>Do Nothing</description>

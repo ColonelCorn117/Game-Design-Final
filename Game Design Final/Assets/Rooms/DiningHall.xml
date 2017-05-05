@@ -4,9 +4,9 @@
 
 A single maid stands at the far end, a glass of wine in hand.
 
-Assassin: Please don’t tell me she’s planning to do what I think she’s planning to do...
+Assassin: [Please don’t tell me she’s planning to do what I think she’s planning to do...]
 	</description>
-	<background>DiningHall</background>
+	<background>DiningRoom</background>
 	<conditionList>
 		<condition>
 			<description>Do Nothing</description>

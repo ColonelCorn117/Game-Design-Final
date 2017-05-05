@@ -1,7 +1,7 @@
 ﻿<SceneDescription>
 	<name>Vase</name>
 	<description>The vase is clearly a priceless antique. It's incredibly bland and has no remarkable features whatsoever.</description>
-	<background>Hallway</background>
+	<background>HallwayWindows</background>
 	<conditionList>
 		<condition>
 			<description>Take</description>

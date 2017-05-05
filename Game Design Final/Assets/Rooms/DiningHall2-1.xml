@@ -1,13 +1,13 @@
 ﻿<SceneDescription>
 	<name>Dining Room</name>
-	<description>Assassin: That wine is a vintage, limited bottle. Don’t give him the satisfaction of saying you wasted it. Why not drink it instead? Not only does he lose a valuable maid, but he also loses a delicious wine that you get to take instead.
+	<description>Assassin: "That wine is a vintage, limited bottle. Don’t give him the satisfaction of saying you wasted it. Why not drink it instead? Not only does he lose a valuable maid, but he also loses a delicious wine that you get to take instead."
 
-	The Maid hesitates, staring at the glass with an expression that shows she is considering the idea offered.
+The Maid hesitates, staring at the glass with an expression that shows she is considering the idea offered.
 
-Maid: You won’t tell him?
+Maid: "You won’t tell him?"
 
-Assassin: Nope. I think he’s a dick too. Drink away and just don’t get caught on your way out.</description>
-	<background>DiningHall</background>
+Assassin: "Nope. I think he’s a dick too. Drink away and just don’t get caught on your way out."</description>
+	<background>DiningRoom</background>
 	<conditionList>
 		<condition>
 			<description>Continue</description>
