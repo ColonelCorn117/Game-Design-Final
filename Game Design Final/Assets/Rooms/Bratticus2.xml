@@ -1,11 +1,10 @@
 ﻿<SceneDescription>
-	<name>Music Room</name>
+	<name>Music Room - 1F</name>
 	<description>Bratticus has already set the curtains on fire and charred some sort of incomprehensible diagram onto the lid of one of the pianos. The harp's strings are broken and smoldering. 
 	
 The monster's laughter, completely empty of any sign of sanity, echoes throughout the room.</description>
 	<background>MusicRoom</background>
 	<conditionList>
-		
 		<condition>
 			<description>Pinpoint Sound</description>
 			<action>

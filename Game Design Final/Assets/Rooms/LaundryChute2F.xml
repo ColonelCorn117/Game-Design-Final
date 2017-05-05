@@ -1,8 +1,8 @@
 ﻿<SceneDescription>
-	<name>LaundryChute2F</name>
+	<name>Laundry Chute -  2F</name>
 	<description>A small laundry chute slot is fixed to the wall. You could probably fit inside.
 	</description>
-	<background>HallwayWindows</background>
+	<background>HallwayWindows</background>						<!---Scene not currently used-->
 	<conditionList>
 		<condition>
 			<description>Down the Chute</description>

@@ -1,5 +1,5 @@
 ﻿<SceneDescription>
-	<name>Orchestra Pit</name>
+	<name>Orchestra Pit - 1F</name>
 	<description>Without the orchesta, this is just a big, empty space within the bigger, emptier ballroom. Still, the piano looks very imposing.</description>
 	<background>OrchestraPit</background>
 	<conditionList>	
@@ -62,7 +62,7 @@ Assassin: [She would.]
 			</action>
 		</condition>
 		<condition>
-			<description>Murder Maid</description>
+			<description>Kill Maid</description>
 			<requirement>
 				<prereq>existsMaid2</prereq>
 			</requirement>
@@ -81,8 +81,7 @@ Assassin: [She would.]
 				<prereq>gainedKnife</prereq>
 			</requirement>
 			<action>
-				<description>
-					Muscle memory kicks in as you aim for the maid's exposed throat. In a single smooth motion, you release the knife, and a "thud" marks your success an instant later.
+				<description>Muscle memory kicks in as you aim for the maid's exposed throat. In a single smooth motion, you release the knife, and a "thud" marks your success an instant later.
 				</description>
 				<itemUsed>Knife</itemUsed>
 				<npcSubdued>Maid2</npcSubdued>
@@ -99,8 +98,7 @@ Assassin: [She would.]
 				<prereq>gainedKnife</prereq>
 			</requirement>
 			<action>
-				<description>
-					Muscle memory kicks in as you aim for the jam jar. In a single smooth motion, you release the knife, and a sharp cry marks your success an instant later.				
+				<description>Muscle memory kicks in as you aim for the jam jar. In a single smooth motion, you release the knife, and a sharp cry marks your success an instant later.				
 				</description>
 				<itemUsed>Knife</itemUsed>
 				<npcSubdued>Maid2</npcSubdued>

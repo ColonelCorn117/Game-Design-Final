@@ -12,7 +12,7 @@
 			</requirement>
 			<action>
 				<name>Take</name>
-				<description>Assassin: I'd better get this out of the way.</description>
+				<description>Assassin: [I'd better get this out of the way.]</description>
 				<itemGained>Corpse</itemGained>
 				<timeUsed>0</timeUsed>
 				<nextScene>reload</nextScene>
@@ -25,7 +25,7 @@
 			</requirement>
 			<action>
 				<name>Take</name>
-				<description>Assassin: I can't carry this while I'm hauling a corpse.</description>
+				<description>Assassin: [I can't carry this while I'm hauling a corpse.]</description>
 				<timeUsed>0</timeUsed>
 				<nextScene>reload</nextScene>
 			</action>
@@ -37,7 +37,7 @@
 			</requirement>
 			<action>
 				<name>Take</name>
-				<description>Assassin: I can't carry this while I'm hauling a corpse.</description>
+				<description>Assassin: [I can't carry this while I'm hauling a corpse.]</description>
 				<timeUsed>0</timeUsed>
 				<nextScene>reload</nextScene>
 			</action>
@@ -51,7 +51,7 @@
 			<action>
 				<name>Back</name>
 				<timeUsed>0</timeUsed>
-				<description>Assassin: I'll worry about this later. Probably.</description>
+				<description>Assassin: [I'll worry about this later. Probably.]</description>
 				<nextScene>reload</nextScene>
 			</action>
 		</condition>

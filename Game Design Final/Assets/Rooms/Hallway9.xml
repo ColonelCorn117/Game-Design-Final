@@ -1,22 +1,22 @@
 ﻿<SceneDescription>
-	<name>Hallway</name>
+	<name>Hallway - 1F</name>
 	<description>Are you the hall monitor?</description>
 	<background>HallwayPlain</background>
 	<conditionList>
 		<condition>
-			<description>Bathroom</description>
-			<action>
-				<nextScene>Bathroom2</nextScene>
-			</action>
-		</condition>
-		<condition>
-			<description>Hallway</description>
+			<description>Hallway (North)</description>
 			<action>
 				<nextScene>Hallway6</nextScene>
 			</action>
 		</condition>
 		<condition>
-			<description>Hallway 10</description>
+			<description>Bathroom (East)</description>
+			<action>
+				<nextScene>Bathroom2</nextScene>
+			</action>
+		</condition>
+		<condition>
+			<description>Hallway (South)</description>
 			<action>
 				<nextScene>Hallway10</nextScene>
 			</action>

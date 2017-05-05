@@ -1,5 +1,5 @@
 ﻿<SceneDescription>
-	<name>Dining Room</name>
+	<name>Dining Room - 1F</name>
 	<description>A long table stretches through the middle of the room, a set of fancy chandeliers dangling over it to provide light. The tablecloth has been spread out and stacks of dishes placed on it for when the guests arrive.
 	</description>
 	<background>DiningRoom</background>
@@ -62,7 +62,7 @@ Assassin: [Please don’t tell me she’s planning to do what I think she’s pl
 			<requirement>
 				<prereq>removeMaid1</prereq>
 			</requirement>
-			<description>Hallway</description>
+			<description>Hallway (East)</description>
 			<action>
 				<nextScene>Hallway10</nextScene>
 			</action>
@@ -71,7 +71,7 @@ Assassin: [Please don’t tell me she’s planning to do what I think she’s pl
 			<requirement>
 				<prereq>removeMaid1</prereq>
 			</requirement>
-			<description>Kitchen</description>
+			<description>Kitchen (West)</description>
 			<action>
 				<nextScene>Kitchen</nextScene>
 			</action>

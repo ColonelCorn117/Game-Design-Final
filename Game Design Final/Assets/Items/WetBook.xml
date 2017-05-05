@@ -13,7 +13,7 @@ The book is sopping wet, to the point that you don't think you can open it witho
 			</requirement>
 			<action>
 				<name>Take Book</name>
-				<description>Assassin: This could be useful if I can somehow dry it off.</description>
+				<description>Assassin: [This could be useful if I can somehow dry it off.]</description>
 				<itemGained>WetBook</itemGained>
 				<timeUsed>0</timeUsed>
 				<nextScene>reload</nextScene>
@@ -27,7 +27,7 @@ The book is sopping wet, to the point that you don't think you can open it witho
 			</requirement>
 			<action>
 				<name>Back</name>
-				<description>Assassin: I'll worry about this later.</description>
+				<description>Assassin: [I'll worry about this later.]</description>
 				<timeUsed>0</timeUsed>
 				<nextScene>reload</nextScene>
 			</action>

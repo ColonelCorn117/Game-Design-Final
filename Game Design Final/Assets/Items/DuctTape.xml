@@ -2,7 +2,7 @@
 	<name>Duct Tape</name>
 	<description>According to the label, "Solves half of your problems with a single strip!"
 	
-Assassin: Unfortunately, the other half of my problems are related to Lord Borkus.</description>
+Assassin: [Unfortunately, the other half of my problems are related to Lord Borkus.]</description>
 	<exists>1</exists>
 	<conditionList>
 		<condition>
@@ -12,7 +12,7 @@ Assassin: Unfortunately, the other half of my problems are related to Lord Borku
 			</requirement>
 			<action>
 				<name>Take</name>
-				<description>Assassin: I'll probably find a use for this somewhere.</description>
+				<description>Assassin: [I'll probably find a use for this somewhere.]</description>
 				<itemGained>DuctTape</itemGained>
 				<timeUsed>0</timeUsed>
 				<nextScene>reload</nextScene>
@@ -25,7 +25,7 @@ Assassin: Unfortunately, the other half of my problems are related to Lord Borku
 			</requirement>
 			<action>
 				<name>Back</name>
-				<description>Assassin: Nah. It's not like I'll ever need to keep someone or something from moving.</description>
+				<description>Assassin: [Nah. It's not like I'll ever need to keep someone or something from moving.]</description>
 				<timeUsed>0</timeUsed>
 				<nextScene>reload</nextScene>
 			</action>

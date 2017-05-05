@@ -1,18 +1,18 @@
 ﻿<SceneDescription>
-	<name>Ballroom</name>
+	<name>Ballroom - 1F</name>
 	<description>This is a large, open room with expensive chandeliers.
 
 There is an area for a live orchestra at one end.</description>
 	<background>Ballroom</background>
 	<conditionList>	
 		<condition>
-			<description>Hallway 3</description>
+			<description>Hallway (North)</description>
 			<action>
 				<nextScene>Hallway3</nextScene>
 			</action>
 		</condition>
 		<condition>
-			<description>Orchestra Pit</description>
+			<description>Orchestra Pit (South)</description>
 			<action>
 				<nextScene>OrchestraPit</nextScene>
 			</action>

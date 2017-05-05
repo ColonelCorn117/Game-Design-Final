@@ -1,10 +1,10 @@
 ﻿<SceneDescription>
-	<name>Library</name>
+	<name>Library - 1F</name>
 	<description>Bookshelves span the walls, all with labels by section for easy searching. A rolling ladder for reaching all areas has wisely been installed.</description>
 	<background>Library</background>
 	<conditionList>
 		<condition>
-			<description>Hallway</description>
+			<description>Hallway (North)</description>
 			<requirement>
 				<prereq>removeMaid4</prereq>
 			</requirement>

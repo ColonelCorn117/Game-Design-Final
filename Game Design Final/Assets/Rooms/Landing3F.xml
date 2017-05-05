@@ -1,36 +1,26 @@
 ﻿<SceneDescription>
-	<name>Landing</name>
+	<name>Landing - 3F</name>
 	<description>You see a flight of stairs going down. You have the urge to slide down the railing.
 	</description>
 	<background>Landing</background>
 	<conditionList>
-	
 		<condition>
-			<description>Downstairs</description>
-			<action>
-				<nextScene>Landing2F</nextScene>
-			</action>
-			
-		</condition>
-		<condition>
-			<description>North Hallway</description>
-			<action>
-				<nextScene>Hallway21</nextScene>
-			</action>
-			
-		</condition>
-		<condition>
-			<description>South Hallway</description>
+			<description>Hallway (East)</description>
 			<action>
 				<nextScene>Hallway22</nextScene>
 			</action>
-			
 		</condition>
 		<condition>
-			<description>Test (beta)</description>
+			<description>Downstairs (South)</description>
 			<action>
-				<nextScene>TestDescription</nextScene>
-			</action>	
+				<nextScene>Landing2F</nextScene>
+			</action>
+		</condition>
+		<condition>
+			<description>Hallway (West)</description>
+			<action>
+				<nextScene>Hallway21</nextScene>
+			</action>
 		</condition>
 	</conditionList>
 	<npcList>

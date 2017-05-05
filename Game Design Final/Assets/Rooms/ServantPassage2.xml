@@ -1,9 +1,9 @@
 ﻿<SceneDescription>
-	<name>Servant's Passage</name>
+	<name>Servants' Passage - 1F</name>
 	<description>The evolved form of a hallway.
 	
 You can smell the faint aroma of baked goods.</description>
-	<background>ServantsPassage</background>
+	<background>ServantsPassage</background>								<!---Scene not currently used-->
 	<conditionList>
 		<condition>
 			<description>North Servant Passage</description>
@@ -22,11 +22,9 @@ You can smell the faint aroma of baked goods.</description>
 			<action>
 				<nextScene>ServantPassage1</nextScene>
 			</action>
-			
 		</condition>
 	</conditionList>
 	<npcList>
-		<npc>Glutton</npc>
 	</npcList>
 	<messList>
 	</messList>

@@ -1,10 +1,10 @@
 <SceneDescription>
-	<name>Entrance</name>
+	<name>Entrance - 1F</name>
 	<description>You stand in the entryway to the mansion. It's very big.</description>
 	<background>Landing</background>
 	<conditionList>
 		<condition>
-			<description>Landing</description>
+			<description>Landing (North)</description>
 			<action>
 				<name>toLanding</name>
 				<nextScene>Landing1F</nextScene>

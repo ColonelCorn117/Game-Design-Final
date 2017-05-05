@@ -23,11 +23,12 @@ public class Controller_Game : MonoBehaviour
 	//public List<TextAsset> npcsXML = new List<TextAsset>();
 	//public List<TextAsset> roomsXML = new List<TextAsset>();
 
-	public List<string> itemList = new List<string>();
+	public List<string> itemList = new List<string>();				//Every individual item in the inventory (no item stacks)
+	public List<string> itemListCondensed = new List<string>();		//Abbreviated version of the above (1 stack = 1 item)
 	Dictionary<string, NPC> npcs = new Dictionary<string, NPC>();
 	Dictionary<string,Mess> messes = new Dictionary<string, Mess>();
 	Dictionary<string,Item> items = new Dictionary<string, Item>();
-	public float timeRemaining = 50.0f;
+	public float timeRemaining = 130.0f;
 	public int killCount = 0;
 	public int unclaimedBodyCount = 0;
 	public int breadConsumed = 0;		//How much bread the gorilla maid has consumed
@@ -288,10 +289,10 @@ public class Controller_Game : MonoBehaviour
 			this.ItemLookup (a.itemUsed).consume ();
 
 		}
-		if (a.startTimer != null && a.startTimer != 0) {
+		if (a.startTimer != 0) {
 			this.encounterTimerRunning = true;
 		}
-		if (a.stopTimer != null && a.stopTimer != 0) {
+		if (a.stopTimer != 0) {
 			this.encounterTimerRunning = false;
 		}
 
@@ -414,8 +415,12 @@ public class Controller_Game : MonoBehaviour
 	//----------------------------------------------------------------------------------------------------
 
 	public void examineItem(int i) {
-		Item item = ItemLookup (itemList [i-1]);
-		SceneScript.sceneScript.examineObjectInInventory (item);
+		if (i < itemListCondensed.Count)
+		{
+			Item item = ItemLookup (itemListCondensed [i-1]);
+			SceneScript.sceneScript.examineObjectInInventory (item);
+		}
+
 	}
 
 	//----------------------------------------------------------------------------------------------------
@@ -508,7 +513,8 @@ public class Controller_Game : MonoBehaviour
 			encounterTimer += amount;
 		}
 		if (timeRemaining <= 0) {
-
+			timeRemaining = 0;
+			//TODO: Load ending scenes
 		}
 	}
 

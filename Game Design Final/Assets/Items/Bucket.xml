@@ -10,7 +10,7 @@
 			</requirement>
 			<action>
 				<name>Take</name>
-				<description>Assassin: That might come in handy. I should take it with me.</description>
+				<description>Assassin: [That might come in handy. I should take it with me.]</description>
 				<itemGained>Bucket</itemGained>
 				<timeUsed>0</timeUsed>
 				<nextScene>reload</nextScene>
@@ -23,7 +23,7 @@
 			</requirement>
 			<action>
 				<name>Back</name>
-				<description>Assassin: That’s fine, I didn’t want a bucket anyway.</description>
+				<description>Assassin: [That’s fine, I didn’t want a bucket anyway.]</description>
 				<timeUsed>0</timeUsed>
 				<nextScene>reload</nextScene>
 			</action>

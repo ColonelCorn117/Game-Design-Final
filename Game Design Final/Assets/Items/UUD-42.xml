@@ -2,7 +2,7 @@
 	<name>UUD-42</name>
 	<description>According to the label, it's an "All-Purpose Cleaner*".
 	
-	*Not actually all-purpose.
+*Not actually all-purpose.
 	</description>
 	<exists>1</exists>
 	<duplicable>0</duplicable>
@@ -14,7 +14,7 @@
 			</requirement>
 			<action>
 				<name>Take UUD-42</name>
-				<description>Assassin: Knowing these maids, there's probably something they've jammed around here.</description>
+				<description>Assassin: [Knowing these maids, there's probably something they've jammed around here.]</description>
 				<itemGained>UUD-42</itemGained>
 				<timeUsed>0</timeUsed>
 				<nextScene>reload</nextScene>
@@ -28,7 +28,7 @@
 			</requirement>
 			<action>
 				<name>Back</name>
-				<description>Assassin: I'll worry about this later.</description>
+				<description>Assassin: [I'll worry about this later.]</description>
 				<timeUsed>0</timeUsed>
 				<nextScene>reload</nextScene>
 			</action>

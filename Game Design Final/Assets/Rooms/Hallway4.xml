@@ -1,30 +1,30 @@
 ﻿<SceneDescription>
-	<name>Hallway4</name>
+	<name>Hallway - 1F</name>
 	<description>Hallway to hell.</description>
 	<background>HallwayPlain</background>
 	<conditionList>
 		<condition>
-			<description>Hallway 2</description>
-			<action>
-				<nextScene>Hallway2</nextScene>
-			</action>
-		</condition>
-		<condition>
-			<description>Hallway 5</description>
+			<description>Hallway (North)</description>
 			<action>
 				<nextScene>Hallway5</nextScene>
 			</action>
 		</condition>
 		<condition>
-			<description>Closet</description>
+			<description>Hallway (East)</description>
 			<action>
-				<nextScene>Closet2</nextScene>
+				<nextScene>Hallway2</nextScene>
 			</action>
 		</condition>
 		<condition>
-			<description>Library</description>
+			<description>Library (South)</description>
 			<action>
 				<nextScene>Library</nextScene>
+			</action>
+		</condition>
+		<condition>
+			<description>Closet (West)</description>
+			<action>
+				<nextScene>Closet2</nextScene>
 			</action>
 		</condition>
 	</conditionList>

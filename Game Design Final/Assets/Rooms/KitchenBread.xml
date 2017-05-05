@@ -1,5 +1,5 @@
 ﻿<SceneDescription>
-	<name>Kitchen</name>
+	<name>Kitchen - 1F</name>
 	<description>Assassin: "There’s no limit to the amount of bread puns I could make right now…"
 Assassin: "But that’s the YEAST of my worries...haha...get it?"</description>
 	<background>Kitchen</background>
@@ -11,7 +11,6 @@ Assassin: "But that’s the YEAST of my worries...haha...get it?"</description>
 				<nextScene>Kitchen</nextScene>
 			</action>
 		</condition>
-		
 	</conditionList>
 	<npcList>
 	</npcList>

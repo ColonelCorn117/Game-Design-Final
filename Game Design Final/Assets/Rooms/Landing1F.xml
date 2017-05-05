@@ -1,28 +1,20 @@
 ﻿<SceneDescription>
-	<name>Landing</name>
+	<name>Landing - 1F</name>
 	<description>You see a flight of stairs. They are big and fluffy.
 	</description>
 	<background>Landing</background>
 	<conditionList>
 		<condition>
-			<description>Entrance</description>
-			<action>
-				<nextScene>Entrance</nextScene>
-			</action>
-			
-		</condition>
-		<condition>
-			<description>Upstairs</description>
+			<description>Upstairs (North)</description>
 			<requirement>
 				<prereq>nomessTripwires</prereq>
 			</requirement>
 			<action>
 				<nextScene>Landing2F</nextScene>
 			</action>
-			
 		</condition>
 		<condition>
-			<description>Upstairs</description>
+			<description>Upstairs (North)</description>
 			<additionalDescription>Climbing equipment 'decorates' the stairs, making them more difficult to climb.</additionalDescription>
 			<requirement>
 				<prereq>messedTripwires</prereq>
@@ -31,25 +23,23 @@
 				<timeUsed>1</timeUsed>
 				<nextScene>Landing2F</nextScene>
 			</action>
-			
 		</condition>
 		<condition>
-			<description>South Hallway</description>
-			<action>
-				<nextScene>Hallway2</nextScene>
-			</action>
-		</condition>
-		<condition>
-			<description>North Hallway</description>
+			<description>Hallway (East)</description>
 			<action>
 				<nextScene>Hallway6</nextScene>
 			</action>
 		</condition>
 		<condition>
-			<description>Test (beta)</description>
+			<description>Entrance (South)</description>
 			<action>
-				<name>Remove Later</name>
-				<nextScene>TestDescription</nextScene>
+				<nextScene>Entrance</nextScene>
+			</action>
+		</condition>
+		<condition>
+			<description>Hallway (West)</description>
+			<action>
+				<nextScene>Hallway2</nextScene>
 			</action>
 		</condition>
 	</conditionList>

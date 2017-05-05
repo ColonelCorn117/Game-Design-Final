@@ -5,13 +5,13 @@
 	<conditionList>
 		<condition>
 			<description>Take</description>
-			<additionalDescription>Assassin: Why are these even here?</additionalDescription>
+			<additionalDescription>Assassin: [Why are these even here?]</additionalDescription>
 			<requirement>
 				<prereq>nogainCurtains</prereq>
 			</requirement>
 			<action>
 				<name>Take</name>
-				<description>Assassin: I wonder if I could turn these a spiffy cloak...</description>
+				<description>Assassin: [I wonder if I could turn these a spiffy cloak...]</description>
 				<itemGained>Curtains</itemGained>
 				<timeUsed>0</timeUsed>
 				<nextScene>reload</nextScene>
@@ -24,7 +24,7 @@
 			</requirement>
 			<action>
 				<name>Back</name>
-				<description>Assassin: If I wanted to tell someone, "It's curtains for you!", I would have become an actor.</description>
+				<description>Assassin: [If I wanted to tell someone, "It's curtains for you!", I would have become an actor.]</description>
 				<timeUsed>0</timeUsed>
 				<nextScene>reload</nextScene>
 			</action>

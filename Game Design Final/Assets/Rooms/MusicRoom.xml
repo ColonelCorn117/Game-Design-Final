@@ -1,14 +1,16 @@
 ﻿<SceneDescription>
-	<name>Music Room</name>
+	<name>Music Room - 1F</name>
 	<description>The music room is equally as unused as half of the other rooms in the mansion. White walls decorated with gold trimming and cliche fleur-de-lis patterns match the white plush carpet. A harp sits in one corner of the room, overshadowed by the three grand pianos: one black, one white, and one almond brown.
 </description>
 	<background>MusicRoom</background>
 	<conditionList>
 		<condition>
-			<description>Hallway</description>
+			<description>Hallway (South)</description>
 			<additionalDescription>Assassin: ...
-Assassin: He doesn’t even know how to play ONE piano; why does he need THREE?
-Assassin: *sigh* Whatever. At least there aren’t any messes to deal with here.</additionalDescription>
+
+Assassin: [He doesn’t even know how to play ONE piano; why does he need THREE?]
+
+Assassin: *sigh* "Whatever. At least there aren’t any messes to deal with here."</additionalDescription>
 			<requirement>
 				<prereq>removeBratticus</prereq>
 			</requirement>

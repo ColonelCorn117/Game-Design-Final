@@ -1,30 +1,30 @@
 ﻿<SceneDescription>
-	<name>Hallway5</name>
+	<name>Hallway - 1F</name>
 	<description>Hall-elujah.</description>
 	<background>HallwayPaintings</background>
 	<conditionList>
 		<condition>
-			<description>Hallway 4</description>
-			<action>
-				<nextScene>Hallway4</nextScene>
-			</action>
-		</condition>
-		<condition>
-			<description>Assassin's Room</description>
+			<description>Assassin's Room (North)</description>
 			<action>
 				<nextScene>AssassinBedroom</nextScene>
 			</action>
 		</condition>
 		<condition>
-			<description>Lord's Lounge</description>
+			<description>Hallway (South)</description>
 			<action>
-				<nextScene>LordLounge</nextScene>
+				<nextScene>Hallway4</nextScene>
 			</action>
 		</condition>
 		<condition>
-			<description>Bathroom</description>
+			<description>Bathroom (West)</description>
 			<action>
 				<nextScene>Bathroom1</nextScene>
+			</action>
+		</condition>
+		<condition>
+			<description>Lord's Lounge(West)</description>
+			<action>
+				<nextScene>LordLounge</nextScene>
 			</action>
 		</condition>
 	</conditionList>

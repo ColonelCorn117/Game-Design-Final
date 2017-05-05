@@ -1,27 +1,26 @@
 ﻿<SceneDescription>
-	<name>Hallway7</name>
+	<name>Hallway - 1F</name>
 	<description>No, that was that other hallway.</description>
 	<background>HallwayWindows</background>
 	<conditionList>
 		<condition>
-			<description>Music Room</description>
+			<description>Music Room (North)</description>
 			<action>
 				<nextScene>MusicRoom</nextScene>
 			</action>
 		</condition>
 		<condition>
-			<description>Hallway 6</description>
-			<action>
-				<nextScene>Hallway6</nextScene>
-			</action>
-		</condition>
-		<condition>
-			<description>North Servant Passage</description>
+			<description>Servant Passage (South)</description>
 			<action>
 				<nextScene>ServantPassage1</nextScene>
 			</action>
 		</condition>
-		
+		<condition>
+			<description>Hallway (West)</description>
+			<action>
+				<nextScene>Hallway10</nextScene>
+			</action>
+		</condition>
 	</conditionList>
 	<npcList>
 	</npcList>

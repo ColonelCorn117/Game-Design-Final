@@ -121,7 +121,7 @@ public class Requirement {
 					}
 
 				} else if (req.StartsWith ("invblk")) {
-					// the player has bread in the first N slots in inventory.
+					// the player has bread in the first N slots of their inventory.
 					int breadCount = int.Parse (reqName);
 					if (Controller_Game.ctrl_game.itemList.Count > 0) {
 						for (int i = 0; i < breadCount; ++i) {

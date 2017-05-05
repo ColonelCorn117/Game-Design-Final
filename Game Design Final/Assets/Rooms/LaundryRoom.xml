@@ -1,13 +1,21 @@
 ﻿<SceneDescription>
-	<name>LaundryRoom</name>
+	<name>Laundry Room - 1F</name>
 	<description>It's a laundry room. You can see laundry.
+
+There is a washer and dryer in the corner and clean linens stacked nearby.
 
 The laundry chute drops off clothing into a basket.
 	</description>
 	<background>LaundryRoom</background>
 	<conditionList>
 		<condition>
-			<description>Laundry Chute</description>
+			<description>Hallway (South)</description>
+			<action>
+				<nextScene>ServantPassage1</nextScene>
+			</action>
+		</condition>
+		<condition>
+			<description>Examine Laundry Chute</description>
 			<action>
 				<timeUsed>0</timeUsed>
 				<nextScene>LaundryChute1F</nextScene>
@@ -51,13 +59,7 @@ The laundry chute drops off clothing into a basket.
 				<nextScene>reload</nextScene>
 			</action>
 		</condition>
-		<condition>
-			<description>Hallway</description>
-			<action>
-				<nextScene>ServantPassage1</nextScene>
-			</action>
-			
-		</condition>
+
 	</conditionList>
 	<npcList>
 	</npcList>

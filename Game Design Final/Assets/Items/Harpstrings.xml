@@ -5,13 +5,13 @@
 	<conditionList>
 		<condition>
 			<description>Take</description>
-			<additionalDescription>Assassin: Hiding these</additionalDescription>
+			<additionalDescription>Assassin: [Hiding these]</additionalDescription>
 			<requirement>
 				<prereq>nogainHarpstrings</prereq>
 			</requirement>
 			<action>
 				<name>Take</name>
-				<description>Assassin: This will probably come in handy.</description>
+				<description>Assassin: [This will probably come in handy.]</description>
 				<itemGained>Curtains</itemGained>
 				<timeUsed>0</timeUsed>
 				<nextScene>reload</nextScene>
@@ -24,7 +24,7 @@
 			</requirement>
 			<action>
 				<name>Back</name>
-				<description>Assassin: Cat gut is probably too weak to be an effective garrote.</description>
+				<description>Assassin: [Cat gut is probably too weak to be an effective garrote.]</description>
 				<timeUsed>0</timeUsed>
 				<nextScene>reload</nextScene>
 			</action>

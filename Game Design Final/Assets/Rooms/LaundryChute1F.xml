@@ -1,11 +1,11 @@
 ﻿<SceneDescription>
-	<name>Laundry Chute</name>
+	<name>Laundry Chute  - 1F</name>
 	<description>A small laundry chute drops clothing into a large basket.</description>
 	<background>LaundryRoom</background>
 	<conditionList>
 		<condition>
 			<description>Climb</description>
-			<additionalDescription>Assassin: I think I could make it up the chute with this climbing gear.</additionalDescription>
+			<additionalDescription>Assassin: [I think I could make it up the chute with this climbing gear.]</additionalDescription>
 			<requirement>
 				<prereq>gainedClimbingEquipment</prereq>
 			</requirement>
@@ -14,20 +14,17 @@
 				<timeUsed>5</timeUsed>
 				<nextScene>LaundryChute3F</nextScene>
 			</action>
-			
 		</condition>
-		
 		<condition>
 			<description>Back</description>
 			<requirement>
 				<prereq>nogainClimbingEquipment</prereq>
 			</requirement>
-			<additionalDescription>Assassin: I'm pretty sure I can't climb up the chute. I'm an assassin, not a ninja!</additionalDescription>
+			<additionalDescription>Assassin: [I'm pretty sure I can't climb up the chute. I'm an assassin, not a ninja!]</additionalDescription>
 			<action>
 				<timeUsed>0</timeUsed>
 				<nextScene>LaundryRoom</nextScene>
 			</action>
-			
 		</condition>
 		<condition>
 			<description>Back</description>
@@ -35,7 +32,7 @@
 				<prereq>gainedClimbingEquipment</prereq>
 			</requirement>
 			<action>
-				<description>Assassin: Yeah, I'm not doing that.</description>
+				<description>Assassin: "Yeah, I'm not doing that."</description>
 				<nextScene>LaundryRoom</nextScene>
 				<timeUsed>0.0</timeUsed>
 			</action>
