@@ -29,6 +29,7 @@
 				<prereq>existsMaid4</prereq>
 			</requirement>
 			<action>
+				<npcSubdued>Maid4</npcSubdued>
 				<messCreated>BooksStrewn</messCreated>
 				<nextScene>Library1</nextScene>
 				<timeUsed>1.0</timeUsed>
@@ -40,6 +41,7 @@
 				<prereq>existsMaid4</prereq>
 			</requirement>
 			<action>
+				<npcSubdued>Maid4</npcSubdued>
 				<itemCreated>Body</itemCreated>
 				<messCreated>BooksStrewn</messCreated>
 				<nextScene>Library2</nextScene>
@@ -52,6 +54,8 @@
 				<prereq>existsMaid4</prereq>
 			</requirement>
 			<action>
+				<npcSubdued>Maid4</npcSubdued>
+				<kill>1</kill>
 				<itemCreated>Corpse</itemCreated>
 				<messCreated>BooksStrewn</messCreated>
 				<nextScene>Library3</nextScene>
@@ -66,5 +70,7 @@
 	</messList>
 	<itemList>
 		<item>Mop</item>
+		<item>Corpse</item>
+		<item>Body</item>
 	</itemList>
 </SceneDescription>
