@@ -1,7 +1,7 @@
 ﻿<SceneDescription>
 	<name>Bratticus's Bedroom</name>
 	<description>Assassin: ...</description>
-	<background>ChildBedroom</background>
+	<background>ChildsBedroom</background>
 	<conditionList>
 		<condition>
 			<description>Give Up</description>

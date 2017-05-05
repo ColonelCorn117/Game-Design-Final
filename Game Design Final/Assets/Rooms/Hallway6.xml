@@ -1,7 +1,7 @@
 ﻿<SceneDescription>
-	<name>Hallway6</name>
+	<name>Hallway</name>
 	<description>This hallway looks different from the rest. No, wait, no it doesn't.</description>
-	<background>black</background>
+	<background>HallwayPaintings</background>
 	<conditionList>
 		<condition>
 			<description>Landing 1F</description>

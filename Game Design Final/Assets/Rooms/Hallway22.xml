@@ -1,7 +1,10 @@
 ﻿<SceneDescription>
 	<name>Hallway</name>
-	<description>It's a hallway.</description>
-	<background></background>
+	<description>It's a hallway.
+
+There's a laundry chute in the wall.
+</description>
+	<background>HallwayPaintings</background>
 	<conditionList>
 		<condition>
 			<description>Landing</description>

@@ -1,7 +1,7 @@
 ﻿<SceneDescription>
 	<name>Laundry Chute</name>
 	<description>A small laundry chute drops clothing into a large basket.</description>
-	<background></background>
+	<background>LaundryRoom</background>
 	<conditionList>
 		<condition>
 			<description>Climb</description>
@@ -36,7 +36,6 @@
 			</requirement>
 			<action>
 				<description>Assassin: Yeah, I'm not doing that.</description>
-				<timeUsed>0</timeUsed>
 				<nextScene>LaundryRoom</nextScene>
 				<timeUsed>0.0</timeUsed>
 			</action>

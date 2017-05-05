@@ -1,7 +1,7 @@
 ﻿<SceneDescription>
 	<name>Servant's Passage</name>
 	<description>It's really just another hallway.</description>
-	<background>Hallway</background>
+	<background>HallwayPlain</background>
 	<conditionList>
 		<condition>
 			<description>Laundry Room</description>

@@ -2416,6 +2416,8 @@ MonoBehaviour:
   killCount: 0
   unclaimedBodyCount: 0
   breadConsumed: 0
+  encounterTimerRunning: 0
+  encounterTimer: 0
 --- !u!114 &887181254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2427,7 +2429,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6815287f3d7c48dca01f26452a6f278, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingSceneName: Library
+  currentSceneName: 
+  startingSceneName: Intro01-01
 --- !u!1 &896676789
 GameObject:
   m_ObjectHideFlags: 0

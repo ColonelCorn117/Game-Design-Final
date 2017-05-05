@@ -1,9 +1,8 @@
 ﻿<SceneDescription>
 	<name>Dining Room</name>
-	<description>
-	Maid is Subdued, but some wine spills on the floor during the struggle.
+	<description>Maid is Subdued, but some wine spills on the floor during the struggle.
 	</description>
-	<background>DiningHall</background>
+	<background>DiningRoom</background>
 	<conditionList>
 		<condition>
 			<description>Continue</description>

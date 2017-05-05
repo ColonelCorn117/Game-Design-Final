@@ -2,7 +2,7 @@
 	<name>Dining Room</name>
 	<description>The maid swirls the glass and then launches the contents across the tablecloth. She then storms out of the room.
 	</description>
-	<background>DiningHall</background>
+	<background>DiningRoom</background>
 	<conditionList>
 		<condition>
 			<description>Continue</description>

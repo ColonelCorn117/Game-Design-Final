@@ -1,7 +1,7 @@
 ﻿<SceneDescription>
 	<name>Hallway5</name>
 	<description>Hall-elujah.</description>
-	<background>Hallway</background>
+	<background>HallwayPaintings</background>
 	<conditionList>
 		<condition>
 			<description>Hallway 4</description>

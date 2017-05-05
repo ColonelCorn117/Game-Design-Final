@@ -2,8 +2,8 @@
 	<name>Hallway</name>
 	<description>As you rush into the hallway, you see Bratticus dashing down the stairs. However, the layer of grease covering the stairs proves to be quite the tripping hazard, and to your great amusement, Bratticus slips and tumbles head over heels onto the carpet on the second floor landing.
 			
-Assassin: I have never been so glad that the maids decided to put so much effort into trash the entire house.</description>
-	<background>Hallway</background>
+Assassin: [I have never been so glad that the maids decided to put so much effort into trashing the entire house.]</description>
+	<background>HallwayPaintings</background>
 	<conditionList>
 		<condition>
 			<description>Continue</description>

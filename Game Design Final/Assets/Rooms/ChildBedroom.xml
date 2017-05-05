@@ -6,7 +6,7 @@ Assassin: [No no no no no.]
 Assassin: "NO NO NO NO NO!"
 Assassin: "NONONONONONONO!"
 Assassin: [He's not here.]</description>
-	<background>ChildBedroom</background>
+	<background>ChildsBedroom</background>
 	<conditionList>
 		<condition>
 			<description>Turn Around</description>

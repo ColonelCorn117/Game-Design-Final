@@ -1,7 +1,7 @@
 ﻿<SceneDescription>
 	<name>Hallway</name>
 	<description>It's a hallway.</description>
-	<background></background>
+	<background>HallwayWindows</background>
 	<conditionList>
 		<condition>
 			<description>Landing</description>
@@ -19,12 +19,6 @@
 			<description>Trophy Room</description>
 			<action>
 				<nextScene>TrophyRoom</nextScene>
-			</action>	
-		</condition>
-		<condition>
-			<description>Test (beta)</description>
-			<action>
-				<nextScene>TestDescription</nextScene>
 			</action>	
 		</condition>
 	</conditionList>

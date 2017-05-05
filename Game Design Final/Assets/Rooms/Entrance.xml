@@ -1,7 +1,7 @@
 <SceneDescription>
 	<name>Entrance</name>
 	<description>You stand in the entryway to the mansion. It's very big.</description>
-	<background>black</background>
+	<background>Landing</background>
 	<conditionList>
 		<condition>
 			<description>Landing</description>

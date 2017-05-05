@@ -3,7 +3,7 @@
 	<description>Assassin: ...
 	
 The giggling stops.</description>
-	<background>ChildBedroom</background>
+	<background>ChildsBedroom</background>
 	<conditionList>
 		<condition>
 			<description>Turn Around</description>

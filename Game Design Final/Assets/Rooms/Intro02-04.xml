@@ -2,7 +2,7 @@
 	<name>Hallway</name>
 	<description>Assassin: [Because an assassin is never allowed to fail...]
 	</description>
-	<background>Black</background>
+	<background>HallwayPaintings</background>
 	<conditionList>
 		<condition>
 			<description>Continue</description>

@@ -1,7 +1,7 @@
 ﻿<SceneDescription>
 	<name>ServantQuarters</name>
 	<description>This room is noticeably less posh than the rest of the manor.</description>
-	<background>black</background>
+	<background>ServantsQuarters</background>
 	<conditionList>
 		<condition>
 			<description>Servant Passage</description>

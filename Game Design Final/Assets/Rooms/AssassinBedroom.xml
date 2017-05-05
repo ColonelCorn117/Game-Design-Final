@@ -2,10 +2,10 @@
 	<name>Assassin's Bedroom</name>
 	<description>A spartan room with a cot and not much else.
 	
-Assassin: Home sweet home. 
+Assassin: "Home sweet home." 
 
-Assassin: ...or rather, home sweet (miserable) home.</description>
-	<background></background>
+Assassin: [...or rather, home sweet (miserable) home.]</description>
+	<background>AssassinsRoom</background>
 	<conditionList>
 		<condition>
 			<description>Hallway</description>

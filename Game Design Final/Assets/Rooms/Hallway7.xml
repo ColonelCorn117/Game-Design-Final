@@ -1,7 +1,7 @@
 ﻿<SceneDescription>
 	<name>Hallway7</name>
 	<description>No, that was that other hallway.</description>
-	<background>black</background>
+	<background>HallwayWindows</background>
 	<conditionList>
 		<condition>
 			<description>Music Room</description>

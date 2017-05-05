@@ -3,7 +3,7 @@
 	<description>Lord Borkus: "Not only will I fire every one of you, but I will destroy your reputations and ensure that you will never have a life again. You’ll be scrounging the streets for scraps and begging for mercy."
 
 Lord Borkus: "Do I make myself clear?"</description>
-	<background>LordAngryFace</background>
+	<background>IntroLordAngryFace</background>
 	<conditionList>
 		<condition>
 			<description>Continue</description>

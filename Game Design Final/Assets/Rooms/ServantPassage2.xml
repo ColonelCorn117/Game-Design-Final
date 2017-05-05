@@ -3,7 +3,7 @@
 	<description>The evolved form of a hallway.
 	
 You can smell the faint aroma of baked goods.</description>
-	<background>black</background>
+	<background>ServantsPassage</background>
 	<conditionList>
 		<condition>
 			<description>North Servant Passage</description>
