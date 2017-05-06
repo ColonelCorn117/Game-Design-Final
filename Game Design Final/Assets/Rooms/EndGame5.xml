@@ -1,0 +1,13 @@
+﻿<SceneDescription>
+	<name>Game Over - Bad</name>
+	<description>Lord Borkus's home is far too messy. Did you even try?</description>
+	<background></background>
+	<conditionList>
+	</conditionList>
+	<npcList>
+	</npcList>
+	<messList>
+	</messList>
+	<itemList>
+	</itemList>
+</SceneDescription>

@@ -113,7 +113,21 @@ public class Requirement {
 						return false;
 					}
 
-				}else if (req.StartsWith ("loaves")) {
+				} else if (req.StartsWith ("messlo")) {
+					//the player has at least a certain number of remaining messes
+					int messCount = Controller_Game.ctrl_game.GetMessCount();
+					if (messCount < int.Parse (reqName)) {
+						return false;
+					}
+
+				} else if (req.StartsWith ("messhi")) {
+					//the player has not exceeded a certain number of remaining messes
+					int messCount = Controller_Game.ctrl_game.GetMessCount();
+					if (messCount > int.Parse (reqName)) {
+						return false;
+					}
+
+				} else if (req.StartsWith ("loaves")) {
 					// the player has a certain amount of bread in inventory.
 					int reqBread = int.Parse (reqName);
 					if (Controller_Game.ctrl_game.breadQuantity < reqBread) {

@@ -1,14 +1,14 @@
 ﻿<SceneDescription>
-	<name>Assassin's Bedroom - 1F</name>
+	<name>Assassin's Bedroom</name>
 	<description>A spartan room with a cot and not much else.
 	
-Assassin: "Home sweet home." 
+Assassin: Home sweet home. 
 
-Assassin: [...or rather, home sweet (miserable) home.]</description>
-	<background>AssassinsRoom</background>
+Assassin: ...or rather, home sweet (miserable) home.</description>
+	<background></background>
 	<conditionList>
 		<condition>
-			<description>Hallway (South)</description>
+			<description>Hallway</description>
 			<action>
 				<nextScene>Hallway5</nextScene>
 			</action>	
@@ -18,4 +18,6 @@ Assassin: [...or rather, home sweet (miserable) home.]</description>
 	</npcList>
 	<messList>
 	</messList>
+	<itemList>
+	</itemList>
 </SceneDescription>

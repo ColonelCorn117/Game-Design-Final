@@ -1,0 +1,13 @@
+﻿<SceneDescription>
+	<name>Game Over - Good</name>
+	<description>Lord Borkus's home is mostly clean, and somehow the few remaining messes go unseen.</description>
+	<background></background>
+	<conditionList>
+	</conditionList>
+	<npcList>
+	</npcList>
+	<messList>
+	</messList>
+	<itemList>
+	</itemList>
+</SceneDescription>
