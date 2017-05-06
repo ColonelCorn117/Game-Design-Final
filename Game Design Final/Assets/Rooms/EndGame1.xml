@@ -1,0 +1,64 @@
+﻿<SceneDescription>
+	<name>Endgame</name>
+	<description>A bell tolls, in the distance, signaling the arrival of Lord Borkus's guests. 
+	
+Assassin: Borkus won't want his guests to see me, so I'd better get back to my room now.</description>
+	<background></background>
+	<conditionList>
+		<condition>
+			<description>Continue</description>
+			<requirement>
+				<prereq>messhi0</prereq>
+			</requirement>
+			<action>
+				<timeUsed>0</timeUsed>
+				<nextScene>EndGame2</nextScene>
+			</action>	
+		</condition>
+		<condition>
+			<description>Continue</description>
+			<requirement>
+				<prereq>messhi3</prereq>
+				<prereq>messlo1</prereq>
+			</requirement>
+			<action>
+				<timeUsed>0</timeUsed>
+				<nextScene>EndGame3</nextScene>
+			</action>	
+		</condition>
+		<condition>
+			<description>Continue</description>
+			<requirement>
+				<prereq>messhi6</prereq>
+				<prereq>messlo4</prereq>
+			</requirement>
+			<action>
+				<timeUsed>0</timeUsed>
+				<nextScene>EndGame4</nextScene>
+			</action>	
+		</condition>
+		<condition>
+			<description>Continue</description>
+			<requirement>
+				<prereq>messlo7</prereq>
+			</requirement>
+			<action>
+				<timeUsed>0</timeUsed>
+				<nextScene>EndGame5</nextScene>
+			</action>	
+		</condition>
+		<condition>
+			<description></description>
+			<additionalDescription>Assassin: It's too bad I didn't manage to clean everything, but hopefully, that idiot won't notice.</additionalDescription>
+			<requirement>
+				<prereq>messlo1</prereq>
+			</requirement>
+		</condition>
+	</conditionList>
+	<npcList>
+	</npcList>
+	<messList>
+	</messList>
+	<itemList>
+	</itemList>
+</SceneDescription>

@@ -28,6 +28,9 @@ public class Controller_Game : MonoBehaviour
 	Dictionary<string, NPC> npcs = new Dictionary<string, NPC>();
 	Dictionary<string,Mess> messes = new Dictionary<string, Mess>();
 	Dictionary<string,Item> items = new Dictionary<string, Item>();
+
+	public float startTimeRemaining = 130.0f;
+
 	public float timeRemaining = 130.0f;
 	public int killCount = 0;
 	public int unclaimedBodyCount = 0;
@@ -41,6 +44,8 @@ public class Controller_Game : MonoBehaviour
 	public bool encounterTimerRunning = false;
 	public float encounterTimer = 0f;
 
+	bool endGame = false;
+
 	float unassignedActionTime = 1f;	//how much time an action should take if the action has no assigned value
 
 	public Action[] buttonActions = new Action[9]; // buttonActions[0] is empty. the action for btn1 is found in buttonActions[1].
@@ -49,7 +54,7 @@ public class Controller_Game : MonoBehaviour
 	GameObject titleLocation;
 	GameObject descriptionText;
 	GameObject optionsBox;
-	SceneDescription xml;
+	//SceneDescription xml;
 
 	//====================================================================================================
 	//Start Stuff and Updaters
@@ -78,9 +83,10 @@ public class Controller_Game : MonoBehaviour
 	void Start()
 	{
 		Controller_GUI.ctrl_gui.SetItemsText(itemList);
-		Controller_GUI.ctrl_gui.SetMessesText(messes);
+		Controller_GUI.ctrl_gui.SetMessesText(GetMessCount());
 		Controller_GUI.ctrl_gui.SetTimeText(timeRemaining);
 
+		timeRemaining = startTimeRemaining;
 	}
 
 	//----------------------------------------------------------------------------------------------------
@@ -385,7 +391,7 @@ public class Controller_Game : MonoBehaviour
 
 		}
 
-		Controller_GUI.ctrl_gui.SetMessesText(messes);
+		Controller_GUI.ctrl_gui.SetMessesText(GetMessCount());
 //		Debug.Log("pA timeUsed: " + a.timeUsed);
 		if (a.timeUsed < 0.0f)
 		{
@@ -514,7 +520,12 @@ public class Controller_Game : MonoBehaviour
 		}
 		if (timeRemaining <= 0) {
 			timeRemaining = 0;
-			//TODO: Load ending scenes
+
+			if (!endGame) {
+				endGame = true;
+				SceneScript.sceneScript.LoadScene ("EndGame1");
+			}
+
 		}
 	}
 
@@ -531,7 +542,21 @@ public class Controller_Game : MonoBehaviour
 				count++;
 			}
 		}
-		Controller_GUI.ctrl_gui.SetMessesText (count + this.unclaimedBodyCount);
+		Controller_GUI.ctrl_gui.SetMessesText (GetMessCount());
+	}
+
+	public int GetMessCount() {
+		int count = 0;
+
+		foreach (KeyValuePair<string, Mess> mess in messes)
+		{
+			if (mess.Value.exists == 1)
+			{
+				//Debug.Log (mess.Value.name);
+				count++;
+			}
+		}
+		return count + this.unclaimedBodyCount;
 	}
 
 	//----------------------------------------------------------------------------------------------------
@@ -539,5 +564,31 @@ public class Controller_Game : MonoBehaviour
 	public void QuitGame()
 	{
 		Application.Quit();
+	}
+
+	public void NewGame()
+	{
+		npcs.Clear ();
+		messes.Clear ();
+		items.Clear ();
+		itemList.Clear ();
+		itemListCondensed.Clear ();
+		BuildDictionaries ();
+
+		//SceneScript.sceneScript
+		timeRemaining = startTimeRemaining;
+
+		killCount = 0;
+		unclaimedBodyCount = 0;
+		breadConsumed = 0;
+		bodyInRoom.Clear ();
+		corpseInRoom.Clear ();
+		encounterTimerRunning = false;
+		encounterTimer = 0f;
+		breadQuantity = 0;
+		breadSlot = -1;
+
+
+		SceneScript.sceneScript.NewGame();
 	}
 }
