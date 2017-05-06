@@ -50,6 +50,14 @@ public class SceneScript : MonoBehaviour {
 
 	//----------------------------------------------------------------------------------------------------
 
+	public void NewGame() {
+		pastSceneName = "";
+		currentSceneName = "";
+		LoadScene(startingSceneName);
+	}
+
+	//----------------------------------------------------------------------------------------------------
+
 	NPC NpcLookup(string name) {
 		return Controller_Game.ctrl_game.NpcLookup (name);
 	}

@@ -28,6 +28,9 @@ public class Controller_Game : MonoBehaviour
 	Dictionary<string, NPC> npcs = new Dictionary<string, NPC>();
 	Dictionary<string,Mess> messes = new Dictionary<string, Mess>();
 	Dictionary<string,Item> items = new Dictionary<string, Item>();
+
+	public float startTimeRemaining = 130.0f;
+
 	public float timeRemaining = 130.0f;
 	public int killCount = 0;
 	public int unclaimedBodyCount = 0;
@@ -49,7 +52,7 @@ public class Controller_Game : MonoBehaviour
 	GameObject titleLocation;
 	GameObject descriptionText;
 	GameObject optionsBox;
-	SceneDescription xml;
+	//SceneDescription xml;
 
 	//====================================================================================================
 	//Start Stuff and Updaters
@@ -81,6 +84,7 @@ public class Controller_Game : MonoBehaviour
 		Controller_GUI.ctrl_gui.SetMessesText(messes);
 		Controller_GUI.ctrl_gui.SetTimeText(timeRemaining);
 
+		timeRemaining = startTimeRemaining;
 	}
 
 	//----------------------------------------------------------------------------------------------------
@@ -539,5 +543,31 @@ public class Controller_Game : MonoBehaviour
 	public void QuitGame()
 	{
 		Application.Quit();
+	}
+
+	public void NewGame()
+	{
+		npcs.Clear ();
+		messes.Clear ();
+		items.Clear ();
+		itemList.Clear ();
+		itemListCondensed.Clear ();
+		BuildDictionaries ();
+
+		//SceneScript.sceneScript
+		timeRemaining = startTimeRemaining;
+
+		killCount = 0;
+		unclaimedBodyCount = 0;
+		breadConsumed = 0;
+		bodyInRoom.Clear ();
+		corpseInRoom.Clear ();
+		encounterTimerRunning = false;
+		encounterTimer = 0f;
+		breadQuantity = 0;
+		breadSlot = -1;
+
+
+		SceneScript.sceneScript.NewGame();
 	}
 }
