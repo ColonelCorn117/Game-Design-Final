@@ -2,6 +2,7 @@
 	<name>Bucket</name>
 	<description>An empty bucket.</description>
 	<exists>1</exists>
+	<duplicable>1</duplicable>
 	<conditionList>
 		<condition>
 			<description>Take</description>
