@@ -13,7 +13,7 @@
 				<messResolved>BookInToilet</messResolved>
 				<itemCreated>WetBook</itemCreated>
 				<timeUsed>1</timeUsed>
-				<nextScene>Bathroom3-1</nextScene>
+				<nextScene>Bathroom1-1</nextScene>
 			</action>
 		</condition>
 	</conditionList>

@@ -43,8 +43,10 @@
 	</npcList>
 	<messList>
 		<mess>WetFloor</mess>
+		<mess>BookInToilet</mess>
 	</messList>
 	<itemList>
-		<item>AirFreshener</item>
+		
+		<item>WetBook</item>
 	</itemList>
 </SceneDescription>

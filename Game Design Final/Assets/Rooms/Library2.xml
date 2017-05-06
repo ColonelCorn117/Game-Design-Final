@@ -6,6 +6,7 @@
 		<condition>
 			<description>Continue</description>
 			<action>
+				<timeUsed>0</timeUsed>
 				<nextScene>Library</nextScene>
 			</action>	
 		</condition>

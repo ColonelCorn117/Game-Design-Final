@@ -45,7 +45,7 @@
 				<itemCreated>Body</itemCreated>
 				<messCreated>BooksStrewn</messCreated>
 				<nextScene>Library2</nextScene>
-				<timeUsed>1.5</timeUsed>
+				<timeUsed>1</timeUsed>
 			</action>	
 		</condition>
 		<condition>
@@ -59,7 +59,7 @@
 				<itemCreated>Corpse</itemCreated>
 				<messCreated>BooksStrewn</messCreated>
 				<nextScene>Library3</nextScene>
-				<timeUsed>2.5</timeUsed>
+				<timeUsed>3</timeUsed>
 			</action>	
 		</condition>
 	</conditionList>

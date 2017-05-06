@@ -58,7 +58,7 @@ public class Item : GenericGameObject {
 			unclaimed = 0;
 		}
 		exists = 1;
-
+		consumed = 0;
 	}
 
 	public void create() {
@@ -108,7 +108,8 @@ public class Item : GenericGameObject {
 			}
 			// case 1: it's in the room
 			if (!(isClaimed ())) {
-				return true;
+
+				return ! isConsumed();
 			}
 
 			// case 2: it has been in inventory at one point

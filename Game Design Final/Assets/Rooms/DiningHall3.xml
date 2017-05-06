@@ -1,6 +1,6 @@
 ﻿<SceneDescription>
 	<name>Dining Room - 1F</name>
-	<description>Maid is Subdued, but some wine spills on the floor during the struggle.
+	<description>The maid is subdued, but some wine spills on the floor during the struggle.
 	</description>
 	<background>DiningRoom</background>
 	<conditionList>
@@ -8,7 +8,7 @@
 			<description>Continue</description>
 			<action>
 				<nextScene>DiningRoom</nextScene>
-				<timeUsed>0.0</timeUsed>
+				<timeUsed>0</timeUsed>
 			</action>
 		</condition>
 	</conditionList>

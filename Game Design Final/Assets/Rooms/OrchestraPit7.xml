@@ -10,7 +10,6 @@
 				<prereq>noreqs</prereq>
 			</requirement>
 			<action>
-				<messCreated>SpilledJam</messCreated>
 				<nextScene>OrchestraPit</nextScene>
 				<timeUsed>0.0</timeUsed>
 			</action>

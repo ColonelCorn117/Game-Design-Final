@@ -25,9 +25,8 @@
 	<npcList>
 	</npcList>
 	<messList>
-		<mess>BookInToilet</mess>
 	</messList>
 	<itemList>
-		<item>WetBook</item>
+		<item>AirFreshener</item>
 	</itemList>
 </SceneDescription>

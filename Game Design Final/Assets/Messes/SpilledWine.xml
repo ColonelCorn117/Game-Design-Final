@@ -14,6 +14,7 @@
 				<description>You mop up the floor and empty your water bucket out a nearby window.</description>
 				<messResolved>SpilledWine</messResolved>
 				<itemUsed>WaterBucket</itemUsed>
+				<timeUsed>2</timeUsed>
 				<itemGained>Bucket</itemGained>
 				<nextScene>reload</nextScene>
 			</action>
