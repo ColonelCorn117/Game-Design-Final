@@ -77,6 +77,8 @@ public class SceneScript : MonoBehaviour {
 		LoadSimpleScene (i.description, l);
 	}
 
+	//----------------------------------------------------------------------------------------------------
+
 	public void examineObject(GenericGameObject o) {
 		// rebuild description w/o changing the xml object
 		descriptionText.text = o.description;

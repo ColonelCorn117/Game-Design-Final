@@ -1,23 +1,20 @@
 ﻿<SceneDescription>
-	<name>Master Bedroom</name>
+	<name>Master Bedroom - 3F</name>
 	<description>It's the master bedroom.</description>
 	<background>MasterBedroom</background>
 	<conditionList>
-	
 		<condition>
-			<description>Hallway</description>
+			<description>Hallway (East)</description>
 			<action>
 				<nextScene>Hallway21</nextScene>
 			</action>	
 		</condition>
 		<condition>
-			<description>Master Bathroom</description>
+			<description>Master Bathroom (West)</description>
 			<action>
 				<nextScene>MasterBathroom</nextScene>
 			</action>	
 		</condition>
-	
-		
 	</conditionList>
 	<npcList>
 	</npcList>

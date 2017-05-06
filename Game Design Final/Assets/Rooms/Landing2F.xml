@@ -1,53 +1,49 @@
 ﻿<SceneDescription>
-	<name>Landing</name>
+	<name>Landing - 2F</name>
 	<description>You see a flight of wooden stairs going up and flight of carpeted stairs going down. You have the urge to slide down the railing.
 	</description>
 	<background>Landing</background>
 	<conditionList>
-	
 		<condition>
-			<description>Downstairs</description>
+			<requirement>
+				<prereq>messedOilSlick</prereq>
+			</requirement>
+			<description>Upstairs (North)</description>
+			<additionalDescription>The stairs going to the third floor are slick with grease.</additionalDescription>
 			<action>
-				<nextScene>Landing1F</nextScene>
+				<description>Assassin: [There's no way I can climb the stairs when they're that slippery.]</description>
+				<timeUsed>0</timeUsed>
+				<nextScene>reload</nextScene>
 			</action>
-			
 		</condition>
 		<condition>
 			<requirement>
 				<prereq>nomessOilSlick</prereq>
 			</requirement>
-			<description>Upstairs</description>
+			<description>Upstairs (North)</description>
 			<action>
 				<nextScene>Landing3F</nextScene>
 			</action>
-			
 		</condition>
 		<condition>
-			<requirement>
-				<prereq>messedOilSlick</prereq>
-			</requirement>
-			<description>Upstairs</description>
-			<additionalDescription>The stairs going to the third floor are slick with grease.</additionalDescription>
-			<action>
-				<description>Assassin: there's no way I can climb the stairs when they're that slippery</description>
-				<timeUsed>0</timeUsed>
-				<nextScene>reload</nextScene>
-			</action>
-			
-		</condition>
-		<condition>
-			<description>North Hallway</description>
+			<description>Hallway (East)</description>
 			<action>
 				<nextScene>Hallway11</nextScene>
 			</action>
 			
 		</condition>
 		<condition>
-			<description>South Hallway</description>
+			<description>Downstairs (South)</description>
+			<action>
+				<nextScene>Landing1F</nextScene>
+			</action>
+			
+		</condition>
+		<condition>
+			<description>Hallway (West)</description>
 			<action>
 				<nextScene>Hallway12</nextScene>
 			</action>
-			
 		</condition>	
 	</conditionList>
 	<npcList>

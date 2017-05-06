@@ -1,5 +1,5 @@
 ﻿<SceneDescription>
-	<name>Art Gallery</name>
+	<name>Art Gallery - 2F</name>
 	<description>The art gallery is very large and has lots of paintings.
 	</description>
 	<background>ArtGallery</background>
@@ -54,7 +54,7 @@
 			</action>
 		</condition>
 		<condition>
-			<description>South Hallway</description>
+			<description>Hallway (West)</description>
 			<requirement>
 				<prereq>removeMaid3</prereq>
 			</requirement>

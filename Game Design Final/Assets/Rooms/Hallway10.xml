@@ -1,16 +1,16 @@
 ﻿<SceneDescription>
-	<name>Hallway</name>
+	<name>Hallway - 1F</name>
 	<description>Hallways here, hallways there, hallways goddamn everywhere.</description>
 	<background>HallwayWindows</background>
 	<conditionList>
 		<condition>
-			<description>Hallway</description>
+			<description>Hallway (North)</description>
 			<action>
 				<nextScene>Hallway9</nextScene>
 			</action>
 		</condition>
 		<condition>
-			<description>Hallway</description>
+			<description>Hallway (East)</description>
 			<action>
 				<nextScene>Hallway7</nextScene>
 			</action>
@@ -19,12 +19,11 @@
 			<requirement>
 				<prereq>noreqs</prereq>
 			</requirement>
-			<description>Dining Room</description>
+			<description>Dining Room (West)</description>
 			<action>
 				<nextScene>DiningRoom</nextScene>
 			</action>
 		</condition>
-		
 	</conditionList>
 	<npcList>
 	</npcList>

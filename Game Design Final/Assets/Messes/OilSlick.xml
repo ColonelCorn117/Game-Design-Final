@@ -1,8 +1,8 @@
 ﻿<mess>
 	<name>Oily Carpet</name>
-	<description>A layer of food grease covers the wooden stairs. There's no way you can make it up without cleaning this up.
+	<description>A layer of food grease covers the wooden stairs. It's going to be difficult to go upstairs without cleaning this up.
 	
-Assassin: I'm not sure which surprises me more: that Lord Borkus and that demon eat enough food to produce all this grease, or that one of the maids managed to carry all this grease up the stairs before dumping it.</description>
+Assassin: [I'm not sure which surprises me more: that Lord Borkus and that demon eat enough food to produce all this grease, or that one of the maids managed to carry all this grease up the stairs before dumping it.]</description>
 	<exists>1</exists>
 	<conditionList>
 		<condition>

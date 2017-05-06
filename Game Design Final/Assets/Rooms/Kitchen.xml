@@ -1,25 +1,19 @@
 ﻿<SceneDescription>
-	<name>Kitchen</name>
+	<name>Kitchen - 1F</name>
 	<description>The kitchen is fairly clean, though the chef is nowhere to be seen. No maids are present either.</description>
 	<background>Kitchen</background>
 	<conditionList>
 		<condition>
-			<description>Test (beta)</description>
-			<action>
-				<nextScene>TestDescription</nextScene>
-			</action>
-		</condition>
-		<condition>
 			<requirement>
 				<prereq>noreqs</prereq>
 			</requirement>
-			<description>Dining Room</description>
+			<description>Dining Room (East)</description>
 			<action>
 				<nextScene>DiningRoom</nextScene>
 			</action>
 		</condition>
 		<condition>
-			<description>South Servant Passage</description>
+			<description>Servant Passage (West)</description>
 			<action>
 				<nextScene>ServantPassage3</nextScene>
 			</action>
@@ -40,12 +34,12 @@
 			<description>Take Bread</description>
 			<additionalDescription>Though the air is warm and heavy, a delightful aroma wafts through the room from a rack of freshly baked bread.
 			
-Assassin: That smells really good...</additionalDescription>
+Assassin: [That smells really good...]</additionalDescription>
 			<requirement>
 				<prereq>breadn8</prereq>
 			</requirement>
 			<action>
-				<description>Assassin: I’ll just take this for strategic...bread purposes...</description>
+				<description>Assassin: [I’ll just take this for strategic...bread purposes...]</description>
 				<itemGained>Bread</itemGained>
 				<timeUsed>0</timeUsed>
 				<nextScene>reload</nextScene>
@@ -55,13 +49,13 @@ Assassin: That smells really good...</additionalDescription>
 			<description>Take Bread</description>
 			<additionalDescription>Though the air is warm and heavy, a delightful aroma wafts through the room from a rack of freshly baked bread.
 			
-Assassin: That smells really good...</additionalDescription>
+Assassin: [That smells really good...]</additionalDescription>
 			<requirement>
 				<prereq>breadn9</prereq>
 				<prereq>breadm9</prereq>
 			</requirement>
 			<action>
-				<description>Assassin: I’ll just take this for strategic...bread purposes...</description>
+				<description>Assassin: [I’ll just take this for strategic...bread purposes...]</description>
 				<itemGained>Bread</itemGained>
 				<timeUsed>0</timeUsed>
 				<nextScene>KitchenBread</nextScene>

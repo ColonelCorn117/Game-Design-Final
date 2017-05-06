@@ -1,18 +1,18 @@
 ﻿<SceneDescription>
-	<name>Lord's Lounge</name>
+	<name>Lord's Lounge - 1F</name>
 	<description>It's the lord's lounge.</description>
 	<background>LordsLounge</background>
 	<conditionList>
 		<condition>
-			<description>Hallway</description>
+			<description>Bathroom (North)</description>
 			<action>
-				<nextScene>Hallway5</nextScene>
+				<nextScene>Bathroom1</nextScene>
 			</action>	
 		</condition>
 		<condition>
-			<description>Bathroom</description>
+			<description>Hallway (East)</description>
 			<action>
-				<nextScene>Bathroom1</nextScene>
+				<nextScene>Hallway5</nextScene>
 			</action>	
 		</condition>
 	</conditionList>

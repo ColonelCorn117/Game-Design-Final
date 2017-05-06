@@ -10,7 +10,7 @@
 			</requirement>
 			<action>
 				<name>Take</name>
-				<description>Assassin: This seems bizarre enough to be useful somewhere.</description>
+				<description>Assassin: [This seems bizarre enough to be useful somewhere.]</description>
 				<itemGained>Doily</itemGained>
 				<timeUsed>0</timeUsed>
 				<nextScene>reload</nextScene>
@@ -23,7 +23,7 @@
 			</requirement>
 			<action>
 				<name>Back</name>
-				<description>Assassin: I didn't want to decorate anyway.</description>
+				<description>Assassin: [I didn't want to decorate anyway.]</description>
 				<timeUsed>0</timeUsed>
 				<nextScene>reload</nextScene>
 			</action>

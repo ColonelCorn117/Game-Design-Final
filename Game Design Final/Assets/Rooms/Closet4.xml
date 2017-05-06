@@ -1,5 +1,5 @@
 ﻿<SceneDescription>
-	<name>Closet</name>
+	<name>Closet - 3F</name>
 	<description>Unsurprisingly, Lord Borkus's closets are quite spacious.</description>
 	<background>Closet</background>
 	<conditionList>
@@ -7,7 +7,7 @@
 			<requirement>
 				<prereq>noreqs</prereq>
 			</requirement>
-			<description>Hallway</description>
+			<description>Hallway (South)</description>
 			<action>
 				<nextScene>Hallway21</nextScene>
 			</action>

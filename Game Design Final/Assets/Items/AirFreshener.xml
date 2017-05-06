@@ -2,7 +2,7 @@
 	<name>Air Freshener</name>
 	<description>The label says it is “Flower-Scented”.
 
-Assassin: I could probably use that. This whole mansion smells like bullshit.</description>
+Assassin: [I could probably use that. This whole mansion smells like bullshit.]</description>
 	<exists>1</exists>
 	<conditionList>
 		<condition>
@@ -12,7 +12,7 @@ Assassin: I could probably use that. This whole mansion smells like bullshit.</d
 			</requirement>
 			<action>
 				<name>Take</name>
-				<description>Assassin: Though I don’t think this one can is capable of getting rid of all of it...</description>
+				<description>Assassin: [Though I don’t think this one can is capable of getting rid of all of it...]</description>
 				<itemGained>AirFreshener</itemGained>
 				<timeUsed>0</timeUsed>
 				<nextScene>reload</nextScene>
@@ -25,7 +25,7 @@ Assassin: I could probably use that. This whole mansion smells like bullshit.</d
 			</requirement>
 			<action>
 				<name>Back</name>
-				<description>Assassin: Nevermind. Let’s just breathe bullshit nonstop.</description>
+				<description>Assassin: [Nevermind. Let’s just breathe bullshit nonstop.]</description>
 				<timeUsed>0</timeUsed>
 				<nextScene>reload</nextScene>
 			</action>

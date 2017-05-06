@@ -1,10 +1,10 @@
 ﻿<SceneDescription>
-	<name>Bathroom</name>
+	<name>Bathroom - 1F</name>
 	<description>It's a bathroom. There’s a toilet and a sink. What more do you want?</description>
 	<background>Bathroom</background>
 	<conditionList>
 		<condition>
-			<description>Hallway</description>
+			<description>Hallway (West)</description>
 			<action>
 				<nextScene>Hallway9</nextScene>
 			</action>	
@@ -21,14 +21,7 @@
 				<nextScene>reload</nextScene>
 			</action>	
 		</condition>
-		
-		<condition>
-			<description>Test (beta)</description>
-			<action>
-				<nextScene>TestDescription</nextScene>
-			</action>	
-		</condition>
-		<condition>
+		<!---<condition>
 			<additionalDescription>There’s a cabinet underneath the sink with a bucket in it.</additionalDescription>
 			<requirement>
 				<prereq>nogainBucket</prereq>
@@ -38,8 +31,7 @@
 				<timeUsed>0</timeUsed>
 				<nextScene>reload</nextScene>
 			</action>	
-		</condition>
-		
+		</condition>-->
 	</conditionList>
 	<npcList>
 	</npcList>

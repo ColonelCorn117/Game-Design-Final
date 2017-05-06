@@ -1,14 +1,14 @@
 ﻿<SceneDescription>
-	<name>Trophy Room</name>
+	<name>Trophy Room - 2F</name>
 	<description>Once the gorilla reaches you, she stares into your eyes for a long moment.
 	
-Assassin:...
+Assassin: ...
 
-Maid: Ook.
+Maid: "Ook."
 
 The gorilla breaks eye contact, appearing satisfied. The great beast snatches the loaves of bread from your hand, then turns to the mess. Raising the two loaves above her head, the 'maid' slams the bread into the floor with a fierce cry.
 
-'Maid': OOK!</description>
+'Maid': "OOK!"</description>
 	<background>TrophyRoom</background>
 	<conditionList>
 		<condition>

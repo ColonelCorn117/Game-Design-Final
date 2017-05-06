@@ -11,7 +11,7 @@
 			</requirement>
 			<action>
 				<name>Take Book</name>
-				<description>Assassin: This could be useful.</description>
+				<description>Assassin: [This could be useful.]</description>
 				<itemGained>Shears</itemGained>
 				<timeUsed>0</timeUsed>
 				<nextScene>reload</nextScene>
@@ -25,7 +25,7 @@
 			</requirement>
 			<action>
 				<name>Back</name>
-				<description>Assassin: I'll worry about this later.</description>
+				<description>Assassin: [I'll worry about this later.]</description>
 				<timeUsed>0</timeUsed>
 				<nextScene>reload</nextScene>
 			</action>

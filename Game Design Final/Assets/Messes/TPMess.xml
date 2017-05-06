@@ -20,8 +20,9 @@ Assassin: This is going to be a pain to clean.</description>
 		<condition>
 			<description>Summon Gorilla</description>
 			<requirement>
-				<prereq>invblk2</prereq>
-				<prereq>devour8</prereq>
+				<!---<prereq>invblk2</prereq>-->
+				<prereq>loaves2</prereq>
+				<prereq>devour7</prereq>
 			</requirement>
 			<action>
 				<name>Clean</name>

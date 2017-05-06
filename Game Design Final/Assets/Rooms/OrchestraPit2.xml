@@ -1,11 +1,11 @@
 ﻿<SceneDescription>
-	<name>Orchestra Pit</name>
+	<name>Orchestra Pit - 1F</name>
 	<description>You call out to the maid to keep her from continuing her current course of action. Unfortunately, she startles at the sound of your voice, dropping the jar into the piano. Seeing you, the maid flees.
 	</description>
 	<background>OrchestraPit</background>
 	<conditionList>	
 		<condition>
-			<description>Fish out jam jar</description>
+			<description>Fish Out Jam Jar</description>
 			<requirement>
 				<prereq>noreqs</prereq>
 			</requirement>

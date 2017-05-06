@@ -1,11 +1,12 @@
 ﻿<SceneDescription>
-	<name>Trophy Room</name>
+	<name>Trophy Room - 2F</name>
 	<description>Various trophies and awards are displayed around the edges of an enormous hall. A gilded railing runs around the center of the room, enclosing several large animals that been stuffed and posed in various menacing positions.
+
 Assassin: [This would be more impressive if I hadn’t been the one to kill all of these animals.]</description>
 	<background>TrophyRoom</background>
 	<conditionList>
 		<condition>
-			<description>Hallway</description>
+			<description>Hallway (East)</description>
 			<action>
 				<nextScene>Hallway12</nextScene>
 			</action>	

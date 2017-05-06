@@ -1,8 +1,14 @@
 ﻿<SceneDescription>
-	<name>Master Bathroom</name>
+	<name>Master Bathroom - 3F</name>
 	<description>It's the master bathroom.</description>
 	<background>Bathroom</background>
 	<conditionList>
+		<condition>
+			<description>Master Bedroom (East)</description>
+			<action>
+				<nextScene>MasterBedroom</nextScene>
+			</action>	
+		</condition>
 		<condition>
 			<requirement>
 				<prereq>gainedBucket</prereq>
@@ -13,12 +19,6 @@
 				<itemUsed>Bucket</itemUsed>
 				<itemGained>WaterBucket</itemGained>
 				<nextScene>reload</nextScene>
-			</action>	
-		</condition>
-		<condition>
-			<description>Master Bedroom</description>
-			<action>
-				<nextScene>MasterBedroom</nextScene>
 			</action>	
 		</condition>
 	</conditionList>

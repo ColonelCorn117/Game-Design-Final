@@ -1,12 +1,9 @@
 ﻿<SceneDescription>
-	<name>Art Gallery</name>
+	<name>Art Gallery - 2F</name>
 	<description>You steal the maid's lighter and beat her to death with it. The experience is very therapeutic.</description>
 	<background>ArtGallery</background>
 	<conditionList>
 		<condition>
-			<requirement>
-				<prereq></prereq>
-			</requirement>
 			<description>Pocket Lighter</description>
 			<action>
 				<description>Assassin: [I'd better keep this. I'd rather not deal with ANOTHER pyromaniac.]</description>

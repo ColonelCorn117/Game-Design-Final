@@ -1,24 +1,24 @@
 ﻿<SceneDescription>
-	<name>Hallway</name>
+	<name>Hallway - 1F</name>
 	<description>This hallway looks different from the rest. No, wait, no it doesn't.</description>
 	<background>HallwayPaintings</background>
 	<conditionList>
 		<condition>
-			<description>Landing 1F</description>
+			<description>Closet (East)</description>
 			<action>
-				<nextScene>Landing1F</nextScene>
+				<nextScene>Closet1</nextScene>
 			</action>
 		</condition>
 		<condition>
-			<description>Hallway</description>
+			<description>Hallway (South)</description>
 			<action>
 				<nextScene>Hallway9</nextScene>
 			</action>
 		</condition>
 		<condition>
-			<description>Closet</description>
+			<description>Landing (West)</description>
 			<action>
-				<nextScene>Closet1</nextScene>
+				<nextScene>Landing1F</nextScene>
 			</action>
 		</condition>
 	</conditionList>

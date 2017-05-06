@@ -1,16 +1,16 @@
 ﻿<SceneDescription>
-	<name>Hallway3</name>
+	<name>Hallway - 1F</name>
 	<description>If you squint really hard, this still just looks like a hallway.</description>
 	<background>HallwayWindows</background>
 	<conditionList>	
 		<condition>
-			<description>Hallway 2</description>
+			<description>Hallway (North)</description>
 			<action>
 				<nextScene>Hallway2</nextScene>
 			</action>
 		</condition>
 		<condition>
-			<description>Ballroom</description>
+			<description>Ballroom (South)</description>
 			<action>
 				<nextScene>Ballroom</nextScene>
 			</action>

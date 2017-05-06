@@ -173,27 +173,44 @@ public class Controller_GUI : MonoBehaviour
 
 	public void SetItemsText(List<string> itemList)
 	{
+		List<string> itemListCondensed = new List<string>();
 		int breadSlot = Controller_Game.ctrl_game.breadSlot;
 		int assignedSlots = 0;		//How many individual slots have been assigned
 //		Debug.Log("breadSlot: " + breadSlot);
 		for (int i=0; i<itemList.Count; i++)		//Iterate through our obtained items
 		{
-			if (Controller_Game.ctrl_game.ItemLookup(itemList[i]).name == "Bread")
+			if (i < itemsText.Count)	//Dont try to assign names to more slots than we have
 			{
-				if (breadSlot == -1)		//breadSlot gets reset to -1 every time the inventory is hidden (i.e. disabled) in this version of unity, so there isn't a need to reset breadSlot if breadQuantity == 0.
+				if (Controller_Game.ctrl_game.ItemLookup(itemList[i]).name == "Bread")
 				{
-					breadSlot = i;
+					if (breadSlot == -1)		//breadSlot gets reset to -1 every time the inventory is hidden (i.e. disabled) in this version of unity, so there isn't a need to reset breadSlot if breadQuantity == 0.
+					{
+						breadSlot = i;
+						itemListCondensed.Add(itemList[i]);
+						assignedSlots++;
+					}
+					itemsText[breadSlot].text = "Bread x" + Controller_Game.ctrl_game.breadQuantity;
+
+				}
+				else
+				{
+					itemsText[assignedSlots].text = Controller_Game.ctrl_game.ItemLookup(itemList[i]).name;
+					itemListCondensed.Add(itemList[i]);
 					assignedSlots++;
 				}
-				itemsText[breadSlot].text = "Bread x" + Controller_Game.ctrl_game.breadQuantity;
-
 			}
 			else
 			{
-				itemsText[assignedSlots].text = Controller_Game.ctrl_game.ItemLookup(itemList[i]).name;
-				assignedSlots++;
+				break;
 			}
+
 		}
+//		foreach (string item in itemListCondensed)	//Debug lines to test if the item list is shortened properly
+//		{
+//			Debug.Log("ILC: " + item);
+//		}
+
+		Controller_Game.ctrl_game.itemListCondensed = itemListCondensed;
 
 		if (assignedSlots < itemsText.Count)	//We still have open inventory slots after going through our items. Gives slots blank name
 		{

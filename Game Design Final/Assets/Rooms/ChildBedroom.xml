@@ -1,16 +1,31 @@
 ﻿<SceneDescription>
-	<name>Bratticus's Bedroom</name>
+	<name>Bratticus's Bedroom - 3F</name>
 	<description>It looks as if a tornado plowed through this room.
-Assassin: [...oh no.] 
-Assassin: [No no no no no.]
-Assassin: "NO NO NO NO NO!"
-Assassin: "NONONONONONONO!"
-Assassin: [He's not here.]</description>
+</description>
 	<background>ChildsBedroom</background>
 	<conditionList>
 		<condition>
+			<description>Hallway (West)</description>
+			<requirement>
+				<prereq>removeBratticus</prereq>
+			</requirement>
+			<action>
+				<nextScene>Hallway22</nextScene>
+			</action>	
+		</condition>
+		<condition>
 			<description>Turn Around</description>
-			<additionalDescription>You hear giggling coming from behind you.</additionalDescription>
+			<additionalDescription>Assassin: [...oh no.]
+
+Assassin: [No no no no no.]
+
+Assassin: "NO NO NO NO NO!"
+
+Assassin: "NONONONONONONO!"
+
+Assassin: [He's not here.]
+
+You hear giggling coming from behind you.</additionalDescription>
 			<requirement>
 				<prereq>existsBratticus</prereq>
 			</requirement>
@@ -29,15 +44,6 @@ Assassin: [He's not here.]</description>
 				<timeUsed>1</timeUsed>
 				<npcCreated>FinalEncounterFlag</npcCreated>
 				<nextScene>Bratticus0</nextScene>
-			</action>	
-		</condition>
-		<condition>
-			<description>Hallway</description>
-			<requirement>
-				<prereq>removeBratticus</prereq>
-			</requirement>
-			<action>
-				<nextScene>Hallway22</nextScene>
 			</action>	
 		</condition>
 	</conditionList>

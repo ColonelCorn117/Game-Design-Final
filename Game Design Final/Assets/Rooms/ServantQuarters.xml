@@ -1,10 +1,10 @@
 ﻿<SceneDescription>
-	<name>ServantQuarters</name>
+	<name>Servants' Quarters - 1F</name>
 	<description>This room is noticeably less posh than the rest of the manor.</description>
 	<background>ServantsQuarters</background>
 	<conditionList>
 		<condition>
-			<description>Servant Passage</description>
+			<description>Servant Passage (East)</description>
 			<action>
 				<nextScene>ServantPassage1</nextScene>
 			</action>

@@ -1,20 +1,25 @@
 ﻿<SceneDescription>
-	<name>Hallway</name>
+	<name>Hallway - 3F</name>
 	<description>It's a hallway. 
 	</description>
 	<background>HallwayPaintings</background>
 	<conditionList>
-	
 		<condition>
-			<description>Master Bedroom</description>
+			<description>Closet (North)</description>
 			<action>
-				<nextScene>MasterBedroom</nextScene>
+				<nextScene>Closet4</nextScene>
 			</action>	
 		</condition>
 		<condition>
-			<description>Landing</description>
+			<description>Landing (East)</description>
 			<action>
 				<nextScene>Landing3F</nextScene>
+			</action>	
+		</condition>
+		<condition>
+			<description>Master Bedroom (West)</description>
+			<action>
+				<nextScene>MasterBedroom</nextScene>
 			</action>	
 		</condition>
 	</conditionList>

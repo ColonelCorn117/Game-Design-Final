@@ -1,22 +1,22 @@
 ﻿<SceneDescription>
-	<name>Hallway</name>
+	<name>Hallway - 2F</name>
 	<description>It's a hallway.</description>
 	<background>HallwayWindows</background>
 	<conditionList>
 		<condition>
-			<description>Landing</description>
-			<action>
-				<nextScene>Landing2F</nextScene>
-			</action>	
-		</condition>
-		<condition>
-			<description>Bathroom</description>
+			<description>Bathroom (North)</description>
 			<action>
 				<nextScene>Bathroom3</nextScene>
 			</action>	
 		</condition>
 		<condition>
-			<description>Trophy Room</description>
+			<description>Landing (East)</description>
+			<action>
+				<nextScene>Landing2F</nextScene>
+			</action>	
+		</condition>
+		<condition>
+			<description>Trophy Room (West)</description>
 			<action>
 				<nextScene>TrophyRoom</nextScene>
 			</action>	

@@ -1,5 +1,5 @@
 ﻿<SceneDescription>
-	<name>Assassin's Bedroom</name>
+	<name>Assassin's Bedroom - 1F</name>
 	<description>A spartan room with a cot and not much else.
 	
 Assassin: "Home sweet home." 
@@ -8,7 +8,7 @@ Assassin: [...or rather, home sweet (miserable) home.]</description>
 	<background>AssassinsRoom</background>
 	<conditionList>
 		<condition>
-			<description>Hallway</description>
+			<description>Hallway (South)</description>
 			<action>
 				<nextScene>Hallway5</nextScene>
 			</action>	

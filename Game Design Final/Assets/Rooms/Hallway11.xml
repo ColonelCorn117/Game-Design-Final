@@ -1,16 +1,22 @@
 ﻿<SceneDescription>
-	<name>Hallway</name>
+	<name>Hallway - 2F</name>
 	<description>It's a hallway.</description>
 	<background>HallwayWindows</background>
 	<conditionList>
 		<condition>
-			<description>Art Gallery</description>
+			<description>Closet (North)</description>
+			<action>
+				<nextScene>Closet3</nextScene>
+			</action>	
+		</condition>
+		<condition>
+			<description>Art Gallery (East)</description>
 			<action>
 				<nextScene>ArtGallery</nextScene>
 			</action>	
 		</condition>
 		<condition>
-			<description>Landing</description>
+			<description>Landing (West)</description>
 			<action>
 				<nextScene>Landing2F</nextScene>
 			</action>	

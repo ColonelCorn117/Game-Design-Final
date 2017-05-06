@@ -1,5 +1,5 @@
 ﻿<SceneDescription>
-	<name>Hallway</name>
+	<name>Hallway - 3F</name>
 	<description>It's a hallway.
 
 There's a laundry chute in the wall.
@@ -7,31 +7,30 @@ There's a laundry chute in the wall.
 	<background>HallwayPaintings</background>
 	<conditionList>
 		<condition>
-			<description>Landing</description>
-			<action>
-				<nextScene>Landing3F</nextScene>
-			</action>	
-		</condition>
-		<condition>
-			<description>Child's Bedroom</description>
+			<description>Child's Bedroom (East)</description>
 			<additionalDescription>The wretched smell from the bedroom has a very physical presence.</additionalDescription>
 			<requirement>
 				<prereq>messedStinkWall</prereq>
 			</requirement>
 			<action>
-				<description>Assassin: I'm not going through that with anything less than a HazMat suit.</description>
+				<description>Assassin: [I'm not going through that with anything less than a HazMat suit.]</description>
 				<timeUsed>0</timeUsed>
 				<nextScene>reload</nextScene>
 			</action>	
 		</condition>
 		<condition>
-			<description>Child's Bedroom</description>
-			
+			<description>Child's Bedroom (East)</description>	
 			<requirement>
 				<prereq>nomessStinkWall</prereq>
 			</requirement>
 			<action>
 				<nextScene>ChildBedroom</nextScene>
+			</action>	
+		</condition>
+		<condition>
+			<description>Landing (West)</description>
+			<action>
+				<nextScene>Landing3F</nextScene>
 			</action>	
 		</condition>
 		<condition>

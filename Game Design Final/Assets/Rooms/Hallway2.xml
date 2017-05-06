@@ -1,30 +1,30 @@
 ﻿<SceneDescription>
-	<name>Hallway</name>
+	<name>Hallway - 1F</name>
 	<description>Another hallway. This one at least has a vase.</description>
 	<background>HallwayWindows</background>
 	<conditionList>
 		<condition>
-			<description>Landing</description>
+			<description>Landing (East)</description>
 			<action>
 				<nextScene>Landing1F</nextScene>
 			</action>
 		</condition>
 		<condition>
-			<description>East Hallway</description>
+			<description>Hallway (South)</description>
 			<action>
 				<nextScene>Hallway3</nextScene>
 			</action>
 		</condition>
 		<condition>
-			<description>South Hallway</description>
+			<description>Servant Passage (South)</description>
 			<action>
-				<nextScene>Hallway4</nextScene>
+				<nextScene>ServantPassage3</nextScene>
 			</action>
 		</condition>
 		<condition>
-			<description>South Servant Passage</description>
+			<description>Hallway (West)</description>
 			<action>
-				<nextScene>ServantPassage3</nextScene>
+				<nextScene>Hallway4</nextScene>
 			</action>
 		</condition>
 		<condition>

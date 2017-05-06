@@ -1,10 +1,10 @@
 ﻿<SceneDescription>
-	<name>Bathroom</name>
+	<name>Bathroom - 2F</name>
 	<description>It's a bathroom.</description>
 	<background>Bathroom</background>
 	<conditionList>
 		<condition>
-			<description>Hallway</description>
+			<description>Hallway (South)</description>
 			<action>
 				<nextScene>Hallway12</nextScene>
 			</action>	
