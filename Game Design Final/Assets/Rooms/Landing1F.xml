@@ -20,7 +20,7 @@
 				<prereq>messedTripwires</prereq>
 			</requirement>
 			<action>
-				<timeUsed>1</timeUsed>
+				<timeUsed>5</timeUsed>
 				<nextScene>Landing2F</nextScene>
 			</action>
 		</condition>

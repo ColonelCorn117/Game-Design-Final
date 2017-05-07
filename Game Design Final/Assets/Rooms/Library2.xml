@@ -8,6 +8,7 @@
 			<action>
 				<timeUsed>0</timeUsed>
 				<nextScene>Library</nextScene>
+				<timeUsed>0</timeUsed>
 			</action>	
 		</condition>
 	</conditionList>
