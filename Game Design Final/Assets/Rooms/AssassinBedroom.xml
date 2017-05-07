@@ -1,10 +1,10 @@
 ﻿<SceneDescription>
-	<name>Assassin's Bedroom</name>
+	<name>Assassin's Bedroom - 1F</name>
 	<description>A spartan room with a cot and not much else.
 	
-Assassin: Home sweet home. 
+Assassin: "Home sweet home." 
 
-Assassin: ...or rather, home sweet (miserable) home.</description>
+Assassin: [...or rather, home sweet (miserable) home.]</description>
 	<background></background>
 	<conditionList>
 		<condition>
