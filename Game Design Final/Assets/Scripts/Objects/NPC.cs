@@ -22,4 +22,9 @@ public class NPC : Problem {
 	public int getDialogueLocation() {
 		return dialogueLocation;
 	}
+
+	public void overwrite(NPC n) {
+		base.overwrite (n);
+		this.dialogueLocation = n.getDialogueLocation ();
+	}
 }

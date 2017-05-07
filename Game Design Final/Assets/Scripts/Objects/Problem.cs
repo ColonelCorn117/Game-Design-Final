@@ -22,4 +22,14 @@ public class Problem : GenericGameObject {
 		this.name = "";
 		this.description = "";
 	}
+
+	public void overwrite(Problem p) {
+		this.id = p.id;
+		this.name = p.name;
+		this.description = p.description;
+		this.exists = p.exists;
+
+		this.clearingConditions = p.clearingConditions;
+		this.conditions = p.conditions;
+	}
 }

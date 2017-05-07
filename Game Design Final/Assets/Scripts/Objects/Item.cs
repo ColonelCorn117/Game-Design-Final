@@ -31,6 +31,18 @@ public class Item : GenericGameObject {
 		//singleton = 1;
 	}
 
+	public void overwrite(Item i) {
+		this.name = i.name;
+		this.id = i.id;
+		this.exists = i.exists;
+		this.unclaimed = i.unclaimed;
+		this.consumed = i.consumed;
+		this.duplicable = i.duplicable;
+		this.description = i.description;
+		this.action = i.action;
+		this.conditions = i.conditions;
+	}
+
 	public void setName(string n) {
 		this.name = n;
 		action.itemGained = n;

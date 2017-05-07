@@ -608,7 +608,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &225337448
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2815,6 +2815,15 @@ MonoBehaviour:
   encounterTimer: 0
   endGame: 0
   savedSceneName: 
+  saveitemList: []
+  saveitemListCondensed: []
+  savetimeRemaining: 130
+  savekillCount: 0
+  saveunclaimedBodyCount: 0
+  savebreadConsumed: 0
+  saveencounterTimerRunning: 0
+  saveencounterTimer: 0
+  saveendGame: 0
 --- !u!114 &887181254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2919,7 +2928,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &903871212
 RectTransform:
   m_ObjectHideFlags: 0
