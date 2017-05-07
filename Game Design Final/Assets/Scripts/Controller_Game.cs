@@ -15,7 +15,6 @@ public class Controller_Game : MonoBehaviour
 	//====================================================================================================
 
 	public static Controller_Game ctrl_game;
-	public static Controller_Game save_state;
 
 	//Used to keep references to the xml files so they are included in the build
 	//public List<TextAsset> dialogueXML = new List<TextAsset>();
@@ -42,12 +41,29 @@ public class Controller_Game : MonoBehaviour
 	Dictionary<string,int> bodyInRoom = new Dictionary<string,int>();
 	Dictionary<string,int> corpseInRoom = new Dictionary<string,int>();
 
+
 	public bool encounterTimerRunning = false;
 	public float encounterTimer = 0f;
 
 	public bool endGame = false;
 
 	public string savedSceneName = ""; // Only used in save states
+	public List<string> saveitemList = new List<string>();				//Every individual item in the inventory (no item stacks)
+	public List<string> saveitemListCondensed = new List<string>();		//Abbreviated version of the above (1 stack = 1 item)
+	Dictionary<string, NPC> savenpcs = new Dictionary<string, NPC>();
+	Dictionary<string,Mess> savemesses = new Dictionary<string, Mess>();
+	Dictionary<string,Item> saveitems = new Dictionary<string, Item>();
+	public float savetimeRemaining = 130.0f;
+	public int savekillCount = 0;
+	public int saveunclaimedBodyCount = 0;
+	public int savebreadConsumed = 0;		//How much bread the gorilla maid has consumed
+	public int savebreadQuantity{ get; set; }
+	public int savebreadSlot{ get; set;}	//Which slot in the inventory contains bread
+	public bool saveencounterTimerRunning = false;
+	public float saveencounterTimer = 0f;
+	public bool saveendGame = false;
+	Dictionary<string,int> savebodyInRoom = new Dictionary<string,int>();
+	Dictionary<string,int> savecorpseInRoom = new Dictionary<string,int>();
 
 	float unassignedActionTime = 1f;	//how much time an action should take if the action has no assigned value
 
@@ -614,69 +630,156 @@ public class Controller_Game : MonoBehaviour
 	}
 
 	public void SaveGame() {
-		if (save_state == null) {
+		if (this.savedSceneName == null || this.savedSceneName == "") {
 			//Make a new one
-			save_state = this;
-		} 
+			savedSceneName = SceneScript.sceneScript.currentSceneName;
 
-		save_state.itemList = ctrl_game.itemList;
-		save_state.itemListCondensed = ctrl_game.itemListCondensed;
-		save_state.npcs = ctrl_game.npcs;
-		save_state.messes = ctrl_game.messes;
-		save_state.items = ctrl_game.items;
+			foreach (string item in itemList) {
+				saveitemList.Add (item);
+			}
 
-		save_state.timeRemaining = ctrl_game.timeRemaining;
-		Debug.Log ("Saved turn count: " + save_state.timeRemaining);
-		save_state.killCount = ctrl_game.killCount;
-		save_state.unclaimedBodyCount = ctrl_game.unclaimedBodyCount;
-		save_state.breadConsumed = ctrl_game.breadConsumed;		//How much bread the gorilla maid has consumed
-		save_state.breadQuantity = ctrl_game.breadQuantity;
-		save_state.breadSlot = ctrl_game.breadSlot;	//Which slot in the inventory contains bread
+			foreach (string item in itemListCondensed) {
+				saveitemListCondensed.Add (item);
+			}
 
-		ctrl_game.bodyInRoom = ctrl_game.bodyInRoom;
-		ctrl_game.corpseInRoom = ctrl_game.corpseInRoom;
+			foreach (KeyValuePair<string, NPC> k in npcs) {
+				savenpcs.Add (k.Key, k.Value);
+			}
 
-		save_state.encounterTimerRunning = ctrl_game.encounterTimerRunning;
-		save_state.encounterTimer = ctrl_game.encounterTimer;
+			foreach (KeyValuePair<string, Mess> k in messes) {
+				savemesses.Add (k.Key, k.Value);
+			}
 
-		save_state.endGame = ctrl_game.endGame;
+			foreach (KeyValuePair<string, Item> k in items) {
+				saveitems.Add (k.Key, k.Value);
+			}
 
-		save_state.savedSceneName = SceneScript.sceneScript.currentSceneName;
+			foreach (KeyValuePair<string, int> k in bodyInRoom) {
+				savebodyInRoom.Add (k.Key, k.Value);
+			}
+			foreach (KeyValuePair<string, int> k in corpseInRoom) {
+				savecorpseInRoom.Add (k.Key, k.Value);
+			}
+		} else {
+			saveitemList.Clear ();
+			foreach (string item in itemList) {
+				
+				saveitemList.Add (item);
+			}
+
+			saveitemListCondensed.Clear ();
+			foreach (string item in itemListCondensed) {
+				saveitemListCondensed.Add (item);
+			}
+
+			foreach (KeyValuePair<string, NPC> k in npcs) {
+				NPC n;
+				savenpcs.TryGetValue (k.Key, out n);
+				if (n != null) {
+					n.overwrite (k.Value);
+				}
+			}
+
+			foreach (KeyValuePair<string, Mess> k in messes) {
+				Mess m;
+				savemesses.TryGetValue (k.Key, out m);
+				if (m != null) {
+					m.overwrite (k.Value);
+				}
+
+			}
+
+			foreach (KeyValuePair<string, Item> k in items) {
+				Item i;
+				saveitems.TryGetValue (k.Key, out i);
+				if (i != null) {
+					i.overwrite (k.Value);
+				}
+			}
+
+			savebodyInRoom.Clear ();
+			foreach (KeyValuePair<string, int> k in bodyInRoom) {
+				savebodyInRoom.Add (k.Key, k.Value);
+			}
+			savecorpseInRoom.Clear ();
+			foreach (KeyValuePair<string, int> k in corpseInRoom) {
+				savecorpseInRoom.Add (k.Key, k.Value);
+			}
+		}
+
+		savetimeRemaining = ctrl_game.timeRemaining;
+		Debug.Log ("Saved turn count: " + savetimeRemaining);
+		savekillCount = ctrl_game.killCount;
+		saveunclaimedBodyCount = ctrl_game.unclaimedBodyCount;
+		savebreadConsumed = ctrl_game.breadConsumed;		//How much bread the gorilla maid has consumed
+		savebreadQuantity = ctrl_game.breadQuantity;
+		savebreadSlot = ctrl_game.breadSlot;	//Which slot in the inventory contains bread
+
+		saveencounterTimerRunning = ctrl_game.encounterTimerRunning;
+		saveencounterTimer = ctrl_game.encounterTimer;
+
+		saveendGame = ctrl_game.endGame;
 		Debug.Log ("Saved");
 	}
 
 	public void LoadGame() {
-		if (save_state == null) {
-			// do nothing
+		if (this.savedSceneName == null) {
+
 		} else {
-			//overwrite
-			Debug.Log("Loading");
+			SceneScript.sceneScript.currentSceneName = savedSceneName;
 
-			ctrl_game.itemList = save_state.itemList;
-			ctrl_game.itemListCondensed = save_state.itemListCondensed;
-			ctrl_game.npcs = save_state.npcs;
-			ctrl_game.messes = save_state.messes;
-			ctrl_game.items = save_state.items;
+			itemList.Clear ();
+			foreach (string item in saveitemList) {
+				itemList.Add (item);
+			}
 
-			ctrl_game.timeRemaining = save_state.timeRemaining;
-			Debug.Log ("ctrl time: " + ctrl_game.timeRemaining + ", saved: " + save_state.timeRemaining);
-			ctrl_game.killCount = save_state.killCount;
-			ctrl_game.unclaimedBodyCount = save_state.unclaimedBodyCount;
-			ctrl_game.breadConsumed = save_state.breadConsumed;		//How much bread the gorilla maid has consumed
-			ctrl_game.breadQuantity = save_state.breadQuantity;
-			ctrl_game.breadSlot = save_state.breadSlot;	//Which slot in the inventory contains bread
+			itemListCondensed.Clear ();
+			foreach (string item in saveitemListCondensed) {
+				itemListCondensed.Add (item);
+			}
 
-			ctrl_game.bodyInRoom = save_state.bodyInRoom;
-			ctrl_game.corpseInRoom = save_state.corpseInRoom;
+			foreach (KeyValuePair<string, NPC> k in savenpcs) {
+				NPC n;
+				npcs.TryGetValue (k.Key, out n);
+				n.overwrite (k.Value);
+			}
 
-			ctrl_game.encounterTimerRunning = save_state.encounterTimerRunning;
-			ctrl_game.encounterTimer = save_state.encounterTimer;
+			foreach (KeyValuePair<string, Mess> k in messes) {
+				Mess m;
+				messes.TryGetValue (k.Key, out m);
+				m.overwrite (k.Value);
+			}
 
-			ctrl_game.endGame = save_state.endGame;
+			foreach (KeyValuePair<string, Item> k in items) {
+				Item i;
+				items.TryGetValue (k.Key, out i);
+				i.overwrite (k.Value);
+			}
 
-			ctrl_game.savedSceneName = save_state.savedSceneName;
+			bodyInRoom.Clear ();
+			foreach (KeyValuePair<string, int> k in savebodyInRoom) {
+				bodyInRoom.Add (k.Key, k.Value);
+			}
+			corpseInRoom.Clear ();
+			foreach (KeyValuePair<string, int> k in savecorpseInRoom) {
+				corpseInRoom.Add (k.Key, k.Value);
+			}
 
-			SceneScript.sceneScript.LoadScene (ctrl_game.savedSceneName);
+			this.timeRemaining = savetimeRemaining;
+			this.killCount = savekillCount;
+			this.unclaimedBodyCount = saveunclaimedBodyCount;
+			this.breadConsumed = savebreadConsumed;		//How much bread the gorilla maid has consumed
+			this.breadQuantity = savebreadQuantity;
+			this.breadSlot = savebreadSlot;	//Which slot in the inventory contains bread
+
+			this.encounterTimerRunning = saveencounterTimerRunning;
+			this.encounterTimer = saveencounterTimer;
+
+			this.endGame = saveendGame;
+			Debug.Log ("Saved");
+			Controller_GUI.ctrl_gui.SetMessesText(GetMessCount());
+			Controller_GUI.ctrl_gui.SetTimeText(this.timeRemaining);
+			SceneScript.sceneScript.LoadScene (this.savedSceneName);
 		}
 	}
 }
