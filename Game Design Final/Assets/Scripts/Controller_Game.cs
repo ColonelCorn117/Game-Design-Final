@@ -553,9 +553,17 @@ public class Controller_Game : MonoBehaviour
 			if (mess.Value.exists == 1)
 			{
 				//Debug.Log (mess.Value.name);
-				count++;
+				++count;
 			}
 		}
+		foreach (KeyValuePair<string, NPC> npc in npcs) {
+			if (npc.Value.exists == 1) {
+				if (!npc.Value.name.Contains ("Flag")) {
+					++count;
+				}
+			}
+		}
+
 		return count + this.unclaimedBodyCount;
 	}
 

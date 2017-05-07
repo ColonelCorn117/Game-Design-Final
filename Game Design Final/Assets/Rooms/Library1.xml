@@ -15,7 +15,7 @@ Maid: "W-well go away!"</description>
 			<description>Continue Talking</description>
 			<action>
 				<nextScene>Library1-1</nextScene>
-				<timeUsed>0.0</timeUsed>
+				<timeUsed>0</timeUsed>
 			</action>	
 		</condition>
 	</conditionList>

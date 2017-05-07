@@ -1,0 +1,22 @@
+﻿<SceneDescription>
+	<name>Bathroom - 1F</name>
+	<description>Assassin: [At least I'm wearing gloves. Here's to hoping that there are no 'surprises' underneath the book!]
+
+Fortunately, you encounter no surprises as you fish out the book and drop it on the floor.</description>
+	<background>Bathroom</background>
+	<conditionList>
+		<condition>
+			<description>Continue</description>
+			<action>
+				<timeUsed>0</timeUsed>
+				<nextScene>Bathroom1</nextScene>
+			</action>	
+		</condition>
+	</conditionList>
+	<npcList>
+	</npcList>
+	<messList>
+	</messList>
+	<itemList>
+	</itemList>
+</SceneDescription>

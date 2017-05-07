@@ -12,8 +12,10 @@
 			<description>Do Nothing</description>
 			<action>
 				<npcSubdued>Maid3</npcSubdued>
+				<itemCreated>Painting</itemCreated>
+				<itemGained>Lighter</itemGained>
 				<nextScene>ArtGallery1</nextScene>
-				<timeUsed>0.5</timeUsed>
+				<timeUsed>3</timeUsed>
 			</action>
 		</condition>
 		<condition>
@@ -23,7 +25,9 @@
 			</requirement>
 			<action>
 				<npcSubdued>Maid3</npcSubdued>
+				<itemCreated>Painting</itemCreated>
 				<nextScene>ArtGallery2</nextScene>
+				<itemGained>Lighter</itemGained>
 				<timeUsed>1.0</timeUsed>
 			</action>
 		</condition>
@@ -33,10 +37,10 @@
 				<prereq>existsMaid3</prereq>
 			</requirement>
 			<action>
-				<description></description>
 				<npcSubdued>Maid3</npcSubdued>
 				<itemCreated>Body</itemCreated>
 				<nextScene>ArtGallery3</nextScene>
+				<itemGained>Lighter</itemGained>
 				<timeUsed>2.0</timeUsed>
 			</action>
 		</condition>
@@ -48,6 +52,7 @@
 			<action>
 				<npcSubdued>Maid3</npcSubdued>
 				<itemCreated>Corpse</itemCreated>
+				<itemGained>Lighter</itemGained>
 				<kill>1</kill>
 				<nextScene>ArtGallery4</nextScene>
 				<timeUsed>3.0</timeUsed>
