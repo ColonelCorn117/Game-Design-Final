@@ -1,7 +1,7 @@
 ﻿<npc>
 	<name>Sakuya Izayoi</name>
 	<description>Stops time. Uses this power to clean.</description>
-	<exists>1</exists>
+	<exists>0</exists>
 	<clearList>
 		<condition>
 			<requirement>

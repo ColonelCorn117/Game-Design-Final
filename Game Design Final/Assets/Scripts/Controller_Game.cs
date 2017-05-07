@@ -15,6 +15,7 @@ public class Controller_Game : MonoBehaviour
 	//====================================================================================================
 
 	public static Controller_Game ctrl_game;
+	public static Controller_Game save_state;
 
 	//Used to keep references to the xml files so they are included in the build
 	//public List<TextAsset> dialogueXML = new List<TextAsset>();
@@ -44,7 +45,9 @@ public class Controller_Game : MonoBehaviour
 	public bool encounterTimerRunning = false;
 	public float encounterTimer = 0f;
 
-	bool endGame = false;
+	public bool endGame = false;
+
+	public string savedSceneName = ""; // Only used in save states
 
 	float unassignedActionTime = 1f;	//how much time an action should take if the action has no assigned value
 
@@ -526,6 +529,9 @@ public class Controller_Game : MonoBehaviour
 				SceneScript.sceneScript.LoadScene ("EndGame1");
 			}
 
+		} else if (GetMessCount () < 1) {
+			endGame = true;
+			SceneScript.sceneScript.LoadScene ("EndGame1");
 		}
 	}
 
@@ -559,7 +565,14 @@ public class Controller_Game : MonoBehaviour
 		foreach (KeyValuePair<string, NPC> npc in npcs) {
 			if (npc.Value.exists == 1) {
 				if (!npc.Value.name.Contains ("Flag")) {
-					++count;
+					if (npc.Value.name == "Maid3a") {
+						
+					} else if (npc.Value.name == "Glutton") {
+
+					} else {
+						++count;
+					}
+
 				}
 			}
 		}
@@ -598,5 +611,72 @@ public class Controller_Game : MonoBehaviour
 
 
 		SceneScript.sceneScript.NewGame();
+	}
+
+	public void SaveGame() {
+		if (save_state == null) {
+			//Make a new one
+			save_state = this;
+		} 
+
+		save_state.itemList = ctrl_game.itemList;
+		save_state.itemListCondensed = ctrl_game.itemListCondensed;
+		save_state.npcs = ctrl_game.npcs;
+		save_state.messes = ctrl_game.messes;
+		save_state.items = ctrl_game.items;
+
+		save_state.timeRemaining = ctrl_game.timeRemaining;
+		Debug.Log ("Saved turn count: " + save_state.timeRemaining);
+		save_state.killCount = ctrl_game.killCount;
+		save_state.unclaimedBodyCount = ctrl_game.unclaimedBodyCount;
+		save_state.breadConsumed = ctrl_game.breadConsumed;		//How much bread the gorilla maid has consumed
+		save_state.breadQuantity = ctrl_game.breadQuantity;
+		save_state.breadSlot = ctrl_game.breadSlot;	//Which slot in the inventory contains bread
+
+		ctrl_game.bodyInRoom = ctrl_game.bodyInRoom;
+		ctrl_game.corpseInRoom = ctrl_game.corpseInRoom;
+
+		save_state.encounterTimerRunning = ctrl_game.encounterTimerRunning;
+		save_state.encounterTimer = ctrl_game.encounterTimer;
+
+		save_state.endGame = ctrl_game.endGame;
+
+		save_state.savedSceneName = SceneScript.sceneScript.currentSceneName;
+		Debug.Log ("Saved");
+	}
+
+	public void LoadGame() {
+		if (save_state == null) {
+			// do nothing
+		} else {
+			//overwrite
+			Debug.Log("Loading");
+
+			ctrl_game.itemList = save_state.itemList;
+			ctrl_game.itemListCondensed = save_state.itemListCondensed;
+			ctrl_game.npcs = save_state.npcs;
+			ctrl_game.messes = save_state.messes;
+			ctrl_game.items = save_state.items;
+
+			ctrl_game.timeRemaining = save_state.timeRemaining;
+			Debug.Log ("ctrl time: " + ctrl_game.timeRemaining + ", saved: " + save_state.timeRemaining);
+			ctrl_game.killCount = save_state.killCount;
+			ctrl_game.unclaimedBodyCount = save_state.unclaimedBodyCount;
+			ctrl_game.breadConsumed = save_state.breadConsumed;		//How much bread the gorilla maid has consumed
+			ctrl_game.breadQuantity = save_state.breadQuantity;
+			ctrl_game.breadSlot = save_state.breadSlot;	//Which slot in the inventory contains bread
+
+			ctrl_game.bodyInRoom = save_state.bodyInRoom;
+			ctrl_game.corpseInRoom = save_state.corpseInRoom;
+
+			ctrl_game.encounterTimerRunning = save_state.encounterTimerRunning;
+			ctrl_game.encounterTimer = save_state.encounterTimer;
+
+			ctrl_game.endGame = save_state.endGame;
+
+			ctrl_game.savedSceneName = save_state.savedSceneName;
+
+			SceneScript.sceneScript.LoadScene (ctrl_game.savedSceneName);
+		}
 	}
 }
