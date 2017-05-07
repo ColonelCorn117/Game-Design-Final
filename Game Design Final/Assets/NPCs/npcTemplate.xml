@@ -2,7 +2,7 @@
 <npc>
 	<name>name</name>
 	<description></description>
-	<exists>1</exists>
+	<exists>0</exists>
 	<conditionList>
 		<condition>
 			<requirement>
