@@ -582,9 +582,9 @@ public class Controller_Game : MonoBehaviour
 		foreach (KeyValuePair<string, NPC> npc in npcs) {
 			if (npc.Value.exists == 1) {
 				if (!npc.Value.name.Contains ("Flag")) {
-					if (npc.Value.name == "Maid3a") {
+					if (npc.Value.id == "Maid3a") {
 						
-					} else if (npc.Value.name == "'Maid'") {
+					} else if (npc.Value.id == "Glutton") {
 
 					} else {
 						Debug.Log (npc.Value.name);
@@ -783,5 +783,33 @@ public class Controller_Game : MonoBehaviour
 			Controller_GUI.ctrl_gui.SetTimeText(this.timeRemaining);
 			SceneScript.sceneScript.LoadScene (this.savedSceneName);
 		}
+	}
+
+	public void LogMesses() {
+		string desc = "";
+
+		foreach (KeyValuePair<string, Mess> mess in messes) {
+			if (mess.Value.exists == 1) {
+				desc += mess.Value.name + "\n";
+			}
+		}
+		foreach (KeyValuePair<string, NPC> npc in npcs) {
+			if (npc.Value.exists == 1) {
+				if (!npc.Value.name.Contains ("Flag")) {
+					if (npc.Value.id == "Maid3a") {
+
+					} else if (npc.Value.id == "Glutton") {
+
+					} else {
+						desc += npc.Value.name + "\n";
+					}
+
+				}
+			}
+		}
+
+		desc +="bodies: " + this.unclaimedBodyCount;
+
+		SceneScript.sceneScript.LoadSimpleScene(desc, "reload");
 	}
 }
