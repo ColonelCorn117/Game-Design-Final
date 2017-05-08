@@ -5,15 +5,15 @@
 	<background>Landing</background>
 	<conditionList>
 		<condition>
-			<description>Hallway (East)</description>
+			<description>Downstairs (North)</description>
 			<action>
-				<nextScene>Hallway22</nextScene>
+				<nextScene>Landing2F</nextScene>
 			</action>
 		</condition>
 		<condition>
-			<description>Downstairs (South)</description>
+			<description>Hallway (East)</description>
 			<action>
-				<nextScene>Landing2F</nextScene>
+				<nextScene>Hallway22</nextScene>
 			</action>
 		</condition>
 		<condition>

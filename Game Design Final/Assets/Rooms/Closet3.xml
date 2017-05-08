@@ -7,7 +7,7 @@
 			<requirement>
 				<prereq>noreqs</prereq>
 			</requirement>
-			<description>Hallway (South)</description>
+			<description>Hallway (North)</description>
 			<action>
 				<nextScene>Hallway11</nextScene>
 			</action>

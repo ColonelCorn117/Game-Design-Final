@@ -11,7 +11,6 @@ Lord Borkus: "This meeting is too important for fuck-ups. My mansion needs to be
 		<condition>
 			<description>Continue</description>
 			<action>
-				<timeUsed>0</timeUsed>
 				<nextScene>Intro01-02</nextScene>
 				<timeUsed>0.0</timeUsed>
 			</action>
@@ -19,8 +18,7 @@ Lord Borkus: "This meeting is too important for fuck-ups. My mansion needs to be
 		<condition>
 			<description>Skip</description>
 			<action>
-				<timeUsed>0</timeUsed>
-				<nextScene>Entrance</nextScene>
+				<nextScene>AssassinBedroom</nextScene>
 				<timeUsed>0.0</timeUsed>
 			</action>
 		</condition>

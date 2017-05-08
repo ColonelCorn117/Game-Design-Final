@@ -1,58 +1,23 @@
 ﻿<SceneDescription>
 	<name>Endgame</name>
-	<description>A bell tolls, in the distance, signaling the arrival of Lord Borkus's guests. 
-	
-Assassin: Borkus won't want his guests to see me, so I'd better get back to my room now.</description>
+	<description>Assassin: [Finally…they’re gone]
+
+The guests have left. Every moment of the meeting with Lord Borkus was agonizing to watch, forced to follow along silently as they were given a grand tour of the mansion.
+
+Assassin: [I need to start being more selective of what jobs I take on…this has been ridiculous…]
+
+Lord Borkus returns to the office, closing the door behind him and moving to sit at his desk. He is quiet for a minute, before turning around in his chair to face you with a pleased smile on his face.
+
+Lord Borkus: "Everything has gone perfectly. Negotiations were successful. They will be investing in my new business venture."
+</description>
 	<background></background>
 	<conditionList>
 		<condition>
 			<description>Continue</description>
-			<requirement>
-				<prereq>messhi0</prereq>
-			</requirement>
 			<action>
 				<timeUsed>0</timeUsed>
-				<nextScene>EndGame2</nextScene>
+				<nextScene>EndGame1-1</nextScene>
 			</action>	
-		</condition>
-		<condition>
-			<description>Continue</description>
-			<requirement>
-				<prereq>messhi3</prereq>
-				<prereq>messlo1</prereq>
-			</requirement>
-			<action>
-				<timeUsed>0</timeUsed>
-				<nextScene>EndGame3</nextScene>
-			</action>	
-		</condition>
-		<condition>
-			<description>Continue</description>
-			<requirement>
-				<prereq>messhi6</prereq>
-				<prereq>messlo4</prereq>
-			</requirement>
-			<action>
-				<timeUsed>0</timeUsed>
-				<nextScene>EndGame4</nextScene>
-			</action>	
-		</condition>
-		<condition>
-			<description>Continue</description>
-			<requirement>
-				<prereq>messlo7</prereq>
-			</requirement>
-			<action>
-				<timeUsed>0</timeUsed>
-				<nextScene>EndGame5</nextScene>
-			</action>	
-		</condition>
-		<condition>
-			<description></description>
-			<additionalDescription>Assassin: It's too bad I didn't manage to clean everything, but hopefully, that idiot won't notice.</additionalDescription>
-			<requirement>
-				<prereq>messlo1</prereq>
-			</requirement>
 		</condition>
 	</conditionList>
 	<npcList>

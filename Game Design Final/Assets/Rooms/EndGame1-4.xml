@@ -1,0 +1,27 @@
+﻿<SceneDescription>
+	<name>Endgame</name>
+	<description>Assassin: "I can’t take it anymore!"
+
+Lord Borkus: "What can’t you take anym- eh?!"
+
+You pick up Lord Borkus, chair and all, and move to the window, kicking it open.
+
+Assassin: "I QUIT!"
+
+The chair, with Lord Borkus still sitting in it, is promptly thrown out the window. Relieved of your remaining problems, you dust off your hands and gently close the window. Your task is done.
+
+Assassin: "Well, that was therapeutic..."
+
+Congratulations! You’ve gotten the Good Ending!
+</description>
+	<background>black</background>
+	<conditionList>
+		
+	</conditionList>
+	<npcList>
+	</npcList>
+	<messList>
+	</messList>
+	<itemList>
+	</itemList>
+</SceneDescription>

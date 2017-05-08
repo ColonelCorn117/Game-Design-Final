@@ -4,7 +4,7 @@
 	<background>Landing</background>
 	<conditionList>
 		<condition>
-			<description>Landing (North)</description>
+			<description>Landing (South)</description>
 			<action>
 				<name>toLanding</name>
 				<nextScene>Landing1F</nextScene>

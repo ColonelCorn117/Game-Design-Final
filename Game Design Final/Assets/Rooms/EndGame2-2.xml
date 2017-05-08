@@ -1,0 +1,31 @@
+﻿<SceneDescription>
+	<name>Endgame</name>
+	<description>Assassin: "I have an explanation if you will hear me out, Sir..."
+
+Lord Borkus: "Speak quickly."
+
+Assassin: "The maid staff were…extremely angry after the meeting this morning. They decided to go on strike and began to destroy your mansion. I did what I could to stop them and clean up their messes, but it was too much for me to handle alone. I deeply apologize, Sir."
+
+Lord Borkus looks drastically less happy than before.
+
+Lord Borkus: "Why did you not inform me that these things were happening?!"
+
+Assassin: "I didn’t want to disturb you, Sir. "
+</description>
+	<background></background>
+	<conditionList>
+		<condition>
+			<description>Continue</description>
+			<action>
+				<timeUsed>0</timeUsed>
+				<nextScene>EndGame2-3</nextScene>
+			</action>	
+		</condition>
+	</conditionList>
+	<npcList>
+	</npcList>
+	<messList>
+	</messList>
+	<itemList>
+	</itemList>
+</SceneDescription>

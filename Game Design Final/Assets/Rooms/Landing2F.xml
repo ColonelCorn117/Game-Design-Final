@@ -5,10 +5,23 @@
 	<background>Landing</background>
 	<conditionList>
 		<condition>
+			<description>Downstairs (North)</description>
+			<action>
+				<nextScene>Landing1F</nextScene>
+			</action>
+		</condition>
+		<condition>
+			<description>Hallway (East)</description>
+			<action>
+				<nextScene>Hallway11</nextScene>
+			</action>
+			
+		</condition>
+		<condition>
 			<requirement>
 				<prereq>messedOilSlick</prereq>
 			</requirement>
-			<description>Upstairs (North)</description>
+			<description>Upstairs (South)</description>
 			<additionalDescription>The stairs going to the third floor are slick with grease.</additionalDescription>
 			<action>
 				<description>Assassin: [There's no way I can climb the stairs when they're that slippery.]</description>
@@ -20,24 +33,10 @@
 			<requirement>
 				<prereq>nomessOilSlick</prereq>
 			</requirement>
-			<description>Upstairs (North)</description>
+			<description>Upstairs (South)</description>
 			<action>
 				<nextScene>Landing3F</nextScene>
 			</action>
-		</condition>
-		<condition>
-			<description>Hallway (East)</description>
-			<action>
-				<nextScene>Hallway11</nextScene>
-			</action>
-			
-		</condition>
-		<condition>
-			<description>Downstairs (South)</description>
-			<action>
-				<nextScene>Landing1F</nextScene>
-			</action>
-			
 		</condition>
 		<condition>
 			<description>Hallway (West)</description>

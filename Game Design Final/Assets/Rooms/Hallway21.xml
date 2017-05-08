@@ -5,15 +5,15 @@
 	<background>HallwayPaintings</background>
 	<conditionList>
 		<condition>
-			<description>Closet (North)</description>
-			<action>
-				<nextScene>Closet4</nextScene>
-			</action>	
-		</condition>
-		<condition>
 			<description>Landing (East)</description>
 			<action>
 				<nextScene>Landing3F</nextScene>
+			</action>	
+		</condition>
+		<condition>
+			<description>Closet (South)</description>
+			<action>
+				<nextScene>Closet4</nextScene>
 			</action>	
 		</condition>
 		<condition>

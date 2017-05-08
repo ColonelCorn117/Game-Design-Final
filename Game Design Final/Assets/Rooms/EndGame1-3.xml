@@ -1,0 +1,34 @@
+﻿<SceneDescription>
+	<name>Endgame</name>
+	<description>Lord Borkus: "Ah, goodness. An assassin cleaning like a maid. That’s a good one. I haven’t gotten that good of a laugh in some time. Now, to get to work."
+
+Assassin: "Work?"
+
+Lord Borkus: "I’ll have to file the paperwork to give the maids their well-earned raises".
+
+Assassin: [Are you f***ing KIDDING ME?!]
+</description>
+	<background></background>
+	<conditionList>
+		<condition>
+			<description>Kill Him</description>
+			<action>
+				<timeUsed>0</timeUsed>
+				<nextScene>EndGame1-4</nextScene>
+			</action>	
+		</condition>
+		<condition>
+			<description>Quit</description>
+			<action>
+				<timeUsed>0</timeUsed>
+				<nextScene>EndGame1-5</nextScene>
+			</action>	
+		</condition>
+	</conditionList>
+	<npcList>
+	</npcList>
+	<messList>
+	</messList>
+	<itemList>
+	</itemList>
+</SceneDescription>

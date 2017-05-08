@@ -1,8 +1,22 @@
 ﻿<SceneDescription>
-	<name>Game Over - Golden</name>
-	<description>Lord Borkus's home is spotless. You win everything. Forever.</description>
+	<name>Endgame</name>
+	<description>The sound of the mansion doors closing is bliss. The guests have finally left.
+
+Assassin: [I don’t think I could have taken much more…]
+
+However, even though some messes were cleaned up, you failed to get to enough of them in time. Lord Borkus didn’t look happy when he saw them. You’ve been summoned to his office.
+
+Assassin: [I sincerely hope he isn’t too pissed off. I really don’t have the patience for this shit anymore…”
+</description>
 	<background></background>
 	<conditionList>
+		<condition>
+			<description>Continue</description>
+			<action>
+				<timeUsed>0</timeUsed>
+				<nextScene>EndGame2-1</nextScene>
+			</action>	
+		</condition>
 	</conditionList>
 	<npcList>
 	</npcList>

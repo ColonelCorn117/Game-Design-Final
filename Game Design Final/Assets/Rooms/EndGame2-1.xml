@@ -1,0 +1,29 @@
+﻿<SceneDescription>
+	<name>Endgame</name>
+	<description>Lord Borkus is sitting at his desk when you walk in.
+
+Lord Borkus: "It goes without saying that I am very displeased, Assassin."
+  
+Assassin: [No shit…]
+
+Assassin: [How the hell do I get out of this…?]
+
+Assassin: [I’ll just tell him what actually happened. That’ll at least direct some of the fire away from me]
+</description>
+	<background></background>
+	<conditionList>
+		<condition>
+			<description>Continue</description>
+			<action>
+				<timeUsed>0</timeUsed>
+				<nextScene>EndGame2-2</nextScene>
+			</action>	
+		</condition>
+	</conditionList>
+	<npcList>
+	</npcList>
+	<messList>
+	</messList>
+	<itemList>
+	</itemList>
+</SceneDescription>

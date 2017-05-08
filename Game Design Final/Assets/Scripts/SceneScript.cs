@@ -280,6 +280,7 @@ public class SceneScript : MonoBehaviour {
 			LoadButtons ();
 			LoadBackgroundImage (xml.background);
 			LoadDetailSprite ("Default");
+			LoadMapImage(sceneName);
 		} else if ((sceneName.Length > 8) && (sceneName.Substring (0, 8) == "dialogue")) {
 			LoadDialogue (sceneName.Substring (8));
 		} else {
@@ -409,6 +410,37 @@ public class SceneScript : MonoBehaviour {
 		Controller_GUI.ctrl_gui.SetDetailImage (Sprite.Create (texture, new Rect (0, 0, texture.width, texture.height), new Vector2 (0.5f, 0.5f)));
 
 		return true;
+	}
+	
+	//----------------------------------------------------------------------------------------------------
+	public void LoadMapImage(string imageName)
+	{
+		string imagePath = "Assets/Images/Map Images/" + imageName + ".png";
+
+		if (imageName.Length > 3 && imageName.Substring (imageName.Length - 4, 1) == ".")
+		{
+			imagePath = "Assets/Images/Map Images/" + imageName;
+		}
+
+		if (File.Exists (imagePath))
+		{
+			byte[] data = File.ReadAllBytes (imagePath);
+			Texture2D texture = new Texture2D (64, 64, TextureFormat.ARGB32, false);
+			texture.LoadImage (data);
+			texture.name = Path.GetFileNameWithoutExtension (imageName);
+
+			Controller_GUI.ctrl_gui.SetMapImage (Sprite.Create (texture, 
+			new Rect (0, 0, texture.width, texture.height), new Vector2 (0.5f, 0.5f)));
+		}
+		else
+		{
+			//Debug.Log("Image " + imageName + " not found");
+
+			if (imageName != "map")
+			{
+				LoadMapImage ("map");
+			}
+		}
 	}
 
 	//----------------------------------------------------------------------------------------------------

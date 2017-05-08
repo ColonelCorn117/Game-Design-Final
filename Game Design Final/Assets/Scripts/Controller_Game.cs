@@ -16,7 +16,7 @@ public class Controller_Game : MonoBehaviour
 
 	public static Controller_Game ctrl_game;
 
-	//Used to keep references to the xml files so they are included in the build
+	//Used to keep references to the xml files so they are included in the build, but we're just dropping the assets folder next to the build, so we don't use them.
 	//public List<TextAsset> dialogueXML = new List<TextAsset>();
 	//public List<TextAsset> itemsXML = new List<TextAsset>();
 	//public List<TextAsset> messesXML = new List<TextAsset>();
@@ -540,9 +540,10 @@ public class Controller_Game : MonoBehaviour
 		if (timeRemaining <= 0) {
 			timeRemaining = 0;
 
-			if (!endGame) {
+			if (!endGame)
+			{
 				endGame = true;
-				SceneScript.sceneScript.LoadScene ("EndGame1");
+				SceneScript.sceneScript.LoadScene ("EndGame");
 			}
 
 		} else if (GetMessCount () < 1) {

@@ -4,15 +4,15 @@
 	<background>HallwayWindows</background>
 	<conditionList>
 		<condition>
-			<description>Bathroom (North)</description>
-			<action>
-				<nextScene>Bathroom3</nextScene>
-			</action>	
-		</condition>
-		<condition>
 			<description>Landing (East)</description>
 			<action>
 				<nextScene>Landing2F</nextScene>
+			</action>	
+		</condition>
+		<condition>
+			<description>Bathroom (South)</description>
+			<action>
+				<nextScene>Bathroom3</nextScene>
 			</action>	
 		</condition>
 		<condition>

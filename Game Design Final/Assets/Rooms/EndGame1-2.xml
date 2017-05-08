@@ -1,0 +1,27 @@
+﻿<SceneDescription>
+	<name>Endgame</name>
+	<description>Assassin: "Sir…I am the one who did all of the cleaning."
+
+Lord Borkus snorts obnoxiously and laughs. He doesn’t stop laughing for a solid minute.
+
+Lord Borkus: "Hah! You tell good jokes, Assassin! I should hire you on permanently!"
+
+All attempts to convince Lord Borkus that you are the one who did the cleaning fail to get through to him. He will never acknowledge that you have done all of the cleaning.
+</description>
+	<background></background>
+	<conditionList>
+		<condition>
+			<description>Continue</description>
+			<action>
+				<timeUsed>0</timeUsed>
+				<nextScene>EndGame1-3</nextScene>
+			</action>	
+		</condition>
+	</conditionList>
+	<npcList>
+	</npcList>
+	<messList>
+	</messList>
+	<itemList>
+	</itemList>
+</SceneDescription>

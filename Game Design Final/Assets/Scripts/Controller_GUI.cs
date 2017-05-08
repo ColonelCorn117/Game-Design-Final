@@ -26,6 +26,7 @@ public class Controller_GUI : MonoBehaviour
 	Button option4Btn;*/
 	Image itemsListImage;
 	Image detailImage;
+	Image mapImage;
 	public Image itemsBox;
 	List<Text> itemsText = new List<Text>();	//Text components of the item slots
 
@@ -74,6 +75,9 @@ public class Controller_GUI : MonoBehaviour
 				break;
 			case("Detail Image"):
 				detailImage = image;
+				break;
+			case("Map Image"):
+				mapImage = image;
 				break;
 			case("Items Box"):
 				itemsBox = image;
@@ -153,6 +157,13 @@ public class Controller_GUI : MonoBehaviour
 	public void SetBackgroundImage(Sprite imageSource)
 	{
 		bgImage.sprite = imageSource;	
+	}
+
+	//----------------------------------------------------------------------------------------------------
+
+	public void SetMapImage(Sprite imageSource)
+	{
+		mapImage.sprite = imageSource;	
 	}
 
 	//----------------------------------------------------------------------------------------------------

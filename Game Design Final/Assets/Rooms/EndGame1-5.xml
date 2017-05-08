@@ -1,0 +1,23 @@
+﻿<SceneDescription>
+	<name>Endgame</name>
+	<description>No words could possibly express the amount of ice cold rage you feel. You move toward the door of the office. Lord Borkus puts down his pen.
+
+Lord Borkus: Is there something wrong?”
+
+You say nothing, but do stop to stare at a very expensive-looking, fancy vase that sits on a decorate display pillar next to the door. 
+
+Lord Borkus: What are you doing? What’s the matter with you?
+
+Congratulations! You’ve gotten the Good Ending!
+</description>
+	<background>black</background>
+	<conditionList>
+		
+	</conditionList>
+	<npcList>
+	</npcList>
+	<messList>
+	</messList>
+	<itemList>
+	</itemList>
+</SceneDescription>

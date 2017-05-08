@@ -12,7 +12,7 @@ Assassin: [He doesn’t even know how to play ONE piano; why does he need THREE?
 
 Assassin: *sigh* "Whatever. At least there aren’t any messes to deal with here."</additionalDescription>
 			<requirement>
-				<prereq>removeBratticus</prereq>
+				<prereq>removeFinalEncounterFlag</prereq>
 			</requirement>
 			<action>
 				<nextScene>Hallway7</nextScene>

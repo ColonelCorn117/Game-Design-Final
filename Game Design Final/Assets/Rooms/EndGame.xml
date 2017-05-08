@@ -1,0 +1,44 @@
+﻿<SceneDescription>
+	<name>Endgame</name>
+	<description>The sound of a doorbell echoes through the halls of the mansion. The time has come. The guests have arrived…and brought your fate along with them…</description>
+	<background></background>
+	<conditionList>
+		<condition>
+			<description>Continue</description>
+			<requirement>
+				<prereq>messhi0</prereq>	<!---Range of messes = [0, 0]-->
+			</requirement>
+			<action>
+				<timeUsed>0</timeUsed>
+				<nextScene>EndGame1</nextScene>
+			</action>	
+		</condition>
+		<condition>
+			<description>Continue</description>
+			<requirement>
+				<prereq>messlo1</prereq>		<!---Range of messes = [1, 7]-->
+				<prereq>messhi7</prereq>	
+			</requirement>
+			<action>
+				<timeUsed>0</timeUsed>
+				<nextScene>EndGame2</nextScene>
+			</action>	
+		</condition>
+		<condition>
+			<description>Continue</description>
+			<requirement>
+				<prereq>messlo8</prereq>	<!---Range of messes = [8, +]-->
+			</requirement>
+			<action>
+				<timeUsed>0</timeUsed>
+				<nextScene>EndGame3</nextScene>
+			</action>	
+		</condition>
+	</conditionList>
+	<npcList>
+	</npcList>
+	<messList>
+	</messList>
+	<itemList>
+	</itemList>
+</SceneDescription>

@@ -5,23 +5,9 @@
 	<background>Landing</background>
 	<conditionList>
 		<condition>
-			<description>Upstairs (North)</description>
-			<requirement>
-				<prereq>nomessTripwires</prereq>
-			</requirement>
+			<description>Entrance (North)</description>
 			<action>
-				<nextScene>Landing2F</nextScene>
-			</action>
-		</condition>
-		<condition>
-			<description>Upstairs (North)</description>
-			<additionalDescription>Climbing equipment 'decorates' the stairs, making them more difficult to climb.</additionalDescription>
-			<requirement>
-				<prereq>messedTripwires</prereq>
-			</requirement>
-			<action>
-				<timeUsed>5</timeUsed>
-				<nextScene>Landing2F</nextScene>
+				<nextScene>Entrance</nextScene>
 			</action>
 		</condition>
 		<condition>
@@ -31,9 +17,23 @@
 			</action>
 		</condition>
 		<condition>
-			<description>Entrance (South)</description>
+			<description>Upstairs (South)</description>
+			<requirement>
+				<prereq>nomessTripwires</prereq>
+			</requirement>
 			<action>
-				<nextScene>Entrance</nextScene>
+				<nextScene>Landing2F</nextScene>
+			</action>
+		</condition>
+		<condition>
+			<description>Upstairs (South)</description>
+			<additionalDescription>Climbing equipment 'decorates' the stairs, making them more difficult to climb.</additionalDescription>
+			<requirement>
+				<prereq>messedTripwires</prereq>
+			</requirement>
+			<action>
+				<timeUsed>5</timeUsed>
+				<nextScene>Landing2F</nextScene>
 			</action>
 		</condition>
 		<condition>
