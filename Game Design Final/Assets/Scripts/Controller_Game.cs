@@ -575,7 +575,7 @@ public class Controller_Game : MonoBehaviour
 		{
 			if (mess.Value.exists == 1)
 			{
-				//Debug.Log (mess.Value.name);
+				Debug.Log (mess.Value.name);
 				++count;
 			}
 		}
@@ -587,6 +587,7 @@ public class Controller_Game : MonoBehaviour
 					} else if (npc.Value.id == "Glutton") {
 
 					} else {
+						Debug.Log (npc.Value.name);
 						++count;
 					}
 

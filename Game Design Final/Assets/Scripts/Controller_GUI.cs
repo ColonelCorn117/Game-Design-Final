@@ -254,6 +254,7 @@ public class Controller_GUI : MonoBehaviour
 			if (mess.Value.exists == 1)
 			{
 				count++;
+				Debug.Log(mess.Value);
 			}
 		}
 		messesText.text = (count + Controller_Game.ctrl_game.unclaimedBodyCount).ToString();

@@ -4,7 +4,7 @@
 	<background>OrchestraPit</background>
 	<conditionList>	
 		<condition>
-			<description>Ballroom</description>
+			<description>Ballroom (North)</description>
 			<requirement>
 				<prereq>removeMaid2</prereq>
 			</requirement>
@@ -110,7 +110,7 @@ Assassin: [She would.]
 			</action>
 		</condition>
 		<condition>
-			<description>Stand and Watch</description>
+			<description>Activate Bread</description>
 			<requirement>
 				<prereq>existsMaid2</prereq>
 				<prereq>loaves7</prereq>
