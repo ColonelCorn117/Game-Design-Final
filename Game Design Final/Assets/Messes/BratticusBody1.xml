@@ -12,7 +12,7 @@
 			<action>
 				<name>Clean</name>
 				<description>A few strips of duct tape and two flights of stairs later, Bratticus has been hidden safely in his room.</description>
-				<messResolved>BratticusBody</messResolved>
+				<messResolved>BratticusBody1</messResolved>
 				<itemUsed>DuctTape</itemUsed>
 				<timeUsed>9</timeUsed>
 				<nextScene>ChildBedroom</nextScene>
