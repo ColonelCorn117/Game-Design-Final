@@ -2836,7 +2836,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentSceneName: 
-  startingSceneName: AssassinBedroom
+  startingSceneName: Intro01-01
 --- !u!1 &896676789
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,0 +1,23 @@
+﻿<SceneDescription>
+	<name>Introduction</name>
+	<description>You retreat to your room to gather your thoughts.
+
+There is a commotion outside your door, followed by what sounds like running water.
+
+Assassin: [Alright. What did they do?]
+	</description>
+	<background></background>
+	<conditionList>
+		<condition>
+			<description>Continue</description>
+			<action>
+				<nextScene>AssassinBedroom</nextScene>
+				<timeUsed>0.0</timeUsed>
+			</action>
+		</condition>
+	</conditionList>
+	<npcList>
+	</npcList>
+	<messList>
+	</messList>
+</SceneDescription>

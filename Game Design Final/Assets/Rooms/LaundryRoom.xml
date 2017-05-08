@@ -9,7 +9,7 @@ The laundry chute drops off clothing into a basket.
 	<background>LaundryRoom</background>
 	<conditionList>
 		<condition>
-			<description>Hallway (South)</description>
+			<description>Servant Passage (West)</description>
 			<action>
 				<nextScene>ServantPassage1</nextScene>
 			</action>
