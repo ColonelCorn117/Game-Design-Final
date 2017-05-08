@@ -575,7 +575,7 @@ public class Controller_Game : MonoBehaviour
 		{
 			if (mess.Value.exists == 1)
 			{
-				//Debug.Log (mess.Value.name);
+				Debug.Log (mess.Value.name);
 				++count;
 			}
 		}
@@ -584,9 +584,10 @@ public class Controller_Game : MonoBehaviour
 				if (!npc.Value.name.Contains ("Flag")) {
 					if (npc.Value.name == "Maid3a") {
 						
-					} else if (npc.Value.name == "Glutton") {
+					} else if (npc.Value.name == "'Maid'") {
 
 					} else {
+						Debug.Log (npc.Value.name);
 						++count;
 					}
 
