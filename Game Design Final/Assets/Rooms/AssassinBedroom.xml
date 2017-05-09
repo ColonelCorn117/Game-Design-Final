@@ -8,7 +8,7 @@ Assassin: [...or rather, home sweet (miserable) home.]</description>
 	<background></background>
 	<conditionList>
 		<condition>
-			<description>Hallway</description>
+			<description>Hallway (South)</description>
 			<action>
 				<nextScene>Hallway5</nextScene>
 			</action>	

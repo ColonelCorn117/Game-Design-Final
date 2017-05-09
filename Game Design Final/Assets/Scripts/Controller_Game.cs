@@ -264,10 +264,10 @@ public class Controller_Game : MonoBehaviour
 				bodyInRoom [room] -= 1;
 				--this.unclaimedBodyCount;
 			} else {
-				Debug.Log ("Room " + room + " contains too few bodies");
+//				Debug.Log ("Room " + room + " contains too few bodies");
 			}
 		} else {
-			Debug.Log ("Room " + room + " not found");
+//			Debug.Log ("Room " + room + " not found");
 		}
 	}
 
@@ -279,10 +279,10 @@ public class Controller_Game : MonoBehaviour
 				corpseInRoom [room] -= 1;
 				--this.unclaimedBodyCount;
 			} else {
-				Debug.Log ("Room " + room + " contains too few corpses");
+//				Debug.Log ("Room " + room + " contains too few corpses");
 			}
 		} else {
-			Debug.Log ("Room " + room + " not found");
+//			Debug.Log ("Room " + room + " not found");
 		}
 	}
 
@@ -303,10 +303,10 @@ public class Controller_Game : MonoBehaviour
 				++breadConsumed;
 
 			} else if (a.itemUsed == "Body") {
-				Debug.Log ("Attempting to hide a body in : " + SceneScript.sceneScript.GetSceneID());
+//				Debug.Log ("Attempting to hide a body in : " + SceneScript.sceneScript.GetSceneID());
 				AddBody (SceneScript.sceneScript.GetSceneID(), false);
 			} else if (a.itemUsed == "Corpse") {
-				Debug.Log ("Attempting to hide a corpse in : " + SceneScript.sceneScript.GetSceneID());
+//				Debug.Log ("Attempting to hide a corpse in : " + SceneScript.sceneScript.GetSceneID());
 				AddCorpse (SceneScript.sceneScript.GetSceneID(),false);
 			}
 			//this.itemList.Remove (a.itemUsed);
@@ -330,10 +330,10 @@ public class Controller_Game : MonoBehaviour
 				}
 				++breadQuantity;
 			} else if (a.itemGained == "Body") {
-				Debug.Log ("Attempting to remove a body from : " + SceneScript.sceneScript.GetSceneID());
+//				Debug.Log ("Attempting to remove a body from : " + SceneScript.sceneScript.GetSceneID());
 				RemoveBody (SceneScript.sceneScript.GetSceneID());
 			} else if (a.itemGained == "Corpse") {
-				Debug.Log ("Attempting to remove a corpse from : " + SceneScript.sceneScript.GetSceneID());
+//				Debug.Log ("Attempting to remove a corpse from : " + SceneScript.sceneScript.GetSceneID());
 				RemoveCorpse (SceneScript.sceneScript.GetSceneID());
 			}
 			this.ItemLookup (a.itemGained).claim ();
@@ -343,10 +343,10 @@ public class Controller_Game : MonoBehaviour
 		if (a.itemCreated != null && a.itemCreated != "") {
 			this.ItemLookup (a.itemCreated).create ();
 			if (a.itemCreated == "Corpse") {
-				Debug.Log ("Attempting to add a corpse to : " + SceneScript.sceneScript.GetSceneID());
+//				Debug.Log ("Attempting to add a corpse to : " + SceneScript.sceneScript.GetSceneID());
 				AddCorpse (SceneScript.sceneScript.GetSceneID());
 			} else if (a.itemCreated == "Body") {
-				Debug.Log ("Attempting to add a body to : " + SceneScript.sceneScript.GetSceneID());
+//				Debug.Log ("Attempting to add a body to : " + SceneScript.sceneScript.GetSceneID());
 				AddBody (SceneScript.sceneScript.GetSceneID());
 			}
 		}
@@ -575,7 +575,7 @@ public class Controller_Game : MonoBehaviour
 		{
 			if (mess.Value.exists == 1)
 			{
-				Debug.Log (mess.Value.name);
+//				Debug.Log (mess.Value.id);
 				++count;
 			}
 		}
@@ -587,7 +587,7 @@ public class Controller_Game : MonoBehaviour
 					} else if (npc.Value.id == "Glutton") {
 
 					} else {
-						Debug.Log (npc.Value.name);
+//						Debug.Log (npc.Value.id);
 						++count;
 					}
 
@@ -710,7 +710,7 @@ public class Controller_Game : MonoBehaviour
 		}
 
 		savetimeRemaining = ctrl_game.timeRemaining;
-		Debug.Log ("Saved turn count: " + savetimeRemaining);
+//		Debug.Log ("Saved turn count: " + savetimeRemaining);
 		savekillCount = ctrl_game.killCount;
 		saveunclaimedBodyCount = ctrl_game.unclaimedBodyCount;
 		savebreadConsumed = ctrl_game.breadConsumed;		//How much bread the gorilla maid has consumed
@@ -721,7 +721,7 @@ public class Controller_Game : MonoBehaviour
 		saveencounterTimer = ctrl_game.encounterTimer;
 
 		saveendGame = ctrl_game.endGame;
-		Debug.Log ("Saved");
+//		Debug.Log ("Saved");
 	}
 
 	public void LoadGame() {
@@ -778,7 +778,7 @@ public class Controller_Game : MonoBehaviour
 			this.encounterTimer = saveencounterTimer;
 
 			this.endGame = saveendGame;
-			Debug.Log ("Saved");
+//			Debug.Log ("Saved");
 			Controller_GUI.ctrl_gui.SetMessesText(GetMessCount());
 			Controller_GUI.ctrl_gui.SetTimeText(this.timeRemaining);
 			SceneScript.sceneScript.LoadScene (this.savedSceneName);
