@@ -23,7 +23,7 @@ public class NPC : Problem {
 		return dialogueLocation;
 	}
 
-	public NPC copy() {
+	public new NPC copy() {
 		NPC p = new NPC ();
 		p.exists = this.exists;
 		p.id = this.id;

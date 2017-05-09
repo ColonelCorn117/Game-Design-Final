@@ -18,7 +18,7 @@ public class Mess : Problem {
 		return (this.id == m.id) && (this.exists == m.exists);
 	}
 
-	public Mess copy() {
+	public new Mess copy() {
 		Mess p = new Mess ();
 		p.exists = this.exists;
 		p.id = this.id;
