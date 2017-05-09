@@ -2,6 +2,7 @@
 	<name>'Maid'</name>
 	<description>Assassin: I had no idea that the maid staff included a 400 pound gorilla capable of surviving on nothing but bread.</description>
 	<exists>1</exists>
+	<id>Glutton</id>
 	<clearList>
 		<condition>
 			<requirement>

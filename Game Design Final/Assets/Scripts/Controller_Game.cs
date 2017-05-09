@@ -264,10 +264,10 @@ public class Controller_Game : MonoBehaviour
 				bodyInRoom [room] -= 1;
 				--this.unclaimedBodyCount;
 			} else {
-//				Debug.Log ("Room " + room + " contains too few bodies");
+				Debug.Log ("Room " + room + " contains too few bodies");
 			}
 		} else {
-//			Debug.Log ("Room " + room + " not found");
+			Debug.Log ("Room " + room + " not found");
 		}
 	}
 
@@ -279,10 +279,10 @@ public class Controller_Game : MonoBehaviour
 				corpseInRoom [room] -= 1;
 				--this.unclaimedBodyCount;
 			} else {
-//				Debug.Log ("Room " + room + " contains too few corpses");
+				Debug.Log ("Room " + room + " contains too few corpses");
 			}
 		} else {
-//			Debug.Log ("Room " + room + " not found");
+			Debug.Log ("Room " + room + " not found");
 		}
 	}
 
@@ -303,10 +303,10 @@ public class Controller_Game : MonoBehaviour
 				++breadConsumed;
 
 			} else if (a.itemUsed == "Body") {
-//				Debug.Log ("Attempting to hide a body in : " + SceneScript.sceneScript.GetSceneID());
+				Debug.Log ("Attempting to hide a body in : " + SceneScript.sceneScript.GetSceneID());
 				AddBody (SceneScript.sceneScript.GetSceneID(), false);
 			} else if (a.itemUsed == "Corpse") {
-//				Debug.Log ("Attempting to hide a corpse in : " + SceneScript.sceneScript.GetSceneID());
+				Debug.Log ("Attempting to hide a corpse in : " + SceneScript.sceneScript.GetSceneID());
 				AddCorpse (SceneScript.sceneScript.GetSceneID(),false);
 			}
 			//this.itemList.Remove (a.itemUsed);
@@ -330,10 +330,10 @@ public class Controller_Game : MonoBehaviour
 				}
 				++breadQuantity;
 			} else if (a.itemGained == "Body") {
-//				Debug.Log ("Attempting to remove a body from : " + SceneScript.sceneScript.GetSceneID());
+				//Debug.Log ("Attempting to remove a body from : " + SceneScript.sceneScript.GetSceneID());
 				RemoveBody (SceneScript.sceneScript.GetSceneID());
 			} else if (a.itemGained == "Corpse") {
-//				Debug.Log ("Attempting to remove a corpse from : " + SceneScript.sceneScript.GetSceneID());
+				//Debug.Log ("Attempting to remove a corpse from : " + SceneScript.sceneScript.GetSceneID());
 				RemoveCorpse (SceneScript.sceneScript.GetSceneID());
 			}
 			this.ItemLookup (a.itemGained).claim ();
@@ -343,10 +343,10 @@ public class Controller_Game : MonoBehaviour
 		if (a.itemCreated != null && a.itemCreated != "") {
 			this.ItemLookup (a.itemCreated).create ();
 			if (a.itemCreated == "Corpse") {
-//				Debug.Log ("Attempting to add a corpse to : " + SceneScript.sceneScript.GetSceneID());
+				//Debug.Log ("Attempting to add a corpse to : " + SceneScript.sceneScript.GetSceneID());
 				AddCorpse (SceneScript.sceneScript.GetSceneID());
 			} else if (a.itemCreated == "Body") {
-//				Debug.Log ("Attempting to add a body to : " + SceneScript.sceneScript.GetSceneID());
+				//Debug.Log ("Attempting to add a body to : " + SceneScript.sceneScript.GetSceneID());
 				AddBody (SceneScript.sceneScript.GetSceneID());
 			}
 		}
@@ -575,7 +575,7 @@ public class Controller_Game : MonoBehaviour
 		{
 			if (mess.Value.exists == 1)
 			{
-//				Debug.Log (mess.Value.id);
+				//Debug.Log (mess.Value.name);
 				++count;
 			}
 		}
@@ -587,7 +587,6 @@ public class Controller_Game : MonoBehaviour
 					} else if (npc.Value.id == "Glutton") {
 
 					} else {
-//						Debug.Log (npc.Value.id);
 						++count;
 					}
 
@@ -632,96 +631,80 @@ public class Controller_Game : MonoBehaviour
 	}
 
 	public void SaveGame() {
-		if (this.savedSceneName == null || this.savedSceneName == "") {
+		//if (this.savedSceneName == null || this.savedSceneName == "") {
 			//Make a new one
-			savedSceneName = SceneScript.sceneScript.currentSceneName;
+		savedSceneName = SceneScript.sceneScript.currentSceneName;
 
-			foreach (string item in itemList) {
-				saveitemList.Add (item);
-			}
-
-			foreach (string item in itemListCondensed) {
-				saveitemListCondensed.Add (item);
-			}
-
-			foreach (KeyValuePair<string, NPC> k in npcs) {
-				savenpcs.Add (k.Key, k.Value);
-			}
-
-			foreach (KeyValuePair<string, Mess> k in messes) {
-				savemesses.Add (k.Key, k.Value);
-			}
-
-			foreach (KeyValuePair<string, Item> k in items) {
-				saveitems.Add (k.Key, k.Value);
-			}
-
-			foreach (KeyValuePair<string, int> k in bodyInRoom) {
-				savebodyInRoom.Add (k.Key, k.Value);
-			}
-			foreach (KeyValuePair<string, int> k in corpseInRoom) {
-				savecorpseInRoom.Add (k.Key, k.Value);
-			}
-		} else {
-			saveitemList.Clear ();
-			foreach (string item in itemList) {
-				
-				saveitemList.Add (item);
-			}
-
-			saveitemListCondensed.Clear ();
-			foreach (string item in itemListCondensed) {
-				saveitemListCondensed.Add (item);
-			}
-
-			foreach (KeyValuePair<string, NPC> k in npcs) {
-				NPC n;
-				savenpcs.TryGetValue (k.Key, out n);
-				if (n != null) {
-					n.overwrite (k.Value);
-				}
-			}
-
-			foreach (KeyValuePair<string, Mess> k in messes) {
-				Mess m;
-				savemesses.TryGetValue (k.Key, out m);
-				if (m != null) {
-					m.overwrite (k.Value);
-				}
-
-			}
-
-			foreach (KeyValuePair<string, Item> k in items) {
-				Item i;
-				saveitems.TryGetValue (k.Key, out i);
-				if (i != null) {
-					i.overwrite (k.Value);
-				}
-			}
-
-			savebodyInRoom.Clear ();
-			foreach (KeyValuePair<string, int> k in bodyInRoom) {
-				savebodyInRoom.Add (k.Key, k.Value);
-			}
-			savecorpseInRoom.Clear ();
-			foreach (KeyValuePair<string, int> k in corpseInRoom) {
-				savecorpseInRoom.Add (k.Key, k.Value);
+		saveitemList.Clear ();
+		foreach (string item in itemList) {
+			saveitemList.Add (item);
+		}
+		saveitemListCondensed.Clear ();
+		foreach (string item in itemListCondensed) {
+			saveitemListCondensed.Add (item);
+		}
+			
+		foreach (KeyValuePair<string, NPC> k in npcs) {
+			NPC n;
+			savenpcs.TryGetValue (k.Key, out n);
+			//Debug.Log ("NPC: " + k.Key + ", compare: " + n.compare (k.Value));
+			if (n == null) {
+				savenpcs.Add (k.Key, k.Value.copy());
+			} else if (!n.compare (k.Value)) {
+				savenpcs.Remove (k.Key);
+				savenpcs.Add (k.Key, k.Value.copy());
+				Debug.Log ("NPC resaved: " + k.Key);
 			}
 		}
 
-		savetimeRemaining = ctrl_game.timeRemaining;
-//		Debug.Log ("Saved turn count: " + savetimeRemaining);
-		savekillCount = ctrl_game.killCount;
-		saveunclaimedBodyCount = ctrl_game.unclaimedBodyCount;
-		savebreadConsumed = ctrl_game.breadConsumed;		//How much bread the gorilla maid has consumed
-		savebreadQuantity = ctrl_game.breadQuantity;
-		savebreadSlot = ctrl_game.breadSlot;	//Which slot in the inventory contains bread
+		foreach (KeyValuePair<string, Mess> k in messes) {
+			Mess m;
+			savemesses.TryGetValue (k.Key, out m);
+			if (m == null) {
+				savemesses.Add (k.Key, k.Value.copy());
+			} else if (!m.compare (k.Value)) {
+				savemesses.Remove (k.Key);
+				savemesses.Add (k.Key, k.Value.copy());
+				Debug.Log ("Mess resaved: " + k.Key);
+			}
+		}
 
-		saveencounterTimerRunning = ctrl_game.encounterTimerRunning;
-		saveencounterTimer = ctrl_game.encounterTimer;
+		foreach (KeyValuePair<string, Item> k in items) {
+			Item i;
+			saveitems.TryGetValue (k.Key, out i);
 
-		saveendGame = ctrl_game.endGame;
-//		Debug.Log ("Saved");
+			if (i == null) {
+				saveitems.Add (k.Key, k.Value.copy());
+			} else if (!i.compare (k.Value)) {
+				saveitems.Remove (k.Key);
+				saveitems.Add (k.Key, k.Value.copy());
+				Debug.Log ("Item resaved: " + k.Key);
+			}
+		}
+
+		savebodyInRoom.Clear ();
+		foreach (KeyValuePair<string, int> k in bodyInRoom) {
+			savebodyInRoom.Add (k.Key, k.Value);
+		}
+
+		savecorpseInRoom.Clear ();
+		foreach (KeyValuePair<string, int> k in corpseInRoom) {
+			savecorpseInRoom.Add (k.Key, k.Value);
+		}
+
+		savetimeRemaining = this.timeRemaining;
+		//Debug.Log ("Saved turn count: " + savetimeRemaining);
+		savekillCount = this.killCount;
+		saveunclaimedBodyCount = this.unclaimedBodyCount;
+		savebreadConsumed = this.breadConsumed;		//How much bread the gorilla maid has consumed
+		savebreadQuantity = this.breadQuantity;
+		savebreadSlot = this.breadSlot;	//Which slot in the inventory contains bread
+
+		saveencounterTimerRunning = this.encounterTimerRunning;
+		saveencounterTimer = this.encounterTimer;
+
+		saveendGame = this.endGame;
+		Debug.Log ("Saved");
 	}
 
 	public void LoadGame() {
@@ -729,6 +712,10 @@ public class Controller_Game : MonoBehaviour
 
 		} else {
 			SceneScript.sceneScript.currentSceneName = savedSceneName;
+
+			foreach (string item in saveitemList) {
+				//if(itemList
+			}
 
 			itemList.Clear ();
 			foreach (string item in saveitemList) {
@@ -743,19 +730,33 @@ public class Controller_Game : MonoBehaviour
 			foreach (KeyValuePair<string, NPC> k in savenpcs) {
 				NPC n;
 				npcs.TryGetValue (k.Key, out n);
-				n.overwrite (k.Value);
+				//Debug.Log ("NPC: " + k.Key + ", compare: " + n.compare (k.Value));
+				if (!n.compare (k.Value)) {
+					npcs.Remove (k.Key);
+					npcs.Add (k.Key, k.Value.copy());
+					Debug.Log ("NPC reloaded: " + k.Key);
+				}
+
 			}
 
-			foreach (KeyValuePair<string, Mess> k in messes) {
+			foreach (KeyValuePair<string, Mess> k in savemesses) {
 				Mess m;
 				messes.TryGetValue (k.Key, out m);
-				m.overwrite (k.Value);
+				if (!m.compare (k.Value)) {
+					messes.Remove (k.Key);
+					messes.Add (k.Key, k.Value.copy());
+					Debug.Log ("Mess reloaded: " + k.Key);
+				}
 			}
 
-			foreach (KeyValuePair<string, Item> k in items) {
+			foreach (KeyValuePair<string, Item> k in saveitems) {
 				Item i;
 				items.TryGetValue (k.Key, out i);
-				i.overwrite (k.Value);
+				if (!i.compare (k.Value)) {
+					items.Remove (k.Key);
+					items.Add (k.Key, k.Value.copy());
+					Debug.Log ("Item reloaded: " + k.Key);
+				}
 			}
 
 			bodyInRoom.Clear ();
@@ -778,7 +779,7 @@ public class Controller_Game : MonoBehaviour
 			this.encounterTimer = saveencounterTimer;
 
 			this.endGame = saveendGame;
-//			Debug.Log ("Saved");
+			Debug.Log ("Loaded");
 			Controller_GUI.ctrl_gui.SetMessesText(GetMessCount());
 			Controller_GUI.ctrl_gui.SetTimeText(this.timeRemaining);
 			SceneScript.sceneScript.LoadScene (this.savedSceneName);

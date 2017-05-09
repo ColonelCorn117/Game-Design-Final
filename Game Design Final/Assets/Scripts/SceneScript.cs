@@ -125,7 +125,7 @@ public class SceneScript : MonoBehaviour {
 					}
 					*/
 					if (i.conditions.Count == 0) {
-						Debug.Log (i.id + " taken");
+						//Debug.Log (i.id + " taken");
 						l.Add (new Condition ("Take", new Action ("Take", currentSceneName, "", i.id,0f)));
 						l.Add (new Condition ("Back", new Action ("Back", currentSceneName, "","",0f)));
 					}
@@ -346,6 +346,7 @@ public class SceneScript : MonoBehaviour {
 	//----------------------------------------------------------------------------------------------------
 
 	public bool LoadDetailSprite(string name, string typeName) {
+		Debug.Log ("Sprite attempted: " + name);
 		string folder = "Rooms";
 		switch (typeName) {
 		case "npc":
