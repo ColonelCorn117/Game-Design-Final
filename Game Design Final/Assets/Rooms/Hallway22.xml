@@ -4,7 +4,7 @@
 
 There's a laundry chute in the wall.
 </description>
-	<background>HallwayPaintings</background>
+	<background>Hallway.jpg</background>
 	<conditionList>
 		<condition>
 			<description>Child's Bedroom (East)</description>

@@ -2,7 +2,7 @@
 	<name>Landing - 2F</name>
 	<description>You see a flight of wooden stairs going up and flight of carpeted stairs going down. You have the urge to slide down the railing.
 	</description>
-	<background>Landing</background>
+	<background>Stairwell</background>
 	<conditionList>
 		<condition>
 			<description>Downstairs (North)</description>

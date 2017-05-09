@@ -1,7 +1,7 @@
 ﻿<SceneDescription>
 	<name>Hallway - 2F</name>
 	<description>It's a hallway.</description>
-	<background>HallwayWindows</background>
+	<background>Hallway.jpg</background>
 	<conditionList>
 		<condition>
 			<description>Art Gallery (East)</description>

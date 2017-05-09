@@ -1,7 +1,7 @@
 ﻿<SceneDescription>
-	<name>Hallway</name>
+	<name>Hallway.jpg</name>
 	<description>It's a hallway.</description>
-	<background>HallwayPlain</background>							<!--Scene not currently used-->
+	<background>Hallway.jpg</background>							<!--Scene not currently used-->
 	<conditionList>
 		<condition>
 			<description>Landing</description>

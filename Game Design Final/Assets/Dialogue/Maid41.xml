@@ -1,0 +1,21 @@
+﻿<dialogue>
+	<name>Loli Maid</name>
+	<description>Assassin: "Can you not?"
+
+The maid is so startled that she nearly falls off of the ladder with a squeak of surprise.
+
+Maid: "Wh-who are you?! Where did you come from?"
+
+Assassin: "Um...the door..."
+
+Maid: "W-well go away!"</description>
+	<conditionList>
+		<condition>
+			<description>Continue Talking</description>
+			<action>
+				<nextScene>dialogueMaid42</nextScene>
+				<timeUsed>0</timeUsed>
+			</action>	
+		</condition>
+	</conditionList>
+</dialogue>

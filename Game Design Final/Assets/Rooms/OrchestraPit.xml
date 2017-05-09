@@ -1,10 +1,10 @@
 ﻿<SceneDescription>
 	<name>Orchestra Pit - 1F</name>
 	<description>Without the orchesta, this is just a big, empty space within the bigger, emptier ballroom. Still, the piano looks very imposing.</description>
-	<background>OrchestraPit</background>
+	<background>OrchestraPit.jpg</background>
 	<conditionList>	
 		<condition>
-			<description>Ballroom (North)</description>
+			<description>Ballroom</description>
 			<requirement>
 				<prereq>removeMaid2</prereq>
 			</requirement>
@@ -110,7 +110,7 @@ Assassin: [She would.]
 			</action>
 		</condition>
 		<condition>
-			<description>Activate Bread</description>
+			<description>Stand and Watch</description>
 			<requirement>
 				<prereq>existsMaid2</prereq>
 				<prereq>loaves7</prereq>

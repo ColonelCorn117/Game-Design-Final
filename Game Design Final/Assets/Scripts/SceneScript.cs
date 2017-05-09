@@ -707,8 +707,8 @@ public class SceneScript : MonoBehaviour {
 			NpcLookup (dialogueName.Substring (0, dialogueName.Length - 1)).setDialogueLocation (
 				int.Parse(dialogueName.Substring (dialogueName.Length - 1))); // sets the dialogue location on the NPC
 
-			this.LoadButtons(d.conditions, new Condition ("Back", new Action ("Back", currentSceneName, "","",0f)));
-
+			this.LoadButtons(d.conditions);
+			LoadDetailSprite (dialogueName.Substring (0, dialogueName.Length - 1));
 			foreach(Condition c in d.conditions) {
 				if (c.Satisfied ()) {
 					AddToDescription ("\n" + c.additionalDescription);

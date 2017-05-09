@@ -1,7 +1,7 @@
 ﻿<SceneDescription>
 	<name>Hallway - 1F</name>
 	<description>Hall-elujah.</description>
-	<background>HallwayPaintings</background>
+	<background>Hallway.jpg</background>
 	<conditionList>
 		<condition>
 			<description>Assassin's Room (North)</description>

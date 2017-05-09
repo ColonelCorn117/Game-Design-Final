@@ -1,5 +1,6 @@
 ﻿<npc>
-	<name>Maid</name>
+	<name>Loli Maid</name>
+	<id>Maid4</id>
 	<description>A maid in a uniform.</description>
 	<exists>1</exists>
 	<clearList>
