@@ -7,7 +7,7 @@ Maid 3: "It will be done."
 'Maid': "Ook."
 	
 The maids leave.</description>
-	<background>IntroMaidSalute</background>
+	<background>BorkusAtDesk.jpg</background>
 	<conditionList>
 		<condition>
 			<description>Continue</description>

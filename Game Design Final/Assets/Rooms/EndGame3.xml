@@ -2,11 +2,11 @@
 	<name>Endgame</name>
 	<description>The door of the mansion closes with a resounding boom as the guests take their leave. All is silent. Lord Borkus stands at the top of the landing, staring down at you furiously.
 
-Lord Borkus: "I warned you…"
+Lord Borkus: "I warned you..."
 
 You got the Bad Ending. Learn how to clean and try again.
 </description>
-	<background></background>
+	<background>BorkusAtDesk.jpg</background>
 	<conditionList>
 		
 	</conditionList>

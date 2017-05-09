@@ -8,7 +8,7 @@ Lord Borkus: "I’ll have to file the paperwork to give the maids their well-ear
 
 Assassin: [Are you f***ing KIDDING ME?!]
 </description>
-	<background></background>
+	<background>BorkusAtDesk.jpg</background>
 	<conditionList>
 		<condition>
 			<description>Kill Him</description>

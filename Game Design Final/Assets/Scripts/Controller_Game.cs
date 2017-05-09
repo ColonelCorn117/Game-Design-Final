@@ -708,7 +708,7 @@ public class Controller_Game : MonoBehaviour
 	}
 
 	public void LoadGame() {
-		if (this.savedSceneName == null) {
+		if (this.savedSceneName == null || this.savedSceneName == "") {
 
 		} else {
 			SceneScript.sceneScript.currentSceneName = savedSceneName;
