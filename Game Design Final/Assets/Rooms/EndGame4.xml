@@ -1,7 +1,7 @@
 ﻿<SceneDescription>
 	<name>Game Over - Normal</name>
 	<description>Lord Borkus's home is kinda messy. You lose.</description>
-	<background></background>								<!---Scene not currently used-->
+	<background>BorkusAtDesk.jpg</background>								<!---Scene not currently used-->
 	<conditionList>
 	</conditionList>
 	<npcList>

@@ -1,16 +1,16 @@
 ﻿<SceneDescription>
 	<name>Endgame</name>
-	<description>Assassin: [Finally…they’re gone]
+	<description>Assassin: [Finally...they’re gone]
 
 The guests have left. Every moment of the meeting with Lord Borkus was agonizing to watch, forced to follow along silently as they were given a grand tour of the mansion.
 
-Assassin: [I need to start being more selective of what jobs I take on…this has been ridiculous…]
+Assassin: [I need to start being more selective of what jobs I take on...this has been ridiculous...]
 
 Lord Borkus returns to the office, closing the door behind him and moving to sit at his desk. He is quiet for a minute, before turning around in his chair to face you with a pleased smile on his face.
 
 Lord Borkus: "Everything has gone perfectly. Negotiations were successful. They will be investing in my new business venture."
 </description>
-	<background></background>
+	<background>BorkusAtDesk.jpg</background>
 	<conditionList>
 		<condition>
 			<description>Continue</description>

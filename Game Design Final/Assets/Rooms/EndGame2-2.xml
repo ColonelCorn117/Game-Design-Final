@@ -12,7 +12,7 @@ Lord Borkus: "Why did you not inform me that these things were happening?!"
 
 Assassin: "I didn’t want to disturb you, Sir. "
 </description>
-	<background></background>
+	<background>BorkusAtDesk.jpg</background>
 	<conditionList>
 		<condition>
 			<description>Continue</description>

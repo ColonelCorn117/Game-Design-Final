@@ -8,7 +8,7 @@ Lord Borkus: "Everything needs to go flawlessly for my guests’ arrival. I hire
 
 Lord Borkus: "That said, I need you to do more than just keep away any dangers."
 	</description>
-	<background>LordsOffice</background>
+	<background>AssassinInCorner</background>
 	<conditionList>
 		<condition>
 			<description>Continue</description>

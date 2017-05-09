@@ -4,13 +4,13 @@
 
 Lord Borkus: "Yes. I’m starting a line of furniture for rich people like myself. High class in every way."
 
-Assassin: "Uh-huh…"
+Assassin: "Uh-huh..."
 
 Lord Borkus: "I wouldn’t expect you to understand. Either way, I’m very pleased with how this day has gone. It seems my scolding of the maids made them see right. I must say though, things are far cleaner than they ever have been. Perhaps I’ll have to give them a raise."
 
-Assassin: ...
+Assassin:...
 </description>
-	<background></background>
+	<background>BorkusAtDesk.jpg</background>
 	<conditionList>
 		<condition>
 			<description>Tell Him You Did It</description>
