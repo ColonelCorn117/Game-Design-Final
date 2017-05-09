@@ -14,7 +14,7 @@ Assassin: "Well, that was therapeutic..."
 
 Congratulations! You’ve gotten the Good Ending!
 </description>
-	<background>black</background>
+	<background>Good_EndingChair</background>
 	<conditionList>
 		
 	</conditionList>
