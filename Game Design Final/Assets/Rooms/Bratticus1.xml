@@ -15,7 +15,8 @@ Assassin: [That's a blowtorch.]
 Assassin: ...
 
 Assassin: "SHIT!"</description>
-	<background>ChildsBedroom</background>
+	<background>ChildBedroom</background>
+	<extraBackground>Bratticus</extraBackground>
 	<conditionList>
 		<condition>
 			<description>Chase Him Down</description>

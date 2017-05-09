@@ -4,6 +4,7 @@
 			
 Assassin: [I have never been so glad that the maids decided to put so much effort into trashing the entire house.]</description>
 	<background>HallwayPaintings</background>
+	<extraBackground>Bratticus</extraBackground>
 	<conditionList>
 		<condition>
 			<description>Continue</description>

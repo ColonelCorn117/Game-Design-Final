@@ -7,12 +7,17 @@ Lord Borkus: Is there something wrong?”
 You say nothing, but do stop to stare at a very expensive-looking, fancy vase that sits on a decorate display pillar next to the door. 
 
 Lord Borkus: What are you doing? What’s the matter with you?
-
-Congratulations! You’ve gotten the Good Ending!
 </description>
-	<background>black</background>
+	<background>AssassinVase1</background>
 	<conditionList>
 		
+	<condition>
+			<description>Continue</description>
+			<action>
+				<timeUsed>0</timeUsed>
+				<nextScene>EndGame1-6</nextScene>
+			</action>	
+		</condition>
 	</conditionList>
 	<npcList>
 	</npcList>

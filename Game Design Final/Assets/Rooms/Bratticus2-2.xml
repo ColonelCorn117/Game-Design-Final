@@ -3,6 +3,7 @@
 	<description>Leaping over the piano, you descend upon your mortal nemesis, raining blows with absolute precision. Bratticus falls in a heap, the blowtorch shutting off and landing at his side.
 </description>
 	<background>MusicRoom</background>
+	<extraBackground>Bratticus</extraBackground>
 	<conditionList>
 		
 		<condition>
