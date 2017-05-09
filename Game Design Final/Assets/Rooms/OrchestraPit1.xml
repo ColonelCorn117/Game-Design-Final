@@ -5,7 +5,7 @@
 Maid: "Give me the bread!"
 
 You see your life flash before your eyes, and decide that your head is worth more than a single loaf of bread. As you hand over a loaf of bread, the maid's demeanor shifts abruptly. She pulls out a butter knife, spreading the jam over her newly acquired loaf, and skips away, munching away at her prize.</description>
-	<background>OrchestraPit</background>
+	<background>OrchestraPit.jpg</background>
 	<conditionList>	
 		<condition>
 			<description>Continue</description>
@@ -13,8 +13,7 @@ You see your life flash before your eyes, and decide that your head is worth mor
 				<prereq>noreqs</prereq>
 			</requirement>
 			<action>
-				<description>Assassin: "...what?"</description>
-				<nextScene>OrchestraPit</nextScene>
+				<nextScene>OrchestraPit1-1</nextScene>
 				<timeUsed>0.0</timeUsed>
 			</action>
 		</condition>

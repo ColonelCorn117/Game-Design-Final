@@ -1,0 +1,21 @@
+﻿<SceneDescription>
+	<name>Orchestra Pit - 1F</name>
+	<description>Assassin: "...what?"</description>
+	<background>OrchestraPit.jpg</background>
+	<extraBackground>AssassinWut</extraBackground>
+	<conditionList>	
+		<condition>
+			<description>Continue</description>
+			<requirement>
+				<prereq>noreqs</prereq>
+			</requirement>
+			<action>
+				<description></description>
+				<nextScene>OrchestraPit</nextScene>
+				<timeUsed>0.0</timeUsed>
+			</action>
+		</condition>
+	</conditionList>
+	<npcList>
+	</npcList>
+</SceneDescription>
