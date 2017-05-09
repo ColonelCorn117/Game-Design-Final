@@ -3,7 +3,7 @@
 	<description>This is a large, open room with expensive chandeliers.
 
 There is an area for a live orchestra at one end.</description>
-	<background>Ballroom</background>
+	<background>OrchestraPit.jpg</background>
 	<conditionList>	
 		<condition>
 			<description>Hallway (North)</description>

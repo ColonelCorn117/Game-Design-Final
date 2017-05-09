@@ -31,7 +31,7 @@
 			<action>
 				<npcSubdued>Maid4</npcSubdued>
 				<messCreated>BooksStrewn</messCreated>
-				<nextScene>Library1</nextScene>
+				<nextScene>dialogueMaid41</nextScene>
 				<timeUsed>1.0</timeUsed>
 			</action>	
 		</condition>

@@ -1,0 +1,17 @@
+﻿<dialogue>
+	<name>Loli Maid</name>
+	<description>Assassin: "Just get out of here. I'll deal with this."
+
+Maid: "O-okay."
+
+The maid quietly exits the room.</description>
+	<conditionList>
+		<condition>
+			<description>Continue</description>
+			<action>
+				<nextScene>Library</nextScene>
+				<timeUsed>0.0</timeUsed>
+			</action>	
+		</condition>
+	</conditionList>
+</dialogue>

@@ -1,7 +1,7 @@
 ﻿<SceneDescription>
-	<name>Hallway</name>
+	<name>Hallway.jpg</name>
 	<description>More like 'allways.</description>
-	<background>HallwayPlain</background>						<!--Scene not currently used-->
+	<background>Hallway.jpg</background>						<!--Scene not currently used-->
 	<conditionList>
 		<condition>
 			<description>Hallway 6</description>

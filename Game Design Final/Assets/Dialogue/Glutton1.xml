@@ -1,9 +1,6 @@
 ﻿<dialogue>
 	<name>Glutton</name>
-	<description>'Maid': Ook?
-
-
-	</description>
+	<description>'Maid': Ook?</description>
 
 	<conditionList>
 		<condition>
@@ -17,6 +14,14 @@
 				<itemUsed>Bread</itemUsed>
 				<nextScene>dialogueGlutton1</nextScene>
 				<timeUsed>0</timeUsed>
+			</action>
+		</condition>
+		<condition>
+			<description>Back</description>
+			
+			<action>
+				<timeUsed>0</timeUsed>
+				<nextScene>reload</nextScene>
 			</action>
 		</condition>
 	</conditionList>

@@ -1,7 +1,7 @@
 ﻿<SceneDescription>
 	<name>Hallway - 1F</name>
 	<description>Another hallway. This one at least has a vase.</description>
-	<background>HallwayWindows</background>
+	<background>Hallway.jpg</background>
 	<conditionList>
 		<condition>
 			<description>Landing (East)</description>
