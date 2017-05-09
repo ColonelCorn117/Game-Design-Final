@@ -1,0 +1,19 @@
+﻿<SceneDescription>
+	<name>Endgame</name>
+	<description>CRASH!
+	
+You leave without saying a word.
+
+Congratulations! You’ve gotten the Good Ending!
+</description>
+	<background>AssassinVase2</background>
+	<conditionList>
+		
+	</conditionList>
+	<npcList>
+	</npcList>
+	<messList>
+	</messList>
+	<itemList>
+	</itemList>
+</SceneDescription>

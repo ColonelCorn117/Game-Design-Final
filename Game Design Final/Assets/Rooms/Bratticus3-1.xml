@@ -2,6 +2,7 @@
 	<name>Music Room - 1F</name>
 	<description>Assassin: [I don't have much time left. I need to clean this up fast.]</description>
 	<background>MusicRoom</background>
+	<extraBackground>AssassinAngry</extraBackground>
 	<conditionList>
 		<condition>
 			<description>Continue</description>
