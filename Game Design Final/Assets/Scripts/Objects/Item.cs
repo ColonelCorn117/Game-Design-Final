@@ -31,6 +31,23 @@ public class Item : GenericGameObject {
 		//singleton = 1;
 	}
 
+	public Item copy() {
+		Item i = new Item (this.name);
+		i.unclaimed = this.unclaimed;
+		i.consumed = this.consumed;
+		i.id = this.id;
+		i.duplicable = this.duplicable;
+		i.description = this.description;
+		i.action = this.action;
+		i.conditions = this.conditions;
+
+		return i;
+	}
+
+	public bool compare (Item i) {
+		return (this.id == i.id) && (this.exists == i.exists) && (this.unclaimed == i.unclaimed) && (this.consumed == i.consumed);
+	}
+
 	public void overwrite(Item i) {
 		this.name = i.name;
 		this.id = i.id;

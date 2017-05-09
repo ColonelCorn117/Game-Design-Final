@@ -23,6 +23,21 @@ public class NPC : Problem {
 		return dialogueLocation;
 	}
 
+	public NPC copy() {
+		NPC p = new NPC ();
+		p.exists = this.exists;
+		p.id = this.id;
+		p.name = this.name;
+		p.description = this.description;
+		p.conditions = this.conditions;
+		p.dialogueLocation = this.dialogueLocation;
+		return p;
+	}
+
+	public bool compare(NPC n) {
+		return base.compare(n) && (this.dialogueLocation == n.getDialogueLocation ());
+	}
+
 	public void overwrite(NPC n) {
 		base.overwrite (n);
 		this.dialogueLocation = n.getDialogueLocation ();
