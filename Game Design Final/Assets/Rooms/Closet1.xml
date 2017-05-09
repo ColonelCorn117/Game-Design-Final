@@ -36,6 +36,16 @@
 				<timeUsed>0.0</timeUsed>
 			</action>
 		</condition>
+		<condition>
+			<description>Ending (demo)</description>
+			<requirement>
+				<prereq></prereq>
+			</requirement>
+			<action>
+				<nextScene>Ending1</nextScene>
+				<timeUsed>0.0</timeUsed>
+			</action>
+		</condition>
 	</conditionList>
 	<npcList>
 	</npcList>
