@@ -274,12 +274,16 @@ public class SceneScript : MonoBehaviour {
 			locationText.text = xml.name;
 			xml.id = sceneName;
 			//}
-
+			
 			BuildDescription ();
 			Controller_Game.ctrl_game.UpdateMessCount ();
 			LoadButtons ();
 			LoadBackgroundImage (xml.background);
-			LoadDetailSprite ("Default");
+			if (xml.extraBackground != null && xml.extraBackground != "") {
+				LoadDetailSprite (xml.extraBackground);
+			} else {
+				LoadDetailSprite ("Default");
+			}
 			LoadMapImage(sceneName);
 		} else if ((sceneName.Length > 8) && (sceneName.Substring (0, 8) == "dialogue")) {
 			LoadDialogue (sceneName.Substring (8));
@@ -387,6 +391,7 @@ public class SceneScript : MonoBehaviour {
 		string npcPath = "Assets/NPCs/Images/"  + name + ".png";
 		string messPath = "Assets/Messes/Images/" + name + ".png";
 		string itemPath = "Assets/Items/Images/" + name + ".png";
+		
 		string path = "";
 		if (File.Exists (npcPath)) {
 			path = npcPath;
@@ -398,7 +403,7 @@ public class SceneScript : MonoBehaviour {
 			//Debug.Log("Image " + name + " not found");
 
 			if (name != "Default") {		
-				//return LoadDetailSprite ("Default");
+				return LoadDetailSprite ("Default");
 			}
 			return false;
 		}
@@ -707,8 +712,8 @@ public class SceneScript : MonoBehaviour {
 			NpcLookup (dialogueName.Substring (0, dialogueName.Length - 1)).setDialogueLocation (
 				int.Parse(dialogueName.Substring (dialogueName.Length - 1))); // sets the dialogue location on the NPC
 
-			this.LoadButtons(d.conditions, new Condition ("Back", new Action ("Back", currentSceneName, "","",0f)));
-
+			this.LoadButtons(d.conditions);
+			LoadDetailSprite (dialogueName.Substring (0, dialogueName.Length - 1));
 			foreach(Condition c in d.conditions) {
 				if (c.Satisfied ()) {
 					AddToDescription ("\n" + c.additionalDescription);

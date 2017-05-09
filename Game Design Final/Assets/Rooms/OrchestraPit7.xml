@@ -2,7 +2,7 @@
 	<name>Orchestra Pit - 1F</name>
 	<description>You rush the maid, tackling her away from the piano and snapping her neck, killing her instantly. Unfortunately, you see that the jam jar has emptied its contents on the floor near the piano.
 	</description>
-	<background>OrchestraPit</background>
+	<background>OrchestraPit.jpg</background>
 	<conditionList>	
 		<condition>
 			<description>Continue</description>

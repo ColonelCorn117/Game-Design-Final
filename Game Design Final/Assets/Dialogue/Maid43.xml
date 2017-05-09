@@ -1,0 +1,29 @@
+﻿<dialogue>
+	<name>Loli Maid</name>
+	<description>Assassin: "Look. Tearing apart his mansion isn't going to make him be nice to you."
+
+Maid: "But Head Maid Elora said that if I did this, then he would feel bad for yelling at us and apologize."
+
+Assassin: "That's not true. He'll only be angrier. Do yourself a favor and pick up all th-"
+
+Maid: "I don't have anywhere to go if he gets rid of me! She said it was going to be okay! What am I supposed to do now?!"</description>
+	<conditionList>
+		<condition>
+			<description>Ask to Clean</description>
+			<requirement>
+				<prereq>nokill2</prereq>
+			</requirement>
+			<action>
+				<nextScene>dialogueMaid44</nextScene>
+				<timeUsed>0.0</timeUsed>
+			</action>	
+		</condition>
+		<condition>
+			<description>Tell to Leave</description>
+			<action>
+				<nextScene>dialogueMaid45</nextScene>
+				<timeUsed>0.0</timeUsed>
+			</action>	
+		</condition>
+	</conditionList>
+</dialogue>

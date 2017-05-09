@@ -1,7 +1,7 @@
 ﻿<SceneDescription>
 	<name>Hallway - 1F</name>
 	<description>If you squint really hard, this still just looks like a hallway.</description>
-	<background>HallwayWindows</background>
+	<background>Hallway.jpg</background>
 	<conditionList>	
 		<condition>
 			<description>Hallway (North)</description>

@@ -1,7 +1,7 @@
 ﻿<SceneDescription>
 	<name>Hallway - 1F</name>
 	<description>Are you the hall monitor?</description>
-	<background>HallwayPlain</background>
+	<background>Hallway.jpg</background>
 	<conditionList>
 		<condition>
 			<description>Hallway (North)</description>

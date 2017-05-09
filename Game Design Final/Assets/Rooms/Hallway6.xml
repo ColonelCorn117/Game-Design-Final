@@ -1,7 +1,7 @@
 ﻿<SceneDescription>
 	<name>Hallway - 1F</name>
 	<description>This hallway looks different from the rest. No, wait, no it doesn't.</description>
-	<background>HallwayPaintings</background>
+	<background>Hallway.jpg</background>
 	<conditionList>
 		<condition>
 			<description>Closet (East)</description>

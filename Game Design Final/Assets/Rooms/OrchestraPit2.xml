@@ -2,7 +2,7 @@
 	<name>Orchestra Pit - 1F</name>
 	<description>You call out to the maid to keep her from continuing her current course of action. Unfortunately, she startles at the sound of your voice, dropping the jar into the piano. Seeing you, the maid flees.
 	</description>
-	<background>OrchestraPit</background>
+	<background>OrchestraPit.jpg</background>
 	<conditionList>	
 		<condition>
 			<description>Fish Out Jam Jar</description>

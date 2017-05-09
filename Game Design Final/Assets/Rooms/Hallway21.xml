@@ -2,7 +2,7 @@
 	<name>Hallway - 3F</name>
 	<description>It's a hallway. 
 	</description>
-	<background>HallwayPaintings</background>
+	<background>Hallway.jpg</background>
 	<conditionList>
 		<condition>
 			<description>Landing (East)</description>

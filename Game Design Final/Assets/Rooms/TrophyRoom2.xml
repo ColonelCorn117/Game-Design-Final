@@ -10,6 +10,7 @@ The gorilla breaks eye contact, appearing satisfied. The great beast snatches th
 
 'Maid': "OOK!"</description>
 	<background>TrophyRoom</background>
+	<extraBackground>Maidrilla</extraBackground>
 	<conditionList>
 		<condition>
 			<description>Continue</description>

@@ -1,7 +1,7 @@
 ﻿<SceneDescription>
 	<name>Orchestra Pit - 1F</name>
 	<description>You stand and watch as the maid empties the jam into the piano.</description>
-	<background>OrchestraPit</background>
+	<background>OrchestraPit.jpg</background>
 	<conditionList>	
 		<condition>
 			<description>Continue</description>

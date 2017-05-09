@@ -2,17 +2,16 @@
 	<name>Trophy Room - 2F</name>
 	<description>Every single piece of toilet paper in the room disintegrates into dust.
 	
-The gorilla turns back towards you, bows, and disappears in another puff of smoke.
-	
-Assassin: [There are no words that can adequately describe how weirded out I am right now.]</description>
+The gorilla turns back towards you, bows, and disappears in another puff of smoke.</description>
 	<background>TrophyRoom</background>
+	<extraBackground>Maidrilla</extraBackground>
 	<conditionList>
 		<condition>
 			<description>Continue</description>
 			<action>
 				<timeUsed>0</timeUsed>
 				<messCreated>TPDust</messCreated>
-				<nextScene>TrophyRoom</nextScene>
+				<nextScene>TrophyRoom4</nextScene>
 			</action>	
 		</condition>
 	</conditionList>

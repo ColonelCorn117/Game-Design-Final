@@ -2,7 +2,7 @@
 	<name>Landing - 1F</name>
 	<description>You see a flight of stairs. They are big and fluffy.
 	</description>
-	<background>Landing</background>
+	<background>Stairwell</background>
 	<conditionList>
 		<condition>
 			<description>Entrance (North)</description>
